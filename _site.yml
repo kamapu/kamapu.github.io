@@ -1,5 +1,4 @@
 name: "my-website"
-theme: jekyll-theme-modernist
 output_dir: "."
 navbar:
   title: "My Website"
