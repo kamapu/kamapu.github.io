@@ -1,9 +1,10 @@
 name: "my-website"
 theme: jekyll-theme-modernist
+output_dir: "."
 navbar:
   title: "My Website"
   left:
     - text: "Home"
       href: index.html
-    -text: "About"
+    - text: "About"
       href: about.html
