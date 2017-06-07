@@ -1,9 +1,22 @@
-name: "my-website"
+name: "Miguel Alvarez"
 output_dir: "."
 navbar:
-  title: "My Website"
+  title: "Miguel Alvarez"
   left:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
+  right:
+    - icon: fa-university
+      href: https://www.ipe.uni-bonn.de/pflanzenernaehrung/mitarbeiter/m_alvarez
+    - icon: fa-github
+      href: https://www.github.com/kamapu
+    - icon: fa-facebook-official
+      href: https://www.facebook.com/miguelypunto
+output:
+  html_document:
+    theme: flatly
+    include:
+      after_body: footer.html
+    css: styles.css
