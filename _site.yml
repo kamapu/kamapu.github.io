@@ -10,6 +10,8 @@ navbar:
   right:
     - icon: fa-university
       href: https://www.ipe.uni-bonn.de/pflanzenernaehrung/mitarbeiter/m_alvarez
+    - icon: fa-envelope-o
+      href: mailto:kamapu78@gmail.com
     - icon: fa-github
       href: https://www.github.com/kamapu
     - icon: fa-facebook-official
@@ -18,5 +20,6 @@ output:
   html_document:
     theme: flatly
     include:
+      before_body: top_bar.html
       after_body: footer.html
     css: styles.css

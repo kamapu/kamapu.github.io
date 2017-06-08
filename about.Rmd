@@ -1,5 +1,8 @@
 ---
 title: "About this website"
+output:
+  html_document:
+    css: styles_about.css
 ---
 
 Under construction.

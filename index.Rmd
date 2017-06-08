@@ -2,7 +2,7 @@
 title: "Dr. Miguel Alvarez"
 ---
 
-<!--img src="figures/Miguel_1.jpg" width="200"-->
-<img src="images/Start_Bar.jpg" width="800">
+Some text
 
-Under construction.
+Some additional text
+
