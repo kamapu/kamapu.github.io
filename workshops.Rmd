@@ -1,0 +1,10 @@
+---
+title: "Workshops"
+output:
+  html_document:
+    include:
+      before_body: topbar_workshops.html
+    css: styles_workshops.css
+---
+
+Under construction.

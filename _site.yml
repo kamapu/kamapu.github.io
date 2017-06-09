@@ -7,6 +7,8 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+    - text: "Workshops"
+      href: workshops.html
   right:
     - icon: fa-university
       href: https://www.ipe.uni-bonn.de/pflanzenernaehrung/mitarbeiter/m_alvarez
@@ -22,6 +24,6 @@ output:
   html_document:
     theme: flatly
     include:
-      before_body: top_bar.html
+      before_body: topbar_home.html
       after_body: footer.html
     css: styles.css
