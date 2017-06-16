@@ -1,8 +1,45 @@
 ---
-layout: post
-title: Test Title
+title: "News"
+output:
+  html_document:
+    include:
+      before_body: topbar_news.html
+    css: styles_news.css
 ---
 
-# First Post Header
+Any important news will be published in this area.
+For comments or suggestions, use the
+[issues](https://github.com/kamapu/kamapu.github.io/issues) site.
 
-Some text goes here.
+<br/>
+
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+# Package taxlist launched in CRAN
+*2017-06-14*
+
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/taxlist)](https://cran.r-project.org/package=taxlist)
+[![CRAN_downloads](http://cranlogs.r-pkg.org/badges/taxlist)](http://cran.rstudio.com/web/packages/taxlist/index.html)
+
+After a long time of conceptualization and development, `taxlist` is already
+available at **CRAN**.
+Thus you can install it in your **R** session:
+
+```{r install_cran, eval=FALSE}
+install.packages("taxlist", dependencies=TRUE)
+```
+
+To load the last version from **GitHub** you can still use:
+
+```{r install_github, eval=FALSE}
+library(devtools)
+install_github("kamapu/taxlist")
+```
+
+Examples of its use will be published in
+[Workshops](https://kamapu.github.io/workshops.html)
+
+</div>
+
+<br/>

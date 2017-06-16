@@ -11,7 +11,7 @@
 
 
 
-<title>Test Title</title>
+<title>News</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -67,7 +67,7 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="styles.css" type="text/css" />
+<link rel="stylesheet" href="styles_news.css" type="text/css" />
 
 </head>
 
@@ -222,21 +222,32 @@ $(document).ready(function () {
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-<div><img src="images/bar_home.png" width="1000px" align="top"></div>
+<div><img src="images/bar_news.png" width="1000px" align="top"></div>
 
 <div class="fluid-row" id="header">
 
 
 
-<h1 class="title toc-ignore">Test Title</h1>
+<h1 class="title toc-ignore">News</h1>
 
 </div>
 
 
-<div id="first-post-header" class="section level1">
-<h1>First Post Header</h1>
-<p>Some text goes here.</p>
+<p>Any important news will be published in this area. For comments or suggestions, use the <a href="https://github.com/kamapu/kamapu.github.io/issues">issues</a> site.</p>
+<p><br/></p>
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+<h1 id="package-taxlist-launched-in-cran">Package taxlist launched in CRAN</h1>
+<p><em>2017-06-14</em></p>
+<p><a href="https://cran.r-project.org/package=taxlist"><img src="http://www.r-pkg.org/badges/version/taxlist" alt="CRAN_Status_Badge" /></a> <a href="http://cran.rstudio.com/web/packages/taxlist/index.html"><img src="http://cranlogs.r-pkg.org/badges/taxlist" alt="CRAN_downloads" /></a></p>
+<p>After a long time of conceptualization and development, <code>taxlist</code> is already available at <strong>CRAN</strong>. Thus you can install it in your <strong>R</strong> session:</p>
+<pre class="r"><code>install.packages(&quot;taxlist&quot;, dependencies=TRUE)</code></pre>
+<p>To load the last version from <strong>GitHub</strong> you can still use:</p>
+<pre class="r"><code>library(devtools)
+install_github(&quot;kamapu/taxlist&quot;)</code></pre>
+<p>Examples of its use will be published in <a href="https://kamapu.github.io/workshops.html">Workshops</a></p>
 </div>
+<p><br/></p>
 
 <p>&copy; <b>M. Alvarez</b>
   <a href="mailto:kamapu78@gmail.com">
