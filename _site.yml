@@ -9,6 +9,8 @@ navbar:
       href: about.html
     - text: "Workshops"
       href: workshops.html
+    - text: "News"
+      href: news.html
   right:
     - icon: fa-university
       href: https://www.ipe.uni-bonn.de/pflanzenernaehrung/mitarbeiter/m_alvarez
