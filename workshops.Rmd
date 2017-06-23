@@ -19,7 +19,8 @@ border-radius: 15px">
 *2017-03-09 Freiburg im Breisgau, Germany*
 
 This workshop was offered during the
-[**16<sup>th</sup> Meeting on Vegetation Databases**](https://www.hswt.de/person/joerg-ewald/vegetationsdatenbanken.html).
+[**16<sup>th</sup> Meeting on Vegetation Databases**](https://www.hswt.de/person/joerg-ewald/vegetationsdatenbanken.html)
+and includes an introduction to the packages `taxlist` and `vegtable`.
 
 [**Link to the session**](workshops_freiburg_2017.html)
 
