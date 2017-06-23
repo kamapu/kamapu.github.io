@@ -7,4 +7,22 @@ output:
     css: styles_workshops.css
 ---
 
-Under construction.
+
+This site is a listing of past organized workshops.
+
+<br/>
+
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+# Introduction to the package vegtable
+*2017-03-09 Freiburg im Breisgau, Germany*
+
+This workshop was offered during the
+[**16<sup>th</sup> Meeting on Vegetation Databases**](https://www.hswt.de/person/joerg-ewald/vegetationsdatenbanken.html).
+
+[**Link to the session**](workshops_freiburg_2017.html)
+
+</div>
+
+<br/>
