@@ -8,7 +8,8 @@ output:
 ---
 
 
-This site is a listing of past organized workshops.
+Most of the activities listed here are workshops organized either in the context
+of research projects or as voluntary teaching activities.
 
 <br/>
 
@@ -22,7 +23,22 @@ This workshop was offered during the
 [**16<sup>th</sup> Meeting on Vegetation Databases**](https://www.hswt.de/person/joerg-ewald/vegetationsdatenbanken.html)
 and includes an introduction to the packages `taxlist` and `vegtable`.
 
-[**Link to the session**](workshops_freiburg_2017.html)
+[**Handout**](workshops_freiburg_2017.html)
+
+</div>
+
+<br/>
+
+<div style="background-color: #ffffcc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+# Quick introduction to R and the Work with GIS
+*2015-11-09 Addis Ababa, Ethiopia*
+
+Workshop about R applications dealing with spatial data (GIS) and organized
+within the activities of the project [**ARBONETH**](https://www.arboneth.com).
+
+[**Handout**](documents/RandGIS.pdf)
 
 </div>
 
