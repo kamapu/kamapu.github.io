@@ -13,7 +13,7 @@ of research projects or as voluntary teaching activities.
 
 <br/>
 
-<div style="background-color: #deefbc; text-align: left; padding: 10px;
+<div style="background-color: #ffe699; text-align: left; padding: 10px;
 border-radius: 15px">
 
 # Introduction to the package vegtable
@@ -24,6 +24,23 @@ This workshop was offered during the
 and includes an introduction to the packages `taxlist` and `vegtable`.
 
 [**Handout**](workshops_freiburg_2017.html)
+
+</div>
+
+<br/>
+
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+# Storage and analysis of vegetation data: a crash course
+*2016-11-18 Addis Ababa, Ethiopia*
+
+A very quick introduction on the use of relational models (relational databases)
+for the storage of vegetation data.
+This activity was organized in the context of the project
+[**ARBONETH**](https://www.arboneth.com).
+
+[**Handout**](documents/Handout_ARBONETH_2016.pdf)
 
 </div>
 
