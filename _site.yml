@@ -28,4 +28,4 @@ output:
     include:
       before_body: topbar_home.html
       after_body: footer.html
-    css: styles.css
+    css: styles_index.css
