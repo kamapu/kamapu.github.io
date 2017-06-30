@@ -5,43 +5,51 @@ title: "Welcome to my personal site!"
 This page introduces you to my activities as docent, researcher and developer.
 Maybe also some of my abilities as artist.
 
-Following is a listing of current and past projects:
+# Research Projects
+
+Research and teaching activities are focused on plant diversity and vegetation
+ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).
 
 <table>
 
 <tr>
-  <td><img src="images/Globe_logo.png" alt="" style="width:200px; height:auto;"></td>
+  <td><img src="images/Globe_logo.png" alt="" style="width:300px; height:auto;"></td>
   <td>
-  <b>GlobE-wetlands:</b>
+  <b>GlobE-wetlands -- reconciling future food production with environmental
+  protection: </b>
   
-  Wetlands, with year-round water availability, high resource base quality and
-  the potential to harvest several times per year present production hot-spots in
-  an otherwise degraded landscape.
+  An interdisciplinary project dealing with the effects of cropping activities
+  on seasonal wetlands.
+  While wetlands in sub-Saharan Africa are important sites for food production,
+  especially in semi-arid regions, cropping activities may also have negative
+  impacts on the integrity of agro-ecosystems.
   <a href="https://www.wetlands-africa.de">Link</a>
   </td>
 </tr>
 
 <tr>
-  <td><img src="images/RCR_logo.png" alt="" style="width:200px; height:auto;"></td>
+  <td><img src="images/RCR_logo.png" alt="" style="width:300px; height:auto;"></td>
   <td>
-  <b>RCR:</b>
+  <b>RCR --  resilience, collapse and reorganization in social-ecological
+  systems of African savannas:</b>
   
-  Wetlands, with year-round water availability, high resource base quality and
-  the potential to harvest several times per year present production hot-spots in
-  an otherwise degraded landscape.
-  <a href="https://www.wetlands-africa.de">Link</a>
+  Social systems and environment interact through coupling and regulation
+  processes in the bio-physical, political-institutional and symbolic-cultural
+  space.
+  Understanding such processes may allow decision makers to adopt strategies
+  suitables for avoiding collapse of socio-ecological systems (SES).
+  <a href="http://resilience-research.de">Link</a>
   </td>
 </tr>
 
 <tr>
-  <td><img src="images/Arboneth_logo.png" alt="" style="width:200px; height:auto;"></td>
+  <td><img src="images/Arboneth_logo.png" alt="" style="width:300px; height:auto;"></td>
   <td>
-  <b>ARBONETH:</b>
+  <b>ARBONETH --  the Ethiopian arboretum network:</b>
   
-  Wetlands, with year-round water availability, high resource base quality and
-  the potential to harvest several times per year present production hot-spots in
-  an otherwise degraded landscape.
-  <a href="https://www.wetlands-africa.de">Link</a>
+  Research and education project supporting ex-situ conservation of native trees
+  through the establishment of a network among Ethiopian arboretums.
+  <a href="https://www.arboneth.com">Link</a>
   </td>
 </tr>
 

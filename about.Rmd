@@ -4,7 +4,7 @@ output:
   html_document:
     include:
       before_body: topbar_about.html
-    css: styles_about.css
+    css: styles_index.css
 ---
 
 Under construction.
