@@ -1,5 +1,5 @@
 ---
-title: "About Miguel"
+title: "About me"
 output:
   html_document:
     include:
@@ -7,4 +7,31 @@ output:
     css: styles_index.css
 ---
 
-Under construction.
+<table>
+
+<tr>
+  <td><img src="images/Miguel_plantingtrees.jpg" alt="" style="width:1200px; height:auto;"></td>
+  <td>
+  <b>Miguel Alvarez, Dr. rer. nat.</b>
+  
+  I am <b>Research associate</b> at the
+  <a href="https://www.ipe.uni-bonn.de/">Plant Nutrition Group</a>,
+  University of Bonn, Germany.
+  My research activities are focused on plant diversity and vegetation ecology
+  in East African wetlands. Additionally, I dedicate some efforts to
+  synsystematic classification in diverse formations and in the management of
+  data stored in vegetation-plot databases. Some surveys have been also carried
+  out in Mediterranean and temperate Chile.
+  
+  This page is oriented to my services developing tools for handling
+  vegetation-plot data and diversity information.
+  
+  Although most the information presented here is related to my work, it does
+  not represent in any way the opinion of the University of Bonn.
+  </td>
+</tr>
+
+</table>
+
+
+<br/>
