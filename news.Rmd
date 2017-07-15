@@ -4,6 +4,7 @@ output:
   html_document:
     include:
       before_body: topbar_news.html
+      after_body: footer.html
     css: styles_news.css
 ---
 

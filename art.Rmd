@@ -1,0 +1,80 @@
+---
+title: "Art Gallery"
+output:
+  html_document:
+    include:
+      before_body: topbar_art.html
+    css: styles_art.css
+---
+
+<div class="gallery">
+  <a target="_top" href="gallery/Self_3.png">
+    <img src="gallery/Self_3.png">
+  </a>
+  <div class="desc">Self portrait for a GitHub profile.</div>
+</div>
+
+<div class="gallery">
+  <a target="_top" href="gallery/Baringo.jpg">
+    <img src="gallery/Baringo.jpg">
+  </a>
+  <div class="desc">Image resulted from spatial models around Lake Baringo, Kenya.</div>
+</div>
+
+<div class="gallery">
+  <a target="_top" href="gallery/ARBONETH.jpg">
+    <img src="gallery/ARBONETH.jpg">
+  </a>
+  <div class="desc">Slide prepared as closure for a workshop in Addis Ababa, Ethiopia.</div>
+</div>
+
+<div class="gallery">
+  <a target="_top" href="gallery/Self_1.jpg">
+    <img src="gallery/Self_1.jpg">
+  </a>
+  <div class="desc">Me taking a coffee in Las Cabras, Chile.</div>
+</div>
+
+<div class="gallery">
+  <a target="_top" href="gallery/Self_2.jpg">
+    <img src="gallery/Self_2.jpg">
+  </a>
+  <div class="desc">Another self portrait.</div>
+</div>
+
+<div class="gallery">
+  <a target="_top" href="gallery/Selfinblack_1.jpg">
+    <img src="gallery/Selfinblack_1.jpg">
+  </a>
+  <div class="desc">Me, black and sad.</div>
+</div>
+
+<div class="gallery">
+  <a target="_top" href="gallery/Selfinblack_2.jpg">
+    <img src="gallery/Selfinblack_2.jpg">
+  </a>
+  <div class="desc">Same as before.</div>
+</div>
+
+<div class="gallery">
+  <a target="_top" href="gallery/pokot_girl.jpg">
+    <img src="gallery/pokot_girl.jpg">
+  </a>
+  <div class="desc">A Pokot girl in Churo, Kenya.</div>
+</div>
+
+<div class="gallery">
+  <a target="_top" href="gallery/Wildebeest.jpg">
+    <img src="gallery/Wildebeest.jpg">
+  </a>
+  <div class="desc">Wildebeest.</div>
+</div>
+
+<div class="gallery">
+  <a target="_top" href="gallery/bees.png">
+    <img src="gallery/bees.png">
+  </a>
+  <div class="desc">Bees for Emilia.</div>
+</div>
+
+<br/>

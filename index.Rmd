@@ -1,5 +1,10 @@
 ---
 title: "Welcome to my personal site!"
+output:
+  html_document:
+    include:
+      before_body: topbar_home.html
+      after_body: footer.html
 ---
 
 This page introduces you to my activities as docent, researcher and developer.
