@@ -71,8 +71,8 @@ output:
 </div>
 
 <div class="gallery">
-  <a target="_top" href="gallery/bees.png">
-    <img src="gallery/bees.png">
+  <a target="_top" href="gallery/Bees.png">
+    <img src="gallery/Bees.png">
   </a>
   <div class="desc">Bees for Emilia.</div>
 </div>
