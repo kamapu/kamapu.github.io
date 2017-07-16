@@ -7,6 +7,10 @@ output:
     css: styles_art.css
 ---
 
+Here is a selection of some current and past artworks.
+Though most of them were produced just for fun, some of them had a "functional"
+task.
+
 <div class="gallery">
   <a target="_top" href="gallery/Self_3.png">
     <img src="gallery/Self_3.png">
