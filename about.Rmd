@@ -15,7 +15,7 @@ output:
   <td>
   <b>Miguel Alvarez, Dr. rer. nat.</b>
   
-  I am <b>Research associate</b> at the
+  I am <b>Research Associate</b> at the
   <a href="https://www.ipe.uni-bonn.de/">Plant Nutrition Group</a>,
   University of Bonn, Germany.
   My research activities are focused on plant diversity and vegetation ecology
@@ -29,6 +29,11 @@ output:
   
   Although most the information presented here is related to my work, it does
   not represent in any way the opinion of the University of Bonn.
+  
+  <a href="documents/CV_Miguel.pdf">Curriculum Vitae</a>
+  
+  <a href="documents/Publications_Miguel.pdf">Publication List</a>
+  
   </td>
 </tr>
 
