@@ -14,7 +14,7 @@ For comments or suggestions, use the
 
 <br/>
 
-<div style="background-color: #deefbc; text-align: left; padding: 10px;
+<div style="background-color: #d2d3dc; text-align: left; padding: 10px;
 border-radius: 15px">
 
 # Package vegtable is on CRAN
@@ -38,7 +38,7 @@ library(devtools)
 install_github("kamapu/vegtable")
 ```
 
-For examples on its applications, visit
+Examples of its applications are available at
 [https://kamapu.github.io/workshops_freiburg_2017.html](https://kamapu.github.io/workshops_freiburg_2017.html).
 
 </div>
