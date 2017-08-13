@@ -310,6 +310,12 @@ div.tocify {
   </a>
 </li>
 <li>
+  <a href="https://gis.stackexchange.com/users/80385/migue-lo?tab=profile">
+    <span class="fa fa-stack-overflow"></span>
+     
+  </a>
+</li>
+<li>
   <a href="https://www.linkedin.com/in/miguel-alvarez-49559b145">
     <span class="fa fa-linkedin"></span>
      
@@ -408,8 +414,14 @@ summary(Cyperus)</code></pre>
 <div id="using-turboveg-species-list" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> Using Turboveg species list</h3>
 <p>A direct import from a <strong>Turboveg</strong> database can be done using the function <code>tv2taxlist</code>. The installation of <code>vegtable</code> includes data published by <strong>Fujiwara et al. (2014)</strong> with vegetation plots collected in forest stands from Kenya.</p>
-<pre class="r"><code>library(vegtable)
-tv_home &lt;- file.path(path.package(&quot;vegtable&quot;), &quot;tv_data&quot;)
+<pre class="r"><code>library(vegtable)</code></pre>
+<pre><code>## This is vegtable 0.1.0</code></pre>
+<pre><code>## 
+## Attaching package: &#39;vegtable&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:base&#39;:
+## 
+##     transform</code></pre>
+<pre class="r"><code>tv_home &lt;- file.path(path.package(&quot;vegtable&quot;), &quot;tv_data&quot;)
 Fujiwara &lt;- tv2taxlist(&quot;Fujiwara_sp&quot;, tv_home)
 summary(Fujiwara)</code></pre>
 </div>
@@ -581,7 +593,7 @@ summary(Kenya_veg)</code></pre>
 ## db_name: Sweadataveg
 ## sp_list: Easplist
 ## dictionary: Swea
-## object size: 9316.5 Kb 
+## object size: 9317.7 Kb 
 ## validity: TRUE 
 ## 
 ## ## Content 
@@ -599,7 +611,7 @@ summary(Kenya_veg)</code></pre>
 ## db_name: Sweadataveg
 ## sp_list: Easplist
 ## dictionary: Swea
-## object size: 9316.5 Kb 
+## object size: 9317.7 Kb 
 ## validity: TRUE 
 ## 
 ## ## Content 
