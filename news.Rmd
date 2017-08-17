@@ -21,7 +21,7 @@ border-radius: 15px">
 *2017-08-08*
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/vegtable)](https://cran.r-project.org/package=vegtable)
-[![CRAN_downloads](http://cranlogs.r-pkg.org/badges/vegtable)](http://cran.rstudio.com/web/packages/vegtable/index.html)
+[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/vegtable)](http://cranlogs.r-pkg.org/badges/grand-total/vegtable)
 
 The package `vegtable` defines an object containing vegetation-plot data
 sets and many functions for handling these data.
@@ -53,7 +53,7 @@ border-radius: 15px">
 *2017-06-14*
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/taxlist)](https://cran.r-project.org/package=taxlist)
-[![CRAN_downloads](http://cranlogs.r-pkg.org/badges/taxlist)](http://cran.rstudio.com/web/packages/taxlist/index.html)
+[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/taxlist)](http://cranlogs.r-pkg.org/badges/grand-total/taxlist)
 
 After a long time of conceptualization and development, `taxlist` is already
 available at **CRAN**.
