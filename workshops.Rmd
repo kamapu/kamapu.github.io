@@ -14,6 +14,20 @@ of research projects or as voluntary teaching activities.
 
 <br/>
 
+<div style="background-color: #ceffff; text-align: left; padding: 10px;
+border-radius: 15px">
+
+<img src="images/Map_bar_v2.png" style="width:350px;">
+
+*2017-11-27 Haramaya, Ethiopia*
+
+Workshop about R applications dealing with spatial data (GIS) and organized
+within the activities of the project [**ARBONETH**](https://www.arboneth.com).
+
+</div>
+
+<br/>
+
 <div style="background-color: #ffe699; text-align: left; padding: 10px;
 border-radius: 15px">
 
