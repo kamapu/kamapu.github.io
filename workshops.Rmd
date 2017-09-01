@@ -24,6 +24,8 @@ border-radius: 15px">
 Workshop about R applications dealing with spatial data (GIS) and organized
 within the activities of the project [**ARBONETH**](https://www.arboneth.com).
 
+[**Preliminary Program**](documents/Program_ARBONETH_2017.pdf)
+
 </div>
 
 <br/>
