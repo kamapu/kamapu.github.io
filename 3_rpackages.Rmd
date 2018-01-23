@@ -1,0 +1,83 @@
+---
+title: "R packages"
+output:
+  html_document:
+    include:
+      before_body: 3_rpackages_topbar.html
+    css: 3_rpackages_style.css
+---
+
+A series of packages have been developed as experimental tools for data process
+and analysis.
+Though some of the created packages are developed for tasks specific to
+personal projects, they are freely available for public use.
+Feel free to use them and do not forget to provide your feedback.
+
+<br/>
+
+## Packages in CRAN
+
+
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### taxlist
+
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/taxlist)](https://cran.r-project.org/package=taxlist)
+[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/taxlist)](http://cranlogs.r-pkg.org/badges/grand-total/taxlist)
+
+This package provides an object class for containing taxonomic lists.
+Lists of taxa (e.g. plant species) may be a list of accepted names but can
+optionally contain synonyms, taxonomic ranks, parent-child relationships, taxon
+traits, etc.
+
+The object `taxlist` attempts to validate the congruency of information
+contained in taxonomic lists and provides several functions for the
+manipulation of objects belonging to this class.
+
+**in CRAN**
+[https://CRAN.R-project.org/package=taxlist](https://CRAN.R-project.org/package=taxlist)
+
+**in GitHub**
+[https://github.com/kamapu/taxlist](https://github.com/kamapu/taxlist)
+
+</div>
+
+<br/>
+
+
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### vegtable
+
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/vegtable)](https://cran.r-project.org/package=vegtable)
+[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/vegtable)](http://cranlogs.r-pkg.org/badges/grand-total/vegtable)
+
+This package provides an object class for containing taxonomic lists. Lists of
+taxa (e.g. plant species) may be a list of accepted names but can optionally
+contain synonyms, taxonomic ranks, parent-child relationships, taxon traits,
+etc.
+
+The object `taxlist` attempts to validate the congruency of information
+contained in taxonomic lists and provides several functions for the manipulation
+of objects belonging to this class.
+
+**in CRAN**
+[https://CRAN.R-project.org/package=vegtable](https://CRAN.R-project.org/package=vegtable)
+
+**in GitHub**
+[https://github.com/kamapu/vegtable](https://github.com/kamapu/vegtable)
+
+</div>
+
+<br/>
+# Packages out of CRAN
+
+Lexiguel
+
+vegtable 2
+
+taxsearch
+
+conosur

@@ -3,7 +3,7 @@ title: "Welcome to my personal site!"
 output:
   html_document:
     include:
-      before_body: topbar_home.html
+      before_body: index_topbar.html
       after_body: footer.html
 ---
 

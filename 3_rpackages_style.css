@@ -1,0 +1,9 @@
+body {
+  background-color: #d9d9d9;
+}
+
+br {
+  content: "";
+  display: block;
+  margin: 10px;
+}

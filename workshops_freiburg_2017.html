@@ -25,8 +25,8 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -36,10 +36,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -278,19 +280,19 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Home</a>
+  <a href="1_about.html">About</a>
 </li>
 <li>
-  <a href="about.html">About</a>
+  <a href="2_workshops.html">Workshops</a>
 </li>
 <li>
-  <a href="workshops.html">Workshops</a>
+  <a href="3_rpackages.html">R packages</a>
 </li>
 <li>
-  <a href="art.html">Art Gallery</a>
+  <a href="4_news.html">News</a>
 </li>
 <li>
-  <a href="news.html">News</a>
+  <a href="5_art.html">Gallery</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -409,6 +411,7 @@ summary(Cyperus)</code></pre>
 ## number of names: 95 
 ## number of concepts: 42 
 ## trait entries: 0 
+## number of trait variables: 0 
 ## reference entries: 0</code></pre>
 </div>
 <div id="using-turboveg-species-list" class="section level3">
@@ -430,6 +433,7 @@ summary(Fujiwara)</code></pre>
 ## number of names: 95 
 ## number of concepts: 42 
 ## trait entries: 0 
+## number of trait variables: 0 
 ## reference entries: 0</code></pre>
 <p>Note that this option also executes a validity check of the object, as done by the function <code>validObject</code>.</p>
 <p>The second way is getting information on a particular concept by adding it concept ID in the second argument of the function.</p>
@@ -490,6 +494,7 @@ summary(Phraaus, &quot;all&quot;)</code></pre>
 ## number of names: 5337 
 ## number of concepts: 3935 
 ## trait entries: 51 
+## number of trait variables: 1 
 ## reference entries: 2 
 ## 
 ## concepts with parents: 3745 
@@ -538,7 +543,7 @@ summary(Papyrus, &quot;all&quot;)</code></pre>
 ## parent: 54607 
 ## 
 ## # accepted name: 
-## 53660 Cyperus  
+## 53660 Cyperus NA 
 ## ------------------------------ 
 ## concept ID: 54607 
 ## view ID: 2 
@@ -546,7 +551,7 @@ summary(Papyrus, &quot;all&quot;)</code></pre>
 ## parent: none 
 ## 
 ## # accepted name: 
-## 54607 Cyperaceae  
+## 54607 Cyperaceae NA 
 ## ------------------------------</code></pre>
 </div>
 </div>
@@ -587,7 +592,7 @@ summary(Kenya_veg)</code></pre>
 ## db_name: Sweadataveg
 ## sp_list: Easplist
 ## dictionary: Swea
-## object size: 9316.5 Kb 
+## object size: 9317.8 Kb 
 ## validity: TRUE 
 ## 
 ## ## Content 
@@ -595,7 +600,7 @@ summary(Kenya_veg)</code></pre>
 ## variables in header: 34 
 ## number of relations: 3 
 ## 
-## ## Species List 
+## ## Taxonomic List 
 ## taxon names: 2302 
 ## taxon concepts: 1573 
 ## validity: TRUE</code></pre>
@@ -605,7 +610,7 @@ summary(Kenya_veg)</code></pre>
 ## db_name: Sweadataveg
 ## sp_list: Easplist
 ## dictionary: Swea
-## object size: 9316.5 Kb 
+## object size: 9317.8 Kb 
 ## validity: TRUE 
 ## 
 ## ## Content 
@@ -613,7 +618,7 @@ summary(Kenya_veg)</code></pre>
 ## variables in header: 34 
 ## number of relations: 3 
 ## 
-## ## Species List 
+## ## Taxonomic List 
 ## taxon names: 2302 
 ## taxon concepts: 1573 
 ## validity: TRUE 
@@ -677,7 +682,7 @@ veg_relation(Kenya_veg, &quot;REFERENCE&quot;)[,1:3]</code></pre>
 pasture &lt;- subset(dune_veg, Use == &quot;Pasture&quot;)
 summary(dune_veg)</code></pre>
 <pre><code>## ## Metadata 
-## object size: 20.4 Kb 
+## object size: 20.5 Kb 
 ## validity: TRUE 
 ## 
 ## ## Content 
@@ -685,13 +690,13 @@ summary(dune_veg)</code></pre>
 ## variables in header: 6 
 ## number of relations: 0 
 ## 
-## ## Species List 
+## ## Taxonomic List 
 ## taxon names: 30 
 ## taxon concepts: 30 
 ## validity: TRUE</code></pre>
 <pre class="r"><code>summary(pasture)</code></pre>
 <pre><code>## ## Metadata 
-## object size: 17.3 Kb 
+## object size: 17.7 Kb 
 ## validity: TRUE 
 ## 
 ## ## Content 
@@ -699,9 +704,9 @@ summary(dune_veg)</code></pre>
 ## variables in header: 6 
 ## number of relations: 0 
 ## 
-## ## Species List 
-## taxon names: 23 
-## taxon concepts: 23 
+## ## Taxonomic List 
+## taxon names: 30 
+## taxon concepts: 30 
 ## validity: TRUE</code></pre>
 </div>
 <div id="cross-tables" class="section level2">
@@ -743,7 +748,7 @@ Fujiwara &lt;- tv2vegtable(&quot;Fujiwara_2014&quot;, tv_home)</code></pre>
 ## db_name: Fujiwara_2014
 ## sp_list: Fujiwara_sp
 ## dictionary: Swea
-## object size: 356.3 Kb 
+## object size: 356.5 Kb 
 ## validity: TRUE 
 ## 
 ## ## Content 
@@ -751,7 +756,7 @@ Fujiwara &lt;- tv2vegtable(&quot;Fujiwara_2014&quot;, tv_home)</code></pre>
 ## variables in header: 29 
 ## number of relations: 2 
 ## 
-## ## Species List 
+## ## Taxonomic List 
 ## taxon names: 301 
 ## taxon concepts: 254 
 ## validity: TRUE</code></pre>
