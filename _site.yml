@@ -11,7 +11,7 @@ navbar:
       href: 3_rpackages.html
     - text: "News"
       href: 4_news.html
-    - text: "Gallery"
+    - text: "Galleries"
       href: 5_art.html
   right:
     - icon: fa-university

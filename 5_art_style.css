@@ -4,6 +4,7 @@
 
 body {
     background-image: url("gallery/WondoGenet_bg.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachement: fixed;
     padding: 20px;
