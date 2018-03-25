@@ -9,8 +9,6 @@ output:
 ---
 
 Any important news will be published in this area.
-For comments or suggestions, use the
-[issues](https://github.com/kamapu/kamapu.github.io/issues) site.
 
 <br/>
 
