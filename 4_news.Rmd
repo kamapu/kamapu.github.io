@@ -37,7 +37,7 @@ install_github("kamapu/vegtable", build_vignettes=TRUE)
 ```
 
 Examples of its applications are available at
-[https://kamapu.github.io/workshops_freiburg_2017.html](https://kamapu.github.io/workshops_freiburg_2017.html).
+[https://kamapu.github.io/documents/workshops_freiburg_2017.html](https://kamapu.github.io/documents/workshops_freiburg_2017.html).
 
 </div>
 
