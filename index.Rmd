@@ -27,6 +27,19 @@ ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).
 <table>
 
 <tr>
+  <td><img src="images/FutureAfrica_logo.png" alt="" style="width:300px; height:auto;"></td>
+  <td>
+  <b>Future Rural Africa -- Future-making and social-ecological transformation: </b>
+  
+  Evaluating expectations and probabilities in future-making from different
+  perspectives, including social and natural sciences.
+  One of the focus in the consortium is related to the importance of
+  **invasive plants** on the ecology and management of rangelands in Kenya.
+  <a href="http://www.futureruralafrica.de">Link</a>
+  </td>
+</tr>
+
+<tr>
   <td><img src="images/Globe_logo.png" alt="" style="width:300px; height:auto;"></td>
   <td>
   <b>GlobE-wetlands -- reconciling future food production with environmental
