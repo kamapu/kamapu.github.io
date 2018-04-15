@@ -14,6 +14,24 @@ of research projects or as voluntary teaching activities.
 
 <br/>
 
+<div style="background-color: #ffffcc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+# Advanced Geospatial Analytics for Resource Assessment and Resilience
+
+*2018-03-20 Kampala, Uganda*
+
+Workshop organized at the [Makerere University](https://www.mak.ac.ug) in
+Kampala, Uganda, and founded by the German Academic Exchange Service
+([DAAD](https://www.daad.de/en)).
+
+[**Program**](documents/Program_Uganda_2018.pdf)
+
+</div>
+
+
+<br/>
+
 <div style="background-color: #ceffff; text-align: left; padding: 10px;
 border-radius: 15px">
 
