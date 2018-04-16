@@ -11,74 +11,10 @@ output:
 *2018-03-09* **[Amazing Pictures from the GlobE-wetlands project
 ](https://photos.google.com/share/AF1QipOkR46_z-5CmhLalP3ckv_rck3-4sCYDz4NNWSGgTDdY1K4e7-wH9MCGUSfAgUSuQ?key=eklJUmhFT05ORHdUdVFHUzJhcVE2R3BwTEI5YUxn)**
 
-*2018-01-06* **[Floogin in Troisdorf-Bergheim,
+*2018-01-06* **[Flooding in Troisdorf-Bergheim,
 Germany](https://photos.google.com/share/AF1QipPr8y7V3CbaYCzMXPqQYagYBBMNjbxy3bF8--ZYM7LyhYJ41Ul8LwTjdJrZaZ8NTA?key=c3NNTWxKaHB5S2hCZHBHVXdjbVFHc1hDTDktdjdR)**
 
-<br/>
-
-Old Posts (to be edited!)
-
-<br/>
-
-<div style="background-color: #d2d3dc; text-align: left; padding: 10px;
-border-radius: 15px">
-
-# Package vegtable is on CRAN
-*2017-08-08*
-
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/vegtable)](https://cran.r-project.org/package=vegtable)
-[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/vegtable)](http://cranlogs.r-pkg.org/badges/grand-total/vegtable)
-
-The package `vegtable` defines an object containing vegetation-plot data
-sets and many functions for handling these data.
-You can install it in your **R** session:
-
-```{r install_vegtable_cran, eval=FALSE}
-install.packages("vegtable", dependencies=TRUE)
-```
-
-To load the last version from **GitHub** you can still use:
-
-```{r install_vegtable_github, eval=FALSE}
-library(devtools)
-install_github("kamapu/vegtable", build_vignettes=TRUE)
-```
-
-Examples of its applications are available at
-[https://kamapu.github.io/documents/workshops_freiburg_2017.html](https://kamapu.github.io/documents/workshops_freiburg_2017.html).
-
-</div>
-
-
-<br/>
-
-<div style="background-color: #deefbc; text-align: left; padding: 10px;
-border-radius: 15px">
-
-# Package taxlist launched in CRAN
-*2017-06-14*
-
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/taxlist)](https://cran.r-project.org/package=taxlist)
-[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/taxlist)](http://cranlogs.r-pkg.org/badges/grand-total/taxlist)
-
-After a long time of conceptualization and development, `taxlist` is already
-available at **CRAN**.
-Thus you can install it in your **R** session:
-
-```{r install_cran, eval=FALSE}
-install.packages("taxlist", dependencies=TRUE)
-```
-
-To load the last version from **GitHub** you can still use:
-
-```{r install_github, eval=FALSE}
-library(devtools)
-install_github("kamapu/taxlist", build_vignettes=TRUE)
-```
-
-Examples of its use will be published in
-[Workshops](https://kamapu.github.io/workshops.html)
-
-</div>
+*2017-03-09* **[Introduction to the package
+vegtable](documents/workshops_freiburg_2017.html)**
 
 <br/>
