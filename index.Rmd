@@ -35,26 +35,26 @@ ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).
 <tr>
   <td><img src="images/Globe_logo.png" alt="" style="width:300px; height:auto;"></td>
   <td>
-  <b>GlobE-wetlands -- reconciling future food production with environmental
-  protection: </b>
+  **GlobE-wetlands -- reconciling future food production with environmental
+  protection:**
   
   An interdisciplinary project dealing with the effects of cropping activities
   on seasonal wetlands.
   While wetlands in sub-Saharan Africa are important sites for food production,
   especially in semi-arid regions, cropping activities may also have negative
   impacts on the integrity of agro-ecosystems.
-  <a href="https://www.wetlands-africa.de">Link</a>
+  [Link](https://www.wetlands-africa.de)
   </td>
 </tr>
 
 <tr>
   <td><img src="images/Arboneth_logo.png" alt="" style="width:300px; height:auto;"></td>
   <td>
-  <b>ARBONETH --  the Ethiopian arboretum network:</b>
+  **ARBONETH --  the Ethiopian arboretum network:**
   
   Research and education project supporting ex-situ conservation of native trees
   through the establishment of a network among Ethiopian arboretums.
-  <a href="https://www.arboneth.com">Link</a>
+  [Link](https://www.arboneth.com)
   </td>
 </tr>
 
@@ -69,14 +69,38 @@ ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).
 <tr>
   <td><img src="images/RCR_logo.png" alt="" style="width:300px; height:auto;"></td>
   <td>
-  <b>RCR --  resilience, collapse and reorganization in social-ecological
-  systems of African savannas:</b>
+  **RCR --  resilience, collapse and reorganization in social-ecological
+  systems of African savannas:**
   
   Social systems and environment interact through coupling and regulation
   processes in the bio-physical, political-institutional and symbolic-cultural
   space.   Understanding such processes may allow decision makers to adopt
-strategies   suitables for avoiding collapse of socio-ecological systems (SES).
-  <a href="http://resilience-research.de">Link</a>
+  strategies   suitables for avoiding collapse of socio-ecological systems
+  (SES).
+  [Link](http://resilience-research.de)
+  </td>
+</tr>
+
+<tr>
+  <td><img src="images/SWEA_logo.png" alt="" style="width:300px; height:auto;"></td>
+  <td>
+  **SWEA -- Agricultural use and vulnerability of small wetlands in East
+  Africa:**
+  
+  Effects of cropping activities on the integrity and productivity of small
+  wetlands in Kenya and Tanzania.
+  [Link](https://www.ipe.uni-bonn.de/verbundprojekte/wetland/swea)
+  </td>
+</tr>
+
+<tr>
+  <td><img src="images/Impetus_logo.png" alt="" style="width:300px; height:auto;"></td>
+  <td>
+  **IMPETUS -- An integrated approach to the efficient management of scarce
+  water resources in West Africa:**
+  
+  Sustainable management of water resources in Benin and Morocco.
+  [Link](http://www.impetus.uni-koeln.de/en/project.html)
   </td>
 </tr>
 
