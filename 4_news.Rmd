@@ -8,6 +8,9 @@ output:
     css: 4_news_style.css
 ---
 
+*2018-05-02* **[The taxlist package: managing plant taxonomic lists in
+R](https://doi.org/10.3897/BDJ.6.e23635)**
+
 *2018-04-24* **[List of GIS repositories](documents/GIS_Repositories.pdf)**
 
 *2018-03-09* **[Amazing Pictures from the GlobE-wetlands project
