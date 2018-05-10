@@ -8,6 +8,12 @@ output:
     css: 4_news_style.css
 ---
 
+*2018-05-10* **[vegtable v0.1.2
+released](https://github.com/kamapu/vegtable/releases/tag/v0.1.2)**
+
+*2018-05-08* **[taxlist v0.1.4
+released](https://github.com/kamapu/taxlist/releases/tag/v0.1.4)**
+
 *2018-05-02* **[The taxlist package: managing plant taxonomic lists in
 R](https://doi.org/10.3897/BDJ.6.e23635)**
 
