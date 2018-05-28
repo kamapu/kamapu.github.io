@@ -1516,8 +1516,8 @@ div.tocify {
     &quot;vegan&quot;, &quot;xlsx&quot;), dependencies=TRUE)</code></pre>
 <p>This session will focus on the use of two packages that use <a href="https://github.com/">GitHub</a> as repository for sharing and developmen. The package <a href="https://github.com/kamapu/taxlist">taxlist</a> processes taxonomic lists that may be connected to biodiversity information (e.g. vegetation relevés), while the package <a href="https://github.com/kamapu/vegtable">vegtable</a> has a similar task but handling vegetation-plot records. Since <code>vegtable</code> is depending on <code>taxlist</code>, both packages should be installed and updated for this session:</p>
 <pre class="r"><code>library(devtools)
-install_github(&quot;kamapu/taxlist&quot;)
-install_github(&quot;kamapu/vegtable&quot;)</code></pre>
+install_github(&quot;kamapu/taxlist&quot;, build_vignette=TRUE)
+install_github(&quot;kamapu/vegtable&quot;, build_vignette=TRUE)</code></pre>
 </div>
 <div id="documents-and-data-sets" class="section level2">
 <h2><span class="header-section-number">1.2</span> Documents and data sets</h2>
@@ -1558,7 +1558,7 @@ str(Cyperus)</code></pre>
 <p>Additionally the functions require a logical vector indicating, which of those names should be considered as synonyms or accepted names for its respective concept. This information is provided by the inverse value of the column <code>SYNONYM</code> in <strong>Turboveg</strong>.</p>
 <pre class="r"><code>Cyperus &lt;- df2taxlist(Cyperus, !Cyperus$SYNONYM)
 summary(Cyperus)</code></pre>
-<pre><code>## object size: 29.7 Kb 
+<pre><code>## object size: 32.6 Kb 
 ## validation of 'taxlist' object: TRUE 
 ## 
 ## number of names: 95 
@@ -1580,7 +1580,7 @@ summary(Fujiwara)</code></pre>
 <h2><span class="header-section-number">2.2</span> Summary displays</h2>
 <p>For <code>taxlist</code> objects there are basically two ways for displaying summaries. The first way is just ot apply the function <code>summary</code> to a <code>taxlist</code> object:</p>
 <pre class="r"><code>summary(Cyperus)</code></pre>
-<pre><code>## object size: 29.7 Kb 
+<pre><code>## object size: 32.6 Kb 
 ## validation of 'taxlist' object: TRUE 
 ## 
 ## number of names: 95 
@@ -1589,8 +1589,8 @@ summary(Fujiwara)</code></pre>
 ## number of trait variables: 0 
 ## reference entries: 0</code></pre>
 <p>Note that this option also executes a validity check of the object, as done by the function <code>validObject</code>.</p>
-<p>The second way is getting information on a particular concept by adding it concept ID in the second argument of the function.</p>
-<pre class="r"><code>summary(Cyperus, 197)</code></pre>
+<p>The second way is getting information on a particular concept by adding it concept ID or a taxon usage name as second argument in the function.</p>
+<pre class="r"><code>summary(Cyperus, &quot;Cyperus dives&quot;)</code></pre>
 <pre><code>## ------------------------------ 
 ## concept ID: 197 
 ## view ID: none 
@@ -1620,9 +1620,15 @@ summary(Easplist)</code></pre>
 <h2><span class="header-section-number">2.4</span> Access to slots</h2>
 <p>The common ways to access to the content of slots in <code>S4</code> objects are either using the function <code>slot(object, name)</code> or the symbol <code>@</code> (i.e. <code>object@name</code>). Additional functions, which are specific for <code>taxlist</code> objects are <code>taxon_names</code>, <code>taxon_relations</code>, <code>taxon_traits</code> and <code>taxon_views</code> (see the help documentation).</p>
 <p>Additionally, it is possible to use the methods <code>$</code> and <code>[</code> , the first for access to information in the slot <code>taxonTraits</code>, while the second can be also used for other slots in the object.</p>
-<pre class="r"><code>summary(as.factor(Easplist$LifeForm))</code></pre>
-<pre><code>## Ch  H Hy  T 
-##  5  7  3 36</code></pre>
+<pre class="r"><code>summary(as.factor(Easplist$lf_behn_2018))</code></pre>
+<pre><code>##   acropleustophyte        chamaephyte     climbing_plant 
+##                  8                 25                 25 
+## facultative_annual    obligate_annual       phanerophyte 
+##                 20                114                 26 
+##   pleustohelophyte         reed_plant      reptant_plant 
+##                  8                 14                 19 
+##      tussock_plant 
+##                 52</code></pre>
 </div>
 <div id="subsets" class="section level2">
 <h2><span class="header-section-number">2.5</span> Subsets</h2>
@@ -1641,25 +1647,26 @@ summary(Phraaus, &quot;all&quot;)</code></pre>
 <h2><span class="header-section-number">2.6</span> Parent-child relationships</h2>
 <p>Objects belonging to the class <code>taxlist</code> can optionally content parent-child relationships and taxonomic levels. Such information is also included in the data <code>Easplist</code>, as shown in the summary output.</p>
 <pre class="r"><code>summary(Easplist)</code></pre>
-<pre><code>## object size: 739.8 Kb 
+<pre><code>## object size: 1451.5 Kb 
 ## validation of 'taxlist' object: TRUE 
 ## 
-## number of names: 5337 
-## number of concepts: 3935 
-## trait entries: 51 
+## number of names: 5396 
+## number of concepts: 3887 
+## trait entries: 311 
 ## number of trait variables: 1 
-## reference entries: 2 
+## reference entries: 3 
 ## 
-## concepts with parents: 3745 
-## concepts with children: 1214 
+## concepts with parents: 3698 
+## concepts with children: 1343 
 ## 
-## hierarchical levels: form &lt; variety &lt; subspecies &lt; species &lt; genus &lt; family 
-## number of concepts in level form: 1
-## number of concepts in level variety: 110
-## number of concepts in level subspecies: 81
-## number of concepts in level species: 2528
-## number of concepts in level genus: 1025
-## number of concepts in level family: 189</code></pre>
+## hierarchical levels: form &lt; variety &lt; subspecies &lt; species &lt; complex &lt; genus &lt; family 
+## number of concepts in level form: 2
+## number of concepts in level variety: 95
+## number of concepts in level subspecies: 71
+## number of concepts in level species: 2521
+## number of concepts in level complex: 1
+## number of concepts in level genus: 1011
+## number of concepts in level family: 186</code></pre>
 <p>Note that such information can get lost once applied <code>subset</code>, since the respective parents or children from the original data set are not anymore in the subset. May you like to recover parents and children, you can use the functions <code>get_paretns</code> or <code>get_children</code>, respectively.</p>
 <pre class="r"><code>summary(Papyrus, &quot;all&quot;)</code></pre>
 <pre><code>## ------------------------------ 
@@ -1672,8 +1679,8 @@ summary(Phraaus, &quot;all&quot;)</code></pre>
 ## 206 Cyperus papyrus L. 
 ## 
 ## # synonyms (2): 
-## 52612 Cyperus papyrus subsp. antiquorum (Willd.) Chiov. 
-## 52613 Cyperus papyrus subsp. nyassicus Chiov. 
+## 52612 Cyperus papyrus ssp. antiquorum (Willd.) Chiov. 
+## 52613 Cyperus papyrus ssp. nyassicus Chiov. 
 ## ------------------------------</code></pre>
 <pre class="r"><code>Papyrus &lt;- get_parents(Easplist, Papyrus)
 summary(Papyrus, &quot;all&quot;)</code></pre>
@@ -1681,30 +1688,30 @@ summary(Papyrus, &quot;all&quot;)</code></pre>
 ## concept ID: 206 
 ## view ID: 1 
 ## level: species 
-## parent: 53660 
+## parent: 54853 Cyperus L. 
 ## 
 ## # accepted name: 
 ## 206 Cyperus papyrus L. 
 ## 
 ## # synonyms (2): 
-## 52612 Cyperus papyrus subsp. antiquorum (Willd.) Chiov. 
-## 52613 Cyperus papyrus subsp. nyassicus Chiov. 
+## 52612 Cyperus papyrus ssp. antiquorum (Willd.) Chiov. 
+## 52613 Cyperus papyrus ssp. nyassicus Chiov. 
 ## ------------------------------ 
-## concept ID: 53660 
+## concept ID: 54853 
 ## view ID: 2 
 ## level: genus 
-## parent: 54607 
+## parent: 55959 Cyperaceae NA 
 ## 
 ## # accepted name: 
-## 53660 Cyperus NA 
+## 54855 Cyperus L. 
 ## ------------------------------ 
-## concept ID: 54607 
-## view ID: 2 
+## concept ID: 55959 
+## view ID: 3 
 ## level: family 
 ## parent: none 
 ## 
 ## # accepted name: 
-## 54607 Cyperaceae NA 
+## 55961 Cyperaceae NA 
 ## ------------------------------</code></pre>
 </div>
 </div>
@@ -1745,7 +1752,7 @@ summary(Kenya_veg)</code></pre>
 ## db_name: Sweadataveg
 ## sp_list: Easplist
 ## dictionary: Swea
-## object size: 9317.8 Kb 
+## object size: 10040.6 Kb 
 ## validity: TRUE 
 ## 
 ## ## Content 
@@ -1763,7 +1770,7 @@ summary(Kenya_veg)</code></pre>
 ## db_name: Sweadataveg
 ## sp_list: Easplist
 ## dictionary: Swea
-## object size: 9317.8 Kb 
+## object size: 10040.6 Kb 
 ## validity: TRUE 
 ## 
 ## ## Content 
@@ -1835,7 +1842,7 @@ veg_relation(Kenya_veg, &quot;REFERENCE&quot;)[,1:3]</code></pre>
 pasture &lt;- subset(dune_veg, Use == &quot;Pasture&quot;)
 summary(dune_veg)</code></pre>
 <pre><code>## ## Metadata 
-## object size: 20.5 Kb 
+## object size: 22.1 Kb 
 ## validity: TRUE 
 ## 
 ## ## Content 
@@ -1849,7 +1856,7 @@ summary(dune_veg)</code></pre>
 ## validity: TRUE</code></pre>
 <pre class="r"><code>summary(pasture)</code></pre>
 <pre><code>## ## Metadata 
-## object size: 17.7 Kb 
+## object size: 19.2 Kb 
 ## validity: TRUE 
 ## 
 ## ## Content 
@@ -1901,7 +1908,7 @@ Fujiwara &lt;- tv2vegtable(&quot;Fujiwara_2014&quot;, tv_home)</code></pre>
 ## db_name: Fujiwara_2014
 ## sp_list: Fujiwara_sp
 ## dictionary: Swea
-## object size: 356.5 Kb 
+## object size: 392.8 Kb 
 ## validity: TRUE 
 ## 
 ## ## Content 
