@@ -12,16 +12,18 @@ output:
 <div style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
 
-### vegtalbe v0.1.2 released
+### vegtable v0.1.2 released
 
 *2018-05-10*
 
 This release was published in
 [**GitHub**](https://github.com/kamapu/vegtable/releases/tag/v0.1.2) and
 corresponds to the homonymous version at
-[CRAN](https://cran.r-project.org/package=vegtable).
+[**CRAN**](https://cran.r-project.org/package=vegtable).
 
 </div>
+
+<br/>
 
 <!-- TODO +++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 *2018-05-08* **[taxlist v0.1.4
