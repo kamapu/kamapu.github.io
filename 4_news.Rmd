@@ -8,9 +8,22 @@ output:
     css: 4_news_style.css
 ---
 
-<pre>*2018-05-10*   **[vegtable v0.1.2
-released](https://github.com/kamapu/vegtable/releases/tag/v0.1.2)**</pre>
+<!-- vegtable v0.1.2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
 
+### vegtalbe v0.1.2 released
+
+*2018-05-10*
+
+This release was published in
+[**GitHub**](https://github.com/kamapu/vegtable/releases/tag/v0.1.2) and
+corresponds to the homonymous version at
+[CRAN](https://cran.r-project.org/package=vegtable).
+
+</div>
+
+<!-- TODO +++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 *2018-05-08* **[taxlist v0.1.4
 released](https://github.com/kamapu/taxlist/releases/tag/v0.1.4)**
 
