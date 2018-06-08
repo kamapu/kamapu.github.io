@@ -9,7 +9,7 @@ navbar:
       href: 2_workshops.html
     - text: "R packages"
       href: 3_rpackages.html
-    - text: "News"
+    - text: "Blog"
       href: 4_news.html
     - text: "Galleries"
       href: 5_art.html

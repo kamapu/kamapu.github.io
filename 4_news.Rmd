@@ -1,5 +1,5 @@
 ---
-title: "News"
+title: "Blog"
 output:
   html_document:
     include:
@@ -8,8 +8,30 @@ output:
     css: 4_news_style.css
 ---
 
+<!-- re-launching cropgrowth +++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### Re-launching cropgrowth
+
+*2018-06-09*
+
+[![Travis Build Status](https://travis-ci.org/kamapu/cropgrowth.svg?branch=master)](https://travis-ci.org/kamapu/cropgrowth)
+
+Once upon the time I was working on growth models and wishing, I could do
+everything by myself, just with the help of **R**.
+But I was young and too na&iuml;ve.
+
+Anyway, what I did, I'm doing it again and the result is `cropgrowth`.
+Visit the site at [**GitHub**](https://github.com/kamapu/cropgrowth).
+
+</div>
+
+<br/>
+
+
 <!-- vegtable v0.1.2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<div style="background-color: #deefbc; text-align: left; padding: 10px;
+<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
 border-radius: 15px">
 
 ### vegtable v0.1.2 released
