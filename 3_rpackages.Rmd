@@ -84,7 +84,7 @@ of objects belonging to this class.
 
 # Packages out of CRAN
 
-
+<!-- Lexiguel ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <div style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
 
@@ -99,6 +99,24 @@ A mingle-mangle of functions for R, most of them related to own publications.
 
 <br/>
 
+<!-- cropgrowth ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### cropgrowth
+
+[![Travis Build Status](https://travis-ci.org/kamapu/cropgrowth.svg?branch=master)](https://travis-ci.org/kamapu/cropgrowth)
+
+Tools for the analysis and display of results coming from growth models.
+
+**in GitHub**
+[https://github.com/kamapu/cropgrowth](https://github.com/kamapu/cropgrowth)
+
+</div>
+
+<br/>
+
+<!-- vegtable2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <div style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
 
@@ -113,6 +131,7 @@ Functions customized for the work with our own data sets.
 
 <br/>
 
+<!-- taxsearch +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <div style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
 
@@ -127,6 +146,7 @@ Some functions for search in specimens information in Tropicos.
 
 <br/>
 
+<!-- conosur +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <div style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
 
