@@ -1,0 +1,38 @@
+---
+title: "Databases"
+output:
+  html_document:
+    include:
+      before_body: topnfoot/databases_topbar.html
+      after_body: topnfoot/footer.html
+    css: css/databases_style.css
+---
+
+Two main areas have been the focus of data collection in our working group,
+namely the western side of South America and the central part of Africa.
+
+<br/>
+
+<!-- SWEA-Dataveg ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### SWEA-Dataveg
+
+A database for vegetation plots in East Africa.
+[Read more...](swea_dataveg.html)
+
+</div>
+
+<br/>
+
+<!-- sudamerica ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### sudamerica
+
+Vegetation of western South America.
+[Read more...](sudamerica.html)
+
+</div>

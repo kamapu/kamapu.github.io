@@ -1,0 +1,102 @@
+---
+title: "Blog"
+output:
+  html_document:
+    include:
+      before_body: topnfoot/news_topbar.html
+      after_body: topnfoot/footer.html
+    css: css/news_style.css
+---
+
+<!-- releases for vegtable and taxlist +++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### New releases for taxlist and vegtable
+
+*2018-06-30*
+
+[`taxlist v0.1.5`](https://cran.r-project.org/package=taxlist) (see it on
+[**GitHub**](https://github.com/kamapu/taxlist)) is released.
+Among other new functions, you should test `print_name`.
+
+For compatibility,
+[`vegtable v0.1.3`](https://cran.r-project.org/package=vegtable) was
+uploaded (see its site in [**GitHub**](https://github.com/kamapu/vegtable)).
+
+</div>
+
+<br/>
+
+<!-- re-launching cropgrowth +++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### Re-launching cropgrowth
+
+*2018-06-09*
+
+[![Travis Build Status](https://travis-ci.org/kamapu/cropgrowth.svg?branch=master)](https://travis-ci.org/kamapu/cropgrowth)
+
+Once upon the time I was working on growth models and wishing, I could do
+everything by myself, just with the help of **R**.
+But I was young and too na&iuml;ve.
+
+Anyway, what I did, I'm doing it again and the result is `cropgrowth`.
+Visit the site at [**GitHub**](https://github.com/kamapu/cropgrowth).
+
+</div>
+
+<br/>
+
+<!-- vegtable v0.1.2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### vegtable v0.1.2 released
+
+*2018-05-10*
+
+This release was published in
+[**GitHub**](https://github.com/kamapu/vegtable/releases/tag/v0.1.2) and
+corresponds to the homonymous version at
+[**CRAN**](https://cran.r-project.org/package=vegtable).
+
+</div>
+
+<br/>
+
+<!-- taxlist v0.1.4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### taxlist v0.1.4 released
+
+*2018-05-08*
+
+For more details, visit the release at 
+[**GitHub**](https://github.com/kamapu/taxlist/releases/tag/v0.1.4).
+The package `taxlist` is also available at
+[**CRAN**](https://cran.r-project.org/package=taxlit).
+
+</div>
+
+<br/>
+
+<!-- TODO +++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+*2018-05-02* **[The taxlist package: managing plant taxonomic lists in
+R](https://doi.org/10.3897/BDJ.6.e23635)**
+
+*2018-04-24* **[List of GIS repositories](documents/GIS_Repositories.pdf)**
+
+*2018-03-09* **[Amazing Pictures from the GlobE-wetlands project
+](https://photos.google.com/share/AF1QipOkR46_z-5CmhLalP3ckv_rck3-4sCYDz4NNWSGgTDdY1K4e7-wH9MCGUSfAgUSuQ?key=eklJUmhFT05ORHdUdVFHUzJhcVE2R3BwTEI5YUxn)**
+
+*2018-01-06* **[Flooding in Troisdorf-Bergheim,
+Germany](https://photos.google.com/share/AF1QipPr8y7V3CbaYCzMXPqQYagYBBMNjbxy3bF8--ZYM7LyhYJ41Ul8LwTjdJrZaZ8NTA?key=c3NNTWxKaHB5S2hCZHBHVXdjbVFHc1hDTDktdjdR)**
+
+*2017-03-09* **[Introduction to the package
+vegtable](documents/workshops_freiburg_2017.html)**
+
+<br/>

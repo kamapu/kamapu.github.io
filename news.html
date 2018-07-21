@@ -11,7 +11,7 @@
 
 
 
-<title>Welcome to my personal site!</title>
+<title>Blog</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,7 +71,7 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="css\index_style.css" type="text/css" />
+<link rel="stylesheet" href="css\news_style.css" type="text/css" />
 
 </head>
 
@@ -241,89 +241,59 @@ $(document).ready(function () {
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
-<div><img src="images/bar_home.png" width="1000px" align="top"></div>
+<div><img src="images/bar_news.png" width="1000px" align="top"></div>
 
 <div class="fluid-row" id="header">
 
 
 
-<h1 class="title toc-ignore">Welcome to my personal site!</h1>
+<h1 class="title toc-ignore">Blog</h1>
 
 </div>
 
 
-<p>This page introduces you to my activities as docent, researcher and developer. Maybe also some of my abilities as artist.</p>
-<p><br/></p>
-<div id="research-projects" class="section level1">
-<h1>Research Projects</h1>
-<p>Research and teaching activities are focused on plant diversity and vegetation ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).</p>
-<p><br/></p>
-<div id="current-projects" class="section level2">
-<h2>Current Projects</h2>
-<table>
-<tr>
-<td>
-<img src="images/FutureAfrica_logo.png" alt="" style="width:300px; height:auto;">
-</td>
-<td>
-<p><strong>Future Rural Africa – Future-making and social-ecological transformation:</strong></p>
-Evaluating expectations and probabilities in future-making from different perspectives, including social and natural sciences. One of the focus in the consortium is related to the importance of <strong>invasive plants</strong> on the ecology and management of rangelands in Kenya. <a href="http://www.futureruralafrica.de">Read more…</a>
-</td>
-</tr>
-<tr>
-<td>
-<img src="images/Globe_logo.png" alt="" style="width:300px; height:auto;">
-</td>
-<td>
-<p><strong>GlobE-wetlands – reconciling future food production with environmental protection:</strong></p>
-An interdisciplinary project dealing with the effects of cropping activities on seasonal wetlands. While wetlands in sub-Saharan Africa are important sites for food production, especially in semi-arid regions, cropping activities may also have negative impacts on the integrity of agro-ecosystems. <a href="https://www.wetlands-africa.de">Read more…</a>
-</td>
-</tr>
-<tr>
-<td>
-<img src="images/Arboneth_logo.png" alt="" style="width:300px; height:auto;">
-</td>
-<td>
-<p><strong>ARBONETH – the Ethiopian arboretum network:</strong></p>
-Research and education project supporting ex-situ conservation of native trees through the establishment of a network among Ethiopian arboretums. <a href="https://www.arboneth.com">Read more…</a>
-</td>
-</tr>
-</table>
-<p><br/></p>
+<!-- releases for vegtable and taxlist +++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
+border-radius: 15px">
+<h3 id="new-releases-for-taxlist-and-vegtable">New releases for taxlist and vegtable</h3>
+<p><em>2018-06-30</em></p>
+<p><a href="https://cran.r-project.org/package=taxlist"><code>taxlist v0.1.5</code></a> (see it on <a href="https://github.com/kamapu/taxlist"><strong>GitHub</strong></a>) is released. Among other new functions, you should test <code>print_name</code>.</p>
+<p>For compatibility, <a href="https://cran.r-project.org/package=vegtable"><code>vegtable v0.1.3</code></a> was uploaded (see its site in <a href="https://github.com/kamapu/vegtable"><strong>GitHub</strong></a>).</p>
 </div>
-<div id="past-projects" class="section level2">
-<h2>Past Projects</h2>
-<table>
-<tr>
-<td>
-<img src="images/RCR_logo.png" alt="" style="width:300px; height:auto;">
-</td>
-<td>
-<p><strong>RCR – resilience, collapse and reorganization in social-ecological systems of African savannas:</strong></p>
-Social systems and environment interact through coupling and regulation processes in the bio-physical, political-institutional and symbolic-cultural space. Understanding such processes may allow decision makers to adopt strategies suitables for avoiding collapse of socio-ecological systems (SES). <a href="http://resilience-research.de">Read more…</a>
-</td>
-</tr>
-<tr>
-<td>
-<img src="images/SWEA_logo.png" alt="" style="width:300px; height:auto;">
-</td>
-<td>
-<p><strong>SWEA – Agricultural use and vulnerability of small wetlands in East Africa:</strong></p>
-Effects of cropping activities on the integrity and productivity of small wetlands in Kenya and Tanzania. <a href="https://www.ipe.uni-bonn.de/verbundprojekte/wetland/swea">Read more…</a>
-</td>
-</tr>
-<tr>
-<td>
-<img src="images/Impetus_logo.png" alt="" style="width:300px; height:auto;">
-</td>
-<td>
-<p><strong>IMPETUS – An integrated approach to the efficient management of scarce water resources in West Africa:</strong></p>
-Sustainable management of water resources in Benin and Morocco. <a href="http://www.impetus.uni-koeln.de/en/project.html">Read more…</a>
-</td>
-</tr>
-</table>
+<p><br/></p>
+<!-- re-launching cropgrowth +++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
+border-radius: 15px">
+<h3 id="re-launching-cropgrowth">Re-launching cropgrowth</h3>
+<p><em>2018-06-09</em></p>
+<p><a href="https://travis-ci.org/kamapu/cropgrowth"><img src="https://travis-ci.org/kamapu/cropgrowth.svg?branch=master" alt="Travis Build Status" /></a></p>
+<p>Once upon the time I was working on growth models and wishing, I could do everything by myself, just with the help of <strong>R</strong>. But I was young and too naïve.</p>
+<p>Anyway, what I did, I’m doing it again and the result is <code>cropgrowth</code>. Visit the site at <a href="https://github.com/kamapu/cropgrowth"><strong>GitHub</strong></a>.</p>
 </div>
+<p><br/></p>
+<!-- vegtable v0.1.2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
+border-radius: 15px">
+<h3 id="vegtable-v0.1.2-released">vegtable v0.1.2 released</h3>
+<p><em>2018-05-10</em></p>
+<p>This release was published in <a href="https://github.com/kamapu/vegtable/releases/tag/v0.1.2"><strong>GitHub</strong></a> and corresponds to the homonymous version at <a href="https://cran.r-project.org/package=vegtable"><strong>CRAN</strong></a>.</p>
 </div>
+<p><br/></p>
+<!-- taxlist v0.1.4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
+border-radius: 15px">
+<h3 id="taxlist-v0.1.4-released">taxlist v0.1.4 released</h3>
+<p><em>2018-05-08</em></p>
+<p>For more details, visit the release at <a href="https://github.com/kamapu/taxlist/releases/tag/v0.1.4"><strong>GitHub</strong></a>. The package <code>taxlist</code> is also available at <a href="https://cran.r-project.org/package=taxlit"><strong>CRAN</strong></a>.</p>
+</div>
+<p><br/></p>
+<!-- TODO +++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<p><em>2018-05-02</em> <strong><a href="https://doi.org/10.3897/BDJ.6.e23635">The taxlist package: managing plant taxonomic lists in R</a></strong></p>
+<p><em>2018-04-24</em> <strong><a href="documents/GIS_Repositories.pdf">List of GIS repositories</a></strong></p>
+<p><em>2018-03-09</em> <strong><a href="https://photos.google.com/share/AF1QipOkR46_z-5CmhLalP3ckv_rck3-4sCYDz4NNWSGgTDdY1K4e7-wH9MCGUSfAgUSuQ?key=eklJUmhFT05ORHdUdVFHUzJhcVE2R3BwTEI5YUxn">Amazing Pictures from the GlobE-wetlands project</a></strong></p>
+<p><em>2018-01-06</em> <strong><a href="https://photos.google.com/share/AF1QipPr8y7V3CbaYCzMXPqQYagYBBMNjbxy3bF8--ZYM7LyhYJ41Ul8LwTjdJrZaZ8NTA?key=c3NNTWxKaHB5S2hCZHBHVXdjbVFHc1hDTDktdjdR">Flooding in Troisdorf-Bergheim, Germany</a></strong></p>
+<p><em>2017-03-09</em> <strong><a href="documents/workshops_freiburg_2017.html">Introduction to the package vegtable</a></strong></p>
+<p><br/></p>
 
 <br/>
 <br/>

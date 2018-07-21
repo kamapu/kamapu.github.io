@@ -4,15 +4,17 @@ navbar:
   title: "Miguel Alvarez"
   left:
     - text: "About"
-      href: 1_about.html
+      href: about.html
     - text: "Workshops"
-      href: 2_workshops.html
+      href: workshops.html
     - text: "R packages"
-      href: 3_rpackages.html
+      href: rpackages.html
+    - text: "Databases"
+      href: databases.html
     - text: "Blog"
-      href: 4_news.html
+      href: news.html
     - text: "Galleries"
-      href: 5_art.html
+      href: art.html
   right:
     - icon: fa-university
       href: https://www.ipe.uni-bonn.de/pflanzenernaehrung/mitarbeiter/m_alvarez
@@ -29,4 +31,4 @@ navbar:
 output:
   html_document:
     theme: flatly
-    css: index_style.css
+    css: css/index_style.css

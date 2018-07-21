@@ -3,17 +3,21 @@ title: "Welcome to my personal site!"
 output:
   html_document:
     include:
-      before_body: index_topbar.html
-      after_body: footer.html
+      before_body: topnfoot/index_topbar.html
+      after_body: topnfoot/footer.html
 ---
 
 This page introduces you to my activities as docent, researcher and developer.
 Maybe also some of my abilities as artist.
 
+<br/>
+
 # Research Projects
 
 Research and teaching activities are focused on plant diversity and vegetation
 ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).
+
+<br/>
 
 ## Current Projects
 
@@ -28,7 +32,7 @@ ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).
   perspectives, including social and natural sciences.
   One of the focus in the consortium is related to the importance of
   **invasive plants** on the ecology and management of rangelands in Kenya.
-  [Link](http://www.futureruralafrica.de)
+  [Read more...](http://www.futureruralafrica.de)
   </td>
 </tr>
 
@@ -43,7 +47,7 @@ ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).
   While wetlands in sub-Saharan Africa are important sites for food production,
   especially in semi-arid regions, cropping activities may also have negative
   impacts on the integrity of agro-ecosystems.
-  [Link](https://www.wetlands-africa.de)
+  [Read more...](https://www.wetlands-africa.de)
   </td>
 </tr>
 
@@ -54,7 +58,7 @@ ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).
   
   Research and education project supporting ex-situ conservation of native trees
   through the establishment of a network among Ethiopian arboretums.
-  [Link](https://www.arboneth.com)
+  [Read more...](https://www.arboneth.com)
   </td>
 </tr>
 
@@ -77,7 +81,7 @@ ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).
   space.   Understanding such processes may allow decision makers to adopt
   strategies   suitables for avoiding collapse of socio-ecological systems
   (SES).
-  [Link](http://resilience-research.de)
+  [Read more...](http://resilience-research.de)
   </td>
 </tr>
 
@@ -89,7 +93,7 @@ ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).
   
   Effects of cropping activities on the integrity and productivity of small
   wetlands in Kenya and Tanzania.
-  [Link](https://www.ipe.uni-bonn.de/verbundprojekte/wetland/swea)
+  [Read more...](https://www.ipe.uni-bonn.de/verbundprojekte/wetland/swea)
   </td>
 </tr>
 
@@ -100,7 +104,7 @@ ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).
   water resources in West Africa:**
   
   Sustainable management of water resources in Benin and Morocco.
-  [Link](http://www.impetus.uni-koeln.de/en/project.html)
+  [Read more...](http://www.impetus.uni-koeln.de/en/project.html)
   </td>
 </tr>
 
