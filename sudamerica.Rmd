@@ -8,6 +8,8 @@ output:
     css: css/databases_style.css
 ---
 
+[![GIVD](badges/givd-sudamerica.svg)](http://www.givd.info/ID/SA-CL-001)
+
 ```{r import_sudamerica, echo=FALSE, results="hide"}
 load("data/sudamerica_plots.rda")
 ```

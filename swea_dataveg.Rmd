@@ -8,6 +8,8 @@ output:
     css: css/databases_style.css
 ---
 
+[![GIVD](badges/givd-swea.svg)](http://www.givd.info/ID/AF-00-006)
+
 ```{r import_swea, echo=FALSE, results="hide"}
 load("data/swea_dataveg_plots.rda")
 ```

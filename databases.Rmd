@@ -19,6 +19,8 @@ border-radius: 15px">
 
 ### SWEA-Dataveg
 
+[![GIVD](badges/givd-swea.svg)](http://www.givd.info/ID/AF-00-006)
+
 A database for vegetation plots in East Africa.
 [Read more...](swea_dataveg.html)
 
@@ -31,6 +33,8 @@ A database for vegetation plots in East Africa.
 border-radius: 15px">
 
 ### sudamerica
+
+[![GIVD](badges/givd-sudamerica.svg)](http://www.givd.info/ID/SA-CL-001)
 
 Vegetation of western South America.
 [Read more...](sudamerica.html)
