@@ -4,3 +4,6 @@ xcopy /y "M:\WorkspaceR\00_Documents\GIS_repositories\GIS_Repositories.pdf" "M:\
 
 REM Workshop Freiburg 2017-03-09
 xcopy /y "M:\WorkspaceR\00_Documents\introduction_vegtable\workshops_freiburg_2017.html" "M:\WorkspaceR\kamapu.github.io\documents\*"
+
+REM Publications
+xcopy /y "M:\WorkspaceR\00_Documents\CV_Miguel\Publications_Miguel.pdf" "M:\WorkspaceR\kamapu.github.io\documents\*"
