@@ -14,7 +14,7 @@ namely the western side of South America and the central part of Africa.
 <br/>
 
 <!-- SWEA-Dataveg ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
+<div style="background-color: #e8ffa4; text-align: left; padding: 10px;
 border-radius: 15px">
 
 ### SWEA-Dataveg
@@ -29,7 +29,7 @@ A database for vegetation plots in East Africa.
 <br/>
 
 <!-- sudamerica ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<div style="background-color: #f1f8ff; text-align: left; padding: 10px;
+<div style="background-color: #e8ffa4; text-align: left; padding: 10px;
 border-radius: 15px">
 
 ### sudamerica

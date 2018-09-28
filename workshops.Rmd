@@ -14,6 +14,27 @@ of research projects or as voluntary teaching activities.
 
 <br/>
 
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+# Data for the Future
+*2018-09-03 Nairobi, Kenya*
+
+Introduction to the use of relational databases for the storage of quantitative
+data with special emphasis to the handling of time as variable.
+The workshop activities applied the software **Base** of the
+[**LibreOffice**](https://de.libreoffice.org) suite and its connection to
+[**R**](https://cran.r-project.org).
+This activity was included within the activities of a summer school organised
+in the context of the project [**Future Rural
+Africa**](http://www.futureruralafrica.de).
+
+[**Handout**](documents/workshops_nairobi_2018.pdf)
+
+</div>
+
+<br/>
+
 <div style="background-color: #ffffcc; text-align: left; padding: 10px;
 border-radius: 15px">
 

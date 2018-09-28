@@ -23,6 +23,6 @@ This database is currently including
 library(leaflet)
 leaflet(swea_dataveg_plots) %>% addTiles() %>%
 		addCircleMarkers(lng=~longitude, lat=~latitude, color="red",
-				opacity=0.3, radius=7)
+				opacity=0.3, radius=3)
 ```
 
