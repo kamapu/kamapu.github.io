@@ -1,5 +1,9 @@
 body {
-  background-color: #ffffe6;
+    background-image: url("background_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachement: fixed;
+    padding: 20px;
 }
 
 td {

@@ -5,7 +5,7 @@ output:
     include:
       before_body: topnfoot/about_topbar.html
       after_body: topnfoot/footer.html
-    css: css/index_style.css
+    css: css/about_style.css
 ---
 
 <table>
@@ -39,28 +39,99 @@ output:
 
 </table>
 
-## Further Downloads
 
-<div style="background-color: #d9f3d5; text-align: left; padding: 10px;
-border-radius: 15px">
-[**Online Sources for GIS Data Sets**](documents/GIS_Repositories.pdf)<br>
-<font color="#045f7d">*Miguel Alvarez &amp; Kristian N&auml;schen*</font><br>
-A list of links to download or request spatial data
-sets. The list contains both, vector and raster data as well as attribute
-tables. This document can be especially useful on the search of example data for
-teaching purposes.
-</div>
+# Research Projects
 
-</br>
-
-<div style="background-color: #d9f3d5; text-align: left; padding: 10px;
-border-radius: 15px">
-[**Introduction to the package
-vegdata**](documents/workshops_freiburg_2017.html)<br>
-<font color="#045f7d">*Miguel Alvarez*</font><br>
-A quick introduction to the use of the packages `taxlist` and `vegtable`, which
-are especially designed for working with vegetation-plot data sets and similar
-biodiversity records.
-</div>
+Research and teaching activities are focused on plant diversity and vegetation
+ecology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).
 
 <br/>
+
+## Current Projects
+
+<table>
+
+<tr>
+  <td><img src="images/FutureAfrica_logo.png" alt="" style="width:300px; height:auto;"></td>
+  <td>
+  **Future Rural Africa -- Future-making and social-ecological transformation:**
+  
+  Evaluating expectations and probabilities in future-making from different
+  perspectives, including social and natural sciences.   One of the focus in the
+consortium is related to the importance of   **invasive plants** on the ecology
+and management of rangelands in Kenya.
+  [Read more...](http://www.futureruralafrica.de)
+  </td>
+</tr>
+
+<tr>
+  <td><img src="images/Globe_logo.png" alt="" style="width:300px; height:auto;"></td>
+  <td>
+  **GlobE-wetlands -- reconciling future food production with environmental
+  protection:**
+  
+  An interdisciplinary project dealing with the effects of cropping activities
+  on seasonal wetlands.   While wetlands in sub-Saharan Africa are important sites
+for food production,   especially in semi-arid regions, cropping activities may
+also have negative   impacts on the integrity of agro-ecosystems.
+  [Read more...](https://www.wetlands-africa.de)
+  </td>
+</tr>
+
+<tr>
+  <td><img src="images/Arboneth_logo.png" alt="" style="width:300px; height:auto;"></td>
+  <td>
+  **ARBONETH --  the Ethiopian arboretum network:**
+  
+  Research and education project supporting ex-situ conservation of native trees
+  through the establishment of a network among Ethiopian arboretums.   [Read
+more...](https://www.arboneth.com)
+  </td>
+</tr>
+
+</table>
+
+<br/>
+
+## Past Projects
+
+<table>
+
+<tr>
+  <td><img src="images/RCR_logo.png" alt="" style="width:300px; height:auto;"></td>
+  <td>
+  **RCR --  resilience, collapse and reorganization in social-ecological
+  systems of African savannas:**
+  
+  Social systems and environment interact through coupling and regulation
+  processes in the bio-physical, political-institutional and symbolic-cultural
+  space.   Understanding such processes may allow decision makers to adopt
+  strategies   suitables for avoiding collapse of socio-ecological systems
+  (SES).   [Read more...](http://resilience-research.de)
+  </td>
+</tr>
+
+<tr>
+  <td><img src="images/SWEA_logo.png" alt="" style="width:300px; height:auto;"></td>
+  <td>
+  **SWEA -- Agricultural use and vulnerability of small wetlands in East
+  Africa:**
+  
+  Effects of cropping activities on the integrity and productivity of small
+  wetlands in Kenya and Tanzania.   [Read
+more...](https://www.ipe.uni-bonn.de/verbundprojekte/wetland/swea)
+  </td>
+</tr>
+
+<tr>
+  <td><img src="images/Impetus_logo.png" alt="" style="width:300px; height:auto;"></td>
+  <td>
+  **IMPETUS -- An integrated approach to the efficient management of scarce
+  water resources in West Africa:**
+  
+  Sustainable management of water resources in Benin and Morocco.   [Read
+more...](http://www.impetus.uni-koeln.de/en/project.html)
+  </td>
+</tr>
+
+</table>

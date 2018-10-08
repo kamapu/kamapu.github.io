@@ -11,8 +11,8 @@ navbar:
       href: rpackages.html
     - text: "Databases"
       href: databases.html
-    - text: "Blog"
-      href: news.html
+    - text: "Download"
+      href: download.html
     - text: "Galleries"
       href: art.html
   right:

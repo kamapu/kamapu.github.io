@@ -4,6 +4,7 @@ output:
   html_document:
     include:
       before_body: topnfoot/rpackages_topbar.html
+      after_body: topnfoot/footer.html
     css: css/rpackages_style.css
 ---
 
