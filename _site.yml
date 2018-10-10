@@ -1,7 +1,7 @@
 name: "Miguel Alvarez"
 output_dir: "."
 navbar:
-  title: "Miguel Alvarez"
+  title: "<img id=\"logo\" style=\"height: 55px;\" src=\"images/Miguel4_profi2.png\" />"
   left:
     - text: "About"
       href: about.html

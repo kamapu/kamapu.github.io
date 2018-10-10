@@ -1,11 +1,13 @@
+/* background image */
 body {
-    background-image: url("background_1.jpg");
+	background-image: url("carrying_papyrus.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachement: fixed;
     padding: 20px;
 }
 
-td {
-  padding:10px 20px 10px 0px;
+/* custom headers (title transparent) */
+h1,h2,h3,h4,h5,h6{
+	color: #ffffff00;
 }

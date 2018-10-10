@@ -1,6 +1,8 @@
 ---
+title: "Miguel Alvarez"
 output:
-  html_document
+  html_document:
+    css: css/index_style.css
 ---
 
 ```{r import_documents, echo=FALSE, results=FALSE, message=FALSE}
