@@ -91,6 +91,8 @@ border-radius: 15px">
 
 ### Lexiguel
 
+[![Travis Build Status](https://travis-ci.org/kamapu/Lexiguel.svg?branch=master)](https://travis-ci.org/kamapu/Lexiguel)
+
 A mingle-mangle of functions for R, most of them related to own publications.
 
 **in GitHub**
@@ -122,6 +124,8 @@ Tools for the analysis and display of results coming from growth models.
 border-radius: 15px">
 
 ### vegtable2
+
+[![Travis Build Status](https://travis-ci.org/kamapu/vegtable2.svg?branch=master)](https://travis-ci.org/kamapu/vegtable2)
 
 Functions customized for the work with our own data sets.
 
