@@ -163,5 +163,3 @@ Some functions for search of species names in Flora del Conosur.
 [https://github.com/kamapu/conosur](https://github.com/kamapu/conosur)
 
 </div>
-
-<br/>

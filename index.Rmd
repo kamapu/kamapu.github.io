@@ -24,6 +24,10 @@ file.copy("M:/WorkspaceR/00_Documents/GIS_repositories/GIS_Repositories.pdf",
 file.copy("M:/WorkspaceR/TRR228_2018_data_workshop/handout/_book/_main.pdf",
 		"documents/workshops_nairobi_2018.pdf", overwrite=TRUE)
 
+# Workshop ARBONETH 2018-11-30
+file.copy("M:/WorkspaceR/00_Documents/2017_ARBONETH_closure/Presentation_ARBONETH.html",
+		"documents/Presentation_ARBONETH.html", overwrite=TRUE)
+
 # Workshop Freiburg 2017-03-09
 file.copy("M:/WorkspaceR/00_Documents/introduction_vegtable/workshops_freiburg_2017.html",
 		"documents/workshops_freiburg_2017.html", overwrite=TRUE)
