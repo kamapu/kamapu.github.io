@@ -20,9 +20,20 @@ border-radius: 15px">
 ### SWEA-Dataveg
 
 [![GIVD](badges/swea_givd.svg)](http://www.givd.info/ID/AF-00-006)
+[![version](badges/sweadataveg_version.svg)](sweadataveg.html)
 
-A database for vegetation plots in East Africa.
-[Read more...](swea_dataveg.html)
+This database was launched in the context of the [SWEA
+project](https://www.ipe.uni-bonn.de/verbundprojekte/wetland/swea) (agricultural
+use and vulnerability of small wetlands in East Africa) and has been its legacy
+across different research projects in Eastern Africa.
+Currently covers several countries in the African continent and diverse
+vegetation types.
+
+The first mention to this database was done by [Alvarez et al.
+(2012a)](https://doi.org/10.7809/b-e.00092) and [Alvarez et al.
+(2012b)](https://doi.org/10.7809/b-e.00060).
+
+[Read more...](sweadataveg.html)
 
 </div>
 
@@ -39,7 +50,7 @@ border-radius: 15px">
 
 This database was first launched as a vegetation-plot database for
 Chilean grassland vegetation (**CL-Dataveg**; see also
-[Alvarez et al. 2012](https://doi.org/10.7809/b-e.00230)). Currently it is
+[Alvarez et al. 2012c](https://doi.org/10.7809/b-e.00230)). Currently it is
 extended to other countries in South America and is opened for any plant
 bio-diversity record and any vegetation type.
 
