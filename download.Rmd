@@ -23,7 +23,7 @@ teaching purposes.
 <div style="background-color: #d9f3d5; text-align: left; padding: 10px;
 border-radius: 15px">
 [**Introduction to the package
-vegdata**](documents/workshops_freiburg_2017.html)<br>
+vegtable**](documents/workshops_freiburg_2017.html)<br>
 <font color="#045f7d">*Miguel Alvarez*</font><br>
 A quick introduction to the use of the packages `taxlist` and `vegtable`, which
 are especially designed for working with vegetation-plot data sets and similar
