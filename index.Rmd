@@ -2,6 +2,8 @@
 title: "Miguel Alvarez"
 output:
   html_document:
+    include:
+      after_body: topnfoot/footer_index.html
     css: css/index_style.css
 ---
 
