@@ -11,7 +11,7 @@ output:
 <div style="background-color: #d9f3d5; text-align: left; padding: 10px;
 border-radius: 15px">
 [**Online Sources for GIS Data Sets**](documents/GIS_Repositories.pdf)<br>
-<font color="#045f7d">*Miguel Alvarez &amp; Kristian N&auml;schen*</font><br>
+<font color="#045f7d">*Miguel Alvarez, Kristian N&auml;schen &amp; Lukas Tr&uuml;benbach*</font><br>
 A list of links to download or request spatial data
 sets. The list contains both, vector and raster data as well as attribute
 tables. This document can be especially useful on the search of example data for
