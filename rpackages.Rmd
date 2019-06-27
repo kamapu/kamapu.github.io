@@ -136,6 +136,23 @@ Functions customized for the work with our own data sets.
 
 <br/>
 
+<!-- spatialist ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### spatialist
+
+[![Travis Build Status](https://travis-ci.org/kamapu/spatialist.svg?branch=master)](https://travis-ci.org/kamapu/spatialist)
+
+Tools for the work with spatial (GIS) objects.
+
+**in GitHub**
+[https://github.com/kamapu/spatialist](https://github.com/kamapu/spatialist)
+
+</div>
+
+<br/>
+
 <!-- taxsearch +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <div style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
