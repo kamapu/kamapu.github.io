@@ -14,6 +14,25 @@ of research projects or as voluntary teaching activities.
 
 <br/>
 
+
+<div style="background-color: #ffe699; text-align: left; padding: 10px;
+border-radius: 15px">
+
+# Analyzing and Documenting Data with Freeware
+*2019-08-05 Nairobi, Kenya*
+
+Workshop organized in collaboration between the University of Nairobi in Kenya
+and the University of Bonn in Germany and supported by the project [**Future
+Rural Africa**](http://www.futureruralafrica.de).
+This workshop focused on the applications of **R** on statistical analyses
+and **Rmarkdown** for reporting results and making research reproducible.
+
+[**Handout**](documents/free_stats_2019.pdf)
+
+</div>
+
+<br/>
+
 <div style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
 

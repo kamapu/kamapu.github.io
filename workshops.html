@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -72,9 +73,7 @@ h6 {
 
 <link rel="stylesheet" href="css\workshops_style.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -193,8 +192,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -251,20 +248,17 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -348,6 +342,14 @@ $(document).ready(function () {
 
 <p>Most of the activities listed here are workshops organized either in the context of research projects or as voluntary teaching activities.</p>
 <p><br/></p>
+<div style="background-color: #ffe699; text-align: left; padding: 10px;
+border-radius: 15px">
+<h1 id="analyzing-and-documenting-data-with-freeware">Analyzing and Documenting Data with Freeware</h1>
+<p><em>2019-08-05 Nairobi, Kenya</em></p>
+<p>Workshop organized in collaboration between the University of Nairobi in Kenya and the University of Bonn in Germany and supported by the project <a href="http://www.futureruralafrica.de"><strong>Future Rural Africa</strong></a>. This workshop focused on the applications of <strong>R</strong> on statistical analyses and <strong>Rmarkdown</strong> for reporting results and making research reproducible.</p>
+<p><a href="documents/free_stats_2019.pdf"><strong>Handout</strong></a></p>
+</div>
+<p><br/></p>
 <div style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
 <h1 id="data-for-the-future">Data for the Future</h1>
@@ -427,6 +429,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

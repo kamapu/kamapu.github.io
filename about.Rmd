@@ -64,6 +64,14 @@ and management of rangelands in Kenya.
   </td>
 </tr>
 
+</table>
+
+<br/>
+
+## Past Projects
+
+<table>
+
 <tr>
   <td><img src="images/Globe_logo.png" alt="" style="width:300px; height:auto;"></td>
   <td>
@@ -88,14 +96,6 @@ also have negative   impacts on the integrity of agro-ecosystems.
 more...](https://www.arboneth.com)
   </td>
 </tr>
-
-</table>
-
-<br/>
-
-## Past Projects
-
-<table>
 
 <tr>
   <td><img src="images/RCR_logo.png" alt="" style="width:300px; height:auto;"></td>
