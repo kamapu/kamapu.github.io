@@ -14,7 +14,8 @@ output:
 [![version](badges/sweadataveg_version.svg)](sweadataveg.html)
 
 ```{r import_swea, echo=FALSE, results="hide"}
-load("M:/WorkspaceR/00_Documents/update_databases/sweadataveg.rda")
+# Object already exists in the session
+#load("M:/WorkspaceR/00_Documents/update_databases/sweadataveg.rda")
 ```
 
 The database **SWEA-Dataveg** is formatted in **PostgreSQL**, including the
