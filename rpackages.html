@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -14,6 +13,7 @@
 
 <title>R packages</title>
 
+<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -71,7 +71,7 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="css\rpackages_style.css" type="text/css" />
+<link rel="stylesheet" href="css/rpackages_style.css" type="text/css" />
 
 
 
@@ -87,7 +87,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -236,6 +235,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -344,19 +344,18 @@ $(document).ready(function () {
 <p><br/></p>
 <div id="packages-in-cran" class="section level2">
 <h2>Packages in CRAN</h2>
-<div style="background-color: #deefbc; text-align: left; padding: 10px;
+<div id="taxlist" class="section level3" style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
-<h3 id="taxlist">taxlist</h3>
+<h3>taxlist</h3>
 <p><a href="https://zenodo.org/badge/latestdoi/54913161"><img src="https://zenodo.org/badge/54913161.svg" alt="DOI" /></a> <a href="https://travis-ci.org/kamapu/taxlist"><img src="https://travis-ci.org/kamapu/taxlist.svg?branch=master" alt="Travis Build Status" /></a> <a href="https://cran.r-project.org/package=taxlist"><img src="http://www.r-pkg.org/badges/version/taxlist" alt="CRAN_Status_Badge" /></a> <a href="https://cran.r-project.org/package=taxlist"><img src="http://cranlogs.r-pkg.org/badges/taxlist" alt="CRAN_downloads" /></a> <a href="https://cran.r-project.org/package=taxlist"><img src="http://cranlogs.r-pkg.org/badges/grand-total/taxlist" alt="total downloads" /></a></p>
 <p>This package provides an object class for containing taxonomic lists. Lists of taxa (e.g. plant species) may be a list of accepted names but can optionally contain synonyms, taxonomic ranks, parent-child relationships, taxon traits, etc.</p>
 <p>The object <code>taxlist</code> attempts to validate the congruency of information contained in taxonomic lists and provides several functions for the manipulation of objects belonging to this class.</p>
-<p><strong>in CRAN</strong> <a href="https://CRAN.R-project.org/package=taxlist">https://CRAN.R-project.org/package=taxlist</a></p>
-<p><strong>in GitHub</strong> <a href="https://github.com/kamapu/taxlist">https://github.com/kamapu/taxlist</a></p>
+<p><a href="rpkg/taxlist/index.html">Read more…</a></p>
 </div>
 <p><br/></p>
-<div style="background-color: #deefbc; text-align: left; padding: 10px;
+<div id="vegtable" class="section level3" style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
-<h3 id="vegtable">vegtable</h3>
+<h3>vegtable</h3>
 <p><a href="https://zenodo.org/badge/latestdoi/55006983"><img src="https://zenodo.org/badge/55006983.svg" alt="DOI" /></a> <a href="https://travis-ci.org/kamapu/vegtable"><img src="https://travis-ci.org/kamapu/vegtable.svg?branch=master" alt="Travis Build Status" /></a> <a href="https://cran.r-project.org/package=vegtable"><img src="http://www.r-pkg.org/badges/version/vegtable" alt="CRAN_Status_Badge" /></a> <a href="https://cran.r-project.org/package=vegtable"><img src="http://cranlogs.r-pkg.org/badges/vegtable" alt="CRAN_downloads" /></a> <a href="https://cran.r-project.org/package=vegtable"><img src="http://cranlogs.r-pkg.org/badges/grand-total/vegtable" alt="total downloads" /></a></p>
 <p>This package provides an object class for containing taxonomic lists. Lists of taxa (e.g. plant species) may be a list of accepted names but can optionally contain synonyms, taxonomic ranks, parent-child relationships, taxon traits, etc.</p>
 <p>The object <code>taxlist</code> attempts to validate the congruency of information contained in taxonomic lists and provides several functions for the manipulation of objects belonging to this class.</p>
@@ -368,53 +367,53 @@ border-radius: 15px">
 <div id="packages-out-of-cran" class="section level1">
 <h1>Packages out of CRAN</h1>
 <!-- Lexiguel ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<div style="background-color: #deefbc; text-align: left; padding: 10px;
+<div id="lexiguel" class="section level3" style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
-<h3 id="lexiguel">Lexiguel</h3>
+<h3>Lexiguel</h3>
 <p><a href="https://travis-ci.org/kamapu/Lexiguel"><img src="https://travis-ci.org/kamapu/Lexiguel.svg?branch=master" alt="Travis Build Status" /></a></p>
 <p>A mingle-mangle of functions for R, most of them related to own publications.</p>
 <p><strong>in GitHub</strong> <a href="https://github.com/kamapu/Lexiguel">https://github.com/kamapu/Lexiguel</a></p>
 </div>
 <p><br/></p>
 <!-- cropgrowth ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<div style="background-color: #deefbc; text-align: left; padding: 10px;
+<div id="cropgrowth" class="section level3" style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
-<h3 id="cropgrowth">cropgrowth</h3>
+<h3>cropgrowth</h3>
 <p><a href="https://travis-ci.org/kamapu/cropgrowth"><img src="https://travis-ci.org/kamapu/cropgrowth.svg?branch=master" alt="Travis Build Status" /></a></p>
 <p>Tools for the analysis and display of results coming from growth models.</p>
 <p><strong>in GitHub</strong> <a href="https://github.com/kamapu/cropgrowth">https://github.com/kamapu/cropgrowth</a></p>
 </div>
 <p><br/></p>
 <!-- vegtable2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<div style="background-color: #deefbc; text-align: left; padding: 10px;
+<div id="vegtable2" class="section level3" style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
-<h3 id="vegtable2">vegtable2</h3>
+<h3>vegtable2</h3>
 <p><a href="https://travis-ci.org/kamapu/vegtable2"><img src="https://travis-ci.org/kamapu/vegtable2.svg?branch=master" alt="Travis Build Status" /></a></p>
 <p>Functions customized for the work with our own data sets.</p>
 <p><strong>in GitHub</strong> <a href="https://github.com/kamapu/vegtable2">https://github.com/kamapu/vegtable2</a></p>
 </div>
 <p><br/></p>
 <!-- spatialist ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<div style="background-color: #deefbc; text-align: left; padding: 10px;
+<div id="spatialist" class="section level3" style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
-<h3 id="spatialist">spatialist</h3>
+<h3>spatialist</h3>
 <p><a href="https://travis-ci.org/kamapu/spatialist"><img src="https://travis-ci.org/kamapu/spatialist.svg?branch=master" alt="Travis Build Status" /></a></p>
 <p>Tools for the work with spatial (GIS) objects.</p>
 <p><strong>in GitHub</strong> <a href="https://github.com/kamapu/spatialist">https://github.com/kamapu/spatialist</a></p>
 </div>
 <p><br/></p>
 <!-- taxsearch +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<div style="background-color: #deefbc; text-align: left; padding: 10px;
+<div id="taxsearch" class="section level3" style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
-<h3 id="taxsearch">taxsearch</h3>
+<h3>taxsearch</h3>
 <p>Some functions for search in specimens information in Tropicos.</p>
 <p><strong>in GitHub</strong> <a href="https://github.com/kamapu/taxsearch">https://github.com/kamapu/taxsearch</a></p>
 </div>
 <p><br/></p>
 <!-- conosur +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<div style="background-color: #deefbc; text-align: left; padding: 10px;
+<div id="conosur" class="section level3" style="background-color: #deefbc; text-align: left; padding: 10px;
 border-radius: 15px">
-<h3 id="conosur">conosur</h3>
+<h3>conosur</h3>
 <p>Some functions for search of species names in Flora del Conosur.</p>
 <p><strong>in GitHub</strong> <a href="https://github.com/kamapu/conosur">https://github.com/kamapu/conosur</a></p>
 </div>

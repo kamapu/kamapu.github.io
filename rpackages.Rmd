@@ -40,11 +40,7 @@ The object `taxlist` attempts to validate the congruency of information
 contained in taxonomic lists and provides several functions for the
 manipulation of objects belonging to this class.
 
-**in CRAN**
-[https://CRAN.R-project.org/package=taxlist](https://CRAN.R-project.org/package=taxlist)
-
-**in GitHub**
-[https://github.com/kamapu/taxlist](https://github.com/kamapu/taxlist)
+[Read more...](rpkg/taxlist/index.html)
 
 </div>
 
