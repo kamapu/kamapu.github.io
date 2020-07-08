@@ -73,7 +73,7 @@ a taxlist object." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">taxlist</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.9</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -137,7 +137,7 @@ a <a href='taxlist-class.html'>taxlist</a> object.</p>
     <pre class="usage"><span class='fu'>df2taxlist</span>(<span class='no'>x</span>, <span class='no'>AcceptedName</span>, <span class='no'>...</span>)
 
 <span class='co'># S4 method for data.frame,logical</span>
-<span class='fu'>df2taxlist</span>(<span class='no'>x</span>, <span class='no'>AcceptedName</span>, <span class='no'>...</span>)
+<span class='fu'>df2taxlist</span>(<span class='no'>x</span>, <span class='no'>AcceptedName</span>, <span class='no'>levels</span>, <span class='no'>...</span>)
 
 <span class='co'># S4 method for data.frame,missing</span>
 <span class='fu'>df2taxlist</span>(<span class='no'>x</span>, <span class='no'>AcceptedName</span>, <span class='no'>...</span>)
@@ -160,6 +160,11 @@ a <a href='taxlist-class.html'>taxlist</a> object.</p>
     <tr>
       <th>...</th>
       <td><p>Additional vectors to be added as columns in slot<code>taxonNames</code>.</p></td>
+    </tr>
+    <tr>
+      <th>levels</th>
+      <td><p>A vector with the names of the taxonomic ranks. This argument
+is passed to <code><a href='levels.html'>taxlist::levels()</a></code>.</p></td>
     </tr>
     </table>
 
@@ -196,13 +201,13 @@ provided in this package.</p>
 #&gt; 4          195    CYPEDIG   Cyperus digitatus   Cyperus digitatus         NA
 #&gt; 5          196    CYPEDIS     Cyperus distans     Cyperus distans         NA
 #&gt; 6          197    CYPEDIV       Cyperus dives       Cyperus dives         NA
-#&gt;                        AuthorName SYNONYM TaxonConceptID
-#&gt; 1 (Nees &amp; Meyen ex Kunth) K\xfck.   FALSE            192
-#&gt; 2                          Rottb.   FALSE            193
-#&gt; 3                              L.   FALSE            194
-#&gt; 4                           Roxb.   FALSE            195
-#&gt; 5                           L. f.   FALSE            196
-#&gt; 6                          Delile   FALSE            197</div><div class='input'>
+#&gt;                     AuthorName SYNONYM TaxonConceptID
+#&gt; 1 (Nees &amp; Meyen ex Kunth) Kük.   FALSE            192
+#&gt; 2                       Rottb.   FALSE            193
+#&gt; 3                           L.   FALSE            194
+#&gt; 4                        Roxb.   FALSE            195
+#&gt; 5                        L. f.   FALSE            196
+#&gt; 6                       Delile   FALSE            197</div><div class='input'>
 <span class='co'>## Convert to 'taxlist' object</span>
 <span class='no'>Cyperus</span> <span class='kw'>&lt;-</span> <span class='fu'>df2taxlist</span>(<span class='no'>Cyperus</span>, <span class='kw'>AcceptedName</span> <span class='kw'>=</span>! <span class='no'>Cyperus</span>$<span class='no'>SYNONYM</span>)
 <span class='fu'><a href='summary.html'>summary</a></span>(<span class='no'>Cyperus</span>)</div><div class='output co'>#&gt; object size: 32.4 Kb 
