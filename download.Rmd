@@ -39,3 +39,12 @@ border-radius: 15px">
 A quick introduction on the activities dealing with a vegetation-plot database
 for East Africa.
 </div>
+
+</br>
+
+<div style="background-color: #d9f3d5; text-align: left; padding: 10px;
+border-radius: 15px">
+[**Localities in Project B01**](documents/d1_localities.html)<br>
+<font color="#045f7d">*Miguel Alvarez*</font><br>
+Internal document.
+</div>
