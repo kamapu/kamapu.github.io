@@ -25,7 +25,7 @@ border-radius: 15px">
 ### taxlist
 
 [![DOI](https://zenodo.org/badge/54913161.svg)](https://zenodo.org/badge/latestdoi/54913161)
-[![Travis Build Status](https://travis-ci.org/kamapu/taxlist.svg?branch=master)](https://travis-ci.org/kamapu/taxlist)
+[![Travis Build Status](https://travis-ci.org/ropensci/taxlist.svg?branch=master)](https://travis-ci.org/ropensci/taxlist)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/taxlist)](https://cran.r-project.org/package=taxlist)
 [![CRAN_downloads](http://cranlogs.r-pkg.org/badges/taxlist)](https://cran.r-project.org/package=taxlist)
 [![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/taxlist)](https://cran.r-project.org/package=taxlist)
