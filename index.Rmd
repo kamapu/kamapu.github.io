@@ -1,36 +1,5 @@
 ---
-title: "Miguel Alvarez"
-output:
-  html_document:
-    include:
-      after_body: topnfoot/footer_index.html
-    css: css/index_style.css
+title: "Demo Distill"
+site: distill::distill_website
+listing: posts
 ---
-
-```{r import_documents, echo=FALSE, results=FALSE, message=FALSE}
-## Copy documents
-
-# Curriculum Vitae
-file.copy("M:/WorkspaceR/00_Documents/CV_Miguel/CV_Miguel.pdf",
-		"documents/CV_Miguel.pdf", overwrite=TRUE)
-
-# List of Publications
-file.copy("M:/WorkspaceR/00_Documents/Publications/Publications_Miguel.pdf",
-		"documents/Publications_Miguel.pdf", overwrite=TRUE)
-
-# List of GIS Repositories
-file.copy("M:/WorkspaceR/00_Documents/GIS_repositories/GIS_Repositories.pdf",
-		"documents/GIS_Repositories.pdf", overwrite=TRUE)
-
-# Handout form Data Base course in Nairobi 2018-09-03
-file.copy("M:/WorkspaceR/TRR228_2018_data_workshop/handout/_book/_main.pdf",
-		"documents/workshops_nairobi_2018.pdf", overwrite=TRUE)
-
-# Workshop ARBONETH 2018-11-30
-file.copy("M:/WorkspaceR/00_Documents/2017_ARBONETH_closure/Presentation_ARBONETH.html",
-		"documents/Presentation_ARBONETH.html", overwrite=TRUE)
-
-# Workshop Freiburg 2017-03-09
-file.copy("M:/WorkspaceR/00_Documents/introduction_vegtable/workshops_freiburg_2017.html",
-		"documents/workshops_freiburg_2017.html", overwrite=TRUE)
-```

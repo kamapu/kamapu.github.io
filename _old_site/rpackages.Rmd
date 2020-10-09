@@ -1,0 +1,178 @@
+---
+title: "R packages"
+output:
+  html_document:
+    include:
+      before_body: topnfoot/rpackages_topbar.html
+      after_body: topnfoot/footer.html
+    css: css/rpackages_style.css
+---
+
+A series of packages have been developed as experimental tools for data process
+and analysis.
+Though some of the created packages are developed for tasks specific to
+personal projects, they are freely available for public use.
+Feel free to use them and do not forget to provide your feedback.
+
+<br/>
+
+## Packages in CRAN
+
+
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### taxlist
+
+[![DOI](https://zenodo.org/badge/54913161.svg)](https://zenodo.org/badge/latestdoi/54913161)
+[![Travis Build Status](https://travis-ci.org/ropensci/taxlist.svg?branch=master)](https://travis-ci.org/ropensci/taxlist)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/taxlist)](https://cran.r-project.org/package=taxlist)
+[![CRAN_downloads](http://cranlogs.r-pkg.org/badges/taxlist)](https://cran.r-project.org/package=taxlist)
+[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/taxlist)](https://cran.r-project.org/package=taxlist)
+
+
+This package provides an object class for containing taxonomic lists.
+Lists of taxa (e.g. plant species) may be a list of accepted names but can
+optionally contain synonyms, taxonomic ranks, parent-child relationships, taxon
+traits, etc.
+
+The object `taxlist` attempts to validate the congruency of information
+contained in taxonomic lists and provides several functions for the
+manipulation of objects belonging to this class.
+
+[Read more...](rpkg/taxlist/index.html)
+
+</div>
+
+<br/>
+
+
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### vegtable
+
+[![DOI](https://zenodo.org/badge/55006983.svg)](https://zenodo.org/badge/latestdoi/55006983)
+[![Travis Build Status](https://travis-ci.org/kamapu/vegtable.svg?branch=master)](https://travis-ci.org/kamapu/vegtable)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/vegtable)](https://cran.r-project.org/package=vegtable)
+[![CRAN_downloads](http://cranlogs.r-pkg.org/badges/vegtable)](https://cran.r-project.org/package=vegtable)
+[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/vegtable)](https://cran.r-project.org/package=vegtable)
+
+
+This package provides an object class for containing taxonomic lists. Lists of
+taxa (e.g. plant species) may be a list of accepted names but can optionally
+contain synonyms, taxonomic ranks, parent-child relationships, taxon traits,
+etc.
+
+The object `taxlist` attempts to validate the congruency of information
+contained in taxonomic lists and provides several functions for the manipulation
+of objects belonging to this class.
+
+**in CRAN**
+[https://CRAN.R-project.org/package=vegtable](https://CRAN.R-project.org/package=vegtable)
+
+**in GitHub**
+[https://github.com/kamapu/vegtable](https://github.com/kamapu/vegtable)
+
+</div>
+
+<br/>
+
+
+# Packages out of CRAN
+
+<!-- Lexiguel ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### Lexiguel
+
+[![Travis Build Status](https://travis-ci.org/kamapu/Lexiguel.svg?branch=master)](https://travis-ci.org/kamapu/Lexiguel)
+
+A mingle-mangle of functions for R, most of them related to own publications.
+
+**in GitHub**
+[https://github.com/kamapu/Lexiguel](https://github.com/kamapu/Lexiguel)
+
+</div>
+
+<br/>
+
+<!-- cropgrowth ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### cropgrowth
+
+[![Travis Build Status](https://travis-ci.org/kamapu/cropgrowth.svg?branch=master)](https://travis-ci.org/kamapu/cropgrowth)
+
+Tools for the analysis and display of results coming from growth models.
+
+**in GitHub**
+[https://github.com/kamapu/cropgrowth](https://github.com/kamapu/cropgrowth)
+
+</div>
+
+<br/>
+
+<!-- vegtable2 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### vegtable2
+
+[![Travis Build Status](https://travis-ci.org/kamapu/vegtable2.svg?branch=master)](https://travis-ci.org/kamapu/vegtable2)
+
+Functions customized for the work with our own data sets.
+
+**in GitHub**
+[https://github.com/kamapu/vegtable2](https://github.com/kamapu/vegtable2)
+
+</div>
+
+<br/>
+
+<!-- spatialist ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### spatialist
+
+[![Travis Build Status](https://travis-ci.org/kamapu/spatialist.svg?branch=master)](https://travis-ci.org/kamapu/spatialist)
+
+Tools for the work with spatial (GIS) objects.
+
+**in GitHub**
+[https://github.com/kamapu/spatialist](https://github.com/kamapu/spatialist)
+
+</div>
+
+<br/>
+
+<!-- taxsearch +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### taxsearch
+
+Some functions for search in specimens information in Tropicos.
+
+**in GitHub**
+[https://github.com/kamapu/taxsearch](https://github.com/kamapu/taxsearch)
+
+</div>
+
+<br/>
+
+<!-- conosur +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #deefbc; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### conosur
+
+Some functions for search of species names in Flora del Conosur.
+
+**in GitHub**
+[https://github.com/kamapu/conosur](https://github.com/kamapu/conosur)
+
+</div>

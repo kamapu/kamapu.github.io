@@ -1,0 +1,32 @@
+---
+title: "Galleries"
+output:
+  html_document:
+    include:
+      before_body: topnfoot/art_topbar.html
+      after_body: topnfoot/footer.html
+    css: css/art_style.css
+---
+
+<div class="content">
+  <img src="gallery/flooding_bergheim.jpg" alt="Bear" style="width:100%">
+  <h3><a href="https://photos.app.goo.gl/JfGTO3U2RQIJwPDE2">Flooding in Troisdorf-Bergheim</a></h3>
+  <p>
+  Pictures captured during a flooding on <i>06-01-2018</i> in the Sieg River, at its mouth into the Rhine River.
+  The flooding was caused by heavy rains at the beginning of the year.
+  </p>
+</div>
+
+<br/>
+
+<div class="content">
+  <img src="gallery/self_portrait_r.jpg" alt="Bear" style="width:100%">
+  <h3><a href="https://photos.app.goo.gl/xIaXfAIOnbemHgck2">Art Gallery</a></h3>
+  <p>
+  A small collection of art works, many of those produced during lazyness.
+  My favourite techniques are drawing and linoleum cut.
+  </p>
+</div>
+
+Attempt to embed Google Pictures:
+

@@ -1,0 +1,30 @@
+name: "Miguel Alvarez"
+output_dir: "."
+navbar:
+  title: "<img id=\"logo\" style=\"height: 55px;\" src=\"images/Miguel4_profi2.png\" />"
+  left:
+    - text: "About"
+      href: about.html
+    - text: "Workshops"
+      href: workshops.html
+    - text: "R packages"
+      href: rpackages.html
+    - text: "Databases"
+      href: databases.html
+    - text: "Blog"
+      href: demo-distill/_site/index.html
+  right:
+    - icon: fa-university
+      href: https://www.ipe.uni-bonn.de/pflanzenernaehrung/mitarbeiter/m_alvarez
+    - icon: ai-researchgate
+      href: https://www.researchgate.net/profile/Miguel_Alvarez18
+    - icon: ai-google-scholar
+      href: https://scholar.google.de/citations?user=z29UaXQAAAAJ&hl=en
+    - icon: fa-github
+      href: https://www.github.com/kamapu
+    - icon: fa-stack-overflow
+      href: https://gis.stackexchange.com/users/80385/migue-lo?tab=profile
+output:
+  html_document:
+    theme: flatly
+    css: css/index_style.css

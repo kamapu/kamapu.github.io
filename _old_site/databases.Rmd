@@ -1,0 +1,59 @@
+---
+title: "Databases"
+output:
+  html_document:
+    include:
+      before_body: topnfoot/databases_topbar.html
+      after_body: topnfoot/footer.html
+    css: css/databases_style.css
+---
+
+Two main areas have been the focus of data collection in our working group,
+namely the western side of South America and the central part of Africa.
+
+<br/>
+
+<!-- SWEA-Dataveg ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #e8ffa4; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### SWEA-Dataveg
+
+[![GIVD](badges/swea_givd.svg)](http://www.givd.info/ID/AF-00-006)
+[![version](badges/sweadataveg_version.svg)](sweadataveg.html)
+
+This database was launched in the context of the [SWEA
+project](https://www.ipe.uni-bonn.de/verbundprojekte/wetland/swea) (agricultural
+use and vulnerability of small wetlands in East Africa) and has been its legacy
+across different research projects in Eastern Africa.
+Currently covers several countries in the African continent and diverse
+vegetation types.
+
+The first mention to this database was done by [Alvarez et al.
+(2012a)](https://doi.org/10.7809/b-e.00092) and [Alvarez et al.
+(2012b)](https://doi.org/10.7809/b-e.00060).
+
+[Read more...](sweadataveg.html)
+
+</div>
+
+<br/>
+
+<!-- sudamerica ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: #e8ffa4; text-align: left; padding: 10px;
+border-radius: 15px">
+
+### sudamerica
+
+[![GIVD](badges/sudamerica_givd.svg)](http://www.givd.info/ID/SA-CL-001)
+[![version](badges/sudamerica_version.svg)](sudamerica.html)
+
+This database was first launched as a vegetation-plot database for
+Chilean grassland vegetation (**CL-Dataveg**; see also
+[Alvarez et al. 2012c](https://doi.org/10.7809/b-e.00230)). Currently it is
+extended to other countries in South America and is opened for any plant
+bio-diversity record and any vegetation type.
+
+[Read more...](sudamerica.html)
+
+</div>
