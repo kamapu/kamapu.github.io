@@ -1,0 +1,6 @@
+---
+title: "Demo Distill"
+site: distill::distill_website
+css: css/databases_style.css
+listing: posts
+---

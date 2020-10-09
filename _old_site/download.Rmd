@@ -1,0 +1,50 @@
+---
+title: "Download"
+output:
+  html_document:
+    include:
+      before_body: topnfoot/news_topbar.html
+      after_body: topnfoot/footer.html
+    css: css/news_style.css
+---
+
+<div style="background-color: #d9f3d5; text-align: left; padding: 10px;
+border-radius: 15px">
+[**Online Sources for GIS Data Sets**](documents/GIS_Repositories.pdf)<br>
+<font color="#045f7d">*Miguel Alvarez, Kristian N&auml;schen &amp; Lukas Tr&uuml;benbach*</font><br>
+A list of links to download or request spatial data
+sets. The list contains both, vector and raster data as well as attribute
+tables. This document can be especially useful on the search of example data for
+teaching purposes.
+</div>
+
+</br>
+
+<div style="background-color: #d9f3d5; text-align: left; padding: 10px;
+border-radius: 15px">
+[**Introduction to the package
+vegtable**](documents/workshops_freiburg_2017.html)<br>
+<font color="#045f7d">*Miguel Alvarez*</font><br>
+A quick introduction to the use of the packages `taxlist` and `vegtable`, which
+are especially designed for working with vegetation-plot data sets and similar
+biodiversity records.
+</div>
+
+</br>
+
+<div style="background-color: #d9f3d5; text-align: left; padding: 10px;
+border-radius: 15px">
+[**Vegetation-Plot Databases and their Contribution to Bio-Diversity and Syntaxonomy**](documents/Presentation_ARBONETH.html)<br>
+<font color="#045f7d">*Miguel Alvarez*</font><br>
+A quick introduction on the activities dealing with a vegetation-plot database
+for East Africa.
+</div>
+
+</br>
+
+<div style="background-color: #d9f3d5; text-align: left; padding: 10px;
+border-radius: 15px">
+[**Localities in Project B01**](documents/d1_localities.html)<br>
+<font color="#045f7d">*Miguel Alvarez*</font><br>
+Internal document.
+</div>
