@@ -1,0 +1,94 @@
+---
+title: "R Packages"
+description: |
+  R packages either published in [CRAN](https://cran.r-project.org/) or on
+  development.
+output:
+  distill::distill_article:
+    toc: true
+    toc_float: true
+---
+
+# CRAN Packages
+
+### taxlist
+
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/taxlist)](https://cran.r-project.org/package=taxlist)
+[![DOI](https://zenodo.org/badge/54913161.svg)](https://zenodo.org/badge/latestdoi/54913161)
+[![CRAN_downloads](http://cranlogs.r-pkg.org/badges/taxlist)](https://cran.r-project.org/package=taxlist)
+[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/taxlist)](https://cran.r-project.org/package=taxlist)
+
+This package provides an object class for containing taxonomic lists. Lists of
+taxa (e.g. plant species) may be a list of accepted names but can optionally
+contain synonyms, taxonomic ranks, parent-child relationships, taxon traits,
+etc.
+
+The object `taxlist` attempts to validate the congruency of information
+contained in taxonomic lists and provides several functions for the manipulation
+of objects belonging to this class.
+
+[Read more...](https://docs.ropensci.org/taxlist/)
+
+
+### vegtable
+
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/vegtable)](https://cran.r-project.org/package=vegtable)
+[![DOI](https://zenodo.org/badge/55006983.svg)](https://zenodo.org/badge/latestdoi/55006983)
+[![CRAN_downloads](http://cranlogs.r-pkg.org/badges/vegtable)](https://cran.r-project.org/package=vegtable)
+[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/vegtable)](https://cran.r-project.org/package=vegtable)
+
+This package provides an object class for containing taxonomic lists. Lists of
+taxa (e.g. plant species) may be a list of accepted names but can optionally
+contain synonyms, taxonomic ranks, parent-child relationships, taxon traits,
+etc.
+
+The object `taxlist` attempts to validate the congruency of information
+contained in taxonomic lists and provides several functions for the manipulation
+of objects belonging to this class.
+
+[Read more...](https://github.com/kamapu/vegtable)
+
+
+# Other Packages
+
+
+### Lexiguel
+
+A mingle-mangle of functions for R, most of them related to own publications.
+
+[Read more...](https://github.com/kamapu/Lexiguel)
+
+
+### cropgrowth
+
+Tools for the analysis and display of results coming from growth models.
+
+[Read more...](https://github.com/kamapu/cropgrowth)
+
+
+### vegtable2
+
+Functions customized for the work with our own data sets.
+
+[Read more...](https://github.com/kamapu/vegtable2)
+
+
+### spatialist
+
+Tools for the work with spatial (GIS) objects.
+
+[Read more...](https://github.com/kamapu/spatialist)
+
+
+### taxsearch
+
+Some functions for search in specimens information in Tropicos.
+
+[Read more...](https://github.com/kamapu/taxsearch)
+
+
+### conosur
+
+Some functions for search of species names in Flora del Conosur.
+
+[Read more...](https://github.com/kamapu/conosur)
