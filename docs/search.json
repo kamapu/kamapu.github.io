@@ -5,7 +5,7 @@
       "title": "Demo Distill",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2020-10-10T20:28:21+02:00"
+      "last_modified": "2020-10-10T21:24:06+02:00"
     },
     {
       "path": "databases.html",
@@ -13,14 +13,14 @@
       "description": "Collection of data sets and data bases.",
       "author": [],
       "contents": "\nSWEA-Dataveg\n \nThis database was launched in the context of the SWEA project (agricultural use and vulnerability of small wetlands in East Africa) and has been its legacy across different research projects in Eastern Africa. Currently covers several countries in the African continent and diverse vegetation types.\nThe first mention to this database was done by Alvarez et al. (2012a) and Alvarez et al. (2012b).\nRead more…\nsudamerica\n \nThis database was first launched as a vegetation-plot database for Chilean grassland vegetation (CL-Dataveg; see also Alvarez et al. 2012c). Currently it is extended to other countries in South America and is opened for any plant bio-diversity record and any vegetation type.\nRead more…\n\n\n\n",
-      "last_modified": "2020-10-10T20:28:21+02:00"
+      "last_modified": "2020-10-10T21:24:06+02:00"
     },
     {
       "path": "index.html",
       "title": "Welcome!",
       "author": [],
-      "contents": "\n\n\n\nMiguel Alvarez, Dr. rer. nat.\nI am Research Associate at the Plant Nutrition Group, University of Bonn, Germany. My research activities are focused on plant diversity and vegetation ecology in East African wetlands. Additionally, I dedicate some efforts to synsystematic classification in diverse formations and in the management of data stored in vegetation-plot databases. Some surveys have been also carried out in Mediterranean and temperate Chile.\nThis page is oriented to my services developing tools for handling vegetation-plot data and diversity information.\nAlthough most the information presented here is related to my work, it does not represent in any way the opinion of the University of Bonn.\nCurriculum Vitae\nPublication List\n\n\n\n\n",
-      "last_modified": "2020-10-10T20:28:22+02:00"
+      "contents": "\nMiguel Alvarez, Dr. rer. nat.\nI am Research Associate at the Plant Nutrition Group, University of Bonn, Germany. My research activities are focused on plant diversity and vegetation ecology in East African wetlands. Additionally, I dedicate some efforts to synsystematic classification in diverse formations and in the management of data stored in vegetation-plot databases. Some surveys have been also carried out in Mediterranean and temperate Chile.\n \nThis page is oriented to my services developing tools for handling vegetation-plot data and diversity information.\nAlthough most the information presented here is related to my work, it does not represent in any way the opinion of the University of Bonn.\nCurriculum Vitae\nPublication List\n\n\n\n",
+      "last_modified": "2020-10-10T21:24:07+02:00"
     },
     {
       "path": "research.html",
@@ -28,7 +28,7 @@
       "description": "Research and teaching activities are focused on plant diversity and vegetation\necology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).\nSome additional work have been carried out in Europe (Germany) and South\nAmerica.\n",
       "author": [],
       "contents": "\n\nContents\nCurrent Projects\nFuture Rural Africa\n\nPast Projects\nGlobE-wetlands\nARBONETH\nRCR\nSWEA\nIMPETUS\n\n\nCurrent Projects\nFuture Rural Africa\nFuture Rural Africa – Future-making and social-ecological transformation\nEvaluating expectations and probabilities in future-making from different perspectives, including social and natural sciences. One of the focus in the consortium is related to the importance of invasive plants on the ecology and management of rangelands in Kenya.\n \nPast Projects\nGlobE-wetlands\nGlobE-wetlands – Reconciling future food production with environmental protection\nAn interdisciplinary project dealing with the effects of cropping activities on seasonal wetlands. While wetlands in sub-Saharan Africa are important sites for food production, especially in semi-arid regions, cropping activities may also have negative impacts on the integrity of agro-ecosystems.\n \nARBONETH\nARBONETH – The Ethiopian arboretum network\nResearch and education project supporting ex-situ conservation of native trees through the establishment of a network among Ethiopian arboretums.\n \nRCR\nRCR – Resilience, collapse and reorganization in social-ecological systems of African savannas\nSocial systems and environment interact through coupling and regulation processes in the bio-physical, political-institutional and symbolic-cultural space. Understanding such processes may allow decision makers to adopt strategies suitables for avoiding collapse of socio-ecological systems (SES).\n \nSWEA\nSWEA – Agricultural use and vulnerability of small wetlands in East Africa\nEffects of cropping activities on the integrity and productivity of small wetlands in Kenya and Tanzania.\n \nIMPETUS\nIMPETUS – An integrated approach to the efficient management of scarce water resources in West Africa\nSustainable management of water resources in Benin and Morocco.\n \n\n\n\n",
-      "last_modified": "2020-10-10T20:28:23+02:00"
+      "last_modified": "2020-10-10T21:24:08+02:00"
     },
     {
       "path": "rpackages.html",
@@ -36,7 +36,7 @@
       "description": "R packages either published in [CRAN](https://cran.r-project.org/) or on\ndevelopment.\n",
       "author": [],
       "contents": "\n\nContents\nCRAN Packages\ntaxlist\nvegtable\n\nOther Packages\nLexiguel\ncropgrowth\nvegtable2\nspatialist\ntaxsearch\nconosur\n\n\nCRAN Packages\ntaxlist\n   \nThis package provides an object class for containing taxonomic lists. Lists of taxa (e.g. plant species) may be a list of accepted names but can optionally contain synonyms, taxonomic ranks, parent-child relationships, taxon traits, etc.\nThe object taxlist attempts to validate the congruency of information contained in taxonomic lists and provides several functions for the manipulation of objects belonging to this class.\nRead more…\nvegtable\n   \nThis package provides an object class for containing taxonomic lists. Lists of taxa (e.g. plant species) may be a list of accepted names but can optionally contain synonyms, taxonomic ranks, parent-child relationships, taxon traits, etc.\nThe object taxlist attempts to validate the congruency of information contained in taxonomic lists and provides several functions for the manipulation of objects belonging to this class.\nRead more…\nOther Packages\nLexiguel\nA mingle-mangle of functions for R, most of them related to own publications.\nRead more…\ncropgrowth\nTools for the analysis and display of results coming from growth models.\nRead more…\nvegtable2\nFunctions customized for the work with our own data sets.\nRead more…\nspatialist\nTools for the work with spatial (GIS) objects.\nRead more…\ntaxsearch\nSome functions for search in specimens information in Tropicos.\nRead more…\nconosur\nSome functions for search of species names in Flora del Conosur.\nRead more…\n\n\n\n",
-      "last_modified": "2020-10-10T20:28:23+02:00"
+      "last_modified": "2020-10-10T21:24:08+02:00"
     }
   ],
   "collections": ["posts/posts.json"]
