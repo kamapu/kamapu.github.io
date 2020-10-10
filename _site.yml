@@ -1,12 +1,40 @@
-name: "demo-distill"
-title: "Demo Distill"
+name: "Miguel Alvarez"
+title: "Miguel Alvarez"
 description: |
-  Demo Distill
-output_dir: "_site"
+  Home Page
+output_dir: "docs"
 navbar:
+  left:
+    - text: "Research"
+      href: research.html
+    - text: "R Packages"
+      href: rpackages.html
+    - text: "Databases"
+      href: databases.html
+    - text: "Blog"
+      href: blog.html
   right:
-    - text: "Home"
-      href: index.html
-    - text: "About"
-      href: about.html
-output: distill::distill_article
+    #- icon: fa-university
+    - text: "ub"
+      href: https://www.ipe.uni-bonn.de/pflanzenernaehrung/mitarbeiter/m_alvarez
+    #- icon: ai-researchgate
+    - text: "rg"
+      href: https://www.researchgate.net/profile/Miguel_Alvarez18
+    #- icon: ai-google-scholar
+    - text: "gs"
+      href: https://scholar.google.de/citations?user=z29UaXQAAAAJ&hl=en
+    #- icon: fa-github
+    - text: "gh"
+      href: https://www.github.com/kamapu
+    #- icon: fa-github
+    - text: "gl"
+      href: https://gitlab.com/kamapu1
+    #- icon: fa-stack-overflow
+    - text: "so"
+      href: https://gis.stackexchange.com/users/80385/migue-lo?tab=profile
+  logo: images/logo_miguel.png
+  search: true
+output:
+  distill::distill_article:
+    css: styles.css
+    
