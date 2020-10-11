@@ -2,7 +2,8 @@
 title: "Tanzanian wetlands in the cover of Phytocoenologia"
 description: |
   A publication on classification of East African wetland communities in the
-  context of the Braun-Blanquet approach.
+  context of the Braun-Blanquet approach managed to the cover of the journal
+  Phytocoenologia.
 author:
   - name: Miguel Alvarez
     url: https://kamapu.github.io/
@@ -15,13 +16,8 @@ categories:
   - vegetation
   - wetlands
 preview: images/cover_cropped.jpg
-creative_commons: CC BY
 canonical_url: https://kamapu.github.io/wetlands-phytocoenologia
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
 After a long process of learning, storing data, collecting publications and
 analysing data, the work entitled *Classification of aquatic and semi-aquatic
@@ -33,6 +29,17 @@ and one Kenyan site) with a supervised classification method (Cocktail) and
 includes an exhaustive review on previous syntaxonomical works.
 One of the localities (Kwasunga in Tanzania) appears in the cover page of the
 issue.
+Wetland ecosystems are important providers of services for the people and fulfil
+essential ecological functions.
+Syntaxonomic classifications according to species composition and ecological
+preferences are useful references for monitoring of integrity and to assess the
+importance of wetlands for conservation purposes.
+
+<aside>
+<a href="https://www.schweizerbart.de/papers/phyto/list/47#issue4" target="_self"> 
+    <img src="images/phyto_47_4_2017.jpg"  alt="" style="width:300px; height:auto;"/> 
+</a>
+</aside>
 
 Although in this article I am the only author, I was not alone in the journey.
 I have to thank **Ulrich Deil** (University of Freiburg, Germany) for allowing
@@ -43,8 +50,3 @@ editor.
 I also have to thank to two anonymous reviewers of the manuscript and all
 Kenyan and Tanzanian colleagues that supported me during the field activities.
 
-<aside>
-<a href="https://www.schweizerbart.de/papers/phyto/list/47#issue4" target="_self"> 
-    <img src="images/phyto_47_4_2017.jpg"  alt="" style="width:300px; height:auto;"/> 
-</a>
-</aside>

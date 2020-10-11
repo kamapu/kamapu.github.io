@@ -7,13 +7,33 @@
     <description>Home Page
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 01 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>R for AfRica</title>
+      <dc:creator>Miguel Alvarez</dc:creator>
+      <dc:creator>Bisrat H. Gebrekhidan</dc:creator>
+      <dc:creator>Samuel Kiboi</dc:creator>
+      <link>https://kamapu.github.io/posts/2020-05-13-r4africa</link>
+      <description>The proliferation of freeware and open source applications expands the
+potential of scientists, especially in countries of difficult access to
+commercial licenses for software tools.
+In the context of enhanced international networks between education and
+research institutions, training on use of freeware is becoming a crucial step
+for a better balance in collaboration between European and Eastern African
+countries, harmonizing the capacities among researchers and students.</description>
+      <category>R</category>
+      <category>workshops</category>
+      <guid>https://kamapu.github.io/posts/2020-05-13-r4africa</guid>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/2020-05-13-r4africa/images/bisrat_teaching.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Tanzanian wetlands in the cover of Phytocoenologia</title>
       <dc:creator>Miguel Alvarez</dc:creator>
       <link>https://kamapu.github.io/posts/2017-12-01-wetlandsfront</link>
       <description>A publication on classification of East African wetland communities in the
-context of the Braun-Blanquet approach.</description>
+context of the Braun-Blanquet approach managed to the cover of the journal
+Phytocoenologia.</description>
       <category>vegetation</category>
       <category>wetlands</category>
       <guid>https://kamapu.github.io/posts/2017-12-01-wetlandsfront</guid>

@@ -37,11 +37,11 @@
 
 /*Use similar settings for images in navigation bar*/
 .distill-site-header .nav-image img {
-	opacity: 0.9;
-    max-height: 30px;
+	opacity: 0.85;
+    max-height: 25px;
     width: auto;
     display: inline-block;
-    margin-bottom: -5px;
+    margin-bottom: -3px;
   }
 
 /*Font style*/
