@@ -107,7 +107,7 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Research"]},{"type":"character","attributes":{},"value":["Research and teaching activities are focused on plant diversity and vegetation\necology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).\nSome additional work have been carried out in Europe (Germany) and South\nAmerica.\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["Research"]},{"type":"character","attributes":{},"value":["Research and teaching activities are focused on plant diversity and vegetation\necology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).\nSome additional work have been carried out in Europe (Germany) and South\nAmerica."]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2041,6 +2041,15 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
       margin-bottom: -15px;
     }
 
+  /*Use similar settings for images in navigation bar*/
+  .distill-site-header .nav-image img {
+  	opacity: 0.9;
+      max-height: 30px;
+      width: auto;
+      display: inline-block;
+      margin-bottom: -5px;
+    }
+
   /*Font style*/
   d-article div.sourceCode code, 
   d-article pre code {
@@ -2085,12 +2094,24 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
-<a href="https://www.ipe.uni-bonn.de/pflanzenernaehrung/mitarbeiter/m_alvarez">ub</a>
-<a href="https://www.researchgate.net/profile/Miguel_Alvarez18">rg</a>
-<a href="https://scholar.google.de/citations?user=z29UaXQAAAAJ&amp;hl=en">gs</a>
-<a href="https://www.github.com/kamapu">gh</a>
-<a href="https://gitlab.com/kamapu1">gl</a>
-<a href="https://gis.stackexchange.com/users/80385/migue-lo?tab=profile">so</a>
+<a href="https://www.ipe.uni-bonn.de/pflanzenernaehrung/mitarbeiter/m_alvarez" class="nav-image">
+<img src="images/art_ubonn_w.png"/>
+</a>
+<a href="https://www.researchgate.net/profile/Miguel_Alvarez18" class="nav-image">
+<img src="images/art_researchgate_w.png"/>
+</a>
+<a href="https://scholar.google.de/citations?user=z29UaXQAAAAJ&amp;hl=en" class="nav-image">
+<img src="images/art_gscholar_w.png"/>
+</a>
+<a href="https://www.github.com/kamapu" class="nav-image">
+<img src="images/art_github_w.png"/>
+</a>
+<a href="https://gitlab.com/kamapu1" class="nav-image">
+<img src="images/art_gitlab_w.png"/>
+</a>
+<a href="https://gis.stackexchange.com/users/80385/migue-lo?tab=profile" class="nav-image">
+<img src="images/art_stack_w.png"/>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2108,25 +2129,6 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 
 
 <div class="d-article">
-<div class="d-contents d-contents-float">
-<nav class="l-text toc figcaption" id="TOC">
-<h3>Contents</h3>
-<ul>
-<li><a href="#current-projects">Current Projects</a>
-<ul>
-<li><a href="#future-rural-africa">Future Rural Africa</a></li>
-</ul></li>
-<li><a href="#past-projects">Past Projects</a>
-<ul>
-<li><a href="#globe-wetlands">GlobE-wetlands</a></li>
-<li><a href="#arboneth">ARBONETH</a></li>
-<li><a href="#rcr">RCR</a></li>
-<li><a href="#swea">SWEA</a></li>
-<li><a href="#impetus">IMPETUS</a></li>
-</ul></li>
-</ul>
-</nav>
-</div>
 <h1 id="current-projects">Current Projects</h1>
 <h3 id="future-rural-africa">Future Rural Africa</h3>
 <p><strong>Future Rural Africa – Future-making and social-ecological transformation</strong></p>

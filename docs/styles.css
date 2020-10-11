@@ -35,6 +35,15 @@
     margin-bottom: -15px;
   }
 
+/*Use similar settings for images in navigation bar*/
+.distill-site-header .nav-image img {
+	opacity: 0.9;
+    max-height: 30px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -5px;
+  }
+
 /*Font style*/
 d-article div.sourceCode code, 
 d-article pre code {
