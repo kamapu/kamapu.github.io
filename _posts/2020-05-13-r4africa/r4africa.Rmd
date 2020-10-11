@@ -1,0 +1,29 @@
+---
+title: "R for AfRica"
+description: |
+  The proliferation of freeware and open source applications expands the
+  potential of scientists, especially in countries of difficult access to
+  commercial licenses for software tools.
+  In the context of enhanced international networks between education and
+  research institutions, training on use of freeware is becoming a crucial step
+  for a better balance in collaboration between European and Eastern African
+  countries, harmonizing the capacities among researchers and students.
+author:
+  - name: Miguel Alvarez
+    url: https://kamapu.github.io/
+  - name: Bisrat H. Gebrekhidan
+  - name: Samuel Kiboi
+date: 05-13-2020
+output:
+  distill::distill_article:
+    self_contained: false
+draft: false
+categories:
+  - R
+  - workshops
+preview: images/bisrat_teaching.jpg
+---
+
+<script language="javascript">
+  window.location.href="https://www.crc228.de/2020/05/13/r-for-africa-training-on-analyzing-and-documenting-data-with-r/"
+</script>

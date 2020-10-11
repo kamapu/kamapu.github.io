@@ -1,0 +1,34 @@
+---
+title: "A journey in rOpenSci"
+description: |
+  A brief account of the experiences gained after a bit more than 2 years review
+  process of the package taxlist for its submission to rOpenSci.
+  This journey resulted on new tools learned and new friends.
+  The talk was presented at LatinR 2020 (virtual meeting).
+author:
+  - name: Miguel Alvarez
+    url: https://kamapu.github.io/
+date: 10-08-2020
+output:
+  distill::distill_article:
+    self_contained: false
+draft: true
+categories:
+  - R
+  - conference
+preview: first_slide.png
+canonical_url: https://kamapu.github.io/taxlist-ropensci
+---
+
+
+
+Add a preview figure with "preview"
+
+Conference [**LatinR 2020**](https://latin-r.com/en)
+
+[video](https://www.youtube.com/watch?v=NDB4s8N2fTw)
+
+Presentation is in home // documents/Alvarez2020.pdf
+
+
+
