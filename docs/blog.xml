@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Miguel Alvarez</title>
+    <link>https://kamapu.github.io/</link>
+    <atom:link href="https://kamapu.github.io/blog.xml" rel="self" type="application/rss+xml"/>
+    <description>Home Page
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Fri, 01 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Tanzanian wetlands in the cover of Phytocoenologia</title>
+      <dc:creator>Miguel Alvarez</dc:creator>
+      <link>https://kamapu.github.io/posts/2017-12-01-wetlandsfront</link>
+      <description>A publication on classification of East African wetland communities in the
+context of the Braun-Blanquet approach.</description>
+      <category>vegetation</category>
+      <category>wetlands</category>
+      <guid>https://kamapu.github.io/posts/2017-12-01-wetlandsfront</guid>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/2017-12-01-wetlandsfront/images/cover_cropped.jpg" medium="image" type="image/jpeg"/>
+    </item>
+  </channel>
+</rss>
