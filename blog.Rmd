@@ -1,5 +1,5 @@
 ---
-title: "Demo Distill"
+title: "New and Old News"
 site: distill::distill_website
 listing: posts
 ---

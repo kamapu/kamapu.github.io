@@ -3,6 +3,7 @@ title: "Miguel Alvarez"
 description: |
   Home Page
 output_dir: "docs"
+base_url: https://kamapu.github.io/
 navbar:
   left:
     - text: "Research"
@@ -28,6 +29,12 @@ navbar:
       href: https://gis.stackexchange.com/users/80385/migue-lo?tab=profile
   logo: images/logo_miguel.png
   search: true
+collections:
+  posts:
+    categories: true
+    categories_metadata: true
+    authors_metadata: false
+    citations: false
 output:
   distill::distill_article:
     css: styles.css
