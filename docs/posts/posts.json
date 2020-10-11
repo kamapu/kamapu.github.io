@@ -24,7 +24,7 @@
     ],
     "contents": "\n\n  window.location.href=\"https://www.crc228.de/2020/05/13/r-for-africa-training-on-analyzing-and-documenting-data-with-r/\"\n\n\n\n",
     "preview": "posts/2020-05-13-r4africa/images/bisrat_teaching.jpg",
-    "last_modified": "2020-10-11T22:34:07+02:00",
+    "last_modified": "2020-10-12T00:20:42+02:00",
     "input_file": {}
   },
   {
@@ -44,7 +44,7 @@
     ],
     "contents": "\nAfter a long process of learning, storing data, collecting publications and analysing data, the work entitled Classification of aquatic and semi-aquatic vegetation in two East African sites: Cocktail definitions and syntaxonomy (Alvarez 2017) appeared in the volume 47 of the journal Phytocoenologia. This article assesses vegetation-plots from two localities (one Tanzanian site and one Kenyan site) with a supervised classification method (Cocktail) and includes an exhaustive review on previous syntaxonomical works. One of the localities (Kwasunga in Tanzania) appears in the cover page of the issue. Wetland ecosystems are important providers of services for the people and fulfil essential ecological functions. Syntaxonomic classifications according to species composition and ecological preferences are useful references for monitoring of integrity and to assess the importance of wetlands for conservation purposes.\n \nAlthough in this article I am the only author, I was not alone in the journey. I have to thank Ulrich Deil (University of Freiburg, Germany) for allowing me to access his personal library, Milan Chytrý (University of Brno, Czech Republic) for mentoring me on the hard way of doing Cocktail, and to Jan Roleček (Czech Academy of Sciences, Czech Republic) for his support as editor. I also have to thank to two anonymous reviewers of the manuscript and all Kenyan and Tanzanian colleagues that supported me during the field activities.\n\n\n\n",
     "preview": "posts/2017-12-01-wetlandsfront/images/cover_cropped.jpg",
-    "last_modified": "2020-10-11T22:41:04+02:00",
+    "last_modified": "2020-10-12T00:20:42+02:00",
     "input_file": {}
   }
 ]

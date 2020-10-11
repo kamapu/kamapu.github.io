@@ -35,6 +35,7 @@ collections:
     categories_metadata: true
     authors_metadata: false
     citations: false
+    share: [facebook, linkedin]
 output:
   distill::distill_article:
     css: styles.css
