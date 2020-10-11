@@ -3,10 +3,6 @@ title: "R Packages"
 description: |
   R packages either published in [CRAN](https://cran.r-project.org/) or on
   development.
-output:
-  distill::distill_article:
-    toc: true
-    toc_float: true
 ---
 
 # CRAN Packages
