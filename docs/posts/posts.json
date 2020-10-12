@@ -1,5 +1,27 @@
 [
   {
+    "path": "posts/2020-10-08-taxlistjourney/",
+    "title": "A journey in rOpenSci",
+    "description": "A brief account of the experiences gained after a bit more than 2 years review\nprocess of the package taxlist for its submission to rOpenSci.\nThis journey resulted on new tools learned and new friends.\nThe talk was presented at LatinR 2020 (virtual meeting).",
+    "author": [
+      {
+        "name": "Miguel Alvarez",
+        "url": "https://kamapu.github.io/"
+      }
+    ],
+    "date": "2020-10-08",
+    "categories": [
+      "conference",
+      "R"
+    ],
+    "contents": "\nAfter a long review process, where a lot of improvements have been implemented, the package taxlist managed to be accepted in rOpenSci. The package taxllist handles taxonomic lists as S4 objects in R. Such objects can be used as modules within data sets of biodiversity records as in the package vegtable.\nIn a brief talk a summary of the experiences during the process of submission to rOpenSci was presented in the context of the conference LatinR 2020. Here you can access to the slides and the video of the presentation.\n \n\n\n\n",
+    "preview": "posts/2020-10-08-taxlistjourney/images/cover_video.png",
+    "last_modified": "2020-10-12T05:36:31+02:00",
+    "input_file": {},
+    "preview_width": 749,
+    "preview_height": 419
+  },
+  {
     "path": "posts/2020-05-13-r4africa/",
     "title": "R for AfRica",
     "description": "The proliferation of freeware and open source applications expands the\npotential of scientists, especially in countries of difficult access to\ncommercial licenses for software tools.\nIn the context of enhanced international networks between education and\nresearch institutions, training on use of freeware is becoming a crucial step\nfor a better balance in collaboration between European and Eastern African\ncountries, harmonizing the capacities among researchers and students.",
@@ -20,11 +42,11 @@
     "date": "2020-05-13",
     "categories": [
       "R",
-      "workshops"
+      "workshop"
     ],
     "contents": "\n\n  window.location.href=\"https://www.crc228.de/2020/05/13/r-for-africa-training-on-analyzing-and-documenting-data-with-r/\"\n\n\n\n",
     "preview": "posts/2020-05-13-r4africa/images/bisrat_teaching.jpg",
-    "last_modified": "2020-10-12T00:20:42+02:00",
+    "last_modified": "2020-10-12T05:28:55+02:00",
     "input_file": {}
   },
   {

@@ -20,7 +20,7 @@ output:
 draft: false
 categories:
   - R
-  - workshops
+  - workshop
 preview: images/bisrat_teaching.jpg
 ---
 

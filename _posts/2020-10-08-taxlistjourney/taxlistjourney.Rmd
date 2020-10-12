@@ -12,23 +12,31 @@ date: 10-08-2020
 output:
   distill::distill_article:
     self_contained: false
-draft: true
+draft: false
 categories:
-  - R
   - conference
-preview: first_slide.png
+  - R
+preview: images/cover_video.png
 canonical_url: https://kamapu.github.io/taxlist-ropensci
 ---
 
+After a long review process, where a lot of improvements have been implemented,
+the package [`taxlist`](https://docs.ropensci.org/taxlist/) managed to be
+accepted in [**rOpenSci**](https://ropensci.org/).
+The package `taxllist` handles taxonomic lists as **S4** objects in
+[**R**](https://www.r-project.org/).
+Such objects can be used as modules within data sets of biodiversity records as
+in the package [`vegtable`](https://github.com/kamapu/vegtable).
 
+In a brief talk a summary of the experiences during the process of submission to
+**rOpenSci** was presented in the context of the conference [**LatinR
+2020**](https://latin-r.com/en).
+Here you can access to the
+[slides](https://kamapu.github.io/documents/Alvarez2020.pdf) and the
+[video](https://www.youtube.com/watch?v=NDB4s8N2fTw) of the presentation.
 
-Add a preview figure with "preview"
-
-Conference [**LatinR 2020**](https://latin-r.com/en)
-
-[video](https://www.youtube.com/watch?v=NDB4s8N2fTw)
-
-Presentation is in home // documents/Alvarez2020.pdf
-
-
-
+<aside>
+<a href="https://www.youtube.com/watch?v=NDB4s8N2fTw" target="_self"> 
+    <img src="images/first_slide.png"  alt="" style="width:400px; height:auto;"/> 
+</a>
+</aside>

@@ -7,7 +7,21 @@
     <description>Home Page
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>A journey in rOpenSci</title>
+      <dc:creator>Miguel Alvarez</dc:creator>
+      <link>https://kamapu.github.io/posts/2020-10-08-taxlistjourney</link>
+      <description>A brief account of the experiences gained after a bit more than 2 years review
+process of the package taxlist for its submission to rOpenSci.
+This journey resulted on new tools learned and new friends.
+The talk was presented at LatinR 2020 (virtual meeting).</description>
+      <category>conference</category>
+      <category>R</category>
+      <guid>https://kamapu.github.io/posts/2020-10-08-taxlistjourney</guid>
+      <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/2020-10-08-taxlistjourney/images/cover_video.png" medium="image" type="image/png" width="749" height="419"/>
+    </item>
     <item>
       <title>R for AfRica</title>
       <dc:creator>Miguel Alvarez</dc:creator>
@@ -22,7 +36,7 @@ research institutions, training on use of freeware is becoming a crucial step
 for a better balance in collaboration between European and Eastern African
 countries, harmonizing the capacities among researchers and students.</description>
       <category>R</category>
-      <category>workshops</category>
+      <category>workshop</category>
       <guid>https://kamapu.github.io/posts/2020-05-13-r4africa</guid>
       <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/2020-05-13-r4africa/images/bisrat_teaching.jpg" medium="image" type="image/jpeg"/>
