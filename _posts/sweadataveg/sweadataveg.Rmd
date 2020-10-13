@@ -3,7 +3,7 @@ title: "SWEA-Dataveg: A vegetation-plot database for Africa"
 description: |
   A collection of vegetation-plots from Africa, originally focused on wetland
   vegetation from Eastern Africa, it is currently expanded to other areas
-  and considering any kind of vegetation.
+  and considering any kind of plant communities.
 author:
   - name: Miguel Alvarez
     url: https://kamapu.github.io/
@@ -21,12 +21,7 @@ preview: images/wetland_tz.jpg
 **Vegetation-plot data from Eastern Africa and abroad**
 
 [![GIVD](badges/swea_givd.svg)](http://www.givd.info/ID/AF-00-006)
-[![version](badges/sweadataveg_version.svg)](sweadataveg.html)
-
-```{r import_swea, echo=FALSE, results="hide"}
-# Object already exists in the session
-#load("M:/WorkspaceR/00_Documents/update_databases/sweadataveg.rda")
-```
+[![version](badges/sweadataveg_version.svg)](https://kamapu.github.io/sweadataveg/)
 
 The database **SWEA-Dataveg** is formatted in **PostgreSQL**, including the
 extension **PostGIS**. For data exchange (after a respective agreement with the

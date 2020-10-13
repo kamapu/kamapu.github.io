@@ -9,6 +9,20 @@
     <generator>Distill</generator>
     <lastBuildDate>Tue, 13 Oct 2020 00:00:00 +0000</lastBuildDate>
     <item>
+      <title>sudamerica: A vegetation-plot database for the Neo-Tropics</title>
+      <dc:creator>Miguel Alvarez</dc:creator>
+      <link>https://kamapu.github.io/posts/sudamerica</link>
+      <description>A database initiated for relevés in temperate grasslands in Chile but
+currently open for all the American continent with a strong focus in South
+America.
+This database attempt to store published relevés for meta-analysis purposes.</description>
+      <category>database</category>
+      <category>vegetation</category>
+      <guid>https://kamapu.github.io/posts/sudamerica</guid>
+      <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/sudamerica/images/guadal_chile.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>SWEA-Dataveg: A vegetation-plot database for Africa</title>
       <dc:creator>Miguel Alvarez</dc:creator>
       <link>https://kamapu.github.io/posts/sweadataveg</link>
