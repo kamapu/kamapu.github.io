@@ -7,8 +7,8 @@ description: |
 
 ### SWEA-Dataveg
 
-[![GIVD](badges/swea_givd.svg)](http://www.givd.info/ID/AF-00-006)
-[![version](badges/sweadataveg_version.svg)](https://kamapu.github.io/sweadataveg)
+[![GIVD](posts/updatedswea/badges/swea_givd.svg)](http://www.givd.info/ID/AF-00-006)
+[![version](posts/updatedswea/badges/sweadataveg_version.svg)](https://kamapu.github.io/sweadataveg)
 
 This database was launched in the context of the [SWEA
 project](https://www.ipe.uni-bonn.de/verbundprojekte/wetland/swea) (agricultural
