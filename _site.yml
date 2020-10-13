@@ -12,7 +12,7 @@ navbar:
       href: rpackages.html
     - text: "Databases"
       href: databases.html
-    - text: "Blog"
+    - text: "Posts"
       href: blog.html
   right:
     - image: images/art_ubonn_w.png

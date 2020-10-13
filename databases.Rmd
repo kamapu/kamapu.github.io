@@ -8,7 +8,7 @@ description: |
 ### SWEA-Dataveg
 
 [![GIVD](posts/sweadataveg/badges/swea_givd.svg)](http://www.givd.info/ID/AF-00-006)
-[![version](posts/sweadataveg/badges/sweadataveg_version.svg)](https://kamapu.github.io/posts/sweadataveg)
+[![version](posts/sweadataveg/badges/sweadataveg_version.svg)](https://kamapu.github.io/sweadataveg/)
 
 This database was launched in the context of the [SWEA
 project](https://www.ipe.uni-bonn.de/verbundprojekte/wetland/swea) (agricultural
@@ -20,13 +20,13 @@ The first mention to this database was done by [Alvarez et al.
 (2012a)](https://doi.org/10.7809/b-e.00092) and [Alvarez et al.
 (2012b)](https://doi.org/10.7809/b-e.00060).
 
-[Read more...](https://kamapu.github.io/posts/sweadataveg)
+[Read more...](https://kamapu.github.io/sweadataveg/)
 
 
 ### sudamerica
 
-[![GIVD](badges/sudamerica_givd.svg)](http://www.givd.info/ID/SA-CL-001)
-[![version](badges/sudamerica_version.svg)](sudamerica.html)
+[![GIVD](posts/sudamerica/badges/sudamerica_givd.svg)](http://www.givd.info/ID/SA-CL-001)
+[![version](posts/sudamerica/badges/sudamerica_version.svg)](https://kamapu.github.io/sudamerica/)
 
 This database was first launched as a vegetation-plot database for Chilean
 grassland vegetation (**CL-Dataveg**; see also [Alvarez et al.
@@ -34,4 +34,4 @@ grassland vegetation (**CL-Dataveg**; see also [Alvarez et al.
 countries in South America and is opened for any plant bio-diversity record and
 any vegetation type.
 
-[Read more...](sudamerica.html)
+[Read more...](https://kamapu.github.io/sudamerica/)
