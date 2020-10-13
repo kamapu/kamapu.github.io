@@ -43,16 +43,3 @@
     display: inline-block;
     margin-bottom: -3px;
   }
-
-/*Font style*/
-d-article div.sourceCode code, 
-d-article pre code {
-	font-family: "DM Mono", monospace;
-	font-size: 1rem;
-}
-
-/*Table settings*/
-table td, table td * {
-  padding:10px 20px 10px 0px;
-  vertical-align: top;
-}

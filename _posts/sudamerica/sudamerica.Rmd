@@ -17,30 +17,25 @@ categories:
   - database
   - vegetation
 preview: images/guadal_chile.jpg
+bibliography: sudamericarefs.bib
+nocite: '@*'
 ---
-
-**A database for vegetation-plots in South America**
-
-[![GIVD](badges/sudamerica_givd.svg)](http://www.givd.info/ID/SA-CL-001)
-[![version](badges/sudamerica_version.svg)](https://kamapu.github.io/sudamerica/)
 
 The database **sudamerica** is formatted in **PostgreSQL**, including the
 extension **PostGIS**.
-For data exchange (after a respective agreement with the custodian), objects of
-class [**`vegtable`**](https://github.com/kamapu/vegtable) will be preferred.
-
 **sudamerica** contains currently records from
-**`r format(nrow(sam), big.mark=",")`** plot observations that are
-provided by
-**`r format(length(unique(sam$data_source)), big.mark=",")`**
-sources.
-Most of those sources are works published either as journal articles or
-monographs.
-
+**`r format(nrow(sam), big.mark=",")`** plot observations obtained from
+**`r format(length(unique(sam$data_source)), big.mark=",")`** sources, most of
+them published either as journal articles or monographs.
 The oldest record was done in
 **`r format(min(sam$record_date, na.rm=TRUE), "%d-%m-%Y")`**,
 while the newest record is from
 **`r format(max(sam$record_date, na.rm=TRUE), "%d-%m-%Y")`**.
+
+<aside>
+[![GIVD](badges/sudamerica_givd.svg)](http://www.givd.info/ID/SA-CL-001)
+[![version](badges/sudamerica_version.svg)](https://kamapu.github.io/sudamerica/)
+</aside>
 
 ```{r map_sudamerica, echo=FALSE, message=FALSE, out.width="100%"}
 library(leaflet)
@@ -48,3 +43,17 @@ leaflet(sam) %>% addTiles() %>%
 		addCircleMarkers(lng=~longitude, lat=~latitude, color="red",
 				opacity=0.3, radius=1)
 ```
+
+This database is maintained for research and teaching purposes.
+Data may be shared after a respective agreement with the custodian.
+Both, database and respective data sources may be cited in the case that
+information obtained from them get published.
+For data exchange (after a respective agreement with the custodian), objects of
+class [**`vegtable`**](https://github.com/kamapu/vegtable) will be preferred.
+
+Special thanks to **Javier Amigo** and **Federico Luebert** for providing
+own digitized data to this data base.
+Several students contributed by digitizing tables in the context of short-term
+assistance.
+The reference section below contains all publications used as data sources for
+**sudamerica**.
