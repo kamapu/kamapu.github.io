@@ -11,14 +11,15 @@
     <item>
       <title>SWEA-Dataveg: A vegetation-plot database for Africa</title>
       <dc:creator>Miguel Alvarez</dc:creator>
-      <link>https://kamapu.github.io/posts/updatedswea</link>
+      <link>https://kamapu.github.io/posts/sweadataveg</link>
       <description>A collection of vegetation-plots from Africa, originally focused on wetland
 vegetation from Eastern Africa, it is currently expanded to other areas
 and considering any kind of vegetation.</description>
       <category>database</category>
       <category>vegetation</category>
-      <guid>https://kamapu.github.io/posts/updatedswea</guid>
+      <guid>https://kamapu.github.io/posts/sweadataveg</guid>
       <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/sweadataveg/images/wetland_tz.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>A journey in rOpenSci</title>

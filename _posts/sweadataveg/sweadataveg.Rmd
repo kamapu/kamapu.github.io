@@ -15,8 +15,7 @@ draft: false
 categories:
   - database
   - vegetation
-# preview:
-canonical_url: https://kamapu.github.io/sweadataveg
+preview: images/wetland_tz.jpg
 ---
 
 **Vegetation-plot data from Eastern Africa and abroad**
