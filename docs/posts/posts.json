@@ -108,5 +108,22 @@
     "preview": "posts/2017-12-01-wetlandsfront/images/cover_cropped.jpg",
     "last_modified": "2020-10-12T00:20:42+02:00",
     "input_file": {}
+  },
+  {
+    "path": "posts/2000-01-01-nonews/",
+    "title": "No News",
+    "description": "The day that did not changed the world.",
+    "author": [
+      {
+        "name": "Miguel Alvarez",
+        "url": "https://kamapu.github.io/"
+      }
+    ],
+    "date": "2000-01-01",
+    "categories": [],
+    "contents": "\nLink 1\nLink 2\n\n\n\n",
+    "preview": {},
+    "last_modified": "2020-10-16T16:46:21+02:00",
+    "input_file": {}
   }
 ]
