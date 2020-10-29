@@ -2,7 +2,7 @@
   {
     "path": "posts/2020-10-29-vegtablepress/",
     "title": "vegtable: An R object for vegetation-plot data sets",
-    "description": "A first presentation of vegtable and taxlist at the Marsaryk University in\nBrno (Czech Republic).\nThe presentation includes a brief intorduction to the structure of vegtable\nobjects and functions.",
+    "description": "The package vegtable defines object (class vegtable) and functions for\nhandling vegetation-plot data sets in R.\nWithin its slots, taxonomic lists are formatted as taxlist objects.\nThis is a brief account about a presentation of vegtable and taxlist at the\nMarsaryk University in Brno (Czech Republic).\nThe presentation includes a brief introduction to the structure of vegtable\nobjects and functions.",
     "author": [
       {
         "name": "Miguel Alvarez",
@@ -15,7 +15,7 @@
     ],
     "contents": "\nA presentation about the basics of the package vegtable and taxlist.\nThe packages can be installed either from CRAN (last release) or GitHub (last development version).\n\n\n## Installing from CRAN\ninstall.packages(\"vegtable\", dependencies=TRUE)\n\n## Installing from GitHub\nlibrary(remotes)\ninstall_github(\"ropensci/taxlist\", build_vignettes=TRUE)\ninstall_github(\"kamapu/vegtable\")\n\n\n\nYou can open the vignette installed for taxlist by calling it at the R-console.\n\n\nlibrary(taxlist)\n\nvignette(\"taxlist-intro\")\n\n\n\nFor additional information, visit the respective pages inserted as hypertext at the beginning of this post.\n \n\n\n\n",
     "preview": "posts/2020-10-29-vegtablepress/images/brno_vegtable_slide2.png",
-    "last_modified": "2020-10-29T11:51:01+01:00",
+    "last_modified": "2020-10-29T12:40:12+01:00",
     "input_file": {},
     "preview_width": 629,
     "preview_height": 354
