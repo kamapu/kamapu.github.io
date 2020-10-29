@@ -18,8 +18,8 @@ output:
 draft: false
 categories:
   - R
+  - vegetation
 preview: images/brno_vegtable_slide2.png
-canonical_url: https://kamapu.github.io/wetlands-phytocoenologia
 ---
 
 This was a presentation about the basics of the packages

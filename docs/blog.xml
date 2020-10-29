@@ -7,7 +7,25 @@
     <description>Home Page
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 28 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Introduction to the package vegtable</title>
+      <dc:creator>Miguel Alvarez</dc:creator>
+      <link>https://kamapu.github.io/posts/2020-10-29-vegtableintro</link>
+      <description>The package vegtable offers objects and functions for the work with plot
+observations in vegetation assessments (phytosociological relevés).
+This object class ensures consistency on data, while it is also allowing
+flexibility in the degree of completeness and resolution of data.
+This tutorial is an updated version of a workshop offered in the context of
+the 16th Workshop of the German Group on Vegetation Databases celebrated in
+Freiburg in March 2017.</description>
+      <category>R</category>
+      <category>vegetation</category>
+      <category>workshop</category>
+      <guid>https://kamapu.github.io/posts/2020-10-29-vegtableintro</guid>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/2020-10-29-vegtableintro/images/Fujiwara_map.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>vegtable: An R object for vegetation-plot data sets</title>
       <dc:creator>Miguel Alvarez</dc:creator>
@@ -20,8 +38,9 @@ Marsaryk University in Brno (Czech Republic).
 The presentation includes a brief introduction to the structure of vegtable
 objects and functions.</description>
       <category>R</category>
+      <category>vegetation</category>
       <guid>https://kamapu.github.io/posts/2020-10-29-vegtablepress</guid>
-      <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/2020-10-29-vegtablepress/images/brno_vegtable_slide2.png" medium="image" type="image/png" width="629" height="354"/>
     </item>
     <item>

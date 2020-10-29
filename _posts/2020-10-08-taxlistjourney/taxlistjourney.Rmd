@@ -17,7 +17,6 @@ categories:
   - conference
   - R
 preview: images/cover_video.png
-canonical_url: https://kamapu.github.io/taxlist-ropensci
 ---
 
 After a long review process, where a lot of improvements have been implemented,

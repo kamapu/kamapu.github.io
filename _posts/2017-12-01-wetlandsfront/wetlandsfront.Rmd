@@ -16,7 +16,6 @@ categories:
   - vegetation
   - wetlands
 preview: images/cover_cropped.jpg
-canonical_url: https://kamapu.github.io/wetlands-phytocoenologia
 ---
 
 After a long process of learning, storing data, collecting publications and
