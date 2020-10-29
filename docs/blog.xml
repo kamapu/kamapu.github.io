@@ -7,13 +7,13 @@
     <description>Home Page
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 29 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 00:00:00 +0000</lastBuildDate>
     <item>
       <title>vegtable: An R object for vegetation-plot data sets</title>
       <dc:creator>Miguel Alvarez</dc:creator>
       <link>https://kamapu.github.io/posts/2020-10-29-vegtablepress</link>
-      <description>The package vegtable defines object (class vegtable) and functions for
-handling vegetation-plot data sets in R.
+      <description>The package vegtable defines the homonymous object class and functions
+(methods) for handling vegetation-plot data sets in R.
 Within its slots, taxonomic lists are formatted as taxlist objects.
 This is a brief account about a presentation of vegtable and taxlist at the
 Marsaryk University in Brno (Czech Republic).
@@ -21,7 +21,7 @@ The presentation includes a brief introduction to the structure of vegtable
 objects and functions.</description>
       <category>R</category>
       <guid>https://kamapu.github.io/posts/2020-10-29-vegtablepress</guid>
-      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/2020-10-29-vegtablepress/images/brno_vegtable_slide2.png" medium="image" type="image/png" width="629" height="354"/>
     </item>
     <item>
