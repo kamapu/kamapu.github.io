@@ -1,0 +1,56 @@
+---
+title: "vegtable: An R object for vegetation-plot data sets"
+description: |
+  A first presentation of vegtable and taxlist at the Marsaryk University in
+  Brno (Czech Republic).
+  The presentation includes a brief intorduction to the structure of vegtable
+  objects and functions.
+author:
+  - name: Miguel Alvarez
+    url: https://kamapu.github.io/
+date: 10-29-2020
+output:
+  distill::distill_article:
+    self_contained: false
+draft: false
+categories:
+  - R
+preview: images/brno_vegtable_slide2.png
+canonical_url: https://kamapu.github.io/wetlands-phytocoenologia
+---
+
+A presentation about the basics of the package
+[`vegtable`](https://github.com/kamapu/vegtable) and
+[`taxlist`](https://docs.ropensci.org/taxlist/).
+
+The packages can be installed either from **CRAN** (last release) or **GitHub**
+(last development version).
+
+```{r eval=FALSE, echo=TRUE}
+## Installing from CRAN
+install.packages("vegtable", dependencies=TRUE)
+
+## Installing from GitHub
+library(remotes)
+install_github("ropensci/taxlist", build_vignettes=TRUE)
+install_github("kamapu/vegtable")
+```
+
+You can open the vignette installed for `taxlist` by calling it at the
+R-console.
+
+```{r eval=FALSE, echo=TRUE}
+library(taxlist)
+
+vignette("taxlist-intro")
+```
+
+For additional information, visit the respective pages inserted as hypertext at
+the beginning of this post.
+
+<aside>
+<a href="https://kamapu.github.io/documents/brno_vegtable.pdf" target="_self"> 
+    <img src="images/brno_vegtable_slide2.png"  alt="" style="width:400px; height:auto;"/> 
+</a>
+</aside>
+

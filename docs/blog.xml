@@ -7,7 +7,20 @@
     <description>Home Page
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 13 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>vegtable: An R object for vegetation-plot data sets</title>
+      <dc:creator>Miguel Alvarez</dc:creator>
+      <link>https://kamapu.github.io/posts/2020-10-29-vegtablepress</link>
+      <description>A first presentation of vegtable and taxlist at the Marsaryk University in
+Brno (Czech Republic).
+The presentation includes a brief intorduction to the structure of vegtable
+objects and functions.</description>
+      <category>R</category>
+      <guid>https://kamapu.github.io/posts/2020-10-29-vegtablepress</guid>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/2020-10-29-vegtablepress/images/brno_vegtable_slide2.png" medium="image" type="image/png" width="629" height="354"/>
+    </item>
     <item>
       <title>sudamerica: A vegetation-plot database for the Neo-Tropics</title>
       <dc:creator>Miguel Alvarez</dc:creator>
