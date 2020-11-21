@@ -101,8 +101,7 @@ within the object. The access to the respective slots in R is done with the
 symbol `@` or alternatively using the function `slot()`.
 
 ```{r taxlist_model, echo=FALSE}
-knitr::include_graphics(path=file.path(path.package("taxlist"), "help",
-				"figures", "taxlist_model.png"))
+knitr::include_graphics(path="images/taxlist_model.png")
 ```
 
 ```{r structure}
