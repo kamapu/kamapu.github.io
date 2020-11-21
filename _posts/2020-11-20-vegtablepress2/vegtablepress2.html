@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #545454; font-weight: bold; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #a1024a; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007faa; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #008000; } /* Char */
+code span.cn { color: #d91e18; } /* Constant */
+code span.co { color: #545454; } /* Comment */
+code span.cv { color: #545454; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #aa5d00; } /* DataType */
+code span.dv { color: #a1024a; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #a1024a; } /* Float */
+code span.fu { color: #4254a7; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #545454; font-weight: bold; } /* Information */
+code span.kw { color: #007faa; font-weight: bold; } /* Keyword */
+code span.op { color: #696969; } /* Operator */
+code span.ot { color: #007faa; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #008000; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #008000; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #008000; } /* VerbatimString */
+code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Basics on the work with vegetation-plots in vegtable</title>
+
+  <meta property="description" itemprop="description" content="The package vegtable was developed for the handling of data provided by&#10;vegetation-plot databases in single objects within R sessions.&#10;In this package functions attempt to encapsulate process of complex data sets&#10;in brief command-lines during an R session and target to repeatability in the&#10;assessment of floristic information.&#10;Here we review through some examples the use of the most important functions&#10;implemented in vegtable."/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2020-11-20"/>
+  <meta property="article:created" itemprop="dateCreated" content="2020-11-20"/>
+  <meta name="article:author" content="Miguel Alvarez"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Basics on the work with vegetation-plots in vegtable"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="The package vegtable was developed for the handling of data provided by&#10;vegetation-plot databases in single objects within R sessions.&#10;In this package functions attempt to encapsulate process of complex data sets&#10;in brief command-lines during an R session and target to repeatability in the&#10;assessment of floristic information.&#10;Here we review through some examples the use of the most important functions&#10;implemented in vegtable."/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Basics on the work with vegetation-plots in vegtable"/>
+  <meta property="twitter:description" content="The package vegtable was developed for the handling of data provided by&#10;vegetation-plot databases in single objects within R sessions.&#10;In this package functions attempt to encapsulate process of complex data sets&#10;in brief command-lines during an R session and target to repeatability in the&#10;assessment of floristic information.&#10;Here we review through some examples the use of the most important functions&#10;implemented in vegtable."/>
+
+  <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=The taxlist package: Managing plant taxonomic lists in R;citation_publication_date=2018;citation_publisher=Pensoft Publishers;citation_volume=6;citation_doi=10.3897/bdj.6.e23635;citation_author=Miguel Alvarez;citation_author=Federico Luebert"/>
+  <meta name="citation_reference" content="citation_title=CL-Dataveg a database of Chilean grassland vegetation;citation_publication_date=2012;citation_volume=4;citation_doi=10.7809/b-e.00230;citation_author=Miguel Alvarez;citation_author=Bodo Maria Möseler;citation_author=Cristina San Martín;citation_author=Carlos Ramírez;citation_author=Javier Amigo"/>
+  <meta name="citation_reference" content="citation_title=La vegetación de lagunas primaverales en las cercanías de Temuco (Cautín, Chile);citation_publication_date=1998;citation_volume=23;citation_author=Cristina San Martín;citation_author=Carlos Ramírez;citation_author=Pedro Ojeda"/>
+  <meta name="citation_reference" content="citation_title=Explorative and retrospective evaluation of grassland vegetation in Southcentral Chile;citation_publication_date=2020;citation_publisher=University of Bonn;citation_author=Elena Gómez"/>
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","draft","categories","preview","bibliography","csl"]}},"value":[{"type":"character","attributes":{},"value":["Basics on the work with vegetation-plots in vegtable"]},{"type":"character","attributes":{},"value":["The package vegtable was developed for the handling of data provided by\nvegetation-plot databases in single objects within R sessions.\nIn this package functions attempt to encapsulate process of complex data sets\nin brief command-lines during an R session and target to repeatability in the\nassessment of floristic information.\nHere we review through some examples the use of the most important functions\nimplemented in vegtable.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Miguel Alvarez"]},{"type":"character","attributes":{},"value":["https://kamapu.github.io/"]}]}]},{"type":"character","attributes":{},"value":["11-20-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["R","vegetation"]},{"type":"character","attributes":{},"value":["images/vegtable_diagram.png"]},{"type":"character","attributes":{},"value":["press2refs.bib"]},{"type":"character","attributes":{},"value":["seed-science-research.csl"]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["images/vegtable_diagram.png","images/vegtable_recipe.png","press2refs.bib","seed-science-research.csl","vegtablepress2_files/anchor-4.2.2/anchor.min.js","vegtablepress2_files/bowser-1.9.3/bowser.min.js","vegtablepress2_files/distill-2.2.21/template.v2.js","vegtablepress2_files/figure-html5/annual_prop-1.png","vegtablepress2_files/figure-html5/annual_prop2-1.png","vegtablepress2_files/figure-html5/count_taxa-1.png","vegtablepress2_files/figure-html5/H_graph1-1.png","vegtablepress2_files/figure-html5/H_graph2-1.png","vegtablepress2_files/figure-html5/print_name-1.png","vegtablepress2_files/figure-html5/tax_plot-1.png","vegtablepress2_files/figure-html5/unnamed-chunk-1-1.png","vegtablepress2_files/figure-html5/unnamed-chunk-2-1.png","vegtablepress2_files/figure-html5/unnamed-chunk-5-1.png","vegtablepress2_files/figure-html5/unnamed-chunk-6-1.png","vegtablepress2_files/figure-html5/unnamed-chunk-7-1.png","vegtablepress2_files/header-attrs-2.5.3/header-attrs.js","vegtablepress2_files/htmlwidgets-1.5.2/htmlwidgets.js","vegtablepress2_files/jquery-1.11.3/jquery.min.js","vegtablepress2_files/jquery-1.12.4/jquery.min.js","vegtablepress2_files/leaflet-1.3.1/images/layers-2x.png","vegtablepress2_files/leaflet-1.3.1/images/layers.png","vegtablepress2_files/leaflet-1.3.1/images/marker-icon-2x.png","vegtablepress2_files/leaflet-1.3.1/images/marker-icon.png","vegtablepress2_files/leaflet-1.3.1/images/marker-shadow.png","vegtablepress2_files/leaflet-1.3.1/leaflet.css","vegtablepress2_files/leaflet-1.3.1/leaflet.js","vegtablepress2_files/leaflet-binding-2.0.3/leaflet.js","vegtablepress2_files/leafletfix-1.0.0/leafletfix.css","vegtablepress2_files/Proj4Leaflet-1.0.1/proj4-compressed.js","vegtablepress2_files/Proj4Leaflet-1.0.1/proj4leaflet.js","vegtablepress2_files/rstudio_leaflet-1.3.1/images/1px.png","vegtablepress2_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css","vegtablepress2_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: hidden;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="vegtablepress2_files/header-attrs-2.5.3/header-attrs.js"></script>
+  <script src="vegtablepress2_files/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+  <script src="vegtablepress2_files/jquery-1.12.4/jquery.min.js"></script>
+  <link href="vegtablepress2_files/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+  <script src="vegtablepress2_files/leaflet-1.3.1/leaflet.js"></script>
+  <link href="vegtablepress2_files/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+  <script src="vegtablepress2_files/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+  <script src="vegtablepress2_files/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+  <link href="vegtablepress2_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+  <script src="vegtablepress2_files/leaflet-binding-2.0.3/leaflet.js"></script>
+  <script src="vegtablepress2_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="vegtablepress2_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="vegtablepress2_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="vegtablepress2_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Basics on the work with vegetation-plots in vegtable","description":"The package vegtable was developed for the handling of data provided by\nvegetation-plot databases in single objects within R sessions.\nIn this package functions attempt to encapsulate process of complex data sets\nin brief command-lines during an R session and target to repeatability in the\nassessment of floristic information.\nHere we review through some examples the use of the most important functions\nimplemented in vegtable.","authors":[{"author":"Miguel Alvarez","authorURL":"https://kamapu.github.io/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-11-20T00:00:00.000+01:00","citationText":"Alvarez, 2020"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Basics on the work with vegetation-plots in vegtable</h1>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt=tag">R</div>
+<div class="dt=tag">vegetation</div>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>The package vegtable was developed for the handling of data provided by vegetation-plot databases in single objects within R sessions. In this package functions attempt to encapsulate process of complex data sets in brief command-lines during an R session and target to repeatability in the assessment of floristic information. Here we review through some examples the use of the most important functions implemented in vegtable.</p></p>
+</div>
+
+<div class="d-byline">
+  Miguel Alvarez <a href="https://kamapu.github.io/" class="uri">https://kamapu.github.io/</a> 
+  
+<br/>11-20-2020
+</div>
+
+<div class="d-article">
+<h1 id="installation">Installation</h1>
+<p>Both packages <a href="https://docs.ropensci.org/taxlist/"><code>taxlist</code></a> and <a href="https://github.com/kamapu/vegtable/"><code>vegtable</code></a> are released in the Comprehensive R Archive Network (<strong>CRAN</strong>). Since <code>taxlist</code> is a dependency of <code>vegtable</code>, both will be installed in the following command:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"vegtable"</span>, dependencies<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Alternatively, you can install the development versions from their repositories at <strong>GitHub</strong>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://devtools.r-lib.org/'>devtools</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"ropensci/taxlist"</span>, build_vignettes<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"kamapu/vegtable"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>An additional package including some example data required for this session have also to be installed from <strong>GitHub</strong>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"kamapu/datastore"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<aside>
+<a href="https://kamapu.github.io/documents/press_vegtable_bonn.pdf" target="_self" style="color:blue;"> <img src="images/vegtable_recipe.png"  alt="presentation" style="width:400px; height:auto;"/> to the slides </a>
+</aside>
+<h1 id="working-with-species-lists-only">Working with species lists only</h1>
+<p>Before starting with the work, do not forget to load the installed packages into your R-session:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/kamapu/vegtable'>vegtable</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/kamapu/data_store'>datastore</a></span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>In this first section we focus on the <code>taxlist</code> objects, which are specialized for handling taxonomic lists. For more details on the theory behind this package, see <span class="citation" data-cites="Alvarez2018">Alvarez and Luebert (<a href="#ref-Alvarez2018" role="doc-biblioref">2018</a>)</span>.</p>
+<p>The package <code>taxlist</code> includes a own data set formatted as a <code>taxlist</code> object. You can get a general report on the content of this data set by using the function <code>summary()</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>object size: 761.4 Kb 
+validation of &#39;taxlist&#39; object: TRUE 
+
+number of taxon usage names: 5393 
+number of taxon concepts: 3887 
+trait entries: 311 
+number of trait variables: 1 
+taxon views: 3 
+
+concepts with parents: 3698 
+concepts with children: 1343 
+
+hierarchical levels: form &lt; variety &lt; subspecies &lt; species &lt; complex &lt; genus &lt; family 
+number of concepts in level form: 2
+number of concepts in level variety: 95
+number of concepts in level subspecies: 71
+number of concepts in level species: 2521
+number of concepts in level complex: 1
+number of concepts in level genus: 1011
+number of concepts in level family: 186</code></pre>
+</div>
+<p>The information stored in a <code>taxlist</code> object is organized in four column-oriented tables following a relational model and allocated in own slots within the object. The access to the respective slots in R is done with the symbol <code>@</code> or alternatively using the function <code>slot()</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="/home/miguel/R/x86_64-pc-linux-gnu-library/4.0/taxlist/help/figures/taxlist_model.png" width="100%" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>@</span><span class='va'>taxonNames</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>  TaxonUsageID TaxonConceptID              TaxonName
+1            1              1 Abelmoschus esculentus
+2        52313              1    Hibiscus esculentus
+3            2              2       Abutilon indicum
+4            3              3   Abutilon mauritianum
+5        50361              3         Pavonia patens
+6            4              4   Acacia drepanolobium
+            AuthorName
+1          (L.) Moench
+2                   L.
+3                 (L.)
+4       (Jacq.) Medik.
+5     (Andrews) Chiov.
+6 Harms ex Y. Sjöstedt</code></pre>
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>@</span><span class='va'>taxonRelations</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>  TaxonConceptID AcceptedName Basionym Parent   Level ViewID
+1              1            1       NA  54753 species      1
+2              2            2       NA  54754 species      1
+3              3            3       NA  54754 species      1
+4              4            4       NA  54755 species      1
+5              5            5       NA  54755 species      1
+6              6            6       NA  54755 species      1</code></pre>
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>@</span><span class='va'>taxonTraits</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>  TaxonConceptID       lf_behn_2018
+1              7       phanerophyte
+2              9       phanerophyte
+3             18 facultative_annual
+4             20 facultative_annual
+5             21    obligate_annual
+6             22        chamaephyte</code></pre>
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>@</span><span class='va'>taxonViews</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>  ViewID                                 secundum view_bibtexkey
+1      1            African Plant Database (2012)  CJBGSANBI2012
+2      2 Taxonomic Name Resolution Service (2018)       TNRS2018
+3      3                    The Plant List (2013)        TPL2013</code></pre>
+</div>
+<h2 id="advanced-displays">Advanced displays</h2>
+<p>The function <code>summary()</code> can also be used to query information of a taxon or a set of taxa. In such case we can add the name of the requested taxon usage name. We can also specify a column of the slot <strong>taxonViews</strong> in the parameter <code>secundum</code> in order to get more informatin on the respective taxon view as done here:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Easplist</span>, <span class='st'>"Amaranthus hybridus"</span>, secundum<span class='op'>=</span><span class='st'>"secundum"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>------------------------------ 
+concept ID: 37 
+view ID: 1 - African Plant Database (2012) 
+level: species 
+parent: 54771 Amaranthus L. 
+
+# accepted name: 
+37 Amaranthus hybridus L. 
+------------------------------ 
+concept ID: 38 
+view ID: 1 - African Plant Database (2012) 
+level: subspecies 
+parent: 37 Amaranthus hybridus L. 
+
+# accepted name: 
+38 Amaranthus hybridus ssp. cruentus (L.) Thell. 
+
+# synonyms (1): 
+50004 Amaranthus cruentus L. 
+------------------------------ 
+concept ID: 50820 
+view ID: 1 - African Plant Database (2012) 
+level: subspecies 
+parent: 37 Amaranthus hybridus L. 
+
+# accepted name: 
+50820 Amaranthus hybridus ssp. hybridus L. 
+------------------------------ </code></pre>
+</div>
+<p>Additionally the function <code>print_name()</code> can be used to format scientific names within interactive documents, for instance in combination with the package <code>rmarkdown</code>. See the example by <code>example(print_name)</code>, which is printing in different formats.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="vegtablepress2_files/figure-html5/print_name-1.png" width="100%" /></p>
+</div>
+<h1 id="working-with-vegetation-plots">Working with vegetation-plots</h1>
+<p>Further examples will be applied to a data set available at the installed package <code>datastore</code>, which corresponds to plot observations in grassland and semi-aquatic communities from Temuco, Chile. This data set was originally published by <span class="citation" data-cites="SanMartin1998">San Martín <em>et al.</em> (<a href="#ref-SanMartin1998" role="doc-biblioref">1998</a>)</span> and is stored in the database <strong>sudamerica</strong> <span class="citation" data-cites="Alvarez2012">(<a href="https://kamapu.github.io/sudamerica/" class="uri" role="doc-biblioref">https://kamapu.github.io/sudamerica/</a>, see also Alvarez <em>et al.</em>, <a href="#ref-Alvarez2012" role="doc-biblioref">2012</a>)</span>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>## Metadata 
+object size: 180.8 Kb 
+validity: TRUE 
+
+## Content 
+number of plots: 78 
+variables in header: 7 
+number of relations: 2 
+
+## Taxonomic List 
+taxon names: 544 
+taxon concepts: 197 
+validity: TRUE </code></pre>
+</div>
+<h2 id="structure">Structure</h2>
+<p>Objects of class <code>vegtable</code> are structured into 7 slots, where the slots <strong>species</strong>, <strong>header</strong>, and <strong>samples</strong> are the essential ones.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/vegtable_diagram.png" width="100%" /></p>
+</div>
+<p>The taxonomic list is handled as a <code>taxlist</code> object and is located at the slot <strong>species</strong>:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>species</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>object size: 89.4 Kb 
+validation of &#39;taxlist&#39; object: TRUE 
+
+number of taxon usage names: 544 
+number of taxon concepts: 197 
+trait entries: 83 
+number of trait variables: 8 
+taxon views: 9 
+
+concepts with parents: 162 
+concepts with children: 113 
+
+hierarchical levels: form &lt; variety &lt; subspecies &lt; species &lt; section &lt; subgenus &lt; genus &lt; subfamily &lt; family &lt; division 
+number of concepts in level form: 0
+number of concepts in level variety: 6
+number of concepts in level subspecies: 1
+number of concepts in level species: 84
+number of concepts in level section: 0
+number of concepts in level subgenus: 0
+number of concepts in level genus: 71
+number of concepts in level subfamily: 0
+number of concepts in level family: 35
+number of concepts in level division: 0</code></pre>
+</div>
+<p>The slot <strong>header</strong> is simply a data frame including information related to single plot observations, for instance size of the plot, record date, results of soil analyses, etc.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>    ReleveID data_source plot_size elevation community_type longitude
+669     1153          58        25       165            534  -72.6979
+670     1154          58        25       199            534  -72.7341
+671     1155          58        25       170            534  -72.6803
+672     1156          58        25        77            534  -72.7440
+673     1157          58        25       168            534  -72.6958
+674     1159          58        25       165            534  -72.6979
+    latitude
+669 -38.7072
+670 -38.6310
+671 -38.6908
+672 -38.6846
+673 -38.7141
+674 -38.7072</code></pre>
+</div>
+<p>Records of species in plots are stored in slot <strong>samples</strong>. Against the commonly used cross tables (species by plots or plots by species), this slot is organized in columns (column-oriented table, a.k.a database list).</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>samples</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>      record_id ReleveID TaxonUsageID cover_percentage
+14818     14818     1147        20972             15.0
+14819     14819     1147         2500              0.5
+14820     14820     1147        11008              0.5
+14821     14821     1147        23744             60.0
+14822     14822     1147         9373             20.0
+14823     14823     1147       196060              0.5</code></pre>
+</div>
+<p>The slot <strong>coverconvert</strong> have an own, homonymous class and is used as container for cover conversion tables. These tables can be used for conversion of cover codes, which will be done by the function <code>transform()</code>. The example on grasslands does not include cover conversion tables but the data set installed with <code>vegtable</code> does it.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span><span class='op'>@</span><span class='va'>coverconvert</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>## Number of cover scales: 3 
+
+* scale &#39;br_bl&#39;: 
+  Levels    Range
+1      r    0 - 1
+2      +    0 - 1
+3      1    1 - 5
+4      2   5 - 25
+5      3  25 - 50
+6      4  50 - 75
+7      5 75 - 100
+
+* scale &#39;b_bbds&#39;: 
+  Levels    Range
+1      r    0 - 1
+2      +    0 - 1
+3      1    1 - 5
+4     2m    1 - 5
+5     2a   5 - 15
+6     2b  15 - 25
+7      3  25 - 50
+8      4  50 - 75
+9      5 75 - 100
+
+* scale &#39;ordin.&#39;: 
+  Levels    Range
+1      1    0 - 1
+2      2    0 - 1
+3      3    1 - 5
+4      4    1 - 5
+5      5   5 - 15
+6      6  15 - 25
+7      7  25 - 50
+8      8  50 - 75
+9      9 75 - 100</code></pre>
+</div>
+<p>The slot <strong>relations</strong> is a list of data frames that provide additional information for classes of categorical variables stored in slot <strong>header</strong>. These tables correspond to <em>pop-up tables</em> of <strong>Turboveg 2</strong>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/names.html'>names</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>relations</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] &quot;community_type&quot; &quot;data_source&quot;   </code></pre>
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>relations</span><span class='op'>$</span><span class='va'>community_type</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>  community_type
+1            298
+2            305
+3            307
+4            310
+5            313
+6            315
+                                                       community_name
+1            Loudetia phragmitoides-Hyparrhenia bracteata-communities
+2                                             Loudetio-Fimbristyletum
+3                                            Euphorbieto-Portulacetum
+4                                 Amaranthus sp- Synedrella nodiflora
+5                               Pennisetum purpureum-Acalypha ciliata
+6 Sporobolus festivus-Hysanthes trichotoma (sous-association typique)</code></pre>
+</div>
+<p>While in the header table such categorical variables may be cryptic, there is an option to insert columns from relations into header by using <code>relation2header()</code>. By this way, yo do not only see a community id, which is just a number, but you can also see the respective names of the plant communities that correspond to the syntaxa assigned to the plots originally by the publication.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/veg_relation.html'>relation2header</a></span><span class='op'>(</span><span class='va'>grasslands</span>, <span class='st'>"community_type"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>    ReleveID data_source plot_size elevation community_type longitude
+669     1153          58        25       165            534  -72.6979
+670     1154          58        25       199            534  -72.7341
+671     1155          58        25       170            534  -72.6803
+672     1156          58        25        77            534  -72.7440
+673     1157          58        25       168            534  -72.6958
+674     1159          58        25       165            534  -72.6979
+    latitude   community_name
+669 -38.7072 Juncetum proceri
+670 -38.6310 Juncetum proceri
+671 -38.6908 Juncetum proceri
+672 -38.6846 Juncetum proceri
+673 -38.7141 Juncetum proceri
+674 -38.7072 Juncetum proceri</code></pre>
+</div>
+<h2 id="statistics">Statistics</h2>
+<p>The packages <code>vegtable</code> and <code>taxlist</code> are rather specialized on data manipulation than on data analysis. Nevertheless some common descriptive statistics and summaries that can be used for further statistical analyses are implemented.</p>
+<h3 id="trait-proportions">Trait proportions</h3>
+<p>In this data set, for instance, life forms are inserted as attributes of the recorded species. Since this attribute is a categorical variable, summaries at the plot level can only be done as proportions. The function <code>trait_proportion()</code> is suitable for such kind of summaries. Note that the best way to collect statistics calculated for plots is adding them as new columns into the slot <strong>header</strong>, which is done by the option <code>in_header=TRUE</code>. Additionally, the option <code>weight="cover_percentage"</code> is indicating that the cover percentage stored in the slot <strong>samples</strong> will be used as weight for the respective life from classes.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/trait_stats.html'>trait_proportion</a></span><span class='op'>(</span>trait<span class='op'>=</span><span class='st'>"life_form"</span>, object<span class='op'>=</span><span class='va'>grasslands</span>,
+    head_var<span class='op'>=</span><span class='st'>"ReleveID"</span>, include_nas<span class='op'>=</span><span class='cn'>FALSE</span>, weight<span class='op'>=</span><span class='st'>"cover_percentage"</span>,
+    in_header<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>By default, the function added at slot <strong>header</strong> one column per level in the traits variable appending a suffix (default <code>_prop</code>). Just to remind you, we used the function <code>relation2header()</code> in order to add the names of the recorded communities in the slot <strong>header</strong>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='co'># Add community names to the header table</span>
+<span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/veg_relation.html'>relation2header</a></span><span class='op'>(</span><span class='va'>grasslands</span>, relation<span class='op'>=</span><span class='st'>"community_type"</span><span class='op'>)</span>
+
+<span class='co'># Display mean values per plant communities</span>
+<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>annual_prop</span> <span class='op'>~</span> <span class='va'>community_name</span>, data<span class='op'>=</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span>, FUN<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>                                community_name annual_prop
+1                     Anthoxanthum utriculatum 0.007826989
+2                  Eleocharietum macrostachyae 0.096678841
+3                    Eleocharietum pachycarpae 0.092635324
+4        Eleocharis pachycarpa-Lythrum portula 0.173790650
+5  Gnaphalio cymatoidis-Polygonetum piperoidis 0.650889962
+6                             Juncetum proceri 0.001167405
+7             Junco proceri-Caricetum ripariae 0.000000000
+8   Ludwigia peploides-Sagittaria montevidense 0.000000000
+9       Mentho pulegium-Agrostietum capillaris 0.041020366
+10                             Phyla nodiflora 0.958893907</code></pre>
+<div class="sourceCode">
+<pre><code><span class='co'># The same information as boxplot</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mar<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>, <span class='fl'>20</span>, <span class='fl'>1</span>, <span class='fl'>1</span><span class='op'>)</span>, las<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span><span class='op'>(</span><span class='va'>annual_prop</span> <span class='op'>~</span> <span class='va'>community_name</span>, data<span class='op'>=</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span>, horizontal<span class='op'>=</span><span class='cn'>TRUE</span>,
+    xlab<span class='op'>=</span><span class='st'>"Proportion of annuals"</span>, ylab<span class='op'>=</span><span class='st'>""</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="vegtablepress2_files/figure-html5/annual_prop-1.png" width="100%" /></p>
+</div>
+<p>Before you continue, note that the first argument in the function is a <code>formula</code> indicating on the left a response as left term (in this case the statistic describing a categorical trait variable) and the factors as right terms (grouping variables for the plots). This kind of objects will be frequently used in functions dealing with <code>vegtable</code> objects.</p>
+<h3 id="trait-statistics">Trait Statistics</h3>
+<p>For numerical taxonomic traits statistical parameters such as averages and standard deviation can be calculated per plot. For instance the data set <code>grasslands</code> is also including Ellenberg’s indicator values <span class="citation" data-cites="Ellenberg2001">(see Ellenberg <em>et al.</em>, <a href="#ref-Ellenberg2001" role="doc-biblioref">2001</a>)</span>, which were collected from <span class="citation" data-cites="Ramirez1991">Ramírez <em>et al.</em> (<a href="#ref-Ramirez1991" role="doc-biblioref">1991</a>)</span> and <span class="citation" data-cites="SanMartin2003">San Martín <em>et al.</em> (<a href="#ref-SanMartin2003" role="doc-biblioref">2003</a>)</span>.</p>
+<p>The calculation of trait statistics is done by the function <code>trait_stats()</code>. In the parameter <code>FUN</code> we can use a statistical function such as <code>mean()</code> but we can also define an statistic using the cover values as weights for the calculation. In this case we can calculate weighted means:</p>
+<p><span class="math display">\[\bar{x} = \frac{\sum{x_{i} \cdot w_{i}}}{\sum{w_{i}}}\]</span></p>
+<p>Here <span class="math inline">\(\bar{x}\)</span> is the mean indicator figure for a plot, <span class="math inline">\(x_{i}\)</span> is the indicator value of the <em>ith</em> species in this plot, and <span class="math inline">\(w_{i}\)</span> is the weight of the same species (cover value) in the plot. In R we define it as a function:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='va'>weighted_mean</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>w</span>, <span class='va'>...</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>*</span><span class='va'>w</span>, <span class='va'>...</span><span class='op'>)</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>w</span>, <span class='va'>...</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>In the function <code>trait_stats()</code> we can query indicator figures through a formula. Note that this formula may include multiple variables on the left terms for the simultaneous calculation of indicator values.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/trait_stats.html'>trait_stats</a></span><span class='op'>(</span><span class='va'>ind_N</span> <span class='op'>+</span> <span class='va'>ind_H</span> <span class='op'>~</span> <span class='va'>ReleveID</span>, <span class='va'>grasslands</span>,
+    FUN<span class='op'>=</span><span class='va'>weighted_mean</span>,  include_nas<span class='op'>=</span><span class='cn'>FALSE</span>, weight<span class='op'>=</span><span class='st'>"cover_percentage"</span>,
+    suffix<span class='op'>=</span><span class='st'>"_wmean"</span>, in_header<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>The resulting values may be useful to compare different plant communities or to test relationships between different variables, for instance an expected correlation between the humidity indicator and the proportion of annuals.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mar<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>, <span class='fl'>20</span>, <span class='fl'>1</span>, <span class='fl'>1</span><span class='op'>)</span>, las<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span><span class='op'>(</span><span class='va'>ind_H_wmean</span> <span class='op'>~</span> <span class='va'>community_name</span>, data<span class='op'>=</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span>, horizontal<span class='op'>=</span><span class='cn'>TRUE</span>,
+    xlab<span class='op'>=</span><span class='st'>"H figure (weighted mean)"</span>, ylab<span class='op'>=</span><span class='st'>""</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="vegtablepress2_files/figure-html5/H_graph1-1.png" width="100%" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='co'># Linear regression model</span>
+<span class='va'>Mod</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>annual_prop</span> <span class='op'>~</span> <span class='va'>ind_H_wmean</span>, data<span class='op'>=</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span><span class='op'>)</span>
+
+<span class='co'># plot</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span><span class='op'>[</span>,<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"ind_H_wmean"</span>, <span class='st'>"annual_prop"</span><span class='op'>)</span><span class='op'>]</span>, xlab<span class='op'>=</span><span class='st'>"H figure"</span>,
+    ylab<span class='op'>=</span><span class='st'>"Proportion of annuals"</span>, pch<span class='op'>=</span><span class='fl'>20</span>, col<span class='op'>=</span><span class='st'>"darkgrey"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span><span class='va'>Mod</span>, lty<span class='op'>=</span><span class='fl'>2</span>, col<span class='op'>=</span><span class='st'>"red"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="vegtablepress2_files/figure-html5/H_graph2-1.png" width="100%" /></p>
+</div>
+<p>Well, it is not a nice distribution of observations but still suggesting a negative tendency in the proportion of annuals by increasing humidity indicator, as expected.</p>
+<h3 id="statistics-from-taxonomic-information">Statistics from taxonomic information</h3>
+<p>Taxonomic information (taxonomic ranks and parent-child relationships) are not directly available for statistical descriptions in <code>taxlist</code> objects. If we need to calculate proportions of determined genera or families in the plots, we can pass the taxonomy to the taxon traits table with the function <code>tax2traits()</code>. You need to set <code>get_names=TRUE</code>, otherwise only taxon IDs (numbers) will be inserted in the traits table.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>species</span> <span class='op'>&lt;-</span> <span class='fu'>tax2traits</span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>species</span>, get_names<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>species</span><span class='op'>@</span><span class='va'>taxonTraits</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>   TaxonConceptID origin_status life_form ind_L ind_T ind_R ind_N
+9           21253        native      &lt;NA&gt;     8    NA     5     5
+20          23006        native      &lt;NA&gt;     9     6     3     3
+32          12288     adventive    annual     9     5     7     6
+35          16407     adventive    annual     8     6     7     8
+39          20972     adventive perennial     7     5     3     4
+41          22569     adventive perennial     9     5     6     8
+   ind_H ind_S                           variety
+9      9    NA Symphyotrichum vahlii var. vahlii
+20    10    NA                              &lt;NA&gt;
+32     4    NA                              &lt;NA&gt;
+35     4    NA                              &lt;NA&gt;
+39    NA    NA                              &lt;NA&gt;
+41    10    NA                              &lt;NA&gt;
+                   subspecies                  species          genus
+9                        &lt;NA&gt;    Symphyotrichum vahlii Symphyotrichum
+20 Carex fuscula ssp. fuscula            Carex fuscula          Carex
+32                       &lt;NA&gt;              Briza minor          Briza
+35                       &lt;NA&gt;          Cirsium vulgare        Cirsium
+39                       &lt;NA&gt;      Agrostis capillaris       Agrostis
+41                       &lt;NA&gt; Alisma plantago-aquatica         Alisma
+         family
+9    Compositae
+20   Cyperaceae
+32      Poaceae
+35   Compositae
+39      Poaceae
+41 Alismataceae</code></pre>
+</div>
+<p>Now we can compare, for instance, the proportion of species belonging to the family Poaceae (grasses) in the different plant communities.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/trait_stats.html'>trait_proportion</a></span><span class='op'>(</span><span class='st'>"family"</span>, <span class='va'>grasslands</span>, head_var<span class='op'>=</span><span class='st'>"ReleveID"</span>,
+    trait_level<span class='op'>=</span><span class='st'>"Poaceae"</span>, include_nas<span class='op'>=</span><span class='cn'>FALSE</span>, weight<span class='op'>=</span><span class='st'>"cover_percentage"</span>,
+    in_header<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+
+<span class='co'># Compare communities by proportion of Poaceae</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mar<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>, <span class='fl'>20</span>, <span class='fl'>1</span>, <span class='fl'>1</span><span class='op'>)</span>, las<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span><span class='op'>(</span><span class='va'>Poaceae_prop</span> <span class='op'>~</span> <span class='va'>community_name</span>, data<span class='op'>=</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span>,
+    horizontal<span class='op'>=</span><span class='cn'>TRUE</span>, xlab<span class='op'>=</span><span class='st'>"Proportion of Poaceae"</span>, ylab<span class='op'>=</span><span class='st'>""</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="vegtablepress2_files/figure-html5/tax_plot-1.png" width="100%" /></p>
+</div>
+<p>This graphic is advising us that maybe few of these communities can be considered as grasslands <em>sensu stricto</em>.</p>
+<p>The function <code>count_taxa()</code> is defined for calculation of number of taxa at specific taxonomic ranks. Note that this function may be smart enough to aggregate taxa into the corresponding ranks, for instance the calculation of species numbers may also include sub-specific taxa in their respective species (option <code>include_lower=TRUE</code>).</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/count_taxa.html'>count_taxa</a></span><span class='op'>(</span><span class='va'>species</span> <span class='op'>~</span> <span class='va'>ReleveID</span>, <span class='va'>grasslands</span>, include_lower<span class='op'>=</span><span class='cn'>TRUE</span>,
+    in_header<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+
+<span class='co'># Compare communities by species richness</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mar<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>, <span class='fl'>20</span>, <span class='fl'>1</span>, <span class='fl'>1</span><span class='op'>)</span>, las<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span><span class='op'>(</span><span class='va'>species_count</span> <span class='op'>~</span> <span class='va'>community_name</span>, data<span class='op'>=</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span>,
+    horizontal<span class='op'>=</span><span class='cn'>TRUE</span>, xlab<span class='op'>=</span><span class='st'>"Species richness"</span>, ylab<span class='op'>=</span><span class='st'>""</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="vegtablepress2_files/figure-html5/count_taxa-1.png" width="100%" /></p>
+</div>
+<h2 id="cross-tables-and-maps">Cross tables and Maps</h2>
+<p>Most of the applications used for floristic comparisons require data in form of a cross table. Furthermore, species composition of communities may be more evident by displaying data, for instance, in a table of species by plots. To arrange data in such a way we can apply the function <code>crosstable()</code>.</p>
+<p>In order to reduce the data set, we will apply the function <code>subset()</code>, selecting plots of the association <em>Juncetum proceri</em>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='va'>juncetum</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>grasslands</span>, <span class='va'>community_name</span> <span class='op'>==</span> <span class='st'>"Juncetum proceri"</span>,
+    slot<span class='op'>=</span><span class='st'>"header"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>juncetum</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>## Metadata 
+object size: 202.9 Kb 
+validity: TRUE 
+
+## Content 
+number of plots: 15 
+variables in header: 16 
+number of relations: 2 
+
+## Taxonomic List 
+taxon names: 544 
+taxon concepts: 197 
+validity: TRUE </code></pre>
+</div>
+<p>In the function <code>crosstable()</code> we indicate as formula in the left term the numeric variable used to fill the table, the first right term is the group variable used for the columns and the further right terms are group variables defining the rows of the cross table. Note that the taxa in the formula can be addressed by either one of two keywords, namely <strong>TaxonName</strong> for the use of original entry names (taxon usage names) or <strong>AcceptedName</strong> for use of the respective names considered as accepted in slot species. We also set the arguments <code>FUN=max</code> defining the function used to merge multiple occurrences of a taxon in a plot and <code>na_to_zero=TRUE</code> to fill absence.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='va'>juncetum_cross</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/crosstable.html'>crosstable</a></span><span class='op'>(</span><span class='va'>cover_percentage</span> <span class='op'>~</span> <span class='va'>ReleveID</span> <span class='op'>+</span> <span class='va'>AcceptedName</span>,
+    data<span class='op'>=</span><span class='va'>juncetum</span>, FUN<span class='op'>=</span><span class='va'>max</span>, na_to_zero<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>juncetum_cross</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>                         AcceptedName 1147 1148 1157 1158 1159 1161
+1    Adesmia corymbosa var. corymbosa   10  0.5  0.5  0.5  0.5  0.5
+2                 Agrostis capillaris   15 40.0 10.0 20.0 30.0  0.0
+3            Anthoxanthum utriculatum    0  0.0  0.0  0.0  0.0  0.0
+4 Arrhenatherum elatius var. bulbosum    0  0.0  0.0  0.0  0.0  0.0
+5                Baccharis sagittalis    0  0.0  0.0  0.0  0.0  0.0
+6               Centipeda elatinoides    0  0.0  0.0  0.5  0.5  0.0
+  1149 1150 1151 1152 1153 1154 1155 1156 1160
+1    0    0  0.0    0    0    0    0  0.0  0.0
+2   10   30 20.0   20   50   50   50 20.0 40.0
+3    0    0  0.0    0    0    0    0  0.5  0.0
+4    0    0  0.0    0    0    0    0  0.5  0.0
+5    0    0  0.0    0    0    0    0  0.0  0.5
+6    0    0  0.5    0    0    0    0  0.0  0.0</code></pre>
+</div>
+<p>When plots are geo-referenced, it is also possible to export the respective locations as kml files to be displayed in <strong>Google Earth</strong> using the function <code>vegtable2kml()</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/vegtable2kml.html'>vegtable2kml</a></span><span class='op'>(</span><span class='va'>grasslands</span>, file<span class='op'>=</span><span class='st'>"grasslands.kml"</span>, coords<span class='op'>=</span> <span class='op'>~</span> <span class='va'>longitude</span> <span class='op'>+</span> <span class='va'>latitude</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Alternatively the locations of plots can be displayed by using the package <code>leaflet</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre><code><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://rstudio.github.io/leaflet/'>leaflet</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+    <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addCircleMarkers</a></span><span class='op'>(</span>lng<span class='op'>=</span><span class='op'>~</span><span class='va'>longitude</span>, lat<span class='op'>=</span><span class='op'>~</span><span class='va'>latitude</span>, color<span class='op'>=</span><span class='st'>"red"</span>,
+        opacity<span class='op'>=</span><span class='fl'>0.3</span>, radius<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
+</code></pre>
+</div>
+<div id="htmlwidget-fe4640bd9b1b43b3e05e" style="width:100%;height:384px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fe4640bd9b1b43b3e05e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[-38.7072,-38.631,-38.6908,-38.6846,-38.7141,-38.7072,-38.7072,-38.7072,-38.7342,-38.7138,-38.7138,-38.7138,-38.6908,-38.6908,-38.6908,-38.631,-38.631,-38.631,-38.6379,-38.6727,-38.6908,-38.7141,-38.7342,-38.7342,-38.6727,-38.6846,-38.6846,-38.6846,-38.6846,-38.6985,-38.6908,-38.6846,-38.7072,-38.7072,-38.7072,-38.7342,-38.6985,-38.6985,-38.6985,-38.631,-38.631,-38.631,-38.6908,-38.7141,-38.7141,-38.7141,-38.7141,-38.7141,-38.7141,-38.7141,-38.7342,-38.7342,-38.7342,-38.631,-38.6379,-38.6908,-38.6908,-38.7342,-38.6727,-38.6727,-38.6727,-38.6727,-38.6846,-38.6846,-38.7072,-38.7072,-38.7072,-38.6985,-38.6985,-38.6985,-38.7072,-38.7072,-38.7072,-38.7072,-38.631,-38.6379,-38.6379,-38.6727],[-72.6979,-72.7341,-72.6803,-72.744,-72.6958,-72.6979,-72.6979,-72.6979,-72.6381,-72.684,-72.684,-72.684,-72.6803,-72.6803,-72.6803,-72.7341,-72.7341,-72.7341,-72.7324,-72.7201,-72.6803,-72.6958,-72.6381,-72.6381,-72.7201,-72.744,-72.744,-72.744,-72.744,-72.7093,-72.6803,-72.744,-72.6979,-72.6979,-72.6979,-72.6381,-72.7093,-72.7093,-72.7093,-72.7341,-72.7341,-72.7341,-72.6803,-72.6958,-72.6958,-72.6958,-72.6958,-72.6958,-72.6958,-72.6958,-72.6381,-72.6381,-72.6381,-72.7341,-72.7324,-72.6803,-72.6803,-72.6381,-72.7201,-72.7201,-72.7201,-72.7201,-72.744,-72.744,-72.6979,-72.6979,-72.6979,-72.7093,-72.7093,-72.7093,-72.6979,-72.6979,-72.6979,-72.6979,-72.7341,-72.7324,-72.7324,-72.7201],1,null,null,{"interactive":true,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.3,"fill":true,"fillColor":"red","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-38.7342,-38.631],"lng":[-72.744,-72.6381]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h1 id="acknowledgement">Acknowledgement</h1>
+<p>The data sets and routines demonstrated here have been previously tested by Elena Gómez in the context of her thesis for the degree of MSc. <span class="citation" data-cites="Gomez2020">(Gómez, <a href="#ref-Gomez2020" role="doc-biblioref">2020</a>)</span>. Any further comments and suggestions are kindly welcomed.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-Alvarez2018">
+<p><strong>Alvarez, M. and Luebert, F.</strong> (2018) The taxlist package: Managing plant taxonomic lists in R. <em>Biodiversity Data Journal</em> <strong>6</strong>, e23635. doi:<a href="https://doi.org/10.3897/bdj.6.e23635">10.3897/bdj.6.e23635</a>.</p>
+</div>
+<div id="ref-Alvarez2012">
+<p><strong>Alvarez, M., Möseler, B. M., Martín, C. S., Ramírez, C. and Amigo, J.</strong> (2012) CL-Dataveg a database of Chilean grassland vegetation. <em>Biodiversity &amp; Ecology</em> <strong>4</strong>, 443. doi:<a href="https://doi.org/10.7809/b-e.00230">10.7809/b-e.00230</a>.</p>
+</div>
+<div id="ref-Ellenberg2001">
+<p><strong>Ellenberg, H., Weber, H. E., Düll, R., Wirth, V. and Werner, W.</strong> (2001) <em>Zeigerwerte von pflanzen in mitteleuropa</em>. Göttingen, Erich Goltze.</p>
+</div>
+<div id="ref-Gomez2020">
+<p><strong>Gómez, E.</strong> (2020) Explorative and retrospective evaluation of grassland vegetation in Southcentral Chile.</p>
+</div>
+<div id="ref-Ramirez1991">
+<p><strong>Ramírez, C., Finot, V. L., San Martín, C. and Ellies, A.</strong> (1991) El valor indicador ecológico de las malezas del centro-sur de Chile. <em>Agro Sur</em> <strong>19</strong>, 94–116.</p>
+</div>
+<div id="ref-SanMartin1998">
+<p><strong>San Martín, C., Ramírez, C. and Ojeda, P.</strong> (1998) La vegetación de lagunas primaverales en las cercanías de Temuco (Cautín, Chile). <em>Acta Botanica Malacitana</em> <strong>23</strong>, 99–120.</p>
+</div>
+<div id="ref-SanMartin2003">
+<p><strong>San Martín, C., Ramírez, C. and Alvarez, M.</strong> (2003) Macrófitos como bioindicadores: Una propuesta metodológica para caracterizar ambientes dulciacuícolas. <em>Revista Geográfica de Valparaíso</em> <strong>34</strong>, 243–253.</p>
+</div>
+</div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
