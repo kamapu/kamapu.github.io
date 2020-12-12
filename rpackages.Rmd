@@ -47,6 +47,12 @@ of objects belonging to this class.
 
 # Other Packages
 
+### yamlme
+
+Functions to write yaml-heads and r-markdown documents.
+
+[Read more...](rpkg/yamlme/index.html)
+
 
 ### Lexiguel
 
