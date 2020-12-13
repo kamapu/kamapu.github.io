@@ -34,7 +34,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">yamlme</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90002</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -93,11 +93,54 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/">devtools</a></span><span class="op">)</span>
 <span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"kamapu/yamlme"</span>, build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<p>After installing the package have to be loaded in the current R-session.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/kamapu/yamlme">yamlme</a></span><span class="op">)</span></code></pre></div>
 </div>
-<div id="write-a-template-and-modify-it" class="section level2">
+<div id="create-a-document" class="section level2">
 <h2 class="hasAnchor">
-<a href="#write-a-template-and-modify-it" class="anchor"></a>Write a template and modify it</h2>
-<p>Example from vignette.</p>
+<a href="#create-a-document" class="anchor"></a>Create a document</h2>
+<p>This package aims to save documents with their respective settings (yaml-head) in R-objects.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">my_document</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/write_rmd.html">write_rmd</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Mi First Document"</span>, author <span class="op">=</span> <span class="st">"My Name"</span>,
+        output <span class="op">=</span> <span class="st">"html_document"</span>, append <span class="op">=</span> <span class="st">"# This is a comment in head"</span>,
+        body <span class="op">=</span> <span class="fu"><a href="reference/read_rmd.html">txt_body</a></span><span class="op">(</span>
+                <span class="st">"# Starting a working day"</span>,
+                <span class="st">""</span>,
+                <span class="st">"At the beginning of every day I will do:"</span>,
+                <span class="st">""</span>,
+                <span class="st">"- Say everyone \"Good morning!\""</span>,
+                <span class="st">"- Start the coffe mashine"</span>,
+                <span class="st">"- Start the computer"</span>,
+                <span class="st">"- Read mails"</span><span class="op">)</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="va">my_document</span><span class="op">)</span>
+<span class="co">#&gt; ---</span>
+<span class="co">#&gt;  title: Mi First Document</span>
+<span class="co">#&gt;  author: My Name</span>
+<span class="co">#&gt;  output: html_document</span>
+<span class="co">#&gt;  # This is a comment in head</span>
+<span class="co">#&gt;  ---</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;  # Starting a working day</span>
+<span class="co">#&gt;  </span>
+<span class="co">#&gt;  At the beginning of every day I will do:</span>
+<span class="co">#&gt;  </span>
+<span class="co">#&gt;  - Say everyone "Good morning!"</span>
+<span class="co">#&gt;  - Start the coffe mashine</span>
+<span class="co">#&gt;  - Start the computer</span>
+<span class="co">#&gt;  - Read mails</span>
+<span class="co">#&gt; </span></code></pre></div>
+<p>By this way it is possible to produce documents from plain R-code. This document can be then rendered by the function <code><a href="reference/render_rmd.html">render_rmd()</a></code>.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/render_rmd.html">render_rmd</a></span><span class="op">(</span>input <span class="op">=</span> <span class="va">my_document</span>, output_file <span class="op">=</span> <span class="st">"my_document"</span><span class="op">)</span></code></pre></div>
+<p>For more details, take a look on the vignette.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/vignette.html">vignette</a></span><span class="op">(</span><span class="st">"yamlme-intro"</span><span class="op">)</span></code></pre></div>
+</div>
+<div id="similar-packages" class="section level2">
+<h2 class="hasAnchor">
+<a href="#similar-packages" class="anchor"></a>Similar packages</h2>
+<p>Other R-packages with similar tasks are <a href="https://github.com/viking/r-yaml/"><code>yaml</code></a> and <a href="https://github.com/r-lib/ymlthis"><code>ymlthis</code></a>, where the later is quite close but uses a different approach defining separated functions for different elements, while <code>yamlme</code> uses a single function, which is quite open, writting the head in accordance to the argumnet provided in custom paramaters.</p>
 </div>
 </div>
   </div>
