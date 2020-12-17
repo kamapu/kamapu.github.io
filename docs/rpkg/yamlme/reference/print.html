@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Render documents from object — render_rmd • yamlme</title>
+<title>Print Method for rmd_doc — print • yamlme</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,8 @@
 
 
 
-<meta property="og:title" content="Render documents from object — render_rmd" />
-<meta property="og:description" content="This function is a wrapper of rmarkdown::render() and will also work with
-file names but also enables the possibility of rendering from objects created
-by write_rmd()." />
+<meta property="og:title" content="Print Method for rmd_doc — print" />
+<meta property="og:description" content="Quick display for rmd_doc objects." />
 
 
 
@@ -125,80 +123,40 @@ by write_rmd()." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Render documents from object</h1>
-    <small class="dont-index">Source: <a href='https://github.com/kamapu/yamlme/blob/master/R/render_rmd.R'><code>R/render_rmd.R</code></a></small>
-    <div class="hidden name"><code>render_rmd.Rd</code></div>
+    <h1>Print Method for rmd_doc</h1>
+    <small class="dont-index">Source: <a href='https://github.com/kamapu/yamlme/blob/master/R/print.R'><code>R/print.R</code></a></small>
+    <div class="hidden name"><code>print.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This function is a wrapper of <code><a href='https://rdrr.io/pkg/rmarkdown/man/render.html'>rmarkdown::render()</a></code> and will also work with
-file names but also enables the possibility of rendering from objects created
-by <code><a href='write_rmd.html'>write_rmd()</a></code>.</p>
+    <p>Quick display for <code>rmd_doc</code> objects.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>render_rmd</span><span class='op'>(</span><span class='va'>input</span>, <span class='va'>...</span><span class='op'>)</span>
-
-<span class='co'># S3 method for character</span>
-<span class='fu'>render_rmd</span><span class='op'>(</span><span class='va'>input</span>, <span class='va'>...</span><span class='op'>)</span>
-
-<span class='co'># S3 method for rmd_doc</span>
-<span class='fu'>render_rmd</span><span class='op'>(</span>
-  <span class='va'>input</span>,
-  <span class='va'>output_file</span>,
-  temp_file <span class='op'>=</span> <span class='st'>"_temp.Rmd"</span>,
-  delete_temp <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  <span class='va'>...</span>
-<span class='op'>)</span></pre>
+    <pre class="usage"><span class='co'># S3 method for rmd_doc</span>
+<span class='fu'>print</span><span class='op'>(</span><span class='va'>x</span>, maxlines <span class='op'>=</span> <span class='fl'>15</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>input</th>
-      <td><p>Either a character value indicating the path and the name of the
-r-markdown file, or an object of class <code>rmd_doc</code>, written by
-<code><a href='write_rmd.html'>write_rmd()</a></code>.</p></td>
+      <th>x</th>
+      <td><p>An object of class <code>rmd_doc</code>.</p></td>
+    </tr>
+    <tr>
+      <th>maxlines</th>
+      <td><p>An integer value indicating the number of lines used for the
+display. Longer documents will be truncated.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Further parameters passed to <code><a href='https://rdrr.io/pkg/rmarkdown/man/render.html'>rmarkdown::render()</a></code>.</p></td>
-    </tr>
-    <tr>
-      <th>output_file</th>
-      <td><p>A character value indicating the name of the output file.
-It is passed to <code><a href='https://rdrr.io/pkg/rmarkdown/man/render.html'>rmarkdown::render()</a></code>.</p></td>
-    </tr>
-    <tr>
-      <th>temp_file</th>
-      <td><p>A name for a temporary file created to render the object.</p></td>
-    </tr>
-    <tr>
-      <th>delete_temp</th>
-      <td><p>A logical value indicating whether <code>temp_file</code> should be
-deleted after rendering or not.</p></td>
+      <td><p>Further arguments passed among methods (not yet in use).</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
-<span class='co'>## copy example to your working directory</span>
-<span class='va'>filename</span> <span class='op'>&lt;-</span> <span class='st'>"taxlistjourney.Rmd"</span>
-<span class='fu'><a href='https://rdrr.io/r/base/files.html'>file.copy</a></span><span class='op'>(</span>from<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/find.package.html'>path.package</a></span><span class='op'>(</span><span class='st'>"yamlme"</span><span class='op'>)</span>, <span class='va'>filename</span><span class='op'>)</span>, to<span class='op'>=</span><span class='va'>filename</span><span class='op'>)</span>
+    <p>A display of the resulting R-Markdown document in the console.</p>
 
-<span class='co'>## Render the file with rmarkdown::render()</span>
-<span class='fu'>render_rmd</span><span class='op'>(</span><span class='va'>filename</span>, output_file<span class='op'>=</span><span class='st'>"example"</span><span class='op'>)</span>
-
-<span class='co'>## Render the file with yamlme</span>
-<span class='va'>text_document</span> <span class='op'>&lt;-</span> <span class='fu'><a href='read_rmd.html'>read_rmd</a></span><span class='op'>(</span><span class='va'>filename</span><span class='op'>)</span>
-
-<span class='va'>rmd_document</span> <span class='op'>&lt;-</span> <span class='fu'><a href='write_rmd.html'>write_rmd</a></span><span class='op'>(</span>title<span class='op'>=</span><span class='st'>"my title"</span>, author<span class='op'>=</span><span class='st'>"my name"</span>,
-    output<span class='op'>=</span><span class='st'>"html_document"</span>, body<span class='op'>=</span><span class='va'>text_document</span><span class='op'>)</span>
-
-<span class='fu'>render_rmd</span><span class='op'>(</span><span class='va'>rmd_document</span>, output_file<span class='op'>=</span><span class='st'>"example2"</span><span class='op'>)</span>
-<span class='op'>}</span>
-
-</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
