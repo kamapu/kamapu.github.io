@@ -40,7 +40,8 @@
 
 
 <meta property="og:title" content="Print Method for rmd_doc — print" />
-<meta property="og:description" content="Quick display for rmd_doc objects." />
+<meta property="og:description" content="Quick display for rmd_doc objects. This method also defines the way how
+objects are displayed in the console." />
 
 
 
@@ -129,7 +130,8 @@
     </div>
 
     <div class="ref-description">
-    <p>Quick display for <code>rmd_doc</code> objects.</p>
+    <p>Quick display for <code>rmd_doc</code> objects. This method also defines the way how
+objects are displayed in the console.</p>
     </div>
 
     <pre class="usage"><span class='co'># S3 method for rmd_doc</span>
@@ -157,6 +159,46 @@ display. Longer documents will be truncated.</p></td>
 
     <p>A display of the resulting R-Markdown document in the console.</p>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+<span class='co'>## Create a new document</span>
+<span class='va'>my_document</span> <span class='op'>&lt;-</span> <span class='fu'><a href='write_rmd.html'>write_rmd</a></span><span class='op'>(</span>
+    title <span class='op'>=</span> <span class='st'>"A journey in rOpenSci"</span>,
+    author <span class='op'>=</span> <span class='st'>"Miguel Alvarez"</span>,
+    output <span class='op'>=</span> <span class='st'>"html_document"</span>,
+    body <span class='op'>=</span> <span class='fu'><a href='read_rmd.html'>read_rmd</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/find.package.html'>path.package</a></span><span class='op'>(</span><span class='st'>"yamlme"</span><span class='op'>)</span>,
+            <span class='st'>"taxlistjourney.Rmd"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>my_document</span>
+</div><div class='output co'>#&gt; ---
+#&gt; title: A journey in rOpenSci
+#&gt; author: Miguel Alvarez
+#&gt; output: html_document
+#&gt; ---
+#&gt; 
+#&gt; 
+#&gt; After a long review process, where a lot of improvements have been implemented,
+#&gt; the package [`taxlist`](https://docs.ropensci.org/taxlist/) managed to be
+#&gt; accepted in [**rOpenSci**](https://ropensci.org/).
+#&gt; The package `taxllist` handles taxonomic lists as **S4** objects in
+#&gt; [**R**](https://www.r-project.org/).
+#&gt; Such objects can be used as modules within data sets of biodiversity records as
+#&gt; in the package [`vegtable`](https://github.com/kamapu/vegtable).
+#&gt; 
+#&gt; In a brief talk a summary of the experiences during the process of submission to
+#&gt; **rOpenSci** was presented in the context of the conference [**LatinR
+#&gt; 2020**](https://latin-r.com/en).
+#&gt; Here you can access to the
+#&gt; [slides](https://kamapu.github.io/documents/Alvarez2020.pdf) and the
+#&gt; [video](https://www.youtube.com/watch?v=NDB4s8N2fTw) of the presentation.
+#&gt; 
+#&gt; [![](http://img.youtube.com/vi/NDB4s8N2fTw/0.jpg)](http://www.youtube.com/watch?v=NDB4s8N2fTw "")
+#&gt; </div><div class='input'>
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='co'>## Render the document</span>
+<span class='fu'><a href='render_rmd.html'>render_rmd</a></span><span class='op'>(</span><span class='va'>my_document</span>, <span class='st'>"taxlistjourney"</span><span class='op'>)</span>
+<span class='op'>}</span>
+
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -165,6 +165,24 @@ header (passed to
     </table>
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='va'>my_document</span> <span class='op'>&lt;-</span> <span class='fu'><a href='write_rmd.html'>write_rmd</a></span><span class='op'>(</span>
+    title <span class='op'>=</span> <span class='st'>"Sample Document"</span>, author <span class='op'>=</span> <span class='st'>"Miguel Alavarez"</span>,
+    output <span class='op'>=</span> <span class='st'>"html_document"</span>,
+    body <span class='op'>=</span> <span class='fu'><a href='read_rmd.html'>txt_body</a></span><span class='op'>(</span>
+        <span class='st'>"# Intro"</span>,
+        <span class='st'>""</span>,
+        <span class='st'>"This is just an example."</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>my_document</span>
+
+<span class='co'>## Change output format</span>
+<span class='va'>my_document_v2</span> <span class='op'>&lt;-</span> <span class='fu'>update</span><span class='op'>(</span><span class='va'>my_document</span>, output <span class='op'>=</span> <span class='st'>"pdf_document"</span><span class='op'>)</span>
+<span class='va'>my_document_v2</span>
+<span class='op'>}</span>
+ 
+
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

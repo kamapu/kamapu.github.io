@@ -121,7 +121,6 @@
 <span class="va">my_document</span></code></pre></div>
 <pre><code>## ---
 ## title: My first document
-## 
 ## ---</code></pre>
 <p>Some applications may also require a description (or abstract) as in the case of documents rendered by <code>distill</code>. To add a description in post you start with a vertical line as first element in the vector.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
@@ -135,7 +134,6 @@
 ##   This text starts with a vertical line
 ##   and will be thus used as a description
 ##   in the head.
-## 
 ## ---</code></pre>
 <p>A similar way is applied in the case of the entries for the element <code>vignette</code> in a vignette document, hier for convenience recycling the tile of the vignette.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
@@ -153,7 +151,6 @@
 ##   %\VignetteIndexEntry{Introduction to this package}
 ##   %\VignetteEngine{knitr::rmarkdown}
 ##   %\VignetteEncoding{UTF-8}
-## 
 ## ---</code></pre>
 <p>A further class is used for entries starting with a dash symbol.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
@@ -166,7 +163,6 @@
 ##   - name: Miguel Alvarez
 ##     url: https://kamapu.github.io/
 ##   - name: Bisrat H. Gebrekhidan
-## 
 ## ---</code></pre>
 <p>And finaly, nested entries can be provided as lists.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
@@ -175,7 +171,6 @@
 <pre><code>## ---
 ## output:
 ##   pdf_document: default
-## 
 ## ---</code></pre>
 </div>
 <div id="a-full-example" class="section level1">
@@ -200,7 +195,6 @@
 ## author: My Name
 ## output: html_document
 ## # This is a comment in head
-## 
 ## ---
 ## 
 ## # Starting a working day
@@ -233,7 +227,6 @@
 ## title: Example HTML document
 ## author: My Self
 ## output: html_document
-## 
 ## ---
 ## 
 ## # Introduction
@@ -250,8 +243,7 @@
 ## title: Example PDF document
 ## author: My Self
 ## output: pdf_document
-## # this is a modified version
-## ---
+## # this is a modified version---
 ## 
 ## # Introduction
 ## 

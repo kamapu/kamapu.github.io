@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Writing yaml headers — write_rmd • yamlme</title>
+<title>Writing R-Markdown Documents — write_rmd • yamlme</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,9 @@
 
 
 
-<meta property="og:title" content="Writing yaml headers — write_rmd" />
-<meta property="og:description" content="This function generates yaml headers and Rmarkdown files by including the
-settings as arguments of the function.
+<meta property="og:title" content="Writing R-Markdown Documents — write_rmd" />
+<meta property="og:description" content="This function generates YAML headers and R-Markdown documents by including
+the settings as arguments of the function.
 Comments and pieces of header can be also added through the argument
 append." />
 
@@ -126,14 +126,14 @@ append." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Writing yaml headers</h1>
+    <h1>Writing R-Markdown Documents</h1>
     <small class="dont-index">Source: <a href='https://github.com/kamapu/yamlme/blob/master/R/write_rmd.R'><code>R/write_rmd.R</code></a></small>
     <div class="hidden name"><code>write_rmd.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This function generates yaml headers and Rmarkdown files by including the
-settings as arguments of the function.
+    <p>This function generates YAML headers and R-Markdown documents by including
+the settings as arguments of the function.
 Comments and pieces of header can be also added through the argument
 <code>append</code>.</p>
     </div>
@@ -161,7 +161,7 @@ header.</p></td>
     <tr>
       <th>filename</th>
       <td><p>A character value with the name of the file to be written
-(usually a *.Rmd file). If missing, no file will be written by the
+(usually a *.Rmd file). If missing, no file will be written by this
 function.</p></td>
     </tr>
     </table>
@@ -171,6 +171,19 @@ function.</p></td>
     <p>A character vector of class <code>rmd_doc</code> and, if argument set for parameter
 <code>filename</code>, an Rmd file.</p>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='va'>my_document</span> <span class='op'>&lt;-</span> <span class='fu'>write_rmd</span><span class='op'>(</span>
+    title <span class='op'>=</span> <span class='st'>"Sample Document"</span>, author <span class='op'>=</span> <span class='st'>"Miguel Alavarez"</span>,
+    output <span class='op'>=</span> <span class='st'>"html_document"</span>,
+    body <span class='op'>=</span> <span class='fu'><a href='read_rmd.html'>txt_body</a></span><span class='op'>(</span>
+        <span class='st'>"# Intro"</span>,
+        <span class='st'>""</span>,
+        <span class='st'>"This is just an example."</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>my_document</span>
+<span class='op'>}</span>
+
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
