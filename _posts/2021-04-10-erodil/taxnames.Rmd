@@ -1,0 +1,100 @@
+---
+title: "Displaying taxonomic names in taxlist"
+description: |
+  Abstract about concepts and names.
+author:
+  - name: Miguel Alvarez
+    url: https://kamapu.github.io/
+date: 07-03-2021
+output:
+  distill::distill_article:
+    self_contained: false
+draft: true
+categories:
+  - R
+  - taxonomy
+preview: na
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(biblio)
+
+## Set global chunk options
+opts_chunk$set(out.width="100%", echo=TRUE)
+
+## # Chunk selecting references
+## Bib <- read_bib("MiguelReferences.bib")
+## Sel <- match_keys(Bib, "vegtablepress2.Rmd")$bibtexkey
+## Bib2 <- subset(Bib, bibtexkey %in% Sel)
+## biblio::write_bib(Bib2, file="press2refs.bib")
+```
+
+# Installation
+
+Since some of the functions explained in this post are not available
+in the current CRAN version of `taxlist`, you may need to install the package
+from its **GitHub** repository.
+
+```{r installation2, eval=FALSE}
+library(devtools)
+install_github("ropensci/taxlist", build_vignettes=TRUE)
+```
+
+# Revisiting taxlist
+
+To recapitulate, an object of class `taxlist` contains four slots that
+corresponds to four data frames.
+From them the essentials are **taxonNames** collecting all taxon usage names,
+and **taxonRelations**, which includes all taxon concepts, indicating their
+taxonomic rank and the respective parent taxon.
+While in slot **taxonNames** each usage name is already assigned to a taxon
+concept, in slot **taxonRelations** it is indicated, which name is considered
+the accepted name for the taxon.
+
+**_here the data scheme_**
+
+The slots **taxonViews** and **taxonTraits** can be considered as optional.
+In **taxonViews** is the list of bibliographic references that define the
+respective circumscriptions of the taxonomic concepts, while the slot
+**taxonTraits** contains attributes of the concepts, for instance functional
+traits for species, chorology, indicator values, life forms, etc.
+
+# Accessing names and concepts
+
+The main entries associated to a taxon concept are the concept itself (entries
+in **taxonRelations**) and the respective usage names (entries in
+**taxonNames**).
+Their respective identifiers are called **TaxonConceptID** and **TaxonUsageID**.
+Note that both IDs may be confounded because in some taxonomic concepts can be
+identical but they can also be quite different.
+Both identities are displayed when calling the function `summary()`.
+
+```{r}
+library(taxlist)
+summary(Easplist, "papyrus")
+```
+
+**_Described summary output_**
+
+
+
+Show the respective code in slot relations.
+
+Respective code in slot names.
+
+# Hierarchies
+
+
+Summary of the object and mention to taxonomic ranks (levels).
+
+When looking at the summary of a single taxon concept, both the taxonomic rank
+and the parental taxon are also shown in the display, if existent.
+
+Display of all information by summary.
+
+
+Indented lists.
+
+
+
