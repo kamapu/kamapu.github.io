@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -53,35 +54,35 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #545454; font-weight: bold; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #a1024a; } /* BaseN */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007faa; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #008000; } /* Char */
-code span.cn { color: #d91e18; } /* Constant */
-code span.co { color: #545454; } /* Comment */
-code span.cv { color: #545454; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #aa5d00; } /* DataType */
-code span.dv { color: #a1024a; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
 code span.ex { } /* Extension */
-code span.fl { color: #a1024a; } /* Float */
-code span.fu { color: #4254a7; } /* Function */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
-code span.in { color: #545454; font-weight: bold; } /* Information */
-code span.kw { color: #007faa; font-weight: bold; } /* Keyword */
-code span.op { color: #696969; } /* Operator */
-code span.ot { color: #007faa; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #008000; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #008000; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #008000; } /* VerbatimString */
-code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warning */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
@@ -119,7 +120,7 @@ code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warni
 <!--/radix_placeholder_meta_tags-->
   
   <meta name="citation_reference" content="citation_title=The taxlist package: Managing plant taxonomic lists in R;citation_publication_date=2018;citation_publisher=Pensoft Publishers;citation_volume=6;citation_doi=10.3897/bdj.6.e23635;citation_author=Miguel Alvarez;citation_author=Federico Luebert"/>
-  <meta name="citation_reference" content="citation_title=CL-Dataveg a database of Chilean grassland vegetation;citation_publication_date=2012;citation_volume=4;citation_doi=10.7809/b-e.00230;citation_author=Miguel Alvarez;citation_author=Bodo Maria Möseler;citation_author=Cristina San Martín;citation_author=Carlos Ramírez;citation_author=Javier Amigo"/>
+  <meta name="citation_reference" content="citation_title=CL-Dataveg  a database of Chilean grassland vegetation;citation_publication_date=2012;citation_volume=4;citation_doi=10.7809/b-e.00230;citation_author=Miguel Alvarez;citation_author=Bodo Maria Möseler;citation_author=Cristina San Martín;citation_author=Carlos Ramírez;citation_author=Javier Amigo"/>
   <meta name="citation_reference" content="citation_title=La vegetación de lagunas primaverales en las cercanías de Temuco (Cautín, Chile);citation_publication_date=1998;citation_volume=23;citation_author=Cristina San Martín;citation_author=Carlos Ramírez;citation_author=Pedro Ojeda"/>
   <meta name="citation_reference" content="citation_title=Explorative and retrospective evaluation of grassland vegetation in Southcentral Chile;citation_publication_date=2020;citation_publisher=University of Bonn;citation_author=Elena Gómez"/>
   <!--radix_placeholder_rmarkdown_metadata-->
@@ -2054,16 +2055,20 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.5.3/header-attrs.js"></script>
-  <script src="../../site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+  <script src="../../site_libs/header-attrs-2.10/header-attrs.js"></script>
+  <script src="../../site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
   <script src="../../site_libs/jquery-1.12.4/jquery.min.js"></script>
   <link href="../../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
   <script src="../../site_libs/leaflet-1.3.1/leaflet.js"></script>
   <link href="../../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
-  <script src="../../site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+  <script src="../../site_libs/proj4-2.6.2/proj4.min.js"></script>
   <script src="../../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
   <link href="../../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-  <script src="../../site_libs/leaflet-binding-2.0.3/leaflet.js"></script>
+  <script src="../../site_libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
   <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
@@ -2194,14 +2199,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Both packages <a href="https://docs.ropensci.org/taxlist/"><code>taxlist</code></a> and <a href="https://github.com/kamapu/vegtable/"><code>vegtable</code></a> are released in the Comprehensive R Archive Network (<strong>CRAN</strong>). Since <code>taxlist</code> is a dependency of <code>vegtable</code>, both will be installed in the following command:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"vegtable"</span>, dependencies<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"vegtable"</span>, dependencies<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
 <p>Alternatively, you can install the development versions from their repositories at <strong>GitHub</strong>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://devtools.r-lib.org/'>devtools</a></span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://devtools.r-lib.org/'>devtools</a></span><span class='op'>)</span>
 <span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"ropensci/taxlist"</span>, build_vignettes<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"kamapu/vegtable"</span><span class='op'>)</span>
 </code></pre>
@@ -2210,7 +2215,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>An additional package including some example data required for this session have also to be installed from <strong>GitHub</strong>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"kamapu/datastore"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"kamapu/datastore"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
@@ -2221,7 +2226,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Before starting with the work, do not forget to load the installed packages into your R-session:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/kamapu/vegtable'>vegtable</a></span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/kamapu/vegtable'>vegtable</a></span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/kamapu/data_store'>datastore</a></span><span class='op'>)</span>
 </code></pre>
 </div>
@@ -2230,7 +2235,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>The package <code>taxlist</code> includes a own data set formatted as a <code>taxlist</code> object. You can get a general report on the content of this data set by using the function <code>summary()</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>)</span>
 </code></pre>
 </div>
@@ -2261,7 +2266,7 @@ number of concepts in level family: 186</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>@</span><span class='va'>taxonNames</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>@</span><span class='va'>taxonNames</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>  TaxonUsageID TaxonConceptID              TaxonName
@@ -2279,7 +2284,7 @@ number of concepts in level family: 186</code></pre>
 5     (Andrews) Chiov.
 6 Harms ex Y. Sjöstedt</code></pre>
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>@</span><span class='va'>taxonRelations</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>@</span><span class='va'>taxonRelations</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>  TaxonConceptID AcceptedName Basionym Parent   Level ViewID
@@ -2290,7 +2295,7 @@ number of concepts in level family: 186</code></pre>
 5              5            5       NA  54755 species      1
 6              6            6       NA  54755 species      1</code></pre>
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>@</span><span class='va'>taxonTraits</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>@</span><span class='va'>taxonTraits</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>  TaxonConceptID       lf_behn_2018
@@ -2301,7 +2306,7 @@ number of concepts in level family: 186</code></pre>
 5             21    obligate_annual
 6             22        chamaephyte</code></pre>
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>@</span><span class='va'>taxonViews</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>@</span><span class='va'>taxonViews</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>  ViewID                                 secundum view_bibtexkey
@@ -2313,7 +2318,7 @@ number of concepts in level family: 186</code></pre>
 <p>The function <code>summary()</code> can also be used to query information of a taxon or a set of taxa. In such case we can add the name of the requested taxon usage name. We can also specify a column of the slot <strong>taxonViews</strong> in the parameter <code>secundum</code> in order to get more informatin on the respective taxon view as done here:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Easplist</span>, <span class='st'>"Amaranthus hybridus"</span>, secundum<span class='op'>=</span><span class='st'>"secundum"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Easplist</span>, <span class='st'>"Amaranthus hybridus"</span>, secundum<span class='op'>=</span><span class='st'>"secundum"</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>------------------------------ 
@@ -2350,26 +2355,27 @@ parent: 37 Amaranthus hybridus L.
 <p><img src="vegtablepress2_files/figure-html5/print_name-1.png" width="100%" /></p>
 </div>
 <h1 id="working-with-vegetation-plots">Working with vegetation-plots</h1>
-<p>Further examples will be applied to a data set available at the installed package <code>datastore</code>, which corresponds to plot observations in grassland and semi-aquatic communities from Temuco, Chile. This data set was originally published by <span class="citation" data-cites="SanMartin1998">San Martín <em>et al.</em> (<a href="#ref-SanMartin1998" role="doc-biblioref">1998</a>)</span> and is stored in the database <strong>sudamerica</strong> <span class="citation" data-cites="Alvarez2012">(<a href="https://kamapu.github.io/sudamerica/" class="uri" role="doc-biblioref">https://kamapu.github.io/sudamerica/</a>, see also Alvarez <em>et al.</em>, <a href="#ref-Alvarez2012" role="doc-biblioref">2012</a>)</span>.</p>
+<p>Further examples will be applied to a data set available at the installed package <code>datastore</code>, which corresponds to plot observations in grassland and semi-aquatic communities from Temuco, Chile. This data set was originally published by <span class="citation" data-cites="SanMartin1998">San Martín <em>et al.</em> (<a href="#ref-SanMartin1998" role="doc-biblioref">1998</a>)</span> and is stored in the database <strong>sudamerica</strong> <span class="citation" data-cites="Alvarez2012">(<a href="https://kamapu.github.io/sudamerica/" class="uri" role="doc-biblioref">https://kamapu.github.io/sudamerica/</a>, see also <a href="#ref-Alvarez2012" role="doc-biblioref">Alvarez <em>et al.</em>, 2012</a>)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>## Metadata 
-object size: 180.8 Kb 
-validity: TRUE 
+   object size: 180.8 Kb 
+   validity: TRUE 
 
 ## Content 
-number of plots: 78 
-variables in header: 7 
-number of relations: 2 
+   number of plots: 78 
+   plots with records: 78 
+   variables in header: 7 
+   number of relations: 2 
 
 ## Taxonomic List 
-taxon names: 544 
-taxon concepts: 197 
-validity: TRUE </code></pre>
+   taxon names: 544 
+   taxon concepts: 197 
+   validity: TRUE </code></pre>
 </div>
 <h2 id="structure">Structure</h2>
 <p>Objects of class <code>vegtable</code> are structured into 7 slots, where the slots <strong>species</strong>, <strong>header</strong>, and <strong>samples</strong> are the essential ones.</p>
@@ -2379,7 +2385,7 @@ validity: TRUE </code></pre>
 <p>The taxonomic list is handled as a <code>taxlist</code> object and is located at the slot <strong>species</strong>:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>species</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>species</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>object size: 89.4 Kb 
@@ -2409,7 +2415,7 @@ number of concepts in level division: 0</code></pre>
 <p>The slot <strong>header</strong> is simply a data frame including information related to single plot observations, for instance size of the plot, record date, results of soil analyses, etc.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>    ReleveID data_source plot_size elevation community_type longitude
@@ -2430,7 +2436,7 @@ number of concepts in level division: 0</code></pre>
 <p>Records of species in plots are stored in slot <strong>samples</strong>. Against the commonly used cross tables (species by plots or plots by species), this slot is organized in columns (column-oriented table, a.k.a database list).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>samples</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>samples</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>      record_id ReleveID TaxonUsageID cover_percentage
@@ -2444,7 +2450,7 @@ number of concepts in level division: 0</code></pre>
 <p>The slot <strong>coverconvert</strong> have an own, homonymous class and is used as container for cover conversion tables. These tables can be used for conversion of cover codes, which will be done by the function <code>transform()</code>. The example on grasslands does not include cover conversion tables but the data set installed with <code>vegtable</code> does it.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span><span class='op'>@</span><span class='va'>coverconvert</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span><span class='op'>@</span><span class='va'>coverconvert</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>## Number of cover scales: 3 
@@ -2486,12 +2492,12 @@ number of concepts in level division: 0</code></pre>
 <p>The slot <strong>relations</strong> is a list of data frames that provide additional information for classes of categorical variables stored in slot <strong>header</strong>. These tables correspond to <em>pop-up tables</em> of <strong>Turboveg 2</strong>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/names.html'>names</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>relations</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/names.html'>names</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>relations</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>[1] &quot;community_type&quot; &quot;data_source&quot;   </code></pre>
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>relations</span><span class='op'>$</span><span class='va'>community_type</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>relations</span><span class='op'>$</span><span class='va'>community_type</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>  community_type
@@ -2512,7 +2518,7 @@ number of concepts in level division: 0</code></pre>
 <p>While in the header table such categorical variables may be cryptic, there is an option to insert columns from relations into header by using <code>relation2header()</code>. By this way, yo do not only see a community id, which is just a number, but you can also see the respective names of the plant communities that correspond to the syntaxa assigned to the plots originally by the publication.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/veg_relation.html'>relation2header</a></span><span class='op'>(</span><span class='va'>grasslands</span>, <span class='st'>"community_type"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/veg_relation.html'>relation2header</a></span><span class='op'>(</span><span class='va'>grasslands</span>, <span class='st'>"community_type"</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span><span class='op'>)</span>
 </code></pre>
 </div>
@@ -2537,7 +2543,7 @@ number of concepts in level division: 0</code></pre>
 <p>In this data set, for instance, life forms are inserted as attributes of the recorded species. Since this attribute is a categorical variable, summaries at the plot level can only be done as proportions. The function <code>trait_proportion()</code> is suitable for such kind of summaries. Note that the best way to collect statistics calculated for plots is adding them as new columns into the slot <strong>header</strong>, which is done by the option <code>in_header=TRUE</code>. Additionally, the option <code>weight="cover_percentage"</code> is indicating that the cover percentage stored in the slot <strong>samples</strong> will be used as weight for the respective life from classes.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/trait_stats.html'>trait_proportion</a></span><span class='op'>(</span>trait<span class='op'>=</span><span class='st'>"life_form"</span>, object<span class='op'>=</span><span class='va'>grasslands</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/trait_stats.html'>trait_proportion</a></span><span class='op'>(</span>trait<span class='op'>=</span><span class='st'>"life_form"</span>, object<span class='op'>=</span><span class='va'>grasslands</span>,
     head_var<span class='op'>=</span><span class='st'>"ReleveID"</span>, include_nas<span class='op'>=</span><span class='cn'>FALSE</span>, weight<span class='op'>=</span><span class='st'>"cover_percentage"</span>,
     in_header<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </code></pre>
@@ -2546,7 +2552,7 @@ number of concepts in level division: 0</code></pre>
 <p>By default, the function added at slot <strong>header</strong> one column per level in the traits variable appending a suffix (default <code>_prop</code>). Just to remind you, we used the function <code>relation2header()</code> in order to add the names of the recorded communities in the slot <strong>header</strong>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='co'># Add community names to the header table</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Add community names to the header table</span>
 <span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/veg_relation.html'>relation2header</a></span><span class='op'>(</span><span class='va'>grasslands</span>, relation<span class='op'>=</span><span class='st'>"community_type"</span><span class='op'>)</span>
 
 <span class='co'># Display mean values per plant communities</span>
@@ -2565,7 +2571,7 @@ number of concepts in level division: 0</code></pre>
 9       Mentho pulegium-Agrostietum capillaris 0.041020366
 10                             Phyla nodiflora 0.958893907</code></pre>
 <div class="sourceCode">
-<pre><code><span class='co'># The same information as boxplot</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># The same information as boxplot</span>
 <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mar<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>, <span class='fl'>20</span>, <span class='fl'>1</span>, <span class='fl'>1</span><span class='op'>)</span>, las<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span><span class='op'>(</span><span class='va'>annual_prop</span> <span class='op'>~</span> <span class='va'>community_name</span>, data<span class='op'>=</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span>, horizontal<span class='op'>=</span><span class='cn'>TRUE</span>,
     xlab<span class='op'>=</span><span class='st'>"Proportion of annuals"</span>, ylab<span class='op'>=</span><span class='st'>""</span><span class='op'>)</span>
@@ -2575,20 +2581,20 @@ number of concepts in level division: 0</code></pre>
 </div>
 <p>Before you continue, note that the first argument in the function is a <code>formula</code> indicating on the left a response as left term (in this case the statistic describing a categorical trait variable) and the factors as right terms (grouping variables for the plots). This kind of objects will be frequently used in functions dealing with <code>vegtable</code> objects.</p>
 <h3 id="trait-statistics">Trait Statistics</h3>
-<p>For numerical taxonomic traits statistical parameters such as averages and standard deviation can be calculated per plot. For instance the data set <code>grasslands</code> is also including Ellenberg’s indicator values <span class="citation" data-cites="Ellenberg2001">(see Ellenberg <em>et al.</em>, <a href="#ref-Ellenberg2001" role="doc-biblioref">2001</a>)</span>, which were collected from <span class="citation" data-cites="Ramirez1991">Ramírez <em>et al.</em> (<a href="#ref-Ramirez1991" role="doc-biblioref">1991</a>)</span> and <span class="citation" data-cites="SanMartin2003">San Martín <em>et al.</em> (<a href="#ref-SanMartin2003" role="doc-biblioref">2003</a>)</span>.</p>
+<p>For numerical taxonomic traits statistical parameters such as averages and standard deviation can be calculated per plot. For instance the data set <code>grasslands</code> is also including Ellenberg’s indicator values <span class="citation" data-cites="Ellenberg2001">(see <a href="#ref-Ellenberg2001" role="doc-biblioref">Ellenberg <em>et al.</em>, 2001</a>)</span>, which were collected from <span class="citation" data-cites="Ramirez1991">Ramírez <em>et al.</em> (<a href="#ref-Ramirez1991" role="doc-biblioref">1991</a>)</span> and <span class="citation" data-cites="SanMartin2003">San Martín <em>et al.</em> (<a href="#ref-SanMartin2003" role="doc-biblioref">2003</a>)</span>.</p>
 <p>The calculation of trait statistics is done by the function <code>trait_stats()</code>. In the parameter <code>FUN</code> we can use a statistical function such as <code>mean()</code> but we can also define an statistic using the cover values as weights for the calculation. In this case we can calculate weighted means:</p>
 <p><span class="math display">\[\bar{x} = \frac{\sum{x_{i} \cdot w_{i}}}{\sum{w_{i}}}\]</span></p>
 <p>Here <span class="math inline">\(\bar{x}\)</span> is the mean indicator figure for a plot, <span class="math inline">\(x_{i}\)</span> is the indicator value of the <em>ith</em> species in this plot, and <span class="math inline">\(w_{i}\)</span> is the weight of the same species (cover value) in the plot. In R we define it as a function:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>weighted_mean</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>w</span>, <span class='va'>...</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>*</span><span class='va'>w</span>, <span class='va'>...</span><span class='op'>)</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>w</span>, <span class='va'>...</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>weighted_mean</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>w</span>, <span class='va'>...</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>*</span><span class='va'>w</span>, <span class='va'>...</span><span class='op'>)</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>w</span>, <span class='va'>...</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
 <p>In the function <code>trait_stats()</code> we can query indicator figures through a formula. Note that this formula may include multiple variables on the left terms for the simultaneous calculation of indicator values.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/trait_stats.html'>trait_stats</a></span><span class='op'>(</span><span class='va'>ind_N</span> <span class='op'>+</span> <span class='va'>ind_H</span> <span class='op'>~</span> <span class='va'>ReleveID</span>, <span class='va'>grasslands</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/trait_stats.html'>trait_stats</a></span><span class='op'>(</span><span class='va'>ind_N</span> <span class='op'>+</span> <span class='va'>ind_H</span> <span class='op'>~</span> <span class='va'>ReleveID</span>, <span class='va'>grasslands</span>,
     FUN<span class='op'>=</span><span class='va'>weighted_mean</span>,  include_nas<span class='op'>=</span><span class='cn'>FALSE</span>, weight<span class='op'>=</span><span class='st'>"cover_percentage"</span>,
     suffix<span class='op'>=</span><span class='st'>"_wmean"</span>, in_header<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </code></pre>
@@ -2597,7 +2603,7 @@ number of concepts in level division: 0</code></pre>
 <p>The resulting values may be useful to compare different plant communities or to test relationships between different variables, for instance an expected correlation between the humidity indicator and the proportion of annuals.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mar<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>, <span class='fl'>20</span>, <span class='fl'>1</span>, <span class='fl'>1</span><span class='op'>)</span>, las<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mar<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>, <span class='fl'>20</span>, <span class='fl'>1</span>, <span class='fl'>1</span><span class='op'>)</span>, las<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span><span class='op'>(</span><span class='va'>ind_H_wmean</span> <span class='op'>~</span> <span class='va'>community_name</span>, data<span class='op'>=</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span>, horizontal<span class='op'>=</span><span class='cn'>TRUE</span>,
     xlab<span class='op'>=</span><span class='st'>"H figure (weighted mean)"</span>, ylab<span class='op'>=</span><span class='st'>""</span><span class='op'>)</span>
 </code></pre>
@@ -2606,7 +2612,7 @@ number of concepts in level division: 0</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='co'># Linear regression model</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Linear regression model</span>
 <span class='va'>Mod</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>annual_prop</span> <span class='op'>~</span> <span class='va'>ind_H_wmean</span>, data<span class='op'>=</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span><span class='op'>)</span>
 
 <span class='co'># plot</span>
@@ -2622,7 +2628,7 @@ number of concepts in level division: 0</code></pre>
 <p>Taxonomic information (taxonomic ranks and parent-child relationships) are not directly available for statistical descriptions in <code>taxlist</code> objects. If we need to calculate proportions of determined genera or families in the plots, we can pass the taxonomy to the taxon traits table with the function <code>tax2traits()</code>. You need to set <code>get_names=TRUE</code>, otherwise only taxon IDs (numbers) will be inserted in the traits table.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>species</span> <span class='op'>&lt;-</span> <span class='fu'>tax2traits</span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>species</span>, get_names<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>species</span> <span class='op'>&lt;-</span> <span class='fu'>tax2traits</span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>species</span>, get_names<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>species</span><span class='op'>@</span><span class='va'>taxonTraits</span><span class='op'>)</span>
 </code></pre>
 </div>
@@ -2658,7 +2664,7 @@ number of concepts in level division: 0</code></pre>
 <p>Now we can compare, for instance, the proportion of species belonging to the family Poaceae (grasses) in the different plant communities.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/trait_stats.html'>trait_proportion</a></span><span class='op'>(</span><span class='st'>"family"</span>, <span class='va'>grasslands</span>, head_var<span class='op'>=</span><span class='st'>"ReleveID"</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/trait_stats.html'>trait_proportion</a></span><span class='op'>(</span><span class='st'>"family"</span>, <span class='va'>grasslands</span>, head_var<span class='op'>=</span><span class='st'>"ReleveID"</span>,
     trait_level<span class='op'>=</span><span class='st'>"Poaceae"</span>, include_nas<span class='op'>=</span><span class='cn'>FALSE</span>, weight<span class='op'>=</span><span class='st'>"cover_percentage"</span>,
     in_header<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 
@@ -2674,7 +2680,7 @@ number of concepts in level division: 0</code></pre>
 <p>The function <code>count_taxa()</code> is defined for calculation of number of taxa at specific taxonomic ranks. Note that this function may be smart enough to aggregate taxa into the corresponding ranks, for instance the calculation of species numbers may also include sub-specific taxa in their respective species (option <code>include_lower=TRUE</code>).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/count_taxa.html'>count_taxa</a></span><span class='op'>(</span><span class='va'>species</span> <span class='op'>~</span> <span class='va'>ReleveID</span>, <span class='va'>grasslands</span>, include_lower<span class='op'>=</span><span class='cn'>TRUE</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/count_taxa.html'>count_taxa</a></span><span class='op'>(</span><span class='va'>species</span> <span class='op'>~</span> <span class='va'>ReleveID</span>, <span class='va'>grasslands</span>, include_lower<span class='op'>=</span><span class='cn'>TRUE</span>,
     in_header<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 
 <span class='co'># Compare communities by species richness</span>
@@ -2690,29 +2696,30 @@ number of concepts in level division: 0</code></pre>
 <p>In order to reduce the data set, we will apply the function <code>subset()</code>, selecting plots of the association <em>Juncetum proceri</em>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>juncetum</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>grasslands</span>, <span class='va'>community_name</span> <span class='op'>==</span> <span class='st'>"Juncetum proceri"</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>juncetum</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>grasslands</span>, <span class='va'>community_name</span> <span class='op'>==</span> <span class='st'>"Juncetum proceri"</span>,
     slot<span class='op'>=</span><span class='st'>"header"</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>juncetum</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>## Metadata 
-object size: 202.9 Kb 
-validity: TRUE 
+   object size: 202.9 Kb 
+   validity: TRUE 
 
 ## Content 
-number of plots: 15 
-variables in header: 16 
-number of relations: 2 
+   number of plots: 15 
+   plots with records: 15 
+   variables in header: 16 
+   number of relations: 2 
 
 ## Taxonomic List 
-taxon names: 544 
-taxon concepts: 197 
-validity: TRUE </code></pre>
+   taxon names: 544 
+   taxon concepts: 197 
+   validity: TRUE </code></pre>
 </div>
 <p>In the function <code>crosstable()</code> we indicate as formula in the left term the numeric variable used to fill the table, the first right term is the group variable used for the columns and the further right terms are group variables defining the rows of the cross table. Note that the taxa in the formula can be addressed by either one of two keywords, namely <strong>TaxonName</strong> for the use of original entry names (taxon usage names) or <strong>AcceptedName</strong> for use of the respective names considered as accepted in slot species. We also set the arguments <code>FUN=max</code> defining the function used to merge multiple occurrences of a taxon in a plot and <code>na_to_zero=TRUE</code> to fill absence.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='va'>juncetum_cross</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/crosstable.html'>crosstable</a></span><span class='op'>(</span><span class='va'>cover_percentage</span> <span class='op'>~</span> <span class='va'>ReleveID</span> <span class='op'>+</span> <span class='va'>AcceptedName</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>juncetum_cross</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/crosstable.html'>crosstable</a></span><span class='op'>(</span><span class='va'>cover_percentage</span> <span class='op'>~</span> <span class='va'>ReleveID</span> <span class='op'>+</span> <span class='va'>AcceptedName</span>,
     data<span class='op'>=</span><span class='va'>juncetum</span>, FUN<span class='op'>=</span><span class='va'>max</span>, na_to_zero<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>juncetum_cross</span><span class='op'>)</span>
 </code></pre>
@@ -2735,46 +2742,46 @@ validity: TRUE </code></pre>
 <p>When plots are geo-referenced, it is also possible to export the respective locations as kml files to be displayed in <strong>Google Earth</strong> using the function <code>vegtable2kml()</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/vegtable2kml.html'>vegtable2kml</a></span><span class='op'>(</span><span class='va'>grasslands</span>, file<span class='op'>=</span><span class='st'>"grasslands.kml"</span>, coords<span class='op'>=</span> <span class='op'>~</span> <span class='va'>longitude</span> <span class='op'>+</span> <span class='va'>latitude</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/vegtable2kml.html'>vegtable2kml</a></span><span class='op'>(</span><span class='va'>grasslands</span>, file<span class='op'>=</span><span class='st'>"grasslands.kml"</span>, coords<span class='op'>=</span> <span class='op'>~</span> <span class='va'>longitude</span> <span class='op'>+</span> <span class='va'>latitude</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
 <p>Alternatively the locations of plots can be displayed by using the package <code>leaflet</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre><code><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://rstudio.github.io/leaflet/'>leaflet</a></span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://rstudio.github.io/leaflet/'>leaflet</a></span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
     <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addCircleMarkers</a></span><span class='op'>(</span>lng<span class='op'>=</span><span class='op'>~</span><span class='va'>longitude</span>, lat<span class='op'>=</span><span class='op'>~</span><span class='va'>latitude</span>, color<span class='op'>=</span><span class='st'>"red"</span>,
         opacity<span class='op'>=</span><span class='fl'>0.3</span>, radius<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
 </code></pre>
 </div>
-<div id="htmlwidget-1366714445bd43800105" style="width:100%;height:384px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1366714445bd43800105">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[-38.7072,-38.631,-38.6908,-38.6846,-38.7141,-38.7072,-38.7072,-38.7072,-38.7342,-38.7138,-38.7138,-38.7138,-38.6908,-38.6908,-38.6908,-38.631,-38.631,-38.631,-38.6379,-38.6727,-38.6908,-38.7141,-38.7342,-38.7342,-38.6727,-38.6846,-38.6846,-38.6846,-38.6846,-38.6985,-38.6908,-38.6846,-38.7072,-38.7072,-38.7072,-38.7342,-38.6985,-38.6985,-38.6985,-38.631,-38.631,-38.631,-38.6908,-38.7141,-38.7141,-38.7141,-38.7141,-38.7141,-38.7141,-38.7141,-38.7342,-38.7342,-38.7342,-38.631,-38.6379,-38.6908,-38.6908,-38.7342,-38.6727,-38.6727,-38.6727,-38.6727,-38.6846,-38.6846,-38.7072,-38.7072,-38.7072,-38.6985,-38.6985,-38.6985,-38.7072,-38.7072,-38.7072,-38.7072,-38.631,-38.6379,-38.6379,-38.6727],[-72.6979,-72.7341,-72.6803,-72.744,-72.6958,-72.6979,-72.6979,-72.6979,-72.6381,-72.684,-72.684,-72.684,-72.6803,-72.6803,-72.6803,-72.7341,-72.7341,-72.7341,-72.7324,-72.7201,-72.6803,-72.6958,-72.6381,-72.6381,-72.7201,-72.744,-72.744,-72.744,-72.744,-72.7093,-72.6803,-72.744,-72.6979,-72.6979,-72.6979,-72.6381,-72.7093,-72.7093,-72.7093,-72.7341,-72.7341,-72.7341,-72.6803,-72.6958,-72.6958,-72.6958,-72.6958,-72.6958,-72.6958,-72.6958,-72.6381,-72.6381,-72.6381,-72.7341,-72.7324,-72.6803,-72.6803,-72.6381,-72.7201,-72.7201,-72.7201,-72.7201,-72.744,-72.744,-72.6979,-72.6979,-72.6979,-72.7093,-72.7093,-72.7093,-72.6979,-72.6979,-72.6979,-72.6979,-72.7341,-72.7324,-72.7324,-72.7201],1,null,null,{"interactive":true,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.3,"fill":true,"fillColor":"red","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-38.7342,-38.631],"lng":[-72.744,-72.6381]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b7984f69886c6e0e4928" style="width:100%;height:384px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b7984f69886c6e0e4928">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[-38.7072,-38.631,-38.6908,-38.6846,-38.7141,-38.7072,-38.7072,-38.7072,-38.7342,-38.7138,-38.7138,-38.7138,-38.6908,-38.6908,-38.6908,-38.631,-38.631,-38.631,-38.6379,-38.6727,-38.6908,-38.7141,-38.7342,-38.7342,-38.6727,-38.6846,-38.6846,-38.6846,-38.6846,-38.6985,-38.6908,-38.6846,-38.7072,-38.7072,-38.7072,-38.7342,-38.6985,-38.6985,-38.6985,-38.631,-38.631,-38.631,-38.6908,-38.7141,-38.7141,-38.7141,-38.7141,-38.7141,-38.7141,-38.7141,-38.7342,-38.7342,-38.7342,-38.631,-38.6379,-38.6908,-38.6908,-38.7342,-38.6727,-38.6727,-38.6727,-38.6727,-38.6846,-38.6846,-38.7072,-38.7072,-38.7072,-38.6985,-38.6985,-38.6985,-38.7072,-38.7072,-38.7072,-38.7072,-38.631,-38.6379,-38.6379,-38.6727],[-72.6979,-72.7341,-72.6803,-72.744,-72.6958,-72.6979,-72.6979,-72.6979,-72.6381,-72.684,-72.684,-72.684,-72.6803,-72.6803,-72.6803,-72.7341,-72.7341,-72.7341,-72.7324,-72.7201,-72.6803,-72.6958,-72.6381,-72.6381,-72.7201,-72.744,-72.744,-72.744,-72.744,-72.7093,-72.6803,-72.744,-72.6979,-72.6979,-72.6979,-72.6381,-72.7093,-72.7093,-72.7093,-72.7341,-72.7341,-72.7341,-72.6803,-72.6958,-72.6958,-72.6958,-72.6958,-72.6958,-72.6958,-72.6958,-72.6381,-72.6381,-72.6381,-72.7341,-72.7324,-72.6803,-72.6803,-72.6381,-72.7201,-72.7201,-72.7201,-72.7201,-72.744,-72.744,-72.6979,-72.6979,-72.6979,-72.7093,-72.7093,-72.7093,-72.6979,-72.6979,-72.6979,-72.6979,-72.7341,-72.7324,-72.7324,-72.7201],1,null,null,{"interactive":true,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.3,"fill":true,"fillColor":"red","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-38.7342,-38.631],"lng":[-72.744,-72.6381]}},"evals":[],"jsHooks":[]}</script>
 </div>
 <h1 id="acknowledgement">Acknowledgement</h1>
-<p>The data sets and routines demonstrated here have been previously tested by Elena Gómez in the context of her thesis for the degree of MSc. <span class="citation" data-cites="Gomez2020">(Gómez, <a href="#ref-Gomez2020" role="doc-biblioref">2020</a>)</span>. Any further comments and suggestions are kindly welcomed.</p>
+<p>The data sets and routines demonstrated here have been previously tested by Elena Gómez in the context of her thesis for the degree of MSc. <span class="citation" data-cites="Gomez2020">(<a href="#ref-Gomez2020" role="doc-biblioref">Gómez, 2020</a>)</span>. Any further comments and suggestions are kindly welcomed.</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references hanging-indent" role="doc-bibliography">
-<div id="ref-Alvarez2018">
-<p><strong>Alvarez, M. and Luebert, F.</strong> (2018) The taxlist package: Managing plant taxonomic lists in R. <em>Biodiversity Data Journal</em> <strong>6</strong>, e23635. doi:<a href="https://doi.org/10.3897/bdj.6.e23635">10.3897/bdj.6.e23635</a>.</p>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-Alvarez2018" class="csl-entry" role="doc-biblioentry">
+<strong>Alvarez, M. and Luebert, F.</strong> (2018) The taxlist package: Managing plant taxonomic lists in <span>R</span>. <em>Biodiversity Data Journal</em> <strong>6</strong>, e23635. doi:<a href="https://doi.org/10.3897/bdj.6.e23635">10.3897/bdj.6.e23635</a>.
 </div>
-<div id="ref-Alvarez2012">
-<p><strong>Alvarez, M., Möseler, B. M., Martín, C. S., Ramírez, C. and Amigo, J.</strong> (2012) CL-Dataveg a database of Chilean grassland vegetation. <em>Biodiversity &amp; Ecology</em> <strong>4</strong>, 443. doi:<a href="https://doi.org/10.7809/b-e.00230">10.7809/b-e.00230</a>.</p>
+<div id="ref-Alvarez2012" class="csl-entry" role="doc-biblioentry">
+<strong>Alvarez, M., Möseler, B. M., Martín, C. S., Ramírez, C. and Amigo, J.</strong> (2012) <span>CL-Dataveg</span> <span></span> a database of <span>Chilean</span> grassland vegetation. <em>Biodiversity <span>&amp;</span> Ecology</em> <strong>4</strong>, 443. doi:<a href="https://doi.org/10.7809/b-e.00230">10.7809/b-e.00230</a>.
 </div>
-<div id="ref-Ellenberg2001">
-<p><strong>Ellenberg, H., Weber, H. E., Düll, R., Wirth, V. and Werner, W.</strong> (2001) <em>Zeigerwerte von pflanzen in mitteleuropa</em>. Göttingen, Erich Goltze.</p>
+<div id="ref-Ellenberg2001" class="csl-entry" role="doc-biblioentry">
+<strong>Ellenberg, H., Weber, H. E., Düll, R., Wirth, V. and Werner, W.</strong> (2001) <em>Zeigerwerte von pflanzen in mitteleuropa</em>. Göttingen, Erich Goltze.
 </div>
-<div id="ref-Gomez2020">
-<p><strong>Gómez, E.</strong> (2020) Explorative and retrospective evaluation of grassland vegetation in Southcentral Chile.</p>
+<div id="ref-Gomez2020" class="csl-entry" role="doc-biblioentry">
+<strong>Gómez, E.</strong> (2020) Explorative and retrospective evaluation of grassland vegetation in <span>Southcentral Chile</span>.
 </div>
-<div id="ref-Ramirez1991">
-<p><strong>Ramírez, C., Finot, V. L., San Martín, C. and Ellies, A.</strong> (1991) El valor indicador ecológico de las malezas del centro-sur de Chile. <em>Agro Sur</em> <strong>19</strong>, 94–116.</p>
+<div id="ref-Ramirez1991" class="csl-entry" role="doc-biblioentry">
+<strong>Ramírez, C., Finot, V. L., San Martín, C. and Ellies, A.</strong> (1991) El valor indicador ecológico de las malezas del centro-sur de <span>Chile</span>. <em>Agro Sur</em> <strong>19</strong>, 94–116.
 </div>
-<div id="ref-SanMartin1998">
-<p><strong>San Martín, C., Ramírez, C. and Ojeda, P.</strong> (1998) La vegetación de lagunas primaverales en las cercanías de Temuco (Cautín, Chile). <em>Acta Botanica Malacitana</em> <strong>23</strong>, 99–120.</p>
+<div id="ref-SanMartin1998" class="csl-entry" role="doc-biblioentry">
+<strong>San Martín, C., Ramírez, C. and Ojeda, P.</strong> (1998) La vegetación de lagunas primaverales en las cercanías de <span>Temuco (Cautín, Chile)</span>. <em>Acta Botanica Malacitana</em> <strong>23</strong>, 99–120.
 </div>
-<div id="ref-SanMartin2003">
-<p><strong>San Martín, C., Ramírez, C. and Alvarez, M.</strong> (2003) Macrófitos como bioindicadores: Una propuesta metodológica para caracterizar ambientes dulciacuícolas. <em>Revista Geográfica de Valparaíso</em> <strong>34</strong>, 243–253.</p>
+<div id="ref-SanMartin2003" class="csl-entry" role="doc-biblioentry">
+<strong>San Martín, C., Ramírez, C. and Alvarez, M.</strong> (2003) Macrófitos como bioindicadores: Una propuesta metodológica para caracterizar ambientes dulciacuícolas. <em>Revista Geográfica de Valparaíso</em> <strong>34</strong>, 243–253.
 </div>
 </div>
 <!--radix_placeholder_article_footer-->
