@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>kamapu.github.io</name>
-	<comment></comment>
+	<comment>
+		Project for my personal homepage.
+	</comment>
 	<projects>
 	</projects>
 	<buildSpec>
