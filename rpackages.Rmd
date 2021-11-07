@@ -45,13 +45,33 @@ of objects belonging to this class.
 [Read more...](https://github.com/kamapu/vegtable)
 
 
-# Other Packages
+### biblio
+
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/biblio)](https://cran.r-project.org/package=biblio)
+[![DOI](https://zenodo.org/badge/237954340.svg)](https://zenodo.org/badge/latestdoi/237954340)
+[![CRAN_downloads](http://cranlogs.r-pkg.org/badges/biblio)](https://cran.r-project.org/package=biblio)
+[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/biblio)](https://cran.r-project.org/package=biblio)
+
+A package for import and export of BibTeX files focussing on databases managed
+by the software [JabRef](https://www.jabref.org/).
+
+[Read more...](https://github.com/kamapu/biblio)
+
 
 ### yamlme
 
-Functions to write yaml-heads and r-markdown documents.
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/yamlme)](https://cran.r-project.org/package=yamlme)
+[![DOI](https://zenodo.org/badge/297735831.svg)](https://zenodo.org/badge/latestdoi/297735831)
+[![CRAN_downloads](http://cranlogs.r-pkg.org/badges/yamlme)](https://cran.r-project.org/package=yamlme)
+[![total downloads](http://cranlogs.r-pkg.org/badges/grand-total/yamlme)](https://cran.r-project.org/package=yamlme)
+
+Functions to write yaml-heads and r-markdown documents and exchange documents
+in R-images.
 
 [Read more...](rpkg/yamlme/index.html)
+
+
+# Other Packages
 
 
 ### Lexiguel
