@@ -1,0 +1,19 @@
+---
+title: "Course on Multivariate Statistics an R"
+description: |
+  A course on the applications of multivariate statistics on vegetation ecology
+  is scheduled for the period between the 16^th^ and 23^rd^ of November in
+  Nairobi.
+author:
+  - name: Miguel Alvarez
+    url: https://kamapu.github.io/
+date: 05-11-2021
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - R
+preview: images/poster-course.jpg
+---
+
+Brief description here
