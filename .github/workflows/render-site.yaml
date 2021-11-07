@@ -20,7 +20,7 @@ jobs:
       
       # Install packages needed
       - name: install required packages
-        run: Rscript -e 'install.packages(c("knitr", "rmarkdown", "distill"), dependencies = TRUE)'
+        run: Rscript -e 'install.packages(c("knitr", "rmarkdown", "distill", "devtools"), dependencies = TRUE)'
       
       # Install packages needed from GitHub
       - name: install from GitHub
