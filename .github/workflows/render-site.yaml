@@ -24,7 +24,7 @@ jobs:
       
       # Install packages needed from GitHub
       - name: install from GitHub
-        run: Rscript -e 'remotes::install_github(c("ropensci/taxlist", "kamapu/vegtable))'
+        run: Rscript -e 'remotes::install_github(c("ropensci/taxlist", "kamapu/vegtable"), dependencies = TRUE)'
       
       # Render README.md using rmarkdown
       - name: render site to docs
