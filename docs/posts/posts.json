@@ -2,7 +2,7 @@
   {
     "path": "posts/2021-11-05-multivar/",
     "title": "Course on Multivariate Statistics an R",
-    "description": "A course on the applications of multivariate statistics on vegetation ecology\nis scheduled for the period between the 16^th^ and 23^rd^ of November in\nNairobi.",
+    "description": "A course on the applications of multivariate statistics on vegetation ecology\nis scheduled for the period between the 16th and 23rd of November in\nNairobi.",
     "author": [
       {
         "name": "Miguel Alvarez",
@@ -16,7 +16,7 @@
     ],
     "contents": "\nBrief description here\nSee program here.\n\n\n\n",
     "preview": "posts/2021-11-05-multivar/images/poster-course.jpg",
-    "last_modified": "2021-11-07T18:19:36+01:00",
+    "last_modified": "2021-11-07T18:39:51+01:00",
     "input_file": {}
   },
   {
