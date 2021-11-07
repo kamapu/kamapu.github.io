@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -53,77 +54,75 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #545454; font-weight: bold; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #a1024a; } /* BaseN */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007faa; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #008000; } /* Char */
-code span.cn { color: #d91e18; } /* Constant */
-code span.co { color: #545454; } /* Comment */
-code span.cv { color: #545454; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #aa5d00; } /* DataType */
-code span.dv { color: #a1024a; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
 code span.ex { } /* Extension */
-code span.fl { color: #a1024a; } /* Float */
-code span.fu { color: #4254a7; } /* Function */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
-code span.in { color: #545454; font-weight: bold; } /* Information */
-code span.kw { color: #007faa; font-weight: bold; } /* Keyword */
-code span.op { color: #696969; } /* Operator */
-code span.ot { color: #007faa; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #008000; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #008000; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #008000; } /* VerbatimString */
-code span.wa { color: #545454; font-weight: bold; font-style: italic; } /* Warning */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>Miguel Alvarez: R for AfRica</title>
+<title>Miguel Alvarez: Course on Multivariate Statistics an R</title>
 
-<meta property="description" itemprop="description" content="The proliferation of freeware and open source applications expands the&#10;potential of scientists, especially in countries of difficult access to&#10;commercial licenses for software tools.&#10;In the context of enhanced international networks between education and&#10;research institutions, training on use of freeware is becoming a crucial step&#10;for a better balance in collaboration between European and Eastern African&#10;countries, harmonizing the capacities among researchers and students."/>
+<meta property="description" itemprop="description" content="A course on the applications of multivariate statistics on vegetation ecology&#10;is scheduled for the period between the 16^th^ and 23^rd^ of November in&#10;Nairobi."/>
 
-<link rel="canonical" href="https://kamapu.github.io/posts/2020-05-13-r4africa/"/>
+<link rel="canonical" href="https://kamapu.github.io/posts/2021-11-05-multivar/"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2020-05-13"/>
-<meta property="article:created" itemprop="dateCreated" content="2020-05-13"/>
+<meta property="article:published" itemprop="datePublished" content="2021-05-11"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-05-11"/>
 <meta name="article:author" content="Miguel Alvarez"/>
-<meta name="article:author" content="Bisrat H. Gebrekhidan"/>
-<meta name="article:author" content="Samuel Kiboi"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Miguel Alvarez: R for AfRica"/>
+<meta property="og:title" content="Miguel Alvarez: Course on Multivariate Statistics an R"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="The proliferation of freeware and open source applications expands the&#10;potential of scientists, especially in countries of difficult access to&#10;commercial licenses for software tools.&#10;In the context of enhanced international networks between education and&#10;research institutions, training on use of freeware is becoming a crucial step&#10;for a better balance in collaboration between European and Eastern African&#10;countries, harmonizing the capacities among researchers and students."/>
-<meta property="og:url" content="https://kamapu.github.io/posts/2020-05-13-r4africa/"/>
-<meta property="og:image" content="https://kamapu.github.io/posts/2020-05-13-r4africa/images/bisrat_teaching.jpg"/>
+<meta property="og:description" content="A course on the applications of multivariate statistics on vegetation ecology&#10;is scheduled for the period between the 16^th^ and 23^rd^ of November in&#10;Nairobi."/>
+<meta property="og:url" content="https://kamapu.github.io/posts/2021-11-05-multivar/"/>
+<meta property="og:image" content="https://kamapu.github.io/posts/2021-11-05-multivar/images/poster-course.jpg"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Miguel Alvarez"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="Miguel Alvarez: R for AfRica"/>
-<meta property="twitter:description" content="The proliferation of freeware and open source applications expands the&#10;potential of scientists, especially in countries of difficult access to&#10;commercial licenses for software tools.&#10;In the context of enhanced international networks between education and&#10;research institutions, training on use of freeware is becoming a crucial step&#10;for a better balance in collaboration between European and Eastern African&#10;countries, harmonizing the capacities among researchers and students."/>
-<meta property="twitter:url" content="https://kamapu.github.io/posts/2020-05-13-r4africa/"/>
-<meta property="twitter:image" content="https://kamapu.github.io/posts/2020-05-13-r4africa/images/bisrat_teaching.jpg"/>
+<meta property="twitter:title" content="Miguel Alvarez: Course on Multivariate Statistics an R"/>
+<meta property="twitter:description" content="A course on the applications of multivariate statistics on vegetation ecology&#10;is scheduled for the period between the 16^th^ and 23^rd^ of November in&#10;Nairobi."/>
+<meta property="twitter:url" content="https://kamapu.github.io/posts/2021-11-05-multivar/"/>
+<meta property="twitter:image" content="https://kamapu.github.io/posts/2021-11-05-multivar/images/poster-course.jpg"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","draft","categories","preview","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["R for AfRica"]},{"type":"character","attributes":{},"value":["The proliferation of freeware and open source applications expands the\npotential of scientists, especially in countries of difficult access to\ncommercial licenses for software tools.\nIn the context of enhanced international networks between education and\nresearch institutions, training on use of freeware is becoming a crucial step\nfor a better balance in collaboration between European and Eastern African\ncountries, harmonizing the capacities among researchers and students."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Miguel Alvarez"]},{"type":"character","attributes":{},"value":["https://kamapu.github.io/"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Bisrat H. Gebrekhidan"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Samuel Kiboi"]}]}]},{"type":"character","attributes":{},"value":["05-13-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["R","workshop"]},{"type":"character","attributes":{},"value":["images/bisrat_teaching.jpg"]},{"type":"character","attributes":{},"value":["https://kamapu.github.io/posts/2020-05-13-r4africa/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","draft","categories","preview","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Course on Multivariate Statistics an R"]},{"type":"character","attributes":{},"value":["A course on the applications of multivariate statistics on vegetation ecology\nis scheduled for the period between the 16^th^ and 23^rd^ of November in\nNairobi."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Miguel Alvarez"]},{"type":"character","attributes":{},"value":["https://kamapu.github.io/"]}]}]},{"type":"character","attributes":{},"value":["05-11-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["R","vegetation"]},{"type":"character","attributes":{},"value":["images/poster-course.jpg"]},{"type":"character","attributes":{},"value":["https://kamapu.github.io/posts/2021-11-05-multivar/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["images/bisrat_teaching.jpg","r4africa_files/anchor-4.2.2/anchor.min.js","r4africa_files/bowser-1.9.3/bowser.min.js","r4africa_files/distill-2.2.21/template.v2.js","r4africa_files/header-attrs-2.4/header-attrs.js","r4africa_files/jquery-1.11.3/jquery.min.js","r4africa_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["images/poster-course.jpg","program_2021.pdf"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2047,8 +2046,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.4/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.11.3/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
   <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
@@ -2112,7 +2115,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"R for AfRica","description":"The proliferation of freeware and open source applications expands the\npotential of scientists, especially in countries of difficult access to\ncommercial licenses for software tools.\nIn the context of enhanced international networks between education and\nresearch institutions, training on use of freeware is becoming a crucial step\nfor a better balance in collaboration between European and Eastern African\ncountries, harmonizing the capacities among researchers and students.","authors":[{"author":"Miguel Alvarez","authorURL":"https://kamapu.github.io/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""},{"author":"Bisrat H. Gebrekhidan","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""},{"author":"Samuel Kiboi","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-05-13T00:00:00.000+02:00","citationText":"Alvarez, et al., 2020"}
+{"title":"Course on Multivariate Statistics an R","description":"A course on the applications of multivariate statistics on vegetation ecology\nis scheduled for the period between the 16^th^ and 23^rd^ of November in\nNairobi.","authors":[{"author":"Miguel Alvarez","authorURL":"https://kamapu.github.io/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-11T00:00:00.000+02:00","citationText":"Alvarez, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2158,43 +2161,38 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>R for AfRica</h1>
+<h1>Course on Multivariate Statistics an R</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../blog.html#category:R" class="dt-tag">R</a>
-  <a href="../../blog.html#category:workshop" class="dt-tag">workshop</a>
+  <a href="../../blog.html#category:vegetation" class="dt-tag">vegetation</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>The proliferation of freeware and open source applications expands the potential of scientists, especially in countries of difficult access to commercial licenses for software tools. In the context of enhanced international networks between education and research institutions, training on use of freeware is becoming a crucial step for a better balance in collaboration between European and Eastern African countries, harmonizing the capacities among researchers and students.</p></p>
+<p><p>A course on the applications of multivariate statistics on vegetation ecology is scheduled for the period between the 16<sup>th</sup> and 23<sup>rd</sup> of November in Nairobi.</p></p>
 </div>
 
 <div class="d-byline">
   Miguel Alvarez <a href="https://kamapu.github.io/" class="uri">https://kamapu.github.io/</a> 
   
-,   Bisrat H. Gebrekhidan  
-  
-,   Samuel Kiboi  
-  
-<br/>05-13-2020
+<br/>05-11-2021
 </div>
 
 <div class="d-article">
-<script language="javascript">
-  window.location.href="https://www.crc228.de/2020/05/13/r-for-africa-training-on-analyzing-and-documenting-data-with-r/"
-</script>
+<p>Brief description here</p>
+<p>See program <a href="https://kamapu.github.io/posts/2021-11-05-multivar/program_2021.pdf">here</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
     <span class="article-sharing">
       Share: &nbsp;
-      <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https%3A%2F%2Fkamapu.github.io%2Fposts%2F2020-05-13-r4africa%2F">
+      <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https%3A%2F%2Fkamapu.github.io%2Fposts%2F2021-11-05-multivar%2F">
         <i class="fab fa-facebook"></i>
       </a>
-      <a href="https://twitter.com/share?text=R%20for%20AfRica&amp;url=https%3A%2F%2Fkamapu.github.io%2Fposts%2F2020-05-13-r4africa%2F">
+      <a href="https://twitter.com/share?text=Course%20on%20Multivariate%20Statistics%20an%20R&amp;url=https%3A%2F%2Fkamapu.github.io%2Fposts%2F2021-11-05-multivar%2F">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fkamapu.github.io%2Fposts%2F2020-05-13-r4africa%2F&amp;title=R%20for%20AfRica">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fkamapu.github.io%2Fposts%2F2021-11-05-multivar%2F&amp;title=Course%20on%20Multivariate%20Statistics%20an%20R">
         <i class="fab fa-linkedin"></i>
       </a>
     </span>

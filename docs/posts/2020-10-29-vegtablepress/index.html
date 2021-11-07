@@ -1878,10 +1878,7 @@ function init_distill() {
 
     // hoverable references
     $('span.citation[data-cites]').each(function() {
-      var refs = $(this).attr('data-cites').split(" ");
-      var refHtml = refs.map(function(ref) {
-        return "<p>" + $('#ref-' + ref).html() + "</p>";
-      }).join("\n");
+      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
       window.tippy(this, {
         allowHTML: true,
         content: refHtml,
@@ -2117,7 +2114,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"vegtable: An R object for vegetation-plot data sets","description":"The package vegtable defines the homonymous object class and functions\n(methods) for handling vegetation-plot data sets in R.\nWithin its slots, taxonomic lists are formatted as taxlist objects.\nThis is a brief account about a presentation of vegtable and taxlist at the\nMarsaryk University in Brno (Czech Republic).\nThe presentation includes a brief introduction to the structure of vegtable\nobjects and functions.","authors":[{"author":"Miguel Alvarez","authorURL":"https://kamapu.github.io/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-10-29T00:00:00.000+00:00","citationText":"Alvarez, 2020"}
+{"title":"vegtable: An R object for vegetation-plot data sets","description":"The package vegtable defines the homonymous object class and functions\n(methods) for handling vegetation-plot data sets in R.\nWithin its slots, taxonomic lists are formatted as taxlist objects.\nThis is a brief account about a presentation of vegtable and taxlist at the\nMarsaryk University in Brno (Czech Republic).\nThe presentation includes a brief introduction to the structure of vegtable\nobjects and functions.","authors":[{"author":"Miguel Alvarez","authorURL":"https://kamapu.github.io/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-10-29T00:00:00.000+01:00","citationText":"Alvarez, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2237,11 +2234,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_appendices-->
 <div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
-<!--radix_placeholder_navigation_after_body--><html><body>
+<!--radix_placeholder_navigation_after_body-->
 <div class="distill-site-nav distill-site-footer">
-<p><a href="../../impressum.html"> <b>Imprint</b> </a></p>
-<!--
+  <p>
+    <a href="../../impressum.html">
+      <b>Imprint</b>
+    </a>
+  </p>
+  <!--
 <a href="impressum.html">
   <b>Imprint</b>
 </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -2252,10 +2252,9 @@ document.addEventListener('DOMContentLoaded', function() {
   <b>Disclaimer</b>
 </a>
 -->
-<p>This page was created with <a href="https://rstudio.github.io/distill/"><b>distill</b></a></p>
+  <p>This page was created with <a href="https://rstudio.github.io/distill/"><b>distill</b></a></p>
 </div>
 <!--/radix_placeholder_navigation_after_body-->
-</body></html>
 
 
 </body>

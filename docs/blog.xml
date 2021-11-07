@@ -7,7 +7,20 @@
     <description>Home Page
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Course on Multivariate Statistics an R</title>
+      <dc:creator>Miguel Alvarez</dc:creator>
+      <link>https://kamapu.github.io/posts/2021-11-05-multivar</link>
+      <description>A course on the applications of multivariate statistics on vegetation ecology
+is scheduled for the period between the 16^th^ and 23^rd^ of November in
+Nairobi.</description>
+      <category>R</category>
+      <category>vegetation</category>
+      <guid>https://kamapu.github.io/posts/2021-11-05-multivar</guid>
+      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/2021-11-05-multivar/images/poster-course.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Basics on the work with vegetation-plots in vegtable</title>
       <dc:creator>Miguel Alvarez</dc:creator>
