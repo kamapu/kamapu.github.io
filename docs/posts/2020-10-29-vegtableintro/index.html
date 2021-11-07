@@ -1874,7 +1874,10 @@ function init_distill() {
 
     // hoverable references
     $('span.citation[data-cites]').each(function() {
-      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+      var refs = $(this).attr('data-cites').split(" ");
+      var refHtml = refs.map(function(ref) {
+        return "<p>" + $('#ref-' + ref).html() + "</p>";
+      }).join("\n");
       window.tippy(this, {
         allowHTML: true,
         content: refHtml,
@@ -2110,7 +2113,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Introduction to the package vegtable","description":"The package vegtable offers objects and functions for the work with plot\nobservations in vegetation assessments (phytosociological relevés).\nThis object class ensures consistency on data, while it is also allowing\nflexibility in the degree of completeness and resolution of data.\nThis tutorial is an updated version of a workshop offered in the context of\nthe 16th Workshop of the German Group on Vegetation Databases celebrated in\nFreiburg in March 2017.","authors":[{"author":"Miguel Alvarez","authorURL":"https://kamapu.github.io/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-10-30T00:00:00.000+01:00","citationText":"Alvarez, 2020"}
+{"title":"Introduction to the package vegtable","description":"The package vegtable offers objects and functions for the work with plot\nobservations in vegetation assessments (phytosociological relevés).\nThis object class ensures consistency on data, while it is also allowing\nflexibility in the degree of completeness and resolution of data.\nThis tutorial is an updated version of a workshop offered in the context of\nthe 16th Workshop of the German Group on Vegetation Databases celebrated in\nFreiburg in March 2017.","authors":[{"author":"Miguel Alvarez","authorURL":"https://kamapu.github.io/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2020-10-30T00:00:00.000+00:00","citationText":"Alvarez, 2020"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2810,14 +2813,11 @@ validity: TRUE </code></pre>
 <!--radix_placeholder_appendices-->
 <div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
-<!--radix_placeholder_navigation_after_body-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!--radix_placeholder_navigation_after_body--><html><body>
 <div class="distill-site-nav distill-site-footer">
-  <p>
-    <a href="../../impressum.html">
-      <b>Imprint</b>
-    </a>
-  </p>
-  <!--
+<p><a href="../../impressum.html"> <b>Imprint</b> </a></p>
+<!--
 <a href="impressum.html">
   <b>Imprint</b>
 </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -2828,9 +2828,10 @@ validity: TRUE </code></pre>
   <b>Disclaimer</b>
 </a>
 -->
-  <p>This page was created with <a href="https://rstudio.github.io/distill/"><b>distill</b></a></p>
+<p>This page was created with <a href="https://rstudio.github.io/distill/"><b>distill</b></a></p>
 </div>
 <!--/radix_placeholder_navigation_after_body-->
+</body></html>
 
 
 </body>
