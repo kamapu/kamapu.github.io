@@ -42,7 +42,7 @@ The object `taxlist` attempts to validate the congruency of information
 contained in taxonomic lists and provides several functions for the manipulation
 of objects belonging to this class.
 
-[Read more...](https://github.com/kamapu/vegtable)
+[Read more...](https://kamapu.github.io/vegtable/)
 
 
 ### biblio
@@ -55,7 +55,7 @@ of objects belonging to this class.
 A package for import and export of BibTeX files focussing on databases managed
 by the software [JabRef](https://www.jabref.org/).
 
-[Read more...](https://github.com/kamapu/biblio)
+[Read more...](https://kamapu.github.io/biblio/)
 
 
 ### yamlme
@@ -68,7 +68,7 @@ by the software [JabRef](https://www.jabref.org/).
 Functions to write yaml-heads and r-markdown documents and exchange documents
 in R-images.
 
-[Read more...](rpkg/yamlme/index.html)
+[Read more...](https://kamapu.github.io/yamlme/)
 
 
 # Other Packages

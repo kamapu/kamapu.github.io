@@ -7,7 +7,7 @@ description: |
   America.
 ---
 
-# Current Projects
+# Research Projects
 
 ### Future Rural Africa
 
@@ -24,7 +24,6 @@ and management of rangelands in Kenya.
 </a>
 </aside>
 
-# Past Projects
 
 ### GlobE-wetlands
 
