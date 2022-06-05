@@ -74,6 +74,14 @@ in R-images.
 # Other Packages
 
 
+### vegTemplates
+
+Document templates for `taxlist` and `vegtable` templates using the package
+[yamlme](rpkg/yamlme/index.html).
+
+[Read more...](https://kamapu.github.io/vegTemplates/)
+
+
 ### Lexiguel
 
 A mingle-mangle of functions for R, most of them related to own publications.
@@ -86,13 +94,6 @@ A mingle-mangle of functions for R, most of them related to own publications.
 Tools for the analysis and display of results coming from growth models.
 
 [Read more...](https://github.com/kamapu/cropgrowth)
-
-
-### vegtable2
-
-Functions customized for the work with our own data sets.
-
-[Read more...](https://github.com/kamapu/vegtable2)
 
 
 ### spatialist
