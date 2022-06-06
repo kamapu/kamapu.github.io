@@ -1,0 +1,441 @@
+---
+title: "Basics on the work with vegetation-plots in vegtable"
+description: |
+  The package vegtable was developed for the handling of data provided by
+  vegetation-plot databases in single objects within R sessions.
+  In this package functions attempt to encapsulate process of complex data sets
+  in brief command-lines during an R session and target to repeatability in the
+  assessment of floristic information.
+  Here we review through some examples the use of the most important functions
+  implemented in vegtable.
+author:
+  - name: Miguel Alvarez
+    url: https://kamapu.github.io/
+    orcid_id: 0000-0003-1500-1834
+date: 11-20-2020
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_float: true
+draft: false
+categories:
+  - R
+  - vegetation
+preview: images/vegtable_diagram.png
+bibliography: press2refs.bib
+csl: seed-science-research.csl
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(biblio)
+
+## Set global chunk options
+opts_chunk$set(out.width="100%", echo=TRUE)
+
+## # Chunk selecting references
+## Bib <- read_bib("MiguelReferences.bib")
+## Sel <- match_keys(Bib, "vegtablepress2.Rmd")$bibtexkey
+## Bib2 <- subset(Bib, bibtexkey %in% Sel)
+## biblio::write_bib(Bib2, file="press2refs.bib")
+```
+
+# Installation
+
+Both packages [`taxlist`](https://docs.ropensci.org/taxlist/) and
+[`vegtable`](https://github.com/kamapu/vegtable/) are released in the
+Comprehensive R Archive Network (**CRAN**). Since `taxlist` is a dependency of
+`vegtable`, both will be installed in the following command:
+
+```{r installation1, eval=FALSE}
+install.packages("vegtable", dependencies=TRUE)
+```
+
+Alternatively, you can install the development versions from their repositories
+at **GitHub**.
+
+```{r installation2, eval=FALSE}
+library(devtools)
+install_github("ropensci/taxlist", build_vignettes=TRUE)
+install_github("kamapu/vegtable")
+```
+
+An additional package including some example data required for this session have
+also to be installed from **GitHub**.
+
+```{r installation3, eval=FALSE}
+install_github("kamapu/datastore")
+```
+
+<aside>
+<a href="https://kamapu.github.io/documents/press_vegtable_bonn.pdf" target="_self" style="color:blue;"> 
+ <img src="images/vegtable_recipe.png"  alt="presentation" style="width:400px; height:auto;"/> 
+ to the slides
+</a>
+</aside>
+
+# Working with species lists only
+
+Before starting with the work, do not forget to load the installed packages into
+your R-session:
+
+```{r load_pkgs}
+library(vegtable)
+library(datastore)
+```
+
+In this first section we focus on the `taxlist` objects, which are specialized
+for handling taxonomic lists.
+For more details on the theory behind this package, see @Alvarez2018.
+
+The package `taxlist` includes a own data set formatted as a `taxlist` object.
+You can get a general report on the content of this data set by using the
+function `summary()`.
+
+```{r summ_taxlist}
+data(Easplist)
+summary(Easplist)
+```
+
+The information stored in a `taxlist` object is organized in four
+column-oriented tables following a relational model and allocated in own slots
+within the object. The access to the respective slots in R is done with the
+symbol `@` or alternatively using the function `slot()`.
+
+```{r taxlist_model, echo=FALSE}
+knitr::include_graphics(path="images/taxlist_model.png")
+```
+
+```{r structure}
+head(Easplist@taxonNames)
+head(Easplist@taxonRelations)
+head(Easplist@taxonTraits)
+head(Easplist@taxonViews)
+```
+
+## Advanced displays
+
+The function `summary()` can also be used to query information of a taxon or a
+set of taxa. In such case we can add the name of the requested taxon usage name.
+We can also specify a column of the slot **taxonViews** in the parameter
+`secundum` in order to get more informatin on the respective taxon view as done
+here:
+
+```{r amaranthus}
+summary(Easplist, "Amaranthus hybridus", secundum="secundum")
+```
+
+Additionally the function `print_name()` can be used to format scientific names
+within interactive documents, for instance in combination with the package
+`rmarkdown`. See the example by `example(print_name)`, which is printing in
+different formats.
+
+```{r print_name, echo=FALSE, results="hide"}
+example(print_name)
+```
+
+# Working with vegetation-plots
+
+Further examples will be applied to a data set available at the installed
+package `datastore`, which corresponds to plot observations in grassland and
+semi-aquatic communities from Temuco, Chile.
+This data set was originally published by @SanMartin1998 and is stored in the
+database **sudamerica**
+[https://kamapu.github.io/sudamerica/, see also @Alvarez2012].
+
+```{r loading_grasslands}
+data(grasslands)
+summary(grasslands)
+```
+
+## Structure
+
+Objects of class `vegtable` are structured into `r length(slotNames(Kenya_veg))`
+slots, where the slots **species**, **header**, and **samples** are the
+essential ones.
+
+```{r vegtable_model, echo=FALSE}
+knitr::include_graphics(path="images/vegtable_diagram.png")
+```
+
+The taxonomic list is handled as a `taxlist` object and is located at the slot
+**species**:
+
+```{r species_slot}
+summary(grasslands@species)
+```
+
+The slot **header** is simply a data frame including information related to
+single plot observations, for instance size of the plot, record date, results
+of soil analyses, etc.
+
+```{r header_slot}
+head(grasslands@header)
+```
+
+Records of species in plots are stored in slot **samples**. Against the
+commonly used cross tables (species by plots or plots by species), this slot is
+organized in columns (column-oriented table, a.k.a database list).
+
+```{r samples_slot}
+head(grasslands@samples)
+```
+
+The slot **coverconvert** have an own, homonymous class and is used as container
+for cover conversion tables.
+These tables can be used for conversion of cover codes, which will be done by
+the function `transform()`.
+The example on grasslands does not include cover conversion tables but the data
+set installed with `vegtable` does it.
+
+```{r coverconvert_slot}
+summary(Kenya_veg@coverconvert)
+```
+
+The slot **relations** is a list of data frames that provide additional
+information for classes of categorical variables stored in slot **header**.
+These tables correspond to *pop-up tables* of **Turboveg 2**.
+
+```{r relations_slot}
+names(grasslands@relations)
+head(grasslands@relations$community_type)
+```
+
+While in the header table such categorical variables may be cryptic, there is
+an option to insert columns from relations into header by using
+`relation2header()`.
+By this way, yo do not only see a community id, which is just a number, but you
+can also see the respective names of the plant communities that correspond to
+the syntaxa assigned to the plots originally by the publication.
+
+```{r relation2header}
+grasslands <- relation2header(grasslands, "community_type")
+head(grasslands@header)
+```
+
+## Statistics
+
+The packages `vegtable` and `taxlist` are rather specialized on data
+manipulation than on data analysis. Nevertheless some common descriptive
+statistics and summaries that can be used for further statistical analyses are
+implemented.
+
+### Trait proportions
+
+In this data set, for instance, life forms are inserted as attributes of the
+recorded species.
+Since this attribute is a categorical variable, summaries at the plot level can
+only be done as proportions.
+The function `trait_proportion()` is suitable for such kind of summaries.
+Note that the best way to collect statistics calculated for plots is adding them
+as new columns into the slot **header**, which is done by the option
+`in_header=TRUE`.
+Additionally, the option `weight="cover_percentage"` is indicating that the
+cover percentage stored in the slot **samples** will be used as weight for the
+respective life from classes.
+
+```{r lf_proportions}
+grasslands <- trait_proportion(trait="life_form", object=grasslands,
+		head_var="ReleveID", include_nas=FALSE, weight="cover_percentage",
+		in_header=TRUE)
+```
+
+By default, the function added at slot **header** one column per level in the
+traits variable appending a suffix (default `_prop`).
+Just to remind you, we used the function `relation2header()` in order to add the
+names of the recorded communities in the slot **header**.
+
+```{r annual_prop}
+# Add community names to the header table
+grasslands <- relation2header(grasslands, relation="community_type")
+
+# Display mean values per plant communities
+aggregate(annual_prop ~ community_name, data=grasslands@header, FUN=mean)
+
+# The same information as boxplot
+par(mar=c(5, 20, 1, 1), las=1)
+boxplot(annual_prop ~ community_name, data=grasslands@header, horizontal=TRUE,
+		xlab="Proportion of annuals", ylab="")
+```
+
+Before you continue, note that the first argument in the function is a `formula`
+indicating on the left a response as left term (in this case the statistic
+describing a categorical trait variable) and the factors as right terms
+(grouping variables for the plots).
+This kind of objects will be frequently used in functions dealing with
+`vegtable` objects.
+
+### Trait Statistics
+
+For numerical taxonomic traits statistical parameters such as averages and
+standard deviation can be calculated per plot.
+For instance the data set `grasslands` is also including Ellenberg's indicator
+values [see @Ellenberg2001], which were collected from @Ramirez1991 and
+@SanMartin2003.
+
+The calculation of trait statistics is done by the function `trait_stats()`.
+In the parameter `FUN` we can use a statistical function such as `mean()` but
+we can also define an statistic using the cover values as weights for the
+calculation.
+In this case we can calculate weighted means:
+
+$$\bar{x} = \frac{\sum{x_{i} \cdot w_{i}}}{\sum{w_{i}}}$$
+
+Here $\bar{x}$ is the mean indicator figure for a plot, $x_{i}$ is the
+indicator value of the *ith* species in this plot, and $w_{i}$ is the weight of
+the same species (cover value) in the plot.
+In R we define it as a function:
+
+```{r weighted_mean}
+weighted_mean <- function(x, w, ...) sum(x*w, ...)/sum(w, ...)
+```
+
+In the function `trait_stats()` we can query indicator figures through a
+formula.
+Note that this formula may include multiple variables on the left terms for the
+simultaneous calculation of indicator values.
+
+```{r trait_stats}
+grasslands <- trait_stats(ind_n + ind_h ~ ReleveID, grasslands,
+		FUN=weighted_mean,  include_nas=FALSE, weight="cover_percentage",
+		suffix="_wmean", in_header=TRUE)
+```
+
+The resulting values may be useful to compare different plant communities or to
+test relationships between different variables, for instance an expected
+correlation between the humidity indicator and the proportion of annuals.
+
+```{r H_graph1}
+par(mar=c(5, 20, 1, 1), las=1)
+boxplot(ind_h_wmean ~ community_name, data=grasslands@header, horizontal=TRUE,
+		xlab="H figure (weighted mean)", ylab="")
+```
+
+```{r H_graph2}
+# Linear regression model
+Mod <- lm(annual_prop ~ ind_h_wmean, data=grasslands@header)
+
+# plot
+plot(grasslands@header[,c("ind_h_wmean", "annual_prop")], xlab="H figure",
+		ylab="Proportion of annuals", pch=20, col="darkgrey")
+abline(Mod, lty=2, col="red")
+```
+
+Well, it is not a nice distribution of observations but still suggesting a
+negative tendency in the proportion of annuals by increasing humidity
+indicator, as expected.
+
+
+### Statistics from taxonomic information
+
+Taxonomic information (taxonomic ranks and parent-child relationships) are not
+directly available for statistical descriptions in `taxlist` objects.
+If we need to calculate proportions of determined genera or families in the
+plots, we can pass the taxonomy to the taxon traits table with the function
+`tax2traits()`.
+You need to set `get_names=TRUE`, otherwise only taxon IDs (numbers) will be
+inserted in the traits table.
+
+```{r tax2traits}
+grasslands@species <- tax2traits(grasslands@species, get_names=TRUE)
+head(grasslands@species@taxonTraits)
+```
+
+Now we can compare, for instance, the proportion of species belonging to the
+family Poaceae (grasses) in the different plant communities.
+
+```{r tax_plot}
+grasslands <- trait_proportion("family", grasslands, head_var="ReleveID",
+		trait_level="Poaceae", include_nas=FALSE, weight="cover_percentage",
+		in_header=TRUE)
+
+# Compare communities by proportion of Poaceae
+par(mar=c(5, 20, 1, 1), las=1)
+boxplot(Poaceae_prop ~ community_name, data=grasslands@header,
+		horizontal=TRUE, xlab="Proportion of Poaceae", ylab="")
+```
+
+This graphic is advising us that maybe few of these communities can be
+considered as grasslands *sensu stricto*.
+
+The function `count_taxa()` is defined for calculation of number of taxa at
+specific taxonomic ranks.
+Note that this function may be smart enough to aggregate taxa into the
+corresponding ranks, for instance the calculation of species numbers may also
+include sub-specific taxa in their respective species (option
+`include_lower=TRUE`).
+
+```{r count_taxa}
+grasslands <- count_taxa(species ~ ReleveID, grasslands, include_lower=TRUE,
+		in_header=TRUE)
+
+# Compare communities by species richness
+par(mar=c(5, 20, 1, 1), las=1)
+boxplot(species_count ~ community_name, data=grasslands@header,
+		horizontal=TRUE, xlab="Species richness", ylab="")
+```
+
+## Cross tables and Maps
+
+Most of the applications used for floristic comparisons require data in form of
+a cross table.
+Furthermore, species composition of communities may be more evident by
+displaying data, for instance, in a table of species by plots.
+To arrange data in such a way we can apply the function `crosstable()`.
+
+In order to reduce the data set, we will apply the function `subset()`,
+selecting plots of the association *Juncetum proceri*.
+
+```{r subset}
+juncetum <- subset(grasslands, community_name == "Juncetum proceri",
+		slot="header")
+summary(juncetum)
+```
+
+In the function `crosstable()` we indicate as formula in the left term the
+numeric variable used to fill the table, the first right term is the group
+variable used for the columns and the further right terms are group variables
+defining the rows of the cross table.
+Note that the taxa in the formula can be addressed by either one of two
+keywords, namely **TaxonName** for the use of original entry names (taxon usage
+names) or **AcceptedName** for use of the respective names considered as
+accepted in slot species.
+We also set the arguments `FUN=max` defining the function used to merge
+multiple occurrences of a taxon in a plot and `na_to_zero=TRUE` to fill
+absence.
+
+```{r cross_table}
+juncetum_cross <- crosstable(cover_percentage ~ ReleveID + AcceptedName,
+		data=juncetum, FUN=max, na_to_zero=TRUE)
+head(juncetum_cross)
+```
+
+When plots are geo-referenced, it is also possible to export the respective
+locations as kml files to be displayed in **Google Earth** using the function
+`vegtable2kml()`.
+
+```{r kml, eval=FALSE}
+vegtable2kml(grasslands, file="grasslands.kml", coords= ~ longitude + latitude)
+```
+
+Alternatively the locations of plots can be displayed by using the package
+`leaflet`.
+
+```{r leaflet, message=FALSE}
+library(leaflet)
+leaflet(grasslands@header) %>% addTiles() %>%
+		addCircleMarkers(lng=~longitude, lat=~latitude, color="red",
+				opacity=0.3, radius=1)
+```
+
+
+## Updated on {.appendix}
+
+`r format(Sys.Date(), "%d-%m-%Y")`
+
+## Acknowledgement {.appendix}
+
+The data sets and routines demonstrated here have been previously tested by
+Elena Gómez in the context of her thesis for the degree of MSc. [@Gomez2020].
+Any further comments and suggestions are kindly welcomed.

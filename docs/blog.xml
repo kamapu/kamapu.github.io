@@ -24,7 +24,7 @@ Nairobi.</description>
     <item>
       <title>Basics on the work with vegetation-plots in vegtable</title>
       <dc:creator>Miguel Alvarez</dc:creator>
-      <link>https://kamapu.github.io/posts/2020-11-20-vegtablepress2</link>
+      <link>https://kamapu.github.io/posts/vegtable-press-2</link>
       <description>The package vegtable was developed for the handling of data provided by
 vegetation-plot databases in single objects within R sessions.
 In this package functions attempt to encapsulate process of complex data sets
@@ -34,9 +34,9 @@ Here we review through some examples the use of the most important functions
 implemented in vegtable.</description>
       <category>R</category>
       <category>vegetation</category>
-      <guid>https://kamapu.github.io/posts/2020-11-20-vegtablepress2</guid>
-      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://kamapu.github.io/posts/2020-11-20-vegtablepress2/images/vegtable_diagram.png" medium="image" type="image/png" width="3715" height="1565"/>
+      <guid>https://kamapu.github.io/posts/vegtable-press-2</guid>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/vegtable-press-2/images/vegtable_diagram.png" medium="image" type="image/png" width="3715" height="1565"/>
     </item>
     <item>
       <title>Introduction to the package vegtable</title>

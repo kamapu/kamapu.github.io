@@ -2,73 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://kamapu.github.io/blog.html</loc>
-    <lastmod>2022-06-06T09:40:18+00:00</lastmod>
+    <lastmod>2021-11-05T09:26:11+01:00</lastmod>
   </url>
   <url>
     <loc>https://kamapu.github.io/databases.html</loc>
-    <lastmod>2022-06-06T09:40:18+00:00</lastmod>
+    <lastmod>2021-11-05T09:26:11+01:00</lastmod>
   </url>
   <url>
     <loc>https://kamapu.github.io/impressum.html</loc>
-    <lastmod>2022-06-06T09:40:20+00:00</lastmod>
+    <lastmod>2021-11-05T09:26:11+01:00</lastmod>
   </url>
   <url>
     <loc>https://kamapu.github.io/</loc>
-    <lastmod>2022-06-06T09:40:20+00:00</lastmod>
+    <lastmod>2021-11-05T09:26:11+01:00</lastmod>
   </url>
   <url>
     <loc>https://kamapu.github.io/research.html</loc>
-    <lastmod>2022-06-06T09:40:20+00:00</lastmod>
+    <lastmod>2022-06-06T01:38:07+02:00</lastmod>
   </url>
   <url>
     <loc>https://kamapu.github.io/rpackages.html</loc>
-<<<<<<< HEAD
     <lastmod>2022-06-06T11:45:25+02:00</lastmod>
-=======
-    <lastmod>2022-06-06T09:40:20+00:00</lastmod>
->>>>>>> branch 'master' of https://github.com/kamapu/kamapu.github.io.git
   </url>
   <url>
     <loc>https://kamapu.github.io/posts/2021-11-05-multivar/</loc>
-    <lastmod>2022-06-06T09:40:18+00:00</lastmod>
+    <lastmod>2021-11-07T18:39:51+01:00</lastmod>
   </url>
   <url>
-    <loc>https://kamapu.github.io/posts/2020-11-20-vegtablepress2/</loc>
-    <lastmod>2022-06-06T09:40:18+00:00</lastmod>
+    <loc>https://kamapu.github.io/posts/vegtable-press-2/</loc>
+    <lastmod>2022-06-06T13:22:15+02:00</lastmod>
   </url>
   <url>
     <loc>https://kamapu.github.io/posts/2020-10-29-vegtableintro/</loc>
-    <lastmod>2022-06-06T09:40:18+00:00</lastmod>
+    <lastmod>2021-11-05T09:26:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://kamapu.github.io/posts/2020-10-29-vegtablepress/</loc>
-    <lastmod>2022-06-06T09:40:18+00:00</lastmod>
+    <lastmod>2021-11-05T09:26:33+01:00</lastmod>
   </url>
   <url>
     <loc>https://kamapu.github.io/posts/sudamerica/</loc>
-    <lastmod>2022-06-06T09:40:18+00:00</lastmod>
+    <lastmod>2021-11-05T09:26:09+01:00</lastmod>
   </url>
   <url>
     <loc>https://kamapu.github.io/posts/sweadataveg/</loc>
-    <lastmod>2022-06-06T09:40:18+00:00</lastmod>
+    <lastmod>2021-11-05T09:26:11+01:00</lastmod>
   </url>
   <url>
     <loc>https://kamapu.github.io/posts/2020-10-08-taxlistjourney/</loc>
-    <lastmod>2022-06-06T09:40:18+00:00</lastmod>
+    <lastmod>2021-11-05T09:26:11+01:00</lastmod>
   </url>
   <url>
     <loc>https://kamapu.github.io/posts/2020-05-13-r4africa/</loc>
-    <lastmod>2022-06-06T09:40:18+00:00</lastmod>
+    <lastmod>2021-11-05T09:26:11+01:00</lastmod>
   </url>
   <url>
     <loc>https://kamapu.github.io/posts/2017-12-01-wetlandsfront/</loc>
-    <lastmod>2022-06-06T09:40:18+00:00</lastmod>
+    <lastmod>2021-11-05T09:26:09+01:00</lastmod>
   </url>
-<<<<<<< HEAD
-=======
-  <url>
-    <loc>https://kamapu.github.io/posts/2000-01-01-nonews/</loc>
-    <lastmod>2022-06-06T09:40:18+00:00</lastmod>
-  </url>
->>>>>>> branch 'master' of https://github.com/kamapu/kamapu.github.io.git
 </urlset>
