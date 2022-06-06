@@ -146,13 +146,5 @@ Phytocoenologia.</description>
       <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/2017-12-01-wetlandsfront/images/cover_cropped.jpg" medium="image" type="image/jpeg"/>
     </item>
-    <item>
-      <title>No News</title>
-      <dc:creator>Miguel Alvarez</dc:creator>
-      <link>https://kamapu.github.io/posts/2000-01-01-nonews</link>
-      <description>The day that did not changed the world.</description>
-      <guid>https://kamapu.github.io/posts/2000-01-01-nonews</guid>
-      <pubDate>Sat, 01 Jan 2000 00:00:00 +0000</pubDate>
-    </item>
   </channel>
 </rss>

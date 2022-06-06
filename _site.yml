@@ -3,6 +3,7 @@ title: "Miguel Alvarez"
 description: |
   Home Page
 output_dir: "docs"
+include: ["documents/"]
 base_url: https://kamapu.github.io/
 navbar:
   left:

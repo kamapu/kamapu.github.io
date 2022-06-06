@@ -5,7 +5,7 @@ description: |
   development.
 ---
 
-# CRAN Packages
+# Packages at CRAN
 
 ### taxlist
 
@@ -71,7 +71,7 @@ in R-images.
 [Read more...](https://kamapu.github.io/yamlme/)
 
 
-# Other Packages
+# Other R Packages at GitHub
 
 
 ### vegTemplates
