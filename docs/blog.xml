@@ -7,7 +7,7 @@
     <description>Home Page
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 May 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Course on Multivariate Statistics an R</title>
       <dc:creator>Miguel Alvarez</dc:creator>
@@ -18,7 +18,7 @@ Nairobi.</description>
       <category>R</category>
       <category>vegetation</category>
       <guid>https://kamapu.github.io/posts/2021-11-05-multivar</guid>
-      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/2021-11-05-multivar/images/poster-course.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
@@ -35,7 +35,7 @@ implemented in vegtable.</description>
       <category>R</category>
       <category>vegetation</category>
       <guid>https://kamapu.github.io/posts/vegtable-press-2</guid>
-      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/vegtable-press-2/images/vegtable_diagram.png" medium="image" type="image/png" width="3715" height="1565"/>
     </item>
     <item>
@@ -53,7 +53,8 @@ Freiburg in March 2017.</description>
       <category>vegetation</category>
       <category>workshop</category>
       <guid>https://kamapu.github.io/posts/vegtable-intro</guid>
-      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/vegtable-intro/images/Juice_table.png" medium="image" type="image/png" width="1050" height="824"/>
     </item>
     <item>
       <title>vegtable: An R object for vegetation-plot data sets</title>
@@ -69,7 +70,7 @@ objects and functions.</description>
       <category>R</category>
       <category>vegetation</category>
       <guid>https://kamapu.github.io/posts/2020-10-29-vegtablepress</guid>
-      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/2020-10-29-vegtablepress/images/brno_vegtable_slide2.png" medium="image" type="image/png" width="629" height="354"/>
     </item>
     <item>
@@ -83,7 +84,7 @@ This database attempt to store published relevés for meta-analysis purposes.</d
       <category>database</category>
       <category>vegetation</category>
       <guid>https://kamapu.github.io/posts/sudamerica</guid>
-      <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/sudamerica/images/guadal_chile.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
@@ -96,7 +97,7 @@ and considering any kind of vegetation.</description>
       <category>database</category>
       <category>vegetation</category>
       <guid>https://kamapu.github.io/posts/sweadataveg</guid>
-      <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/sweadataveg/images/wetland_tz.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
@@ -110,7 +111,7 @@ The talk was presented at LatinR 2020 (virtual meeting).</description>
       <category>conference</category>
       <category>R</category>
       <guid>https://kamapu.github.io/posts/2020-10-08-taxlistjourney</guid>
-      <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/2020-10-08-taxlistjourney/images/cover_video.png" medium="image" type="image/png" width="749" height="419"/>
     </item>
     <item>
@@ -129,7 +130,7 @@ countries, harmonizing the capacities among researchers and students.</descripti
       <category>R</category>
       <category>workshop</category>
       <guid>https://kamapu.github.io/posts/2020-05-13-r4africa</guid>
-      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/2020-05-13-r4africa/images/bisrat_teaching.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
@@ -142,7 +143,7 @@ Phytocoenologia.</description>
       <category>vegetation</category>
       <category>wetlands</category>
       <guid>https://kamapu.github.io/posts/2017-12-01-wetlandsfront</guid>
-      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/2017-12-01-wetlandsfront/images/cover_cropped.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>

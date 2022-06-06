@@ -23,12 +23,12 @@ categories:
   - R
   - vegetation
   - workshop
-preview: images/Fujiwara_map.jpg
+preview: images/Juice_table.png
 ---
 
 ```{r setup, include=FALSE}
 ## Set global chunk options
-knitr::opts_chunk$set(echo=TRUE, width="\\textwidth", out.width="\\textwidth",
+knitr::opts_chunk$set(echo=TRUE, width="100%", out.width="100%",
 		R.options=list(width=80))
 ```
 
@@ -519,12 +519,12 @@ Now for the head:
 For geo-referenced plots, you can easily map the location of the plots, for
 instance using the package [`leaflet`](https://rstudio.github.io/leaflet/).
 
-```{r, message=FALSE}
+```{r message=FALSE}
 library(leaflet)
 leaflet(Fujiwara@header) %>%
     addTiles() %>%
     addCircleMarkers(lng=~LONGITUDE, lat=~LATITUDE, color="red",
-        opacity=0.3, radius=1)
+        opacity=0.5, radius=2)
 ```
 
 Then, hopefully you enjoyed the session and did not get too much error messages.

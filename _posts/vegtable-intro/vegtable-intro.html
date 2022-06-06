@@ -113,12 +113,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","draft","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["Introduction to the package vegtable"]},{"type":"character","attributes":{},"value":["The package vegtable offers objects and functions for the work with plot\nobservations in vegetation assessments (phytosociological relevés).\nThis object class ensures consistency on data, while it is also allowing\nflexibility in the degree of completeness and resolution of data.\nThis tutorial is an updated version of a workshop offered in the context of\nthe 16th Workshop of the German Group on Vegetation Databases celebrated in\nFreiburg in March 2017.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","orcid_id"]}},"value":[{"type":"character","attributes":{},"value":["Miguel Alvarez"]},{"type":"character","attributes":{},"value":["https://kamapu.github.io/"]},{"type":"character","attributes":{},"value":["0000-0003-1500-1834"]}]}]},{"type":"character","attributes":{},"value":["10-30-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["R","vegetation","workshop"]},{"type":"character","attributes":{},"value":["images/Fujiwara_map.jpg"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","draft","categories","preview"]}},"value":[{"type":"character","attributes":{},"value":["Introduction to the package vegtable"]},{"type":"character","attributes":{},"value":["The package vegtable offers objects and functions for the work with plot\nobservations in vegetation assessments (phytosociological relevés).\nThis object class ensures consistency on data, while it is also allowing\nflexibility in the degree of completeness and resolution of data.\nThis tutorial is an updated version of a workshop offered in the context of\nthe 16th Workshop of the German Group on Vegetation Databases celebrated in\nFreiburg in March 2017.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","orcid_id"]}},"value":[{"type":"character","attributes":{},"value":["Miguel Alvarez"]},{"type":"character","attributes":{},"value":["https://kamapu.github.io/"]},{"type":"character","attributes":{},"value":["0000-0003-1500-1834"]}]}]},{"type":"character","attributes":{},"value":["10-30-2020"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["R","vegetation","workshop"]},{"type":"character","attributes":{},"value":["images/Juice_table.png"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["images/CombinedLogos.png","images/Juice_header.png","images/Juice_table.png","images/Turboveg_Data.png"]}
+  {"type":"character","attributes":{},"value":["images/CombinedLogos.png","images/Juice_header.png","images/Juice_table.png","images/Turboveg_Data.png","vegtable-intro_files/anchor-4.2.2/anchor.min.js","vegtable-intro_files/bowser-1.9.3/bowser.min.js","vegtable-intro_files/distill-2.2.21/template.v2.js","vegtable-intro_files/header-attrs-2.14/header-attrs.js","vegtable-intro_files/jquery-3.6.0/jquery-3.6.0.js","vegtable-intro_files/jquery-3.6.0/jquery-3.6.0.min.js","vegtable-intro_files/jquery-3.6.0/jquery-3.6.0.min.map","vegtable-intro_files/popper-2.6.0/popper.min.js","vegtable-intro_files/tippy-6.2.7/tippy-bundle.umd.min.js","vegtable-intro_files/tippy-6.2.7/tippy-light-border.css","vegtable-intro_files/tippy-6.2.7/tippy.css","vegtable-intro_files/tippy-6.2.7/tippy.umd.min.js","vegtable-intro_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1469,7 +1469,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_distill-->
   <script src="vegtable-intro_files/header-attrs-2.14/header-attrs.js"></script>
+  <script src="vegtable-intro_files/htmlwidgets-1.5.4/htmlwidgets.js"></script>
   <script src="vegtable-intro_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="vegtable-intro_files/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+  <script src="vegtable-intro_files/leaflet-1.3.1/leaflet.js"></script>
+  <link href="vegtable-intro_files/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+  <script src="vegtable-intro_files/proj4-2.6.2/proj4.min.js"></script>
+  <script src="vegtable-intro_files/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+  <link href="vegtable-intro_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+  <script src="vegtable-intro_files/leaflet-binding-2.1.1/leaflet.js"></script>
   <script src="vegtable-intro_files/popper-2.6.0/popper.min.js"></script>
   <link href="vegtable-intro_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="vegtable-intro_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2332,15 +2340,20 @@ alt="Display of header data in Juice" />
 <strong>Juice</strong></figcaption>
 </figure>
 <h1 id="map-in-leaflet">Map in leaflet</h1>
-<p>In those cases where vegetation data is geo-referenced, it is also
-possible to include spatial reference systems different than
-<strong>longlat WGS 84</strong>, which will be reprojected by the
-function.</p>
+<p>For geo-referenced plots, you can easily map the location of the
+plots, for instance using the package <a
+href="https://rstudio.github.io/leaflet/"><code>leaflet</code></a>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#vegtable2kml(Fujiwara, "RiftValley.kml")</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://rstudio.github.io/leaflet/'>leaflet</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span><span class='op'>(</span><span class='va'>Fujiwara</span><span class='op'>@</span><span class='va'>header</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/leaflet/man/leaflet-imports.html'>%&gt;%</a></span>
+    <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addTiles</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/pkg/leaflet/man/leaflet-imports.html'>%&gt;%</a></span>
+    <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addCircleMarkers</a></span><span class='op'>(</span>lng<span class='op'>=</span><span class='op'>~</span><span class='va'>LONGITUDE</span>, lat<span class='op'>=</span><span class='op'>~</span><span class='va'>LATITUDE</span>, color<span class='op'>=</span><span class='st'>"red"</span>,
+        opacity<span class='op'>=</span><span class='fl'>0.5</span>, radius<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>
 </code></pre>
 </div>
+<div id="htmlwidget-ed969cbb2dc94dd3cf67" style="width:100%;height:384px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ed969cbb2dc94dd3cf67">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[2.66669444,2.66633333,2.66644444,2.6685,2.66886111,2.66755556,2.2625,2.31486111,2.3055,2.30225,2.27111111,2.25341667,2.24425,2.30980556,2.30958333,2.30963889,2.28275,1.253,1.25377778,1.25325,1.25241667,1.24602778,1.2465,1.24652778,1.24669444,1.24766667,1.24830556,1.24413889,1.24486111,1.24577778,-1.24258333,-1.24169444,-1.23919444,-1.23758333,-1.23669444,-1.23861111,-1.23333333,-1.24202778,-1.24338889,-1.24166667,-1.23872222,-1.23872222,-1.24183333,-1.2365,-1.23980556,-1.24508333,-1.35791667,-1.23433333,-1.24325,-1.24525,-1.83527778,-1.83547222,-1.88091667,-1.87905556,-1.8355,-1.83858333],[36.94138889,36.94166667,36.94236111,36.94594444,36.94341667,36.94069444,37.93072222,37.97280556,37.96186111,37.95911111,37.92986111,37.934,37.93219444,37.99497222,37.97980556,38.00030556,37.95419444,37.29186111,37.29111111,37.29375,37.29533333,37.29166667,37.29077778,37.29083333,37.29338889,37.29475,37.29380556,37.29597222,37.29630556,37.29677778,36.83869444,36.83747222,36.82758333,36.82611111,36.82566667,36.82391667,36.81666667,36.83841667,36.83975,36.82530556,36.82786111,36.82786111,36.837,36.8275,36.82383333,36.84102778,36.71141667,36.82580556,36.83916667,36.84055556,35.80994444,35.80883333,35.85822222,35.84825,35.80863889,35.80969444],2,null,null,{"interactive":true,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-1.88091667,2.66886111],"lng":[35.80863889,38.00030556]}},"evals":[],"jsHooks":[]}</script>
 </div>
 <p>Then, hopefully you enjoyed the session and did not get too much
 error messages.</p>
