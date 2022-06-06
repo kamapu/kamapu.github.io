@@ -7,19 +7,19 @@
     <description>Home Page
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 10 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Course on Multivariate Statistics an R</title>
       <dc:creator>Miguel Alvarez</dc:creator>
-      <link>https://kamapu.github.io/posts/2021-11-05-multivar</link>
+      <link>https://kamapu.github.io/posts/multivar</link>
       <description>A course on the applications of multivariate statistics on vegetation ecology
 is scheduled for the period between the 16th and 23rd of November in
 Nairobi.</description>
       <category>R</category>
       <category>vegetation</category>
-      <guid>https://kamapu.github.io/posts/2021-11-05-multivar</guid>
-      <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://kamapu.github.io/posts/2021-11-05-multivar/images/poster-course.jpg" medium="image" type="image/jpeg"/>
+      <guid>https://kamapu.github.io/posts/multivar</guid>
+      <pubDate>Tue, 11 May 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/multivar/images/poster-course.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>Basics on the work with vegetation-plots in vegtable</title>
@@ -35,7 +35,7 @@ implemented in vegtable.</description>
       <category>R</category>
       <category>vegetation</category>
       <guid>https://kamapu.github.io/posts/vegtable-press-2</guid>
-      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/vegtable-press-2/images/vegtable_diagram.png" medium="image" type="image/png" width="3715" height="1565"/>
     </item>
     <item>
@@ -53,13 +53,13 @@ Freiburg in March 2017.</description>
       <category>vegetation</category>
       <category>workshop</category>
       <guid>https://kamapu.github.io/posts/vegtable-intro</guid>
-      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/vegtable-intro/images/Juice_table.png" medium="image" type="image/png" width="1050" height="824"/>
     </item>
     <item>
       <title>vegtable: An R object for vegetation-plot data sets</title>
       <dc:creator>Miguel Alvarez</dc:creator>
-      <link>https://kamapu.github.io/posts/2020-10-29-vegtablepress</link>
+      <link>https://kamapu.github.io/posts/vegtable-press</link>
       <description>The package vegtable defines the homonymous object class and functions
 (methods) for handling vegetation-plot data sets in R.
 Within its slots, taxonomic lists are formatted as taxlist objects.
@@ -69,9 +69,9 @@ The presentation includes a brief introduction to the structure of vegtable
 objects and functions.</description>
       <category>R</category>
       <category>vegetation</category>
-      <guid>https://kamapu.github.io/posts/2020-10-29-vegtablepress</guid>
-      <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://kamapu.github.io/posts/2020-10-29-vegtablepress/images/brno_vegtable_slide2.png" medium="image" type="image/png" width="629" height="354"/>
+      <guid>https://kamapu.github.io/posts/vegtable-press</guid>
+      <pubDate>Thu, 29 Oct 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/vegtable-press/images/brno_vegtable_slide2.png" medium="image" type="image/png" width="629" height="354"/>
     </item>
     <item>
       <title>sudamerica: A vegetation-plot database for the Neo-Tropics</title>
@@ -84,7 +84,7 @@ This database attempt to store published relevés for meta-analysis purposes.</d
       <category>database</category>
       <category>vegetation</category>
       <guid>https://kamapu.github.io/posts/sudamerica</guid>
-      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/sudamerica/images/guadal_chile.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
@@ -97,29 +97,29 @@ and considering any kind of vegetation.</description>
       <category>database</category>
       <category>vegetation</category>
       <guid>https://kamapu.github.io/posts/sweadataveg</guid>
-      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://kamapu.github.io/posts/sweadataveg/images/wetland_tz.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>A journey in rOpenSci</title>
       <dc:creator>Miguel Alvarez</dc:creator>
-      <link>https://kamapu.github.io/posts/2020-10-08-taxlistjourney</link>
+      <link>https://kamapu.github.io/posts/taxlist-journey</link>
       <description>A brief account of the experiences gained after a bit more than 2 years review
 process of the package taxlist for its submission to rOpenSci.
 This journey resulted on new tools learned and new friends.
 The talk was presented at LatinR 2020 (virtual meeting).</description>
       <category>conference</category>
       <category>R</category>
-      <guid>https://kamapu.github.io/posts/2020-10-08-taxlistjourney</guid>
-      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://kamapu.github.io/posts/2020-10-08-taxlistjourney/images/cover_video.png" medium="image" type="image/png" width="749" height="419"/>
+      <guid>https://kamapu.github.io/posts/taxlist-journey</guid>
+      <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/taxlist-journey/images/cover_video.png" medium="image" type="image/png" width="749" height="419"/>
     </item>
     <item>
       <title>R for AfRica</title>
       <dc:creator>Miguel Alvarez</dc:creator>
       <dc:creator>Bisrat H. Gebrekhidan</dc:creator>
       <dc:creator>Samuel Kiboi</dc:creator>
-      <link>https://kamapu.github.io/posts/2020-05-13-r4africa</link>
+      <link>https://kamapu.github.io/posts/r4africa</link>
       <description>The proliferation of freeware and open source applications expands the
 potential of scientists, especially in countries of difficult access to
 commercial licenses for software tools.
@@ -129,22 +129,22 @@ for a better balance in collaboration between European and Eastern African
 countries, harmonizing the capacities among researchers and students.</description>
       <category>R</category>
       <category>workshop</category>
-      <guid>https://kamapu.github.io/posts/2020-05-13-r4africa</guid>
-      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
-      <media:content url="https://kamapu.github.io/posts/2020-05-13-r4africa/images/bisrat_teaching.jpg" medium="image" type="image/jpeg"/>
+      <guid>https://kamapu.github.io/posts/r4africa</guid>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/r4africa/images/bisrat_teaching.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>Tanzanian wetlands in the cover of Phytocoenologia</title>
       <dc:creator>Miguel Alvarez</dc:creator>
-      <link>https://kamapu.github.io/posts/2017-12-01-wetlandsfront</link>
+      <link>https://kamapu.github.io/posts/wetlands-front</link>
       <description>A publication on classification of East African wetland communities in the
 context of the Braun-Blanquet approach managed to the cover of the journal
 Phytocoenologia.</description>
       <category>vegetation</category>
       <category>wetlands</category>
-      <guid>https://kamapu.github.io/posts/2017-12-01-wetlandsfront</guid>
-      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
-      <media:content url="https://kamapu.github.io/posts/2017-12-01-wetlandsfront/images/cover_cropped.jpg" medium="image" type="image/jpeg"/>
+      <guid>https://kamapu.github.io/posts/wetlands-front</guid>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/wetlands-front/images/cover_cropped.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
