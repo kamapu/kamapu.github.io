@@ -2345,7 +2345,7 @@ content of this data set by using the function
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>object size: 761.4 Kb 
@@ -2436,7 +2436,7 @@ the slot <strong>taxonViews</strong> in the parameter
 taxon view as done here:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Easplist</span>, <span class='st'>"Amaranthus hybridus"</span>, secundum<span class='op'>=</span><span class='st'>"secundum"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Easplist</span>, <span class='st'>"Amaranthus hybridus"</span>, secundum<span class='op'>=</span><span class='st'>"secundum"</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>------------------------------ 
@@ -2493,7 +2493,7 @@ role="doc-biblioref">https://kamapu.github.io/sudamerica/</a>, see also
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>## Metadata 
@@ -2526,7 +2526,7 @@ where the slots <strong>species</strong>, <strong>header</strong>, and
 located at the slot <strong>species</strong>:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>species</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>species</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>object size: 98 Kb 
@@ -2608,7 +2608,7 @@ include cover conversion tables but the data set installed with
 <code>vegtable</code> does it.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span><span class='op'>@</span><span class='va'>coverconvert</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span><span class='op'>@</span><span class='va'>coverconvert</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>## Number of cover scales: 3 
@@ -2653,7 +2653,7 @@ stored in slot <strong>header</strong>. These tables correspond to
 <em>pop-up tables</em> of <strong>Turboveg 2</strong>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/names.html'>names</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>relations</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/names.html'>names</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>relations</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>[1] &quot;community_type&quot; &quot;data_source&quot;   </code></pre>
@@ -2684,7 +2684,7 @@ respective names of the plant communities that correspond to the syntaxa
 assigned to the plots originally by the publication.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/veg_relation.html'>relation2header</a></span><span class='op'>(</span><span class='va'>grasslands</span>, <span class='st'>"community_type"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/veg_relation.html'>relation2header</a></span><span class='op'>(</span><span class='va'>grasslands</span>, <span class='st'>"community_type"</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span><span class='op'>)</span>
 </code></pre>
 </div>
@@ -2736,7 +2736,7 @@ percentage stored in the slot <strong>samples</strong> will be used as
 weight for the respective life from classes.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/trait_stats.html'>trait_proportion</a></span><span class='op'>(</span>trait<span class='op'>=</span><span class='st'>"life_form"</span>, object<span class='op'>=</span><span class='va'>grasslands</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/trait_stats.html'>trait_proportion</a></span><span class='op'>(</span>trait<span class='op'>=</span><span class='st'>"life_form"</span>, object<span class='op'>=</span><span class='va'>grasslands</span>,
     head_var<span class='op'>=</span><span class='st'>"ReleveID"</span>, include_nas<span class='op'>=</span><span class='cn'>FALSE</span>, weight<span class='op'>=</span><span class='st'>"cover_percentage"</span>,
     in_header<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </code></pre>
@@ -2750,10 +2750,10 @@ communities in the slot <strong>header</strong>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Add community names to the header table</span>
-<span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/veg_relation.html'>relation2header</a></span><span class='op'>(</span><span class='va'>grasslands</span>, relation<span class='op'>=</span><span class='st'>"community_type"</span><span class='op'>)</span>
+<span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/veg_relation.html'>relation2header</a></span><span class='op'>(</span><span class='va'>grasslands</span>, relation<span class='op'>=</span><span class='st'>"community_type"</span><span class='op'>)</span>
 
 <span class='co'># Display mean values per plant communities</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>annual_prop</span> <span class='op'>~</span> <span class='va'>community_name</span>, data<span class='op'>=</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span>, FUN<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>annual_prop</span> <span class='op'>~</span> <span class='va'>community_name</span>, data<span class='op'>=</span><span class='va'>grasslands</span><span class='op'>@</span><span class='va'>header</span>, FUN<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>                                community_name annual_prop
@@ -2818,7 +2818,7 @@ variables on the left terms for the simultaneous calculation of
 indicator values.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/trait_stats.html'>trait_stats</a></span><span class='op'>(</span><span class='va'>ind_n</span> <span class='op'>+</span> <span class='va'>ind_h</span> <span class='op'>~</span> <span class='va'>ReleveID</span>, <span class='va'>grasslands</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/trait_stats.html'>trait_stats</a></span><span class='op'>(</span><span class='va'>ind_n</span> <span class='op'>+</span> <span class='va'>ind_h</span> <span class='op'>~</span> <span class='va'>ReleveID</span>, <span class='va'>grasslands</span>,
     FUN<span class='op'>=</span><span class='va'>weighted_mean</span>,  include_nas<span class='op'>=</span><span class='cn'>FALSE</span>, weight<span class='op'>=</span><span class='st'>"cover_percentage"</span>,
     suffix<span class='op'>=</span><span class='st'>"_wmean"</span>, in_header<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </code></pre>
@@ -2894,7 +2894,7 @@ need to set <code>get_names=TRUE</code>, otherwise only taxon IDs
 to the family Poaceae (grasses) in the different plant communities.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/trait_stats.html'>trait_proportion</a></span><span class='op'>(</span><span class='st'>"family"</span>, <span class='va'>grasslands</span>, head_var<span class='op'>=</span><span class='st'>"ReleveID"</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/trait_stats.html'>trait_proportion</a></span><span class='op'>(</span><span class='st'>"family"</span>, <span class='va'>grasslands</span>, head_var<span class='op'>=</span><span class='st'>"ReleveID"</span>,
     trait_level<span class='op'>=</span><span class='st'>"Poaceae"</span>, include_nas<span class='op'>=</span><span class='cn'>FALSE</span>, weight<span class='op'>=</span><span class='st'>"cover_percentage"</span>,
     in_header<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 
@@ -2916,7 +2916,7 @@ sub-specific taxa in their respective species (option
 <code>include_lower=TRUE</code>).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/count_taxa.html'>count_taxa</a></span><span class='op'>(</span><span class='va'>species</span> <span class='op'>~</span> <span class='va'>ReleveID</span>, <span class='va'>grasslands</span>, include_lower<span class='op'>=</span><span class='cn'>TRUE</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>grasslands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/count_taxa.html'>count_taxa</a></span><span class='op'>(</span><span class='va'>species</span> <span class='op'>~</span> <span class='va'>ReleveID</span>, <span class='va'>grasslands</span>, include_lower<span class='op'>=</span><span class='cn'>TRUE</span>,
     in_header<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 
 <span class='co'># Compare communities by species richness</span>
@@ -2938,9 +2938,9 @@ the function <code>crosstable()</code>.</p>
 proceri</em>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>juncetum</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>grasslands</span>, <span class='va'>community_name</span> <span class='op'>==</span> <span class='st'>"Juncetum proceri"</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>juncetum</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>grasslands</span>, <span class='va'>community_name</span> <span class='op'>==</span> <span class='st'>"Juncetum proceri"</span>,
     slot<span class='op'>=</span><span class='st'>"header"</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>juncetum</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>juncetum</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>## Metadata 
@@ -2975,7 +2975,7 @@ merge multiple occurrences of a taxon in a plot and
 <code>na_to_zero=TRUE</code> to fill absence.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>juncetum_cross</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/crosstable.html'>crosstable</a></span><span class='op'>(</span><span class='va'>cover_percentage</span> <span class='op'>~</span> <span class='va'>ReleveID</span> <span class='op'>+</span> <span class='va'>AcceptedName</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>juncetum_cross</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/crosstable.html'>crosstable</a></span><span class='op'>(</span><span class='va'>cover_percentage</span> <span class='op'>~</span> <span class='va'>ReleveID</span> <span class='op'>+</span> <span class='va'>AcceptedName</span>,
     data<span class='op'>=</span><span class='va'>juncetum</span>, FUN<span class='op'>=</span><span class='va'>max</span>, na_to_zero<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>juncetum_cross</span><span class='op'>)</span>
 </code></pre>
@@ -3000,7 +3000,7 @@ respective locations as kml files to be displayed in <strong>Google
 Earth</strong> using the function <code>vegtable2kml()</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/vegtable2kml.html'>vegtable2kml</a></span><span class='op'>(</span><span class='va'>grasslands</span>, file<span class='op'>=</span><span class='st'>"grasslands.kml"</span>, coords<span class='op'>=</span> <span class='op'>~</span> <span class='va'>longitude</span> <span class='op'>+</span> <span class='va'>latitude</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/vegtable2kml.html'>vegtable2kml</a></span><span class='op'>(</span><span class='va'>grasslands</span>, file<span class='op'>=</span><span class='st'>"grasslands.kml"</span>, coords<span class='op'>=</span> <span class='op'>~</span> <span class='va'>longitude</span> <span class='op'>+</span> <span class='va'>latitude</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
@@ -3014,11 +3014,11 @@ package <code>leaflet</code>.</p>
         opacity<span class='op'>=</span><span class='fl'>0.3</span>, radius<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
 </code></pre>
 </div>
-<div id="htmlwidget-a1bdb210e7f750d6cf62" style="width:100%;height:384px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a1bdb210e7f750d6cf62">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[-38.6727,-38.6727,-38.631,-38.631,-38.6846,-38.7141,-38.7072,-38.7072,-38.7072,-38.631,-38.631,-38.6379,-38.6908,-38.7342,-38.7138,-38.7138,-38.7138,-38.6908,-38.7072,-38.7072,-38.6379,-38.631,-38.7072,-38.7072,-38.6985,-38.6846,-38.6846,-38.6727,-38.6727,-38.6846,-38.6846,-38.7342,-38.7141,-38.7141,-38.7141,-38.7141,-38.6985,-38.6908,-38.7072,-38.6908,-38.6985,-38.6985,-38.631,-38.631,-38.631,-38.6908,-38.6846,-38.6908,-38.6985,-38.6985,-38.7072,-38.7342,-38.7072,-38.6727,-38.7342,-38.7342,-38.6846,-38.6908,-38.7072,-38.6985,-38.6908,-38.631,-38.7141,-38.7342,-38.7141,-38.7141,-38.6727,-38.6846,-38.7072,-38.7072,-38.7072,-38.6379,-38.6908,-38.6727,-38.6379,-38.7342,-38.7342,-38.7141,-38.7141,-38.7141],[-72.7201,-72.7201,-72.7341,-72.7341,-72.744,-72.6958,-72.6979,-72.6979,-72.6979,-72.7341,-72.7341,-72.7324,-72.6803,-72.6381,-72.684,-72.684,-72.684,-72.6803,-72.6979,-72.6979,-72.7324,-72.7341,-72.6979,-72.6979,-72.7093,-72.744,-72.744,-72.7201,-72.7201,-72.744,-72.744,-72.6381,-72.6958,-72.6958,-72.6958,-72.6958,-72.7093,-72.6803,-72.6979,-72.6803,-72.7093,-72.7093,-72.7341,-72.7341,-72.7341,-72.6803,-72.744,-72.6803,-72.7093,-72.7093,-72.6979,-72.6381,-72.6979,-72.7201,-72.6381,-72.6381,-72.744,-72.6803,-72.6979,-72.7093,-72.6803,-72.7341,-72.6958,-72.6381,-72.6958,-72.6958,-72.7201,-72.744,-72.6979,-72.6979,-72.6979,-72.7324,-72.6803,-72.7201,-72.7324,-72.6381,-72.6381,-72.6958,-72.6958,-72.6958],1,null,null,{"interactive":true,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.3,"fill":true,"fillColor":"red","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-38.7342,-38.631],"lng":[-72.744,-72.6381]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9537e6bd7140807029fb" style="width:100%;height:384px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9537e6bd7140807029fb">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[-38.6727,-38.6727,-38.631,-38.631,-38.6846,-38.7141,-38.7072,-38.7072,-38.7072,-38.631,-38.631,-38.6379,-38.6908,-38.7342,-38.7138,-38.7138,-38.7138,-38.6908,-38.7072,-38.7072,-38.6379,-38.631,-38.7072,-38.7072,-38.6985,-38.6846,-38.6846,-38.6727,-38.6727,-38.6846,-38.6846,-38.7342,-38.7141,-38.7141,-38.7141,-38.7141,-38.6985,-38.6908,-38.7072,-38.6908,-38.6985,-38.6985,-38.631,-38.631,-38.631,-38.6908,-38.6846,-38.6908,-38.6985,-38.6985,-38.7072,-38.7342,-38.7072,-38.6727,-38.7342,-38.7342,-38.6846,-38.6908,-38.7072,-38.6985,-38.6908,-38.631,-38.7141,-38.7342,-38.7141,-38.7141,-38.6727,-38.6846,-38.7072,-38.7072,-38.7072,-38.6379,-38.6908,-38.6727,-38.6379,-38.7342,-38.7342,-38.7141,-38.7141,-38.7141],[-72.7201,-72.7201,-72.7341,-72.7341,-72.744,-72.6958,-72.6979,-72.6979,-72.6979,-72.7341,-72.7341,-72.7324,-72.6803,-72.6381,-72.684,-72.684,-72.684,-72.6803,-72.6979,-72.6979,-72.7324,-72.7341,-72.6979,-72.6979,-72.7093,-72.744,-72.744,-72.7201,-72.7201,-72.744,-72.744,-72.6381,-72.6958,-72.6958,-72.6958,-72.6958,-72.7093,-72.6803,-72.6979,-72.6803,-72.7093,-72.7093,-72.7341,-72.7341,-72.7341,-72.6803,-72.744,-72.6803,-72.7093,-72.7093,-72.6979,-72.6381,-72.6979,-72.7201,-72.6381,-72.6381,-72.744,-72.6803,-72.6979,-72.7093,-72.6803,-72.7341,-72.6958,-72.6381,-72.6958,-72.6958,-72.7201,-72.744,-72.6979,-72.6979,-72.6979,-72.7324,-72.6803,-72.7201,-72.7324,-72.6381,-72.6381,-72.6958,-72.6958,-72.6958],1,null,null,{"interactive":true,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.3,"fill":true,"fillColor":"red","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-38.7342,-38.631],"lng":[-72.744,-72.6381]}},"evals":[],"jsHooks":[]}</script>
 </div>
 <h2 class="appendix" id="updated-on">Updated on</h2>
-<p>06-06-2022</p>
+<p>20-06-2022</p>
 <h2 class="appendix" id="acknowledgement">Acknowledgement</h2>
 <p>The data sets and routines demonstrated here have been previously
 tested by Elena Gómez in the context of her thesis for the degree of

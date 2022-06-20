@@ -128,7 +128,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["images/CombinedLogos.png","images/Juice_header.png","images/Juice_table.png","images/Turboveg_Data.png","vegtable-intro_files/anchor-4.2.2/anchor.min.js","vegtable-intro_files/bowser-1.9.3/bowser.min.js","vegtable-intro_files/distill-2.2.21/template.v2.js","vegtable-intro_files/header-attrs-2.14/header-attrs.js","vegtable-intro_files/jquery-3.6.0/jquery-3.6.0.js","vegtable-intro_files/jquery-3.6.0/jquery-3.6.0.min.js","vegtable-intro_files/jquery-3.6.0/jquery-3.6.0.min.map","vegtable-intro_files/popper-2.6.0/popper.min.js","vegtable-intro_files/tippy-6.2.7/tippy-bundle.umd.min.js","vegtable-intro_files/tippy-6.2.7/tippy-light-border.css","vegtable-intro_files/tippy-6.2.7/tippy.css","vegtable-intro_files/tippy-6.2.7/tippy.umd.min.js","vegtable-intro_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["images/CombinedLogos.png","images/Juice_header.png","images/Juice_table.png","images/Turboveg_Data.png","vegtable-intro_files/anchor-4.2.2/anchor.min.js","vegtable-intro_files/bowser-1.9.3/bowser.min.js","vegtable-intro_files/distill-2.2.21/template.v2.js","vegtable-intro_files/header-attrs-2.14/header-attrs.js","vegtable-intro_files/htmlwidgets-1.5.4/htmlwidgets.js","vegtable-intro_files/jquery-3.6.0/jquery-3.6.0.js","vegtable-intro_files/jquery-3.6.0/jquery-3.6.0.min.js","vegtable-intro_files/jquery-3.6.0/jquery-3.6.0.min.map","vegtable-intro_files/leaflet-1.3.1/images/layers-2x.png","vegtable-intro_files/leaflet-1.3.1/images/layers.png","vegtable-intro_files/leaflet-1.3.1/images/marker-icon-2x.png","vegtable-intro_files/leaflet-1.3.1/images/marker-icon.png","vegtable-intro_files/leaflet-1.3.1/images/marker-shadow.png","vegtable-intro_files/leaflet-1.3.1/leaflet.css","vegtable-intro_files/leaflet-1.3.1/leaflet.js","vegtable-intro_files/leaflet-binding-2.1.1/leaflet.js","vegtable-intro_files/leafletfix-1.0.0/leafletfix.css","vegtable-intro_files/popper-2.6.0/popper.min.js","vegtable-intro_files/proj4-2.6.2/proj4.min.js","vegtable-intro_files/Proj4Leaflet-1.0.1/proj4leaflet.js","vegtable-intro_files/rstudio_leaflet-1.3.1/images/1px.png","vegtable-intro_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css","vegtable-intro_files/tippy-6.2.7/tippy-bundle.umd.min.js","vegtable-intro_files/tippy-6.2.7/tippy-light-border.css","vegtable-intro_files/tippy-6.2.7/tippy.css","vegtable-intro_files/tippy-6.2.7/tippy.umd.min.js","vegtable-intro_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2434,7 +2434,7 @@ from Kenya.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/kamapu/vegtable'>vegtable</a></span><span class='op'>)</span>
 <span class='va'>tv_home</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/find.package.html'>path.package</a></span><span class='op'>(</span><span class='st'>"vegtable"</span><span class='op'>)</span>, <span class='st'>"tv_data"</span><span class='op'>)</span>
 <span class='va'>Fujiwara</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://docs.ropensci.org/taxlist/reference/tv2taxlist.html'>tv2taxlist</a></span><span class='op'>(</span><span class='st'>"Fujiwara_sp"</span>, <span class='va'>tv_home</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Fujiwara</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Fujiwara</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
@@ -2444,7 +2444,7 @@ displaying summaries. The first way is just ot apply the function
 <code>summary</code> to a <code>taxlist</code> object:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Cyperus</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Cyperus</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>object size: 32.1 Kb 
@@ -2463,7 +2463,7 @@ adding it concept ID or a taxon usage name as second argument in the
 function.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Cyperus</span>, <span class='st'>"Cyperus dives"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Cyperus</span>, <span class='st'>"Cyperus dives"</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>------------------------------ 
@@ -2490,7 +2490,7 @@ first concepts, depending on the value of the argument
 <code>maxsum</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Cyperus</span>, <span class='st'>"all"</span>, maxsum<span class='op'>=</span><span class='fl'>10</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Cyperus</span>, <span class='st'>"all"</span>, maxsum<span class='op'>=</span><span class='fl'>10</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
@@ -2504,7 +2504,7 @@ AF-006</a>):</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
@@ -2522,7 +2522,7 @@ documentation).</p>
 slots in the object.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>$</span><span class='va'>life_form</span><span class='op'>)</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>$</span><span class='va'>life_form</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>  acropleustophyte        chamaephyte     climbing_plant facultative_annual 
@@ -2541,25 +2541,25 @@ databases. The <code>subset</code> method can be apply to any slot by
 setting the value of the argument <code>slot</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Papyrus</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>Easplist</span>, <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"papyrus"</span>, <span class='va'>TaxonName</span><span class='op'>)</span>, slot<span class='op'>=</span><span class='st'>"names"</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Papyrus</span>, <span class='st'>"all"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Papyrus</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>Easplist</span>, <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"papyrus"</span>, <span class='va'>TaxonName</span><span class='op'>)</span>, slot<span class='op'>=</span><span class='st'>"names"</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Papyrus</span>, <span class='st'>"all"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
 <p>Or the very same results:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Papyrus</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>Easplist</span>, <span class='va'>TaxonConceptID</span> <span class='op'>==</span> <span class='fl'>206</span>, slot<span class='op'>=</span><span class='st'>"relations"</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Papyrus</span>, <span class='st'>"all"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Papyrus</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>Easplist</span>, <span class='va'>TaxonConceptID</span> <span class='op'>==</span> <span class='fl'>206</span>, slot<span class='op'>=</span><span class='st'>"relations"</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Papyrus</span>, <span class='st'>"all"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
 <p>Similarly, you can look for a specific name.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Phraaus</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>Easplist</span>, <span class='fu'><a href='https://rdrr.io/r/base/charmatch.html'>charmatch</a></span><span class='op'>(</span><span class='st'>"Phragmites australis"</span>, <span class='va'>TaxonName</span><span class='op'>)</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Phraaus</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>Easplist</span>, <span class='fu'><a href='https://rdrr.io/r/base/charmatch.html'>charmatch</a></span><span class='op'>(</span><span class='st'>"Phragmites australis"</span>, <span class='va'>TaxonName</span><span class='op'>)</span>,
   slot<span class='op'>=</span><span class='st'>"names"</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Phraaus</span>, <span class='st'>"all"</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Phraaus</span>, <span class='st'>"all"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
@@ -2570,7 +2570,7 @@ information is also included in the data <code>Easplist</code>, as shown
 in the summary output.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Easplist</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>object size: 761.4 Kb 
@@ -2601,7 +2601,7 @@ parents and children, you can use the functions <code>get_paretns</code>
 or <code>get_children</code>, respectively.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Papyrus</span>, <span class='st'>"all"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Papyrus</span>, <span class='st'>"all"</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>------------------------------ 
@@ -2619,7 +2619,7 @@ parent: none
 ------------------------------</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Papyrus</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://docs.ropensci.org/taxlist/reference/get_children.html'>get_parents</a></span><span class='op'>(</span><span class='va'>Easplist</span>, <span class='va'>Papyrus</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Papyrus</span>, <span class='st'>"all"</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Papyrus</span>, <span class='st'>"all"</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>------------------------------ 
@@ -2697,8 +2697,8 @@ all species included in the table are accepted names:</p>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>File</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/find.package.html'>path.package</a></span><span class='op'>(</span><span class='st'>"vegtable"</span><span class='op'>)</span>, <span class='st'>"Fujiwara_2014"</span>, <span class='st'>"samples.csv"</span><span class='op'>)</span>
 <span class='va'>Fujiwara</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/read.table.html'>read.csv</a></span><span class='op'>(</span><span class='va'>File</span>, check.names<span class='op'>=</span><span class='cn'>FALSE</span>, stringsAsFactors<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
-<span class='va'>Fujiwara_veg</span> <span class='op'>&lt;-</span><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/df2vegtable.html'>df2vegtable</a></span><span class='op'>(</span><span class='va'>Fujiwara</span>, <span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Fujiwara_veg</span><span class='op'>)</span>
+<span class='va'>Fujiwara_veg</span> <span class='op'>&lt;-</span><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/df2vegtable.html'>df2vegtable</a></span><span class='op'>(</span><span class='va'>Fujiwara</span>, <span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Fujiwara_veg</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
@@ -2710,7 +2710,7 @@ package <code>vegan</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>dune_veg</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>dune_veg</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>dune_veg</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
@@ -2721,7 +2721,7 @@ AF-00-006</a>).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>## Metadata 
@@ -2748,7 +2748,7 @@ a validity check. An additional display is offered by the function
 <code>vegtable_stat</code>:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/vegtable_stat.html'>vegtable_stat</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/vegtable_stat.html'>vegtable_stat</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>## Metadata 
@@ -2824,8 +2824,8 @@ KE: 100%
 <code>[</code>:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span><span class='op'>$</span><span class='va'>REFERENCE</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/veg_relation.html'>veg_relation</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span>, <span class='st'>"REFERENCE"</span><span class='op'>)</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>]</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span><span class='op'>$</span><span class='va'>REFERENCE</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/veg_relation.html'>veg_relation</a></span><span class='op'>(</span><span class='va'>Kenya_veg</span>, <span class='st'>"REFERENCE"</span><span class='op'>)</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>]</span>
 </code></pre>
 </div>
 </div>
@@ -2837,8 +2837,8 @@ subset with pasture plots.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>dune_veg</span><span class='op'>)</span>
-<span class='va'>pasture</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dune_veg</span>, <span class='va'>Use</span> <span class='op'>==</span> <span class='st'>"Pasture"</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>dune_veg</span><span class='op'>)</span>
+<span class='va'>pasture</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dune_veg</span>, <span class='va'>Use</span> <span class='op'>==</span> <span class='st'>"Pasture"</span><span class='op'>)</span>
+<span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>dune_veg</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>## Metadata 
@@ -2856,7 +2856,7 @@ subset with pasture plots.</p>
    taxon concepts: 30 
    validity: TRUE </code></pre>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>pasture</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>pasture</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>## Metadata 
@@ -2884,9 +2884,9 @@ table it will be recommended to transform the cover into percentage
 value by using the function <code>transform</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>pasture</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/cover_trans.html'>cover_trans</a></span><span class='op'>(</span><span class='va'>pasture</span>, to<span class='op'>=</span><span class='st'>"Cover"</span>, rule<span class='op'>=</span><span class='st'>"middle"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>pasture</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/cover_trans.html'>cover_trans</a></span><span class='op'>(</span><span class='va'>pasture</span>, to<span class='op'>=</span><span class='st'>"Cover"</span>, rule<span class='op'>=</span><span class='st'>"middle"</span><span class='op'>)</span>
 
-<span class='va'>Cross</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/crosstable.html'>crosstable</a></span><span class='op'>(</span><span class='va'>Cover</span> <span class='op'>~</span> <span class='va'>ReleveID</span> <span class='op'>+</span> <span class='va'>AcceptedName</span>, <span class='va'>pasture</span>, <span class='va'>max</span>,
+<span class='va'>Cross</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/crosstable.html'>crosstable</a></span><span class='op'>(</span><span class='va'>Cover</span> <span class='op'>~</span> <span class='va'>ReleveID</span> <span class='op'>+</span> <span class='va'>AcceptedName</span>, <span class='va'>pasture</span>, <span class='va'>max</span>,
   na_to_zero<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='va'>Cross</span>
 </code></pre>
@@ -2912,9 +2912,9 @@ cell (e.g. multiple records of a species within a plot).</p>
 <code>data.frame</code> (see the help documentation).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>dune_veg</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/cover_trans.html'>cover_trans</a></span><span class='op'>(</span><span class='va'>dune_veg</span>, to<span class='op'>=</span><span class='st'>"Cover"</span>, rule<span class='op'>=</span><span class='st'>"middle"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>dune_veg</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/cover_trans.html'>cover_trans</a></span><span class='op'>(</span><span class='va'>dune_veg</span>, to<span class='op'>=</span><span class='st'>"Cover"</span>, rule<span class='op'>=</span><span class='st'>"middle"</span><span class='op'>)</span>
 
-<span class='va'>Cross_use</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/crosstable.html'>crosstable</a></span><span class='op'>(</span><span class='va'>Cover</span> <span class='op'>~</span> <span class='va'>Use</span> <span class='op'>+</span> <span class='va'>AcceptedName</span>, <span class='va'>dune_veg</span>, <span class='va'>sum</span>,
+<span class='va'>Cross_use</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/crosstable.html'>crosstable</a></span><span class='op'>(</span><span class='va'>Cover</span> <span class='op'>~</span> <span class='va'>Use</span> <span class='op'>+</span> <span class='va'>AcceptedName</span>, <span class='va'>dune_veg</span>, <span class='va'>sum</span>,
   na_to_zero<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='va'>Cross_use</span>
 </code></pre>
@@ -2924,7 +2924,7 @@ cell (e.g. multiple records of a species within a plot).</p>
 table, it is also possible to write a presence-absence table:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Cross_pa</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/crosstable.html'>crosstable</a></span><span class='op'>(</span><span class='va'>Cover</span> <span class='op'>~</span> <span class='va'>ReleveID</span> <span class='op'>+</span> <span class='va'>AcceptedName</span>, <span class='va'>pasture</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fl'>1</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Cross_pa</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/crosstable.html'>crosstable</a></span><span class='op'>(</span><span class='va'>Cover</span> <span class='op'>~</span> <span class='va'>ReleveID</span> <span class='op'>+</span> <span class='va'>AcceptedName</span>, <span class='va'>pasture</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fl'>1</span>,
   na_to_zero<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 <span class='va'>Cross_pa</span>
 </code></pre>
@@ -2937,12 +2937,12 @@ functions in the package is <code>tv2vegtable</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>tv_home</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/find.package.html'>path.package</a></span><span class='op'>(</span><span class='st'>"vegtable"</span><span class='op'>)</span>, <span class='st'>"tv_data"</span><span class='op'>)</span>
-<span class='va'>Fujiwara</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/tv2vegtable.html'>tv2vegtable</a></span><span class='op'>(</span><span class='st'>"Fujiwara_2014"</span>, <span class='va'>tv_home</span><span class='op'>)</span>
+<span class='va'>Fujiwara</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/tv2vegtable.html'>tv2vegtable</a></span><span class='op'>(</span><span class='st'>"Fujiwara_2014"</span>, <span class='va'>tv_home</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>zero values will be replaced by NAs </code></pre>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Fujiwara</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>Fujiwara</span><span class='op'>)</span>
 </code></pre>
 </div>
 <pre><code>## Metadata 
@@ -2974,7 +2974,7 @@ structure, there is the possibility of importing the data as a list for
 further inspection.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Fujiwara_list</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/tv2vegtable.html'>tv2vegtable</a></span><span class='op'>(</span><span class='st'>"Fujiwara_2014"</span>, <span class='va'>tv_home</span>, output<span class='op'>=</span><span class='st'>"list"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Fujiwara_list</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/tv2vegtable.html'>tv2vegtable</a></span><span class='op'>(</span><span class='st'>"Fujiwara_2014"</span>, <span class='va'>tv_home</span>, output<span class='op'>=</span><span class='st'>"list"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
@@ -2983,7 +2983,7 @@ further inspection.</p>
 as for cross tables.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/vegtable/man/write_juice.html'>write_juice</a></span><span class='op'>(</span><span class='va'>Fujiwara</span>, <span class='st'>"RiftValley"</span>,
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/write_juice.html'>write_juice</a></span><span class='op'>(</span><span class='va'>Fujiwara</span>, <span class='st'>"RiftValley"</span>,
   <span class='va'>COVER_CODE</span> <span class='op'>~</span> <span class='va'>ReleveID</span> <span class='op'>+</span> <span class='va'>AcceptedName</span> <span class='op'>+</span> <span class='va'>LAYER</span>,
   header<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"TABLE_NR"</span>,<span class='st'>"NR_IN_TAB"</span>,<span class='st'>"ALTITUDE"</span>,<span class='st'>"INCLINATIO"</span>,<span class='st'>"EXPOSITION"</span>,
     <span class='st'>"COMM_TYPE"</span><span class='op'>)</span>,
@@ -3052,13 +3052,13 @@ href="https://rstudio.github.io/leaflet/"><code>leaflet</code></a>.</p>
         opacity<span class='op'>=</span><span class='fl'>0.5</span>, radius<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>
 </code></pre>
 </div>
-<div id="htmlwidget-ed969cbb2dc94dd3cf67" style="width:100%;height:384px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ed969cbb2dc94dd3cf67">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[2.66669444,2.66633333,2.66644444,2.6685,2.66886111,2.66755556,2.2625,2.31486111,2.3055,2.30225,2.27111111,2.25341667,2.24425,2.30980556,2.30958333,2.30963889,2.28275,1.253,1.25377778,1.25325,1.25241667,1.24602778,1.2465,1.24652778,1.24669444,1.24766667,1.24830556,1.24413889,1.24486111,1.24577778,-1.24258333,-1.24169444,-1.23919444,-1.23758333,-1.23669444,-1.23861111,-1.23333333,-1.24202778,-1.24338889,-1.24166667,-1.23872222,-1.23872222,-1.24183333,-1.2365,-1.23980556,-1.24508333,-1.35791667,-1.23433333,-1.24325,-1.24525,-1.83527778,-1.83547222,-1.88091667,-1.87905556,-1.8355,-1.83858333],[36.94138889,36.94166667,36.94236111,36.94594444,36.94341667,36.94069444,37.93072222,37.97280556,37.96186111,37.95911111,37.92986111,37.934,37.93219444,37.99497222,37.97980556,38.00030556,37.95419444,37.29186111,37.29111111,37.29375,37.29533333,37.29166667,37.29077778,37.29083333,37.29338889,37.29475,37.29380556,37.29597222,37.29630556,37.29677778,36.83869444,36.83747222,36.82758333,36.82611111,36.82566667,36.82391667,36.81666667,36.83841667,36.83975,36.82530556,36.82786111,36.82786111,36.837,36.8275,36.82383333,36.84102778,36.71141667,36.82580556,36.83916667,36.84055556,35.80994444,35.80883333,35.85822222,35.84825,35.80863889,35.80969444],2,null,null,{"interactive":true,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-1.88091667,2.66886111],"lng":[35.80863889,38.00030556]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-31a656d264947c17702c" style="width:100%;height:384px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-31a656d264947c17702c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[2.66669444,2.66633333,2.66644444,2.6685,2.66886111,2.66755556,2.2625,2.31486111,2.3055,2.30225,2.27111111,2.25341667,2.24425,2.30980556,2.30958333,2.30963889,2.28275,1.253,1.25377778,1.25325,1.25241667,1.24602778,1.2465,1.24652778,1.24669444,1.24766667,1.24830556,1.24413889,1.24486111,1.24577778,-1.24258333,-1.24169444,-1.23919444,-1.23758333,-1.23669444,-1.23861111,-1.23333333,-1.24202778,-1.24338889,-1.24166667,-1.23872222,-1.23872222,-1.24183333,-1.2365,-1.23980556,-1.24508333,-1.35791667,-1.23433333,-1.24325,-1.24525,-1.83527778,-1.83547222,-1.88091667,-1.87905556,-1.8355,-1.83858333],[36.94138889,36.94166667,36.94236111,36.94594444,36.94341667,36.94069444,37.93072222,37.97280556,37.96186111,37.95911111,37.92986111,37.934,37.93219444,37.99497222,37.97980556,38.00030556,37.95419444,37.29186111,37.29111111,37.29375,37.29533333,37.29166667,37.29077778,37.29083333,37.29338889,37.29475,37.29380556,37.29597222,37.29630556,37.29677778,36.83869444,36.83747222,36.82758333,36.82611111,36.82566667,36.82391667,36.81666667,36.83841667,36.83975,36.82530556,36.82786111,36.82786111,36.837,36.8275,36.82383333,36.84102778,36.71141667,36.82580556,36.83916667,36.84055556,35.80994444,35.80883333,35.85822222,35.84825,35.80863889,35.80969444],2,null,null,{"interactive":true,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-1.88091667,2.66886111],"lng":[35.80863889,38.00030556]}},"evals":[],"jsHooks":[]}</script>
 </div>
 <p>Then, hopefully you enjoyed the session and did not get too much
 error messages.</p>
 <h2 class="appendix" id="updated-on">Updated on</h2>
-<p>06-06-2022</p>
+<p>20-06-2022</p>
 <h2 class="appendix" id="aknowledgements">Aknowledgements</h2>
 <p>This workshop was supported by the project <a
 href="https://www.wetlands-africa.de">GlobE-wetlands</a>.</p>
