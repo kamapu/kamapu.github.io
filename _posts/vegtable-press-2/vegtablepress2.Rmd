@@ -22,7 +22,7 @@ draft: false
 categories:
   - R
   - vegetation
-preview: images/vegtable_diagram.png
+preview: images/vegtable-structure.png
 bibliography: press2refs.bib
 csl: seed-science-research.csl
 ---
@@ -49,15 +49,15 @@ Comprehensive R Archive Network (**CRAN**). Since `taxlist` is a dependency of
 `vegtable`, both will be installed in the following command:
 
 ```{r installation1, eval=FALSE}
-install.packages("vegtable", dependencies=TRUE)
+install.packages("vegtable", dependencies = TRUE)
 ```
 
 Alternatively, you can install the development versions from their repositories
 at **GitHub**.
 
-```{r installation2, eval=FALSE}
+```{r installation2, eval = FALSE}
 library(devtools)
-install_github("ropensci/taxlist", build_vignettes=TRUE)
+install_github("ropensci/taxlist", build_vignettes = TRUE)
 install_github("kamapu/vegtable")
 ```
 
@@ -65,15 +65,8 @@ An additional package including some example data required for this session have
 also to be installed from **GitHub**.
 
 ```{r installation3, eval=FALSE}
-install_github("kamapu/datastore")
+install_github("kamapu/sanmartin1998")
 ```
-
-<aside>
-<a href="https://kamapu.github.io/documents/press_vegtable_bonn.pdf" target="_self" style="color:blue;"> 
- <img src="images/vegtable_recipe.png"  alt="presentation" style="width:400px; height:auto;"/> 
- to the slides
-</a>
-</aside>
 
 # Working with species lists only
 
@@ -82,20 +75,17 @@ your R-session:
 
 ```{r load_pkgs}
 library(vegtable)
-library(datastore)
+library(sanmartin1998)
 ```
 
 In this first section we focus on the `taxlist` objects, which are specialized
 for handling taxonomic lists.
 For more details on the theory behind this package, see @Alvarez2018.
 
-The package `taxlist` includes a own data set formatted as a `taxlist` object.
-You can get a general report on the content of this data set by using the
-function `summary()`.
+The package `taxlist` includes a own data set called `Easplist`.
 
 ```{r summ_taxlist}
-data(Easplist)
-summary(Easplist)
+Easplist
 ```
 
 The information stored in a `taxlist` object is organized in four
@@ -104,7 +94,7 @@ within the object. The access to the respective slots in R is done with the
 symbol `@` or alternatively using the function `slot()`.
 
 ```{r taxlist_model, echo=FALSE}
-knitr::include_graphics(path="images/taxlist_model.png")
+knitr::include_graphics(path = "images/taxlist_model.png")
 ```
 
 ```{r structure}
@@ -114,39 +104,81 @@ head(Easplist@taxonTraits)
 head(Easplist@taxonViews)
 ```
 
-## Advanced displays
+## Summaries
 
-The function `summary()` can also be used to query information of a taxon or a
-set of taxa. In such case we can add the name of the requested taxon usage name.
-We can also specify a column of the slot **taxonViews** in the parameter
-`secundum` in order to get more informatin on the respective taxon view as done
-here:
+The function `summary()` can be used to query information of a taxon or a
+set of taxa.
 
 ```{r amaranthus}
-summary(Easplist, "Amaranthus hybridus", secundum="secundum")
+summary(Easplist, ConceptID = "Typha domingensis", secundum = "secundum",
+    exact = TRUE)
 ```
 
-Additionally the function `print_name()` can be used to format scientific names
-within interactive documents, for instance in combination with the package
-`rmarkdown`. See the example by `example(print_name)`, which is printing in
-different formats.
+In this command line the parameter `ConceptID` is used to query a taxon name.
+The parameter `secundum` is set to the name of a column in slot
+**taxonViews** that will be appended to the taxon view ID, which may not be
+informative alone.
+The setting `exact = TRUE` indicates that the queried name have to be a
+perfect match to the taxon usage names in the data set, otherwise sub-specific
+taxa of the queried species may be also retrieved.
+The command retrieves the ID of the queried taxon, the ID of the taxon view
+[for a definition see @Alvarez2018], the taxonomic rank, the ID
+and name of the parent taxon (if suitable), the accepted name and a listing of
+synonyms.
 
-```{r print_name, echo=FALSE, results="hide"}
-example(print_name)
+Note in the display that the taxon concept ID and the ID of the parent refer to
+their taxon concept IDs, which is the primary key at slot **taxonRelations**,
+while the IDs in front of the accepted name and synonyms refer to the IDs of
+the respective taxon usage names, which is the primary key at slot
+**taxonNames**.
+
+You can also display an indented list with the following command.
+
+```{r}
+indented_list(Easplist, "Typha")
+```
+
+The function `print_name()` can be used to format scientific
+names when writing `rmarkdown` documents.
+The following example is adapted from the documentation of the function.
+Note in the example that the option `style = "expression"` is meant to be
+used in plot devices.
+
+```{r print_name}
+## Accepted name with author
+print_name(Easplist, 363, style = "expression")
+
+## Including taxon view
+print_name(Easplist, 363, style = "expression", secundum = "secundum")
+
+## Second mention in text
+print_name(Easplist, 363, style = "expression", second_mention = TRUE)
+
+## Using name ID
+print_name(Easplist, 50037, style = "expression", concept = FALSE)
+
+## Markdown style
+print_name(Easplist, 363, style = "markdown")
+
+## HTML style
+print_name(Easplist, 363, style = "html")
+
+## LaTeX style for knitr
+print_name(Easplist, 363, style = "knitr")
 ```
 
 # Working with vegetation-plots
 
 Further examples will be applied to a data set available at the installed
-package `datastore`, which corresponds to plot observations in grassland and
-semi-aquatic communities from Temuco, Chile.
+package `sanmartin1998`, which corresponds to plot observations in
+grasslands
+and semi-aquatic communities from Temuco, Chile.
 This data set was originally published by @SanMartin1998 and is stored in the
 database **sudamerica**
 [https://kamapu.github.io/sudamerica/, see also @Alvarez2012].
 
-```{r loading_grasslands}
-data(grasslands)
-summary(grasslands)
+```{r loading_data}
+releves
 ```
 
 ## Structure
@@ -156,14 +188,14 @@ slots, where the slots **species**, **header**, and **samples** are the
 essential ones.
 
 ```{r vegtable_model, echo=FALSE}
-knitr::include_graphics(path="images/vegtable_diagram.png")
+knitr::include_graphics(path="images/vegtable-structure.png")
 ```
 
 The taxonomic list is handled as a `taxlist` object and is located at the slot
 **species**:
 
 ```{r species_slot}
-summary(grasslands@species)
+summary(releves@species)
 ```
 
 The slot **header** is simply a data frame including information related to
@@ -171,7 +203,7 @@ single plot observations, for instance size of the plot, record date, results
 of soil analyses, etc.
 
 ```{r header_slot}
-head(grasslands@header)
+head(releves@header)
 ```
 
 Records of species in plots are stored in slot **samples**. Against the
@@ -179,14 +211,14 @@ commonly used cross tables (species by plots or plots by species), this slot is
 organized in columns (column-oriented table, a.k.a database list).
 
 ```{r samples_slot}
-head(grasslands@samples)
+head(releves@samples)
 ```
 
 The slot **coverconvert** have an own, homonymous class and is used as container
 for cover conversion tables.
 These tables can be used for conversion of cover codes, which will be done by
 the function `transform()`.
-The example on grasslands does not include cover conversion tables but the data
+The example on releves does not include cover conversion tables but the data
 set installed with `vegtable` does it.
 
 ```{r coverconvert_slot}
@@ -198,8 +230,8 @@ information for classes of categorical variables stored in slot **header**.
 These tables correspond to *pop-up tables* of **Turboveg 2**.
 
 ```{r relations_slot}
-names(grasslands@relations)
-head(grasslands@relations$community_type)
+names(releves@relations)
+head(releves@relations$community_type)
 ```
 
 While in the header table such categorical variables may be cryptic, there is
@@ -210,8 +242,8 @@ can also see the respective names of the plant communities that correspond to
 the syntaxa assigned to the plots originally by the publication.
 
 ```{r relation2header}
-grasslands <- relation2header(grasslands, "community_type")
-head(grasslands@header)
+releves <- relation2header(releves, "community_type")
+head(releves@header)
 ```
 
 ## Statistics
@@ -236,7 +268,7 @@ cover percentage stored in the slot **samples** will be used as weight for the
 respective life from classes.
 
 ```{r lf_proportions}
-grasslands <- trait_proportion(trait="life_form", object=grasslands,
+releves <- trait_proportion(trait="life_form", object=releves,
 		head_var="ReleveID", include_nas=FALSE, weight="cover_percentage",
 		in_header=TRUE)
 ```
@@ -248,14 +280,14 @@ names of the recorded communities in the slot **header**.
 
 ```{r annual_prop}
 # Add community names to the header table
-grasslands <- relation2header(grasslands, relation="community_type")
+releves <- relation2header(releves, relation="community_type")
 
 # Display mean values per plant communities
-aggregate(annual_prop ~ community_name, data=grasslands@header, FUN=mean)
+aggregate(annual_prop ~ community_name, data=releves@header, FUN=mean)
 
 # The same information as boxplot
 par(mar=c(5, 20, 1, 1), las=1)
-boxplot(annual_prop ~ community_name, data=grasslands@header, horizontal=TRUE,
+boxplot(annual_prop ~ community_name, data=releves@header, horizontal=TRUE,
 		xlab="Proportion of annuals", ylab="")
 ```
 
@@ -270,7 +302,7 @@ This kind of objects will be frequently used in functions dealing with
 
 For numerical taxonomic traits statistical parameters such as averages and
 standard deviation can be calculated per plot.
-For instance the data set `grasslands` is also including Ellenberg's indicator
+For instance the data set `releves` is also including Ellenberg's indicator
 values [see @Ellenberg2001], which were collected from @Ramirez1991 and
 @SanMartin2003.
 
@@ -297,7 +329,7 @@ Note that this formula may include multiple variables on the left terms for the
 simultaneous calculation of indicator values.
 
 ```{r trait_stats}
-grasslands <- trait_stats(ind_n + ind_h ~ ReleveID, grasslands,
+releves <- trait_stats(ind_n + ind_h ~ ReleveID, releves,
 		FUN=weighted_mean,  include_nas=FALSE, weight="cover_percentage",
 		suffix="_wmean", in_header=TRUE)
 ```
@@ -308,16 +340,16 @@ correlation between the humidity indicator and the proportion of annuals.
 
 ```{r H_graph1}
 par(mar=c(5, 20, 1, 1), las=1)
-boxplot(ind_h_wmean ~ community_name, data=grasslands@header, horizontal=TRUE,
+boxplot(ind_h_wmean ~ community_name, data=releves@header, horizontal=TRUE,
 		xlab="H figure (weighted mean)", ylab="")
 ```
 
 ```{r H_graph2}
 # Linear regression model
-Mod <- lm(annual_prop ~ ind_h_wmean, data=grasslands@header)
+Mod <- lm(annual_prop ~ ind_h_wmean, data=releves@header)
 
 # plot
-plot(grasslands@header[,c("ind_h_wmean", "annual_prop")], xlab="H figure",
+plot(releves@header[,c("ind_h_wmean", "annual_prop")], xlab="H figure",
 		ylab="Proportion of annuals", pch=20, col="darkgrey")
 abline(Mod, lty=2, col="red")
 ```
@@ -338,21 +370,21 @@ You need to set `get_names=TRUE`, otherwise only taxon IDs (numbers) will be
 inserted in the traits table.
 
 ```{r tax2traits}
-grasslands@species <- tax2traits(grasslands@species, get_names=TRUE)
-head(grasslands@species@taxonTraits)
+releves@species <- tax2traits(releves@species, get_names=TRUE)
+head(releves@species@taxonTraits)
 ```
 
 Now we can compare, for instance, the proportion of species belonging to the
 family Poaceae (grasses) in the different plant communities.
 
 ```{r tax_plot}
-grasslands <- trait_proportion("family", grasslands, head_var="ReleveID",
+releves <- trait_proportion("family", releves, head_var="ReleveID",
 		trait_level="Poaceae", include_nas=FALSE, weight="cover_percentage",
 		in_header=TRUE)
 
 # Compare communities by proportion of Poaceae
 par(mar=c(5, 20, 1, 1), las=1)
-boxplot(Poaceae_prop ~ community_name, data=grasslands@header,
+boxplot(Poaceae_prop ~ community_name, data=releves@header,
 		horizontal=TRUE, xlab="Proportion of Poaceae", ylab="")
 ```
 
@@ -367,12 +399,12 @@ include sub-specific taxa in their respective species (option
 `include_lower=TRUE`).
 
 ```{r count_taxa}
-grasslands <- count_taxa(species ~ ReleveID, grasslands, include_lower=TRUE,
+releves <- count_taxa(species ~ ReleveID, releves, include_lower=TRUE,
 		in_header=TRUE)
 
 # Compare communities by species richness
 par(mar=c(5, 20, 1, 1), las=1)
-boxplot(species_count ~ community_name, data=grasslands@header,
+boxplot(species_count ~ community_name, data=releves@header,
 		horizontal=TRUE, xlab="Species richness", ylab="")
 ```
 
@@ -388,7 +420,7 @@ In order to reduce the data set, we will apply the function `subset()`,
 selecting plots of the association *Juncetum proceri*.
 
 ```{r subset}
-juncetum <- subset(grasslands, community_name == "Juncetum proceri",
+juncetum <- subset(releves, community_name == "Juncetum proceri",
 		slot="header")
 summary(juncetum)
 ```
@@ -411,20 +443,12 @@ juncetum_cross <- crosstable(cover_percentage ~ ReleveID + AcceptedName,
 head(juncetum_cross)
 ```
 
-When plots are geo-referenced, it is also possible to export the respective
-locations as kml files to be displayed in **Google Earth** using the function
-`vegtable2kml()`.
-
-```{r kml, eval=FALSE}
-vegtable2kml(grasslands, file="grasslands.kml", coords= ~ longitude + latitude)
-```
-
-Alternatively the locations of plots can be displayed by using the package
+When plots are geo-referenced, you can show their locations using the package
 `leaflet`.
 
 ```{r leaflet, message=FALSE}
 library(leaflet)
-leaflet(grasslands@header) %>% addTiles() %>%
+leaflet(releves@header) %>% addTiles() %>%
 		addCircleMarkers(lng=~longitude, lat=~latitude, color="red",
 				opacity=0.3, radius=1)
 ```
