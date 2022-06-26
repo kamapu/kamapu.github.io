@@ -7,7 +7,20 @@
     <description>Home Page
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 11 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Syntaxonomic Classification of Chilean Vegetation</title>
+      <link>https://kamapu.github.io/posts/vegetation-chile</link>
+      <description>In a work published in the journal "Vegetation Classification and Survey",
+we did a comparison between associations according to the Braun-Blanquet
+approach and plant formations according to the EcoVeg approach.
+This classification was done on the basis of plots stored in the database
+"sudamerica". Here is the interactive flow diagram.</description>
+      <category>vegetation</category>
+      <guid>https://kamapu.github.io/posts/vegetation-chile</guid>
+      <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/vegetation-chile/images/sankey.png" medium="image" type="image/png" width="2620" height="3640"/>
+    </item>
     <item>
       <title>Course on Multivariate Statistics an R</title>
       <dc:creator>Miguel Alvarez</dc:creator>

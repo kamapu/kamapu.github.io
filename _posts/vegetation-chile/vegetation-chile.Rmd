@@ -1,0 +1,21 @@
+---
+title: "Syntaxonomic Classification of Chilean Vegetation"
+description: |
+  In a work published in the journal "Vegetation Classification and Survey",
+  we did a comparison between associations according to the Braun-Blanquet
+  approach and plant formations according to the EcoVeg approach.
+  This classification was done on the basis of plots stored in the database
+  "sudamerica". Here is the interactive flow diagram.
+date: 06-26-2022
+output:
+  distill::distill_article:
+    self_contained: false
+draft: false
+categories:
+  - vegetation
+preview: images/sankey.png
+---
+
+<script language="javascript">
+  window.location.href="https://kamapu.github.io/documents/chile-bb-ecoveg/"
+</script>

@@ -1,5 +1,21 @@
 [
   {
+    "path": "posts/vegetation-chile/",
+    "title": "Syntaxonomic Classification of Chilean Vegetation",
+    "description": "In a work published in the journal \"Vegetation Classification and Survey\",\nwe did a comparison between associations according to the Braun-Blanquet\napproach and plant formations according to the EcoVeg approach.\nThis classification was done on the basis of plots stored in the database\n\"sudamerica\". Here is the interactive flow diagram.",
+    "author": [],
+    "date": "2022-06-26",
+    "categories": [
+      "vegetation"
+    ],
+    "contents": "\n\n\n\n",
+    "preview": "posts/vegetation-chile/images/sankey.png",
+    "last_modified": "2022-06-26T07:50:44+02:00",
+    "input_file": {},
+    "preview_width": 2620,
+    "preview_height": 3640
+  },
+  {
     "path": "posts/multivar/",
     "title": "Course on Multivariate Statistics an R",
     "description": "A course on the applications of multivariate statistics on vegetation ecology\nis scheduled for the period between the 16th and 23rd of November in\nNairobi.",
