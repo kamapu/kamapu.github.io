@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Vegetation of East African wetlands -- Assessment using R and vegtable</title>
+
+  <meta property="description" itemprop="description" content="Example session of the work with vegetation-plot observations in R using the&#10;package vegtable and a open accessible data set of more than 300 observations&#10;collected from published references and field surveys. This tutorial explains&#10;how to use the package vegtable to process data before starting statistical&#10;assessments. An additional task handled in this document is the use of&#10;taxonomic information and further species&#39; attributes (traits) for calculating&#10;statistics at the plot level. Preview photograph: Vigno vexillatae-Panicetum&#10;fluviicolae in Tanzania (CC-BY-NC K. Behn)."/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2022-07-21"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-07-21"/>
+  <meta name="article:author" content="Miguel Alvarez"/>
+  <meta name="article:author" content="Kai Behn"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Vegetation of East African wetlands -- Assessment using R and vegtable"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Example session of the work with vegetation-plot observations in R using the&#10;package vegtable and a open accessible data set of more than 300 observations&#10;collected from published references and field surveys. This tutorial explains&#10;how to use the package vegtable to process data before starting statistical&#10;assessments. An additional task handled in this document is the use of&#10;taxonomic information and further species&#39; attributes (traits) for calculating&#10;statistics at the plot level. Preview photograph: Vigno vexillatae-Panicetum&#10;fluviicolae in Tanzania (CC-BY-NC K. Behn)."/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Vegetation of East African wetlands -- Assessment using R and vegtable"/>
+  <meta property="twitter:description" content="Example session of the work with vegetation-plot observations in R using the&#10;package vegtable and a open accessible data set of more than 300 observations&#10;collected from published references and field surveys. This tutorial explains&#10;how to use the package vegtable to process data before starting statistical&#10;assessments. An additional task handled in this document is the use of&#10;taxonomic information and further species&#39; attributes (traits) for calculating&#10;statistics at the plot level. Preview photograph: Vigno vexillatae-Panicetum&#10;fluviicolae in Tanzania (CC-BY-NC K. Behn)."/>
+
+  <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=The taxlist package: Managing plant taxonomic lists in R;citation_publication_date=2018;citation_publisher=Pensoft Publishers;citation_volume=6;citation_doi=10.3897/bdj.6.e23635;citation_author=Miguel Alvarez;citation_author=Federico Luebert"/>
+  <meta name="citation_reference" content="citation_title=Using formal logic to classify vegetation;citation_publication_date=1997;citation_volume=32;citation_author=Helge Bruelheide"/>
+  <meta name="citation_reference" content="citation_title=Formalized reproduction of an expert-based phytosociological classification: A case study of subalpine tall-forb vegetation;citation_publication_date=2003;citation_volume=14;citation_doi=10.1111/j.1654-1103.2003.tb02187.x;citation_author=Martin Kočí;citation_author=Milan Chytr‘y;citation_author=Lubomír Tich‘y"/>
+  <meta name="citation_reference" content="citation_title=Electronic documents give reproducible research a new meaning;citation_publication_date=1992;citation_publisher=Society of Exploration Geophysicists;citation_doi=10.1190/1.1822162;citation_author=Jon F. Claerbout;citation_author=Martin Karrenbach"/>
+  <meta name="citation_reference" content="citation_title=JUICE, software for vegetation classification;citation_publication_date=2002;citation_volume=13;citation_doi=10.1111/j.1654-1103.2002.tb02069.x;citation_author=Lubomír Tichý"/>
+  <meta name="citation_reference" content="citation_title=SWEA-Dataveg: A vegetation database for sub-Saharan Africa;citation_publication_date=2021;citation_publisher=Pensoft Publishers;citation_volume=2;citation_doi=10.3897/vcs/2021/64911;citation_author=Miguel Alvarez;citation_author=Michael Curran;citation_author=Itambo Malombe"/>
+  <meta name="citation_reference" content="citation_title=Vegetation diversity in east african wetlands: Cocktail algorithms supported by a vegetation-plot database;citation_publication_date=2022;citation_publisher=Schweizerbart;citation_doi=10.1127/phyto/2022/0392;citation_author=Kai Behn;citation_author=Miguel Alvarez;citation_author=Samuel Mutebi;citation_author=Mathias Becker"/>
+  <meta name="citation_reference" content="citation_title=Introduction to the work with shared vegetation data using the r-package vegtable;citation_publication_date=2021;citation_publisher=Zenodo;citation_doi=10.5281/ZENODO.5111478;citation_author=Miguel Alvarez;citation_author=Kai Behn"/>
+  <meta name="citation_reference" content="citation_title=Repeatability, reproducibility, and replicability: Tackling the 3R challenge in biointerface science and engineering;citation_publication_date=2019;citation_publisher=American Vacuum Society;citation_volume=14;citation_doi=10.1116/1.5093621;citation_author=Sally L. McArthur"/>
+  <meta name="citation_reference" content="citation_title=Reproducibility vs. Replicability: A brief history of a confused terminology;citation_publication_date=2018;citation_publisher=Frontiers Media SA;citation_volume=11;citation_doi=10.3389/fninf.2017.00076;citation_author=Hans E. Plesser"/>
+  <meta name="citation_reference" content="citation_title=Reproducibility and repeatability in ecology;citation_publication_date=2006;citation_publisher=Oxford University Press (OUP);citation_volume=56;citation_doi=10.1641/0006-3568(2006)56[958:rarie]2.0.co;2;citation_author=Phillip Cassey;citation_author=Tim M. Blackburn"/>
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","draft","categories","preview","bibliography","cls"]}},"value":[{"type":"character","attributes":{},"value":["Vegetation of East African wetlands -- Assessment using R and vegtable"]},{"type":"character","attributes":{},"value":["Example session of the work with vegetation-plot observations in R using the\npackage vegtable and a open accessible data set of more than 300 observations\ncollected from published references and field surveys. This tutorial explains\nhow to use the package vegtable to process data before starting statistical\nassessments. An additional task handled in this document is the use of\ntaxonomic information and further species' attributes (traits) for calculating\nstatistics at the plot level. Preview photograph: Vigno vexillatae-Panicetum\nfluviicolae in Tanzania (CC-BY-NC K. Behn).\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","orcid_id"]}},"value":[{"type":"character","attributes":{},"value":["Miguel Alvarez"]},{"type":"character","attributes":{},"value":["https://kamapu.github.io/"]},{"type":"character","attributes":{},"value":["0000-0003-1500-1834"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","orcid_id"]}},"value":[{"type":"character","attributes":{},"value":["Kai Behn"]},{"type":"character","attributes":{},"value":["0000-0003-2598-9575"]}]}]},{"type":"character","attributes":{},"value":["07-21-2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["R","vegetation","wetlands"]},{"type":"character","attributes":{},"value":["Vigno-Panicetum.jpg"]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"character","attributes":{},"value":["vegetation-classification-and-survey.csl"]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["ea-wetlands_files/anchor-4.2.2/anchor.min.js","ea-wetlands_files/bowser-1.9.3/bowser.min.js","ea-wetlands_files/distill-2.2.21/template.v2.js","ea-wetlands_files/figure-html5/unnamed-chunk-16-1.png","ea-wetlands_files/figure-html5/unnamed-chunk-19-1.png","ea-wetlands_files/figure-html5/unnamed-chunk-20-1.png","ea-wetlands_files/header-attrs-2.14/header-attrs.js","ea-wetlands_files/htmlwidgets-1.5.4/htmlwidgets.js","ea-wetlands_files/jquery-3.6.0/jquery-3.6.0.js","ea-wetlands_files/jquery-3.6.0/jquery-3.6.0.min.js","ea-wetlands_files/jquery-3.6.0/jquery-3.6.0.min.map","ea-wetlands_files/leaflet-1.3.1/images/layers-2x.png","ea-wetlands_files/leaflet-1.3.1/images/layers.png","ea-wetlands_files/leaflet-1.3.1/images/marker-icon-2x.png","ea-wetlands_files/leaflet-1.3.1/images/marker-icon.png","ea-wetlands_files/leaflet-1.3.1/images/marker-shadow.png","ea-wetlands_files/leaflet-1.3.1/leaflet.css","ea-wetlands_files/leaflet-1.3.1/leaflet.js","ea-wetlands_files/leaflet-binding-2.1.1/leaflet.js","ea-wetlands_files/leaflet-markercluster-1.0.5/leaflet.markercluster.freezable.js","ea-wetlands_files/leaflet-markercluster-1.0.5/leaflet.markercluster.js","ea-wetlands_files/leaflet-markercluster-1.0.5/leaflet.markercluster.layersupport.js","ea-wetlands_files/leaflet-markercluster-1.0.5/MarkerCluster.css","ea-wetlands_files/leaflet-markercluster-1.0.5/MarkerCluster.Default.css","ea-wetlands_files/leaflet-markercluster-1.0.5/MIT-LICENCE.txt","ea-wetlands_files/leaflet-markercluster-1.0.5/package.json","ea-wetlands_files/leaflet-minimap-3.3.1/Control.MiniMap.css","ea-wetlands_files/leaflet-minimap-3.3.1/Control.MiniMap.js","ea-wetlands_files/leaflet-minimap-3.3.1/Control.MiniMap.min.css","ea-wetlands_files/leaflet-minimap-3.3.1/Control.MiniMap.min.js","ea-wetlands_files/leaflet-minimap-3.3.1/images/toggle.png","ea-wetlands_files/leaflet-minimap-3.3.1/images/toggle.svg","ea-wetlands_files/leaflet-minimap-3.3.1/Minimap-binding.js","ea-wetlands_files/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js","ea-wetlands_files/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js","ea-wetlands_files/leafletfix-1.0.0/leafletfix.css","ea-wetlands_files/popper-2.6.0/popper.min.js","ea-wetlands_files/proj4-2.6.2/proj4.min.js","ea-wetlands_files/Proj4Leaflet-1.0.1/proj4leaflet.js","ea-wetlands_files/rstudio_leaflet-1.3.1/images/1px.png","ea-wetlands_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css","ea-wetlands_files/tippy-6.2.7/tippy-bundle.umd.min.js","ea-wetlands_files/tippy-6.2.7/tippy-light-border.css","ea-wetlands_files/tippy-6.2.7/tippy.css","ea-wetlands_files/tippy-6.2.7/tippy.umd.min.js","ea-wetlands_files/webcomponents-2.0.0/webcomponents.js","references.bib","references.bib.sav.tmp","swea.rda","vegetation-classification-and-survey.csl","Vigno-Panicetum.jpg"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="ea-wetlands_files/header-attrs-2.14/header-attrs.js"></script>
+  <script src="ea-wetlands_files/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <script src="ea-wetlands_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="ea-wetlands_files/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+  <script src="ea-wetlands_files/leaflet-1.3.1/leaflet.js"></script>
+  <link href="ea-wetlands_files/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+  <script src="ea-wetlands_files/proj4-2.6.2/proj4.min.js"></script>
+  <script src="ea-wetlands_files/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+  <link href="ea-wetlands_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+  <script src="ea-wetlands_files/leaflet-binding-2.1.1/leaflet.js"></script>
+  <script src="ea-wetlands_files/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+  <script src="ea-wetlands_files/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script>
+  <link href="ea-wetlands_files/leaflet-markercluster-1.0.5/MarkerCluster.css" rel="stylesheet" />
+  <link href="ea-wetlands_files/leaflet-markercluster-1.0.5/MarkerCluster.Default.css" rel="stylesheet" />
+  <script src="ea-wetlands_files/leaflet-markercluster-1.0.5/leaflet.markercluster.js"></script>
+  <script src="ea-wetlands_files/leaflet-markercluster-1.0.5/leaflet.markercluster.freezable.js"></script>
+  <script src="ea-wetlands_files/leaflet-markercluster-1.0.5/leaflet.markercluster.layersupport.js"></script>
+  <link href="ea-wetlands_files/leaflet-minimap-3.3.1/Control.MiniMap.min.css" rel="stylesheet" />
+  <script src="ea-wetlands_files/leaflet-minimap-3.3.1/Control.MiniMap.min.js"></script>
+  <script src="ea-wetlands_files/leaflet-minimap-3.3.1/Minimap-binding.js"></script>
+  <script src="ea-wetlands_files/popper-2.6.0/popper.min.js"></script>
+  <link href="ea-wetlands_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="ea-wetlands_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="ea-wetlands_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="ea-wetlands_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="ea-wetlands_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="ea-wetlands_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="ea-wetlands_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Vegetation of East African wetlands -- Assessment using R and vegtable","description":"Example session of the work with vegetation-plot observations in R using the\npackage vegtable and a open accessible data set of more than 300 observations\ncollected from published references and field surveys. This tutorial explains\nhow to use the package vegtable to process data before starting statistical\nassessments. An additional task handled in this document is the use of\ntaxonomic information and further species' attributes (traits) for calculating\nstatistics at the plot level. Preview photograph: Vigno vexillatae-Panicetum\nfluviicolae in Tanzania (CC-BY-NC K. Behn).","authors":[{"author":"Miguel Alvarez","authorURL":"https://kamapu.github.io/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":"0000-0003-1500-1834"},{"author":"Kai Behn","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":"0000-0003-2598-9575"}],"publishedDate":"2022-07-21T00:00:00.000+02:00","citationText":"Alvarez & Behn, 2022"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Vegetation of East African wetlands – Assessment using R and vegtable</h1>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt-tag">R</div>
+<div class="dt-tag">vegetation</div>
+<div class="dt-tag">wetlands</div>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Example session of the work with vegetation-plot observations in R
+using the package vegtable and a open accessible data set of more than
+300 observations collected from published references and field surveys.
+This tutorial explains how to use the package vegtable to process data
+before starting statistical assessments. An additional task handled in
+this document is the use of taxonomic information and further species’
+attributes (traits) for calculating statistics at the plot level.
+Preview photograph: Vigno vexillatae-Panicetum fluviicolae in Tanzania
+(CC-BY-NC K. Behn).</p></p>
+</div>
+
+<div class="d-byline">
+  Miguel Alvarez <a href="https://kamapu.github.io/"
+class="uri">https://kamapu.github.io/</a> 
+  
+,   Kai Behn  
+  
+<br/>07-21-2022
+</div>
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#required-packages">Required Packages</a></li>
+<li><a href="#data-set">Data Set</a>
+<ul>
+<li><a href="#taxonomic-lists">Taxonomic Lists</a></li>
+<li><a href="#header-and-relations">Header and Relations</a></li>
+<li><a href="#samples">Samples</a></li>
+</ul></li>
+<li><a href="#cocktail-classification">Cocktail Classification</a></li>
+<li><a href="#statistics-from-taxon-traits">Statistics from Taxon
+Traits</a>
+<ul>
+<li><a href="#life-forms-and-origin">Life Forms and Origin</a></li>
+<li><a href="#taxonomy">Taxonomy</a></li>
+</ul></li>
+<li><a href="#export-functions">Export Functions</a>
+<ul>
+<li><a href="#cross-table">Cross-table</a></li>
+<li><a href="#juice-table">Juice table</a></li>
+<li><a href="#map">Map</a></li>
+<li><a href="#updated-on">Updated on</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<h1 id="introduction">Introduction</h1>
+<p>This document contains an example session of the work with plot
+observations done in East African wetlands, mixing field surveys and
+data collected from published references. This data was assessed in the
+publication by <span class="citation" data-cites="Behn2022">Behn et al.
+(<a href="#ref-Behn2022" role="doc-biblioref">2022</a>)</span> and is a
+modified version of its <strong>Supplement S4</strong> <span
+class="citation" data-cites="Alvarez2021">(<a href="#ref-Alvarez2021"
+role="doc-biblioref">Alvarez and Behn 2021</a>)</span>.</p>
+<p>This is an attempt to ensure reproducibility on the published
+statistical results and promote collaborative data assessment. Note that
+we use the term reproducibility in the sense of <span class="citation"
+data-cites="Cassey2006">Cassey and Blackburn (<a href="#ref-Cassey2006"
+role="doc-biblioref">2006</a>)</span> and <span class="citation"
+data-cites="Claerbout1992">Claerbout and Karrenbach (<a
+href="#ref-Claerbout1992" role="doc-biblioref">1992</a>)</span> but it
+may have a different meaning <span class="citation"
+data-cites="McArthur2019 Plesser2018">(<a href="#ref-McArthur2019"
+role="doc-biblioref">McArthur 2019</a>; <a href="#ref-Plesser2018"
+role="doc-biblioref">Plesser 2018</a>)</span>.</p>
+<h1 id="required-packages">Required Packages</h1>
+<p>The data set is formated using the package <a
+href="https://kamapu.github.io/vegtable/"><code>vegtable</code></a>.
+Taxonomic information and species attributes are embedded into
+<code>vegtable</code> but using <a
+href="https://docs.ropensci.org/taxlist/"><code>taxlist</code></a>.
+Furthermore, bibliographic references are included by using the package
+<a href="https://kamapu.github.io/biblio/"><code>biblio</code></a>.</p>
+<p>We recommend to install all these packages from their development
+versions at GitHub.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span>package <span class='op'>=</span> <span class='st'>"devtools"</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://remotes.r-lib.org/reference/install_github.html'>install_github</a></span><span class='op'>(</span>repo <span class='op'>=</span> <span class='st'>"ropensci/taxlist"</span>, build_vignettes <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://remotes.r-lib.org/reference/install_github.html'>install_github</a></span><span class='op'>(</span>repo <span class='op'>=</span> <span class='st'>"kamapu/vegtable"</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://remotes.r-lib.org/reference/install_github.html'>install_github</a></span><span class='op'>(</span>repo <span class='op'>=</span> <span class='st'>"kamapu/biblio"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>To reproduce the interactive map at the end of this tutorial, you
+will need the package <a
+href="http://rstudio.github.io/leaflet/"><code>leaflet</code></a>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"leaflet"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<h1 id="data-set">Data Set</h1>
+<p>To run this session, you need to download the data by a click on <a
+href="https://zenodo.org/record/5111485/files/swea.rda?download=1">this
+link</a>. Then copy and paste it into your working directory.</p>
+<p>Alternatively you may prefer to download a copy of the R-image using
+the following command in your running session.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/utils/download.file.html'>download.file</a></span><span class='op'>(</span>url <span class='op'>=</span> <span class='st'>"https://zenodo.org/record/5111485/files/swea.rda?download=1"</span>,</span>
+<span>    destfile <span class='op'>=</span> <span class='st'>"swea.rda"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>This data set was exported from the database
+<strong>SWEA-Dataveg</strong>, which is registered in the Global Index
+of Vegetation-Plot Databases (GIVD) as <a
+href="https://www.givd.info/ID/AF-00-006">AF-00-006</a> <span
+class="citation" data-cites="Alvarez2021a">(<a href="#ref-Alvarez2021a"
+role="doc-biblioref">Alvarez, Curran, and Malombe 2021</a>)</span>. To
+optimize the content of the object, the data was pre-processed, whereby
+the most important changes regarding the original data are:</p>
+<ul>
+<li>Recorded sub-specific taxa (i.e. varieties and sub-species) have
+been merged with their respective species.</li>
+<li>Recorded supra-specific taxa (i.e. genera and families) have been
+skipped from the plot observations.</li>
+<li>Undetermined taxa are excluded.</li>
+<li>Multiple occurrence of a species in a plot have been merged
+preserving the maximum abundance value.</li>
+<li>Cover values have been equalized to the Braun-Blanquet scale for all
+records, where classes <strong>+</strong> and <strong>r</strong> have
+been merged with class <strong>1</strong>.</li>
+</ul>
+<p>To start the work with the distributed data set, you need to load
+<code>vegtable</code> to your session.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span>package <span class='op'>=</span> <span class='va'>vegtable</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/load.html'>load</a></span><span class='op'>(</span>file <span class='op'>=</span> <span class='st'>"swea.rda"</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span>object <span class='op'>=</span> <span class='va'>swea</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>## Metadata 
+   name: East African Wetlands
+   authors: K. Behn and M. Alvarez
+   year: 2021
+   object size: 419.3 Kb 
+   validity: TRUE 
+
+## Content 
+   number of plots: 325 
+   plots with records: 325 
+   variables in header: 12 
+   number of relations: 3 
+
+## Taxonomic List 
+   taxon names: 1354 
+   taxon concepts: 601 
+   validity: TRUE </code></pre>
+</div>
+<h2 id="taxonomic-lists">Taxonomic Lists</h2>
+<p>Plots observations contain records of species’ abundance in the
+respective plots. In vegetation-plot databases, those records may be
+collected from diverse sources and refer to different nomenclatures,
+thus a link between synonyms and accepted names to taxon concepts is
+required. Additionally, taxonomic ranks, parent-child relationships, and
+functional traits have to be considered for further ecological
+assessments. To deal with this, there is a slot called
+<strong>species</strong> including the taxonomic list in a
+<code>taxlist</code> object.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span>object <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>species</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>object size: 244.6 Kb 
+validation of &#39;taxlist&#39; object: TRUE 
+
+number of taxon usage names: 1354 
+number of taxon concepts: 601 
+trait entries: 320 
+number of trait variables: 4 
+taxon views: 6 
+
+concepts with parents: 599 
+concepts with children: 266 
+
+hierarchical levels: form &lt; variety &lt; subspecies &lt; species &lt; genus &lt; family &lt; phylum 
+number of concepts in level form: 0
+number of concepts in level variety: 0
+number of concepts in level subspecies: 0
+number of concepts in level species: 335
+number of concepts in level genus: 202
+number of concepts in level family: 62
+number of concepts in level phylum: 2</code></pre>
+</div>
+<p>In this taxonomic list you can also query for some species using its
+name (partial matchings are also allowed).</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span>object <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>species</span>, ConceptID <span class='op'>=</span> <span class='st'>"Cyclosorus interruptus"</span>,</span>
+<span>    secundum <span class='op'>=</span> <span class='st'>"bibtexkey"</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>------------------------------ 
+concept ID: 50074 
+view ID: 1 - CJBGSANBI2012 
+level: species 
+parent: 55055 Cyclosorus Link 
+
+# accepted name: 
+202792 Cyclosorus interruptus (Willd.) H. Itô 
+
+# synonyms (13): 
+22425 Thelypteris interrupta (Willd.) K. Iwats. 
+28798 Aspidium gongylodes Schkuhr 
+28802 Dryopteris gongylodes (Schkuhr) Kuntze 
+28807 Pteris interrupta Willd. 
+202793 Cyclosorus striatus Ching 
+205463 Aspidium continuum Desv. 
+205464 Aspidium ecklonii Kunze 
+205465 Aspidium obtusatum Sw. 
+205466 Aspidium pteroides (Retz.) Sw. 
+205467 Aspidium serra (Sw.) Sw. 
+205468 Aspidium serratum Sw. 
+205469 Aspidium unitum (L.) Sw. 
+205470 Nephrodium propinquum R. Br. 
+------------------------------</code></pre>
+</div>
+<p>This summary shows the ID of the taxon (taxon concept ID), the taxon
+view (reference used for the nomeclature), its taxonomic rank (level),
+the parent taxon (the parent genus in this case), the accepted name and
+a list of synonyms (both including usage name ID).</p>
+<p>You can also use the function <code>indented_list()</code> to have an
+overview of the hierarchical structure including this taxon.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://docs.ropensci.org/taxlist/reference/indented_list.html'>indented_list</a></span><span class='op'>(</span>object <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>species</span>, filter <span class='op'>=</span> <span class='st'>"Cyclosorus"</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>Pteridophyta NA
+ Thelypteridaceae NA
+  Cyclosorus Link
+   Cyclosorus interruptus (Willd.) H. Itô </code></pre>
+</div>
+<p>For more details on the structure of <code>taxlist</code> objects,
+see <span class="citation" data-cites="Alvarez2018">Alvarez and Luebert
+(<a href="#ref-Alvarez2018" role="doc-biblioref">2018</a>)</span>.</p>
+<h2 id="header-and-relations">Header and Relations</h2>
+<p>Information related to plot observations (e.g. soil properties,
+slope, exposition, coordinates) is stored as a <code>data.frame</code>
+in the slot <strong>header</strong>. In this column-oriented table the
+variable <strong>ReleveID</strong> represents the primary key.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>header</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>    ReleveID original_number record_date plot_size elevation
+157      259            &lt;NA&gt;  2012-04-25         4       348
+212      249            &lt;NA&gt;  2012-04-18         4       351
+213      246            &lt;NA&gt;  2012-04-18         4       333
+214      245            &lt;NA&gt;  2012-04-18         4       343
+215      250            &lt;NA&gt;  2012-04-18         4       351
+216      221            &lt;NA&gt;  2012-03-27         4       337
+    cover_total community_type height_total longitude  latitude
+157         100            397           NA  38.32523 -5.084125
+212         100            390           NA  38.32692 -5.076853
+213         100            390           NA  38.32741 -5.075487
+214         100            390           NA  38.32727 -5.075572
+215         100            390           NA  38.32692 -5.076853
+216          90            390           NA  38.32638 -5.077153
+    country_code data_source
+157          TZA           1
+212          TZA           1
+213          TZA           1
+214          TZA           1
+215          TZA           1
+216          TZA           1</code></pre>
+</div>
+<p>Categorical variables in <strong>header</strong> may need detailed
+descriptions on their respective classes, if they are factorized. For
+this purpose, a slot called <strong>relations</strong> contains the
+respective data frames. Both the data frame in the slot
+<strong>relations</strong> and the variable shared with slot
+<strong>header</strong> have the same name.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>relations</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>[1] &quot;community_type&quot; &quot;country_code&quot;   &quot;data_source&quot;   </code></pre>
+</div>
+<p>For instance the field <strong>country_code</strong> has a relation
+of the same name with an homonymous primary key. This field works then
+as a foreign key in slot <strong>header</strong>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>relations</span><span class='op'>$</span><span class='va'>country_code</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>    country_code      name_short                        name_long
+17           KEN           Kenya                            Kenya
+20           TZA        Tanzania                         Tanzania
+33           COD Dem. Rep. Congo Democratic Republic of the Congo
+38           ZAF    South Africa                     South Africa
+82           ZMB          Zambia                           Zambia
+125          BDI         Burundi                          Burundi</code></pre>
+</div>
+<h2 id="samples">Samples</h2>
+<p>The core of plot observations is the record of taxa (usually plant
+species) indicating either their occurrence or their abundance in the
+respective plots. Since <code>vegtable</code> objects emulate relational
+databases, this information is contained in column-oriented table, at
+the slot <strong>samples</strong>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>samples</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>   ReleveID TaxonUsageID cover_percentage cover_class
+15     3661          461                5           1
+16     3662          461                2           1
+17     3663          461                1           1
+18     3748          461                1           1
+19     3750          461                1           1
+21     3817          461                5           1</code></pre>
+</div>
+<p>In this table, the variable <strong>ReleveID</strong> is pointing to
+the plot observations in slot <strong>header</strong>, while the
+variable <strong>TaxonUsageID</strong> is linked to the slot
+<strong>species</strong>. The later is rather a mention of the taxon
+usage name recorded in the plot, which will be recognized either as
+synonym or accepted name of a taxon concept. The abundance of the
+species in plots (variable <strong>cover_class</strong>) corresponds to
+the Braun-Blanquet scale with the classes “+” and “r” merged with “1”,
+as previously mentioned.</p>
+<h1 id="cocktail-classification">Cocktail Classification</h1>
+<p>Cocktail classification is a supervised classification method based
+on logical algorithms. The main elements in these algorithms are the
+definition of species groups (cocktail groups) and dominant species. The
+algorithms will recognize plot observations in a vegetation unit by the
+occurrence of more than a half of the members of a coctail group, the
+absence of a group and whether a dominant species is present over a
+cut-level of abundance or not <span class="citation"
+data-cites="Bruelheide1997 Koci2003">(<a href="#ref-Bruelheide1997"
+role="doc-biblioref">Bruelheide 1997</a>; <a href="#ref-Koci2003"
+role="doc-biblioref">Kočí, Chytr‘y, and Tich‘y 2003</a>)</span>.</p>
+<p>The package <code>vegtable</code> defines an object class called
+<code>shaker</code>. This object will always depend on a
+<code>vegtable</code> object (companion). A <code>shaker</code> is
+included in the distributed image, which is called
+<code>syntax</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span>object <span class='op'>=</span> <span class='va'>syntax</span>, companion <span class='op'>=</span> <span class='va'>swea</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>The design of cocktail algorithms is a time-consuming, iterative
+process and will not be explained here. We recommend to use the software
+<a
+href="https://www.sci.muni.cz/botany/juice/"><strong>Juice</strong></a>
+for this purpose <span class="citation" data-cites="Tichy2002">(<a
+href="#ref-Tichy2002" role="doc-biblioref">Tichý 2002</a>)</span>. The
+function <code>make_cocktail()</code> will execute the expert system and
+produce the classification that can be inserted in the data set.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>swea</span><span class='op'>@</span><span class='va'>header</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/make_cocktail.html'>make_cocktail</a></span><span class='op'>(</span>shaker <span class='op'>=</span> <span class='va'>syntax</span>, vegtable <span class='op'>=</span> <span class='va'>swea</span>, cover <span class='op'>=</span> <span class='st'>"cover_class"</span>,</span>
+<span>    syntax <span class='op'>=</span> <span class='st'>"veg_unit"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>For every formula contained in <code>syntax</code>, a binary variable
+indicating whether a plot is belonging to a vegetation unit or not.
+Additionally a column defined as <strong>veg_unit</strong> is inserted
+with the name of the respective units. Note that in this column
+observations that are not recognized in any vegetation unit get a
+<strong>NA</strong> value, while observation recognized in more than one
+unit get a <strong>+</strong> symbol.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span>object <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>swea</span><span class='op'>$</span><span class='va'>veg_unit</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>        + 01Isc-Fim 02Fui-Amm 03Cor-Pan 04Gra-Ipo 05Cen-Per 06Cyp-Cyp 
+       36        11         8        17         8        12        59 
+07Cyp-Fui 08Mel-Lee 09Cyp-lat 10Cyp-Dry 11Phr-mau  12PhrEch 13Vig-Pan 
+       42        19        25        50        22         5        11 </code></pre>
+</div>
+<h1 id="statistics-from-taxon-traits">Statistics from Taxon Traits</h1>
+<h2 id="life-forms-and-origin">Life Forms and Origin</h2>
+<p>The taxonomic list includes information on life forms and origin
+(native or introduced to sub-Saharan Africa). This information can be
+summarized for every plot, for instance calculating the proportion of
+life forms, weighted by the abundance. For it, we can use the function
+<code>trait_proportion()</code>, which will aggregate proportions of
+single life form classes into plot observations. Since we like to
+collect the information in the slot <strong>header</strong> with further
+plot properties, we will use the option <code>in_header=TRUE</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>swea</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/trait_stats.html'>trait_proportion</a></span><span class='op'>(</span>trait <span class='op'>=</span> <span class='st'>"life_form"</span>, object <span class='op'>=</span> <span class='va'>swea</span>, weight <span class='op'>=</span> <span class='st'>"cover_class"</span>,</span>
+<span>    in_header <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Boxplot</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>las <span class='op'>=</span> <span class='fl'>1</span>, mar <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>4</span>, <span class='fl'>8</span>, <span class='fl'>1</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span><span class='op'>(</span>formula <span class='op'>=</span> <span class='va'>obligate_annual_prop</span> <span class='op'>~</span> <span class='va'>veg_unit</span>, data <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>header</span>, horizontal <span class='op'>=</span> <span class='cn'>TRUE</span>,</span>
+<span>    col <span class='op'>=</span> <span class='st'>"grey"</span>, ylab <span class='op'>=</span> <span class='st'>""</span>, xlab <span class='op'>=</span> <span class='st'>"Proportion of Annual Plants"</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span>v <span class='op'>=</span> <span class='fl'>0.5</span>, lty <span class='op'>=</span> <span class='st'>"dashed"</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="ea-wetlands_files/figure-html5/unnamed-chunk-16-1.png" width="624" /></p>
+</div>
+<p>Note that <code>trait_proprotion()</code> is designed to calculate
+proportions of categorical traits. Alternatively the function
+<code>trait_stats()</code> is suitable for statistics of numerical
+traits (e.g. calculation of weighted averages).</p>
+<h2 id="taxonomy">Taxonomy</h2>
+<p>Taxonomic information is not mandatory in taxonomic lists. In slot
+<strong>species</strong> of the object <code>swea</code> both, the
+taxonomic ranks and the parent-child relationships are included.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span>object <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>species</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>object size: 244.6 Kb 
+validation of &#39;taxlist&#39; object: TRUE 
+
+number of taxon usage names: 1354 
+number of taxon concepts: 601 
+trait entries: 320 
+number of trait variables: 4 
+taxon views: 6 
+
+concepts with parents: 599 
+concepts with children: 266 
+
+hierarchical levels: form &lt; variety &lt; subspecies &lt; species &lt; genus &lt; family &lt; phylum 
+number of concepts in level form: 0
+number of concepts in level variety: 0
+number of concepts in level subspecies: 0
+number of concepts in level species: 335
+number of concepts in level genus: 202
+number of concepts in level family: 62
+number of concepts in level phylum: 2</code></pre>
+</div>
+<p>For statistical assessments it is necessary to set taxonomic
+information as species traits. This can be managed with the function
+<code>tax2traits()</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>swea</span><span class='op'>@</span><span class='va'>species</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://docs.ropensci.org/taxlist/reference/tax2traits.html'>tax2traits</a></span><span class='op'>(</span>object <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>species</span>, get_names <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>species</span><span class='op'>@</span><span class='va'>taxonTraits</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>   TaxonConceptID     life_form origin_ssa origin_source
+2           56944 tussock_plant     native             3
+4           56931 tussock_plant     native             3
+6           56768 tussock_plant     native             3
+8             249 tussock_plant     native             3
+9           54697 tussock_plant     native             3
+10          52150  annual_plant  adventive             3
+                  origin_remarks                 species     genus
+2                           &lt;NA&gt;    Anosporum pectinatum Anosporum
+4                           &lt;NA&gt;            Carex mannii     Carex
+6                           &lt;NA&gt;     Cyperus platycaulis   Cyperus
+8                           &lt;NA&gt;      Epilobium salignum Epilobium
+9                           &lt;NA&gt; Epilobium stereophyllum Epilobium
+10 Mexico to S. Tropical America    Erigeron sumatrensis  Erigeron
+       family        phylum
+2  Cyperaceae Magnoliophyta
+4  Cyperaceae Magnoliophyta
+6  Cyperaceae Magnoliophyta
+8  Onagraceae Magnoliophyta
+9  Onagraceae Magnoliophyta
+10 Compositae Magnoliophyta</code></pre>
+</div>
+<p>The last function inserted new columns for taxonomic ranks indicating
+the usage name of each taxon (without author name) and its respective
+parent taxa. In the next step we will calculate the frequency of species
+in each family.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Counting species per family</span></span>
+<span><span class='va'>Families</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://docs.ropensci.org/taxlist/reference/count_taxa.html'>count_taxa</a></span><span class='op'>(</span>object <span class='op'>=</span> <span class='va'>species</span> <span class='op'>~</span> <span class='va'>family</span>, data <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>species</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Sorting families by frequency</span></span>
+<span><span class='va'>Families</span> <span class='op'>&lt;-</span> <span class='va'>Families</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>Families</span><span class='op'>$</span><span class='va'>species_count</span>, decreasing <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>, <span class='op'>]</span></span>
+<span></span>
+<span><span class='co'># Ploting the 20 most frequent families</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>las <span class='op'>=</span> <span class='fl'>2</span>, mar <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>10</span>, <span class='fl'>5</span>, <span class='fl'>1</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>Families</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>20</span>,<span class='op'>]</span>, expr <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/graphics/barplot.html'>barplot</a></span><span class='op'>(</span><span class='va'>species_count</span>, names.arg <span class='op'>=</span> <span class='va'>family</span>,</span>
+<span>        ylab <span class='op'>=</span> <span class='st'>"Number of Species"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="ea-wetlands_files/figure-html5/unnamed-chunk-19-1.png" width="624" /></p>
+</div>
+<p>To see if there is some trend in the proportion of a family, for
+instance Poaceae, we can use again the function
+<code>trait_proportion()</code>. Herewith we will weight the proportion
+of families by the abundance of the respective species in the plot.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>swea</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/trait_stats.html'>trait_proportion</a></span><span class='op'>(</span>trait <span class='op'>=</span> <span class='st'>"family"</span>, object <span class='op'>=</span> <span class='va'>swea</span>, weight <span class='op'>=</span> <span class='st'>"cover_class"</span>,</span>
+<span>    in_header <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Boxplot</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>las <span class='op'>=</span> <span class='fl'>1</span>, mar <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>4</span>, <span class='fl'>8</span>, <span class='fl'>1</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span><span class='op'>(</span>formula <span class='op'>=</span> <span class='va'>Poaceae_prop</span> <span class='op'>~</span> <span class='va'>veg_unit</span>, data <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>header</span>, horizontal <span class='op'>=</span> <span class='cn'>TRUE</span>,</span>
+<span>    col <span class='op'>=</span> <span class='st'>"grey"</span>, ylab <span class='op'>=</span> <span class='st'>""</span>, xlab <span class='op'>=</span> <span class='st'>"Proportion of Grasses"</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span>v <span class='op'>=</span> <span class='fl'>0.5</span>, lty <span class='op'>=</span> <span class='st'>"dashed"</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="ea-wetlands_files/figure-html5/unnamed-chunk-20-1.png" width="624" /></p>
+</div>
+<h1 id="export-functions">Export Functions</h1>
+<p>The structure of <code>vegtable</code> objects is quite complex and
+some assessments or displays will require a proper export method. Here
+we introduce some of the basic ways to export information for further
+assessments. For instance, some of those functions will work on a subset
+of plots, which include the species <em>Cyperus papyrus</em> L.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>cype_pap</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>swea</span>, subset <span class='op'>=</span> <span class='va'>TaxonName</span> <span class='op'>==</span> <span class='st'>"Cyperus papyrus"</span>, slot <span class='op'>=</span> <span class='st'>"taxonNames"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>In the previous step only records for <em>C. papyrus</em> L. are
+preserved, thus we will use the plot observation ids to produce a subset
+with full relevés.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>cype_pap</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>swea</span>, subset <span class='op'>=</span> <span class='va'>ReleveID</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='va'>cype_pap</span><span class='op'>$</span><span class='va'>ReleveID</span>, slot <span class='op'>=</span> <span class='st'>"header"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<h2 id="cross-table">Cross-table</h2>
+<p>The most common format for displaying vegetation data is the cross
+table, with species as rows and plots as columns. To produce cross
+tables there is the function <code>crosstable()</code>. This function
+requires a formula in the form <em>abundance twidles species and
+plot</em> (in the example,
+<code>cover_class ~ ReleveID + AcceptedName</code>) and a function to
+summarize multiple occurrences of a species in a plot (e.g. the maximum
+value). Depending on the size of the data set, this process may require
+some seconds.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Table</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/crosstable.html'>crosstable</a></span><span class='op'>(</span>formula <span class='op'>=</span> <span class='va'>cover_class</span> <span class='op'>~</span> <span class='va'>ReleveID</span> <span class='op'>+</span> <span class='va'>AcceptedName</span>, data <span class='op'>=</span> <span class='va'>cype_pap</span>,</span>
+<span>    FUN <span class='op'>=</span> <span class='va'>max</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>Note that the terms <strong>ReleveID</strong> and
+<strong>AcceptedName</strong> are the key variables for the slot
+<strong>header</strong> and the object <code>taxlist</code> in slot
+<strong>species</strong>, respectively.</p>
+<p>It is also possible to insert additional columns besides the species
+list, for instance to add the author name (<strong>AuthorName</strong>
+in <code>taxlist</code>) and the family, you need to add them as terms
+in the formula.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Table</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/crosstable.html'>crosstable</a></span><span class='op'>(</span>formula <span class='op'>=</span> <span class='va'>cover_class</span> <span class='op'>~</span> <span class='va'>ReleveID</span> <span class='op'>+</span> <span class='va'>AcceptedName</span> <span class='op'>+</span> <span class='va'>AuthorName</span> <span class='op'>+</span> <span class='va'>family</span>,</span>
+<span>    data <span class='op'>=</span> <span class='va'>cype_pap</span>, FUN <span class='op'>=</span> <span class='va'>max</span>, na_to_zero <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># First 5 rows and 10 columns</span></span>
+<span><span class='va'>Table</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span>, <span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>]</span></span></code></pre>
+</div>
+<pre><code>           AcceptedName                     AuthorName      family
+1   Asystasia gangetica               (L.) T. Anderson Acanthaceae
+2 Hygrophila auriculata              (Schumach.) Heine Acanthaceae
+3    Hypoestes aristata (Vahl) Sol. ex Roem. &amp; Schult. Acanthaceae
+4      Thunbergia alata                  Bojer ex Sims Acanthaceae
+5 Acanthus polystachyus                         Delile Acanthaceae
+  3698 3739 3882 4752 4945 4950 5256
+1    1    1    1    1    1    1    1
+2    0    0    0    0    0    0    0
+3    0    0    0    0    0    0    4
+4    0    0    0    0    0    0    0
+5    0    0    1    0    0    0    0</code></pre>
+</div>
+<p>Some statistical software and R-packages may need the first cross
+table but transposed. This can be achieved by changing the formula in
+the function.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Table</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://kamapu.github.io/vegtable/reference/crosstable.html'>crosstable</a></span><span class='op'>(</span>formula <span class='op'>=</span> <span class='va'>cover_class</span> <span class='op'>~</span> <span class='va'>AcceptedName</span> <span class='op'>+</span> <span class='va'>ReleveID</span>, data <span class='op'>=</span> <span class='va'>swea</span>,</span>
+<span>    FUN <span class='op'>=</span> <span class='va'>max</span>, as_matrix <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<h2 id="juice-table">Juice table</h2>
+<p>There is also a possibility to export the content of plot
+observations to <a
+href="https://www.sci.muni.cz/botany/juice/"><strong>Juice</strong></a>.
+Juice is a freeware specialized in the analysis of vegetation-plot data
+sets and implement a series of statistical assessment methods. To
+produce the data sets, there is the function <code>write_juice()</code>,
+which is working in a similar way as <code>crosstable()</code>. Here we
+need additionally to specify which header variables will be exported and
+which are the geographical coordinates (assumed as decimal degrees in
+WGS84).</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='http://kamapu.github.io/vegtable/reference/write_juice.html'>write_juice</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>swea</span>, file <span class='op'>=</span> <span class='st'>"swea"</span>, formula <span class='op'>=</span> <span class='va'>cover_class</span> <span class='op'>~</span> <span class='va'>ReleveID</span> <span class='op'>+</span> <span class='va'>AcceptedName</span>, </span>
+<span>    db_name <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>description</span><span class='op'>$</span><span class='va'>name</span>,</span>
+<span>    header <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"country_code"</span>, <span class='st'>"data_source"</span>, <span class='st'>"record_date"</span>, <span class='st'>"plot_size"</span>, <span class='st'>"elevation"</span>,</span>
+<span>        <span class='st'>"veg_unit"</span><span class='op'>)</span>,</span>
+<span>    coords <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"longitude"</span>, <span class='st'>"latitude"</span><span class='op'>)</span>, FUN <span class='op'>=</span> <span class='va'>max</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>This command will produce two files in your working directory, the
+file <strong>swea_table.txt</strong> with the cross table, and
+<strong>swea_header.txt</strong> with the information of plots (also
+called header table). To import those files to Juice, yo need to follow
+these steps.</p>
+<h2 id="map">Map</h2>
+<p>The plot observations included in this data set are geo-referenced,
+where the exactitude of the location is depending on the data source
+(some data are geo-referenced according to the study site description of
+the respective publication).</p>
+<p>The location of plot observations can be mapped by using the package
+<code>leaflet</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span>package <span class='op'>=</span> <span class='va'>leaflet</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/leaflet.html'>leaflet</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>swea</span><span class='op'>@</span><span class='va'>header</span>, width <span class='op'>=</span> <span class='st'>"100%"</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>    <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addProviderTiles.html'>addProviderTiles</a></span><span class='op'>(</span><span class='st'>"Esri.WorldImagery"</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-layers.html'>addMarkers</a></span><span class='op'>(</span>lng <span class='op'>=</span> <span class='op'>~</span><span class='va'>longitude</span>, lat <span class='op'>=</span> <span class='op'>~</span><span class='va'>latitude</span>, popup <span class='op'>=</span> <span class='op'>~</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>ReleveID</span><span class='op'>)</span>,</span>
+<span>      clusterOptions <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/map-options.html'>markerClusterOptions</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span></span>
+<span>    <span class='fu'><a href='https://rdrr.io/pkg/leaflet/man/addMiniMap.html'>addMiniMap</a></span><span class='op'>(</span>width <span class='op'>=</span> <span class='fl'>100</span>, height <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span></span></code></pre>
+</div>
+<div id="htmlwidget-ac14f613f0056e9389ed" style="width:100%;height:384px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ac14f613f0056e9389ed">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMarkers","args":[[-5.084125,-5.07685333,-5.07548667,-5.07557167,-5.07685333,-5.07715333,-5.0768,-5.07523333,-5.085465,-5.08553167,-5.07009833,-5.07009833,-5.07048,-5.07009833,-5.085465,-5.07048,-5.084125,-5.084125,-5.084125,-5.084125,-5.08428167,-5.08463,-0.46986233,-0.46986233,-0.46986233,-0.46790523,-0.46986233,-0.46790523,-5.08452833,-5.08452833,-5.08452833,-26.9708,-26.9708,-26.9708,-26.9708,-26.9708,-26.9708,-26.9708,-26.9708,-26.9708,-8.12859444,-8.12846111,-8.15583057,-8.15583611,-8.15586389,-8.15586389,-8.12841388,-8.12859444,-8.12846111,-8.15583057,-8.15583611,-8.15586389,-8.17348611,-8.12841388,-8.12846111,-8.17299722,-8.17348611,-8.17330278,-8.15586389,-8.17348611,-8.12841388,-8.12852222,-8.15583611,-8.12849444,-8.12838611,-8.12848611,-8.15591667,-8.15572778,-8.12849444,-8.12838611,-8.12848611,-8.15591667,-8.15606667,-8.156,-8.128975,-8.15566667,-8.15560278,-8.15565278,-8.15555278,-8.173675,-8.17243889,-8.18984444,-8.19006111,-8.13798611,-8.15544444,-8.18063889,-8.18066944,-8.1287,-8.17569167,-8.176,-8.17691944,-8.16692778,-8.16723056,-8.16980556,-8.18690833,-8.17333333,-8.17326389,-8.12849444,-8.17326389,-8.17352778,-8.17083611,-8.17083611,0.5195,0.5195,0.5195,0.52034444,0.52034444,0.52034444,0.52034444,0.52034444,0.52040278,0.52040278,0.52040278,0.52040278,0.52040278,0.52001667,0.52001667,0.52001667,0.52001667,0.52001667,0.52050556,0.52050556,0.52050556,0.52049167,0.52049167,0.52049167,0.52049167,0.52049167,0.52058,0.52058,0.52058,0.52058,0.520925,0.520925,0.520925,0.520925,0.520925,0.52120556,0.52120556,0.52120556,0.52120556,0.52117222,0.52117222,0.52117222,0.52117222,0.52117222,0.520875,0.520875,0.520875,0.520875,0.520875,0.520875,0.520875,0.52101667,0.52101667,0.52101667,0.5195,0.5195,0.5195,0.52034444,0.52034444,0.52034444,0.52040278,0.52040278,0.52040278,0.52001667,0.52001667,0.52001667,0.52050556,0.52050556,0.52050556,0.52049167,0.52049167,0.52049167,0.52058,0.520925,0.520925,0.520925,0.52117222,0.52117222,0.52117222,0.52101667,0.5195,0.52040278,0.52001667,0.52050556,0.52058,0.52117222,0.52101667,0.5195,0.52034444,0.52040278,0.52050556,0.52049167,0.52058,0.520925,0.52117222,0.52025278,0.52014167,0.52023056,0.52015278,0.52041389,0.52083333,0.52032222,0.52121944,0.520825,0.5207,0.52061944,0.52091944,0.52087222,0.52013611,0.52011944,0.51988056,0.52021667,0.51995833,0.52078056,0.52064167,0.56113883,0.56121108,0.56089994,0.561225,0.5618305,0.44588054,0.44649443,0.44643332,0.48467215,0.51967221,0.52028325,0.53427215,0.53314436,0.52041108,0.51994437,0.5202416,0.51589994,0.5204027,0.51984999,0.50238333,0.50258333,0.50279167,0.50283611,0.50305,0.50316389,0.50293611,0.50310833,0.53439167,0.53438333,0.50778611,0.50755,0.50738889,0.50822778,0.50843056,0.5079,0.51250278,0.51230278,0.51223611,0.51218611,-0.76138464,-11.52,-11.78,-11.57,-11.27,-11.53,-11.78,0.52034444,0.52040278,0.52001667,0.52050556,0.520925,0.52117222,0.52101667,-7.516667,0.52120556,0.52040278,-2.825389,-2.825389,-3.093253,0.52058,0.52006667,0.5195,-2.825389,0.52049167,-2.976404,-2.698789,-8.12841388,-8.15586389,-8.17305833,-8.1285,-8.15598889,0.52050556,0.52058,0.520925,0.52034444,0.52001667,0.520825,0.50836111,0.50826944,-3.17298,-2.698789,-2.698789,-3.194116,-3.093253,-5.07548667,-5.07544667,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,2.056078,0.524129],[38.32523,38.32692333,38.32741167,38.32727,38.32692333,38.32638333,38.32697167,38.32736833,38.32415167,38.32445333,38.32511333,38.32511333,38.32450833,38.32511333,38.32415167,38.32450833,38.32523,38.32523,38.32523,38.32523,38.32540167,38.32527833,37.10221067,37.10221067,37.10221067,37.10196636,37.10221067,37.10196636,38.32344167,38.32344167,38.32344167,32.2884,32.2884,32.2884,32.2884,32.2884,32.2884,32.2884,32.2884,32.2884,36.71220833,36.71211111,36.70168057,36.70165,36.70126111,36.70146944,36.71185557,36.71220833,36.71211111,36.70168057,36.70165,36.70146944,36.69036667,36.71185557,36.71211111,36.69035833,36.69036667,36.69048611,36.70126111,36.69036667,36.71185557,36.71196389,36.70165,36.71183889,36.71203889,36.71230278,36.70152222,36.70170833,36.71183889,36.71203889,36.71230278,36.70152222,36.70128889,36.70125,36.71151111,36.7017,36.70172222,36.70200833,36.70182778,36.69060278,36.69136111,36.701725,36.70053333,36.72201667,36.70328611,36.69311667,36.69477222,36.71228056,36.69534167,36.69657222,36.708375,36.71368611,36.71549444,36.70992778,36.67921667,36.69028611,36.69027778,36.71172222,36.69056389,36.69012778,36.69681667,36.69681667,32.64136112,32.64136112,32.64136112,32.64151667,32.64151667,32.64151667,32.64151667,32.64151667,32.64163333,32.64163333,32.64163333,32.64163333,32.64163333,32.64190833,32.64190833,32.64190833,32.64190833,32.64190833,32.64195833,32.64195833,32.64195833,32.64227778,32.64227778,32.64227778,32.64227778,32.64227778,32.6424,32.6424,32.6424,32.6424,32.64196111,32.64196111,32.64196111,32.64196111,32.64196111,32.64271944,32.64271944,32.64271944,32.64271944,32.64299444,32.64299444,32.64299444,32.64299444,32.64299444,32.64294722,32.64294722,32.64294722,32.64294722,32.64294722,32.64294722,32.64294722,32.64314167,32.64314167,32.64314167,32.64136112,32.64136112,32.64136112,32.64151667,32.64151667,32.64151667,32.64163333,32.64163333,32.64163333,32.64190833,32.64190833,32.64190833,32.64195833,32.64195833,32.64195833,32.64227778,32.64227778,32.64227778,32.6424,32.64196111,32.64196111,32.64196111,32.64299444,32.64299444,32.64299444,32.64314167,32.64136112,32.64163333,32.64190833,32.64195833,32.6424,32.64299444,32.64314167,32.64136112,32.64151667,32.64163333,32.64195833,32.64227778,32.6424,32.64196111,32.64299444,32.64151667,32.6417,32.64167222,32.64192778,32.64197222,32.64220278,32.64213056,32.64289167,32.64304167,32.642175,32.64228056,32.64294444,32.643025,32.64143333,32.64135278,32.64209167,32.64225278,32.64287222,32.64282222,32.64346111,32.68941659,32.68959998,32.68651661,32.68624437,32.68560274,32.63237497,32.63246943,32.6325416,32.61014993,32.64190276,32.64327773,32.62039999,32.61979164,32.64335828,32.64118326,32.64195272,32.64902771,32.64221105,32.64245831,32.64691944,32.64690278,32.64706389,32.64700833,32.64754722,32.64746667,32.64814444,32.64806944,32.61930833,32.61920556,32.65160278,32.65161389,32.65160278,32.65213056,32.65239444,32.65218056,32.65359722,32.65341389,32.65310833,32.6531,29.34804756,27.67,27.48,27.37,27.75,27.68,27.48,32.64151667,32.64163333,32.64190833,32.64195833,32.64196111,32.64299444,32.64314167,23.983333,32.64271944,32.64163333,28.981731,28.981731,29.248031,32.6424,32.64144722,32.64136112,28.981731,32.64227778,29.087842,29.014188,36.71185557,36.70126111,36.69041389,36.71175278,36.70091944,32.64195833,32.6424,32.64196111,32.64151667,32.64190833,32.64204722,32.65248056,32.65243056,29.295446,29.014188,29.014188,29.21762,29.248031,38.32741167,38.32757833,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,30.540441,25.196585],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["259","249","246","245","250","221","251","219","214","215","234","236","237","235","213","238","258","256","255","257","222","223","303","302","304","305","301","306","260","262","261","3358","3359","3363","3364","3365","3366","3367","3368","3459","3466","3467","3468","3469","3470","3471","3472","3474","3475","3476","3477","3479","3482","3484","3487","3488","3490","3491","3494","3506","3508","3509","3513","3521","3522","3523","3524","3525","3529","3530","3531","3532","3534","3535","3537","3539","3540","3541","3543","3544","3545","3548","3553","3558","3562","3566","3569","3572","3575","3576","3578","3581","3582","3584","3590","3591","3592","3594","3596","3597","3602","3603","3606","3607","3608","3613","3614","3615","3616","3617","3620","3621","3622","3623","3624","3627","3628","3629","3630","3631","3635","3636","3638","3641","3642","3643","3644","3645","3648","3650","3651","3652","3655","3656","3657","3658","3659","3661","3662","3663","3665","3668","3669","3670","3671","3673","3674","3675","3676","3677","3678","3679","3680","3683","3684","3685","3688","3689","3690","3691","3692","3693","3694","3695","3696","3697","3698","3699","3700","3701","3702","3703","3704","3705","3708","3709","3710","3711","3715","3716","3717","3723","3724","3726","3727","3728","3730","3733","3735","3736","3737","3738","3740","3741","3742","3743","3745","3748","3749","3750","3751","3752","3755","3756","3757","3758","3762","3764","3766","3767","3772","3773","3779","3780","3782","3784","3787","3791","3792","3794","3795","3796","3799","3800","3801","3802","3804","3808","3812","3817","3824","3829","3830","3839","3841","3844","3846","3847","3849","3850","3852","3853","3855","3856","3861","3862","3864","3865","3866","3869","3872","3874","3879","3880","3881","3882","3891","4108","4118","4119","4130","4131","4179","4195","4196","4197","4198","4201","4203","4205","4487","3664","3619","4759","4760","4754","3706","3770","4194","4947","4199","4945","4950","3464","3478","3489","3538","3542","3634","3649","3654","3725","3739","3754","3870","3873","4764","4765","4766","4751","4752","247","220","5091","5084","5085","5086","5092","5093","5082","5083","5087","5088","5089","5090","5094","5095","5096","5102","5103","5104","5105","5106","5107","5256"],null,{"showCoverageOnHover":true,"zoomToBoundsOnClick":true,"spiderfyOnMaxZoom":true,"removeOutsideVisibleBounds":true,"spiderLegPolylineOptions":{"weight":1.5,"color":"#222","opacity":0.5},"freezeAtZoom":false},null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMiniMap","args":[null,null,"bottomright",100,100,19,19,-5,false,false,false,false,false,false,{"color":"#ff7800","weight":1,"clickable":false},{"color":"#000000","weight":1,"clickable":false,"opacity":0,"fillOpacity":0},{"hideText":"Hide MiniMap","showText":"Show MiniMap"},[]]}],"limits":{"lat":[-26.9708,2.056078],"lng":[23.983333,38.32757833]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<h2 class="appendix" id="updated-on">Updated on</h2>
+<p>22-07-2022</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent"
+role="doc-bibliography">
+<div id="ref-Alvarez2021" class="csl-entry" role="doc-biblioentry">
+Alvarez, Miguel, and Kai Behn. 2021. <span>“Introduction to the Work
+with Shared Vegetation Data Using the r-Package Vegtable.”</span>
+Zenodo. <a
+href="https://doi.org/10.5281/ZENODO.5111478">https://doi.org/10.5281/ZENODO.5111478</a>.
+</div>
+<div id="ref-Alvarez2021a" class="csl-entry" role="doc-biblioentry">
+Alvarez, Miguel, Michael Curran, and Itambo Malombe. 2021.
+<span>“<span>SWEA-Dataveg</span>: A Vegetation Database for <span
+class="nocase">sub-Saharan Africa</span>.”</span> <em>Vegetation
+Classification and Survey</em> 2: 59–63. <a
+href="https://doi.org/10.3897/vcs/2021/64911">https://doi.org/10.3897/vcs/2021/64911</a>.
+</div>
+<div id="ref-Alvarez2018" class="csl-entry" role="doc-biblioentry">
+Alvarez, Miguel, and Federico Luebert. 2018. <span>“The Taxlist Package:
+Managing Plant Taxonomic Lists in <span>R</span>.”</span>
+<em>Biodiversity Data Journal</em> 6: e23635. <a
+href="https://doi.org/10.3897/bdj.6.e23635">https://doi.org/10.3897/bdj.6.e23635</a>.
+</div>
+<div id="ref-Behn2022" class="csl-entry" role="doc-biblioentry">
+Behn, Kai, Miguel Alvarez, Samuel Mutebi, and Mathias Becker. 2022.
+<span>“Vegetation Diversity in East African Wetlands: Cocktail
+Algorithms Supported by a Vegetation-Plot Database.”</span>
+<em>Phytocoenologia</em>, July. <a
+href="https://doi.org/10.1127/phyto/2022/0392">https://doi.org/10.1127/phyto/2022/0392</a>.
+</div>
+<div id="ref-Bruelheide1997" class="csl-entry" role="doc-biblioentry">
+Bruelheide, Helge. 1997. <span>“Using Formal Logic to Classify
+Vegetation.”</span> <em>Folia Geobotanica Et Phytotaxonomica</em> 32:
+41–46.
+</div>
+<div id="ref-Cassey2006" class="csl-entry" role="doc-biblioentry">
+Cassey, Phillip, and Tim M. Blackburn. 2006. <span>“Reproducibility and
+Repeatability in Ecology.”</span> <em><span>BioScience</span></em> 56
+(12): 958. <a
+href="https://doi.org/10.1641/0006-3568(2006)56[958:rarie]2.0.co;2">https://doi.org/10.1641/0006-3568(2006)56[958:rarie]2.0.co;2</a>.
+</div>
+<div id="ref-Claerbout1992" class="csl-entry" role="doc-biblioentry">
+Claerbout, Jon F., and Martin Karrenbach. 1992. <span>“Electronic
+Documents Give Reproducible Research a New Meaning.”</span> In
+<em><span>SEG</span> Technical Program Expanded Abstracts 1992</em>.
+Society of Exploration Geophysicists. <a
+href="https://doi.org/10.1190/1.1822162">https://doi.org/10.1190/1.1822162</a>.
+</div>
+<div id="ref-Koci2003" class="csl-entry" role="doc-biblioentry">
+Kočí, Martin, Milan Chytr‘y, and Lubomír Tich‘y. 2003. <span>“Formalized
+Reproduction of an Expert-Based Phytosociological Classification: A Case
+Study of Subalpine Tall-Forb Vegetation.”</span> <em>Journal of
+Vegetation Science</em> 14 (4): 601–10. <a
+href="https://doi.org/10.1111/j.1654-1103.2003.tb02187.x">https://doi.org/10.1111/j.1654-1103.2003.tb02187.x</a>.
+</div>
+<div id="ref-McArthur2019" class="csl-entry" role="doc-biblioentry">
+McArthur, Sally L. 2019. <span>“Repeatability, Reproducibility, and
+Replicability: Tackling the 3r Challenge in Biointerface Science and
+Engineering.”</span> <em>Biointerphases</em> 14 (2): 020201. <a
+href="https://doi.org/10.1116/1.5093621">https://doi.org/10.1116/1.5093621</a>.
+</div>
+<div id="ref-Plesser2018" class="csl-entry" role="doc-biblioentry">
+Plesser, Hans E. 2018. <span>“Reproducibility Vs. Replicability: A Brief
+History of a Confused Terminology.”</span> <em>Frontiers in
+Neuroinformatics</em> 11 (January). <a
+href="https://doi.org/10.3389/fninf.2017.00076">https://doi.org/10.3389/fninf.2017.00076</a>.
+</div>
+<div id="ref-Tichy2002" class="csl-entry" role="doc-biblioentry">
+Tichý, Lubomír. 2002. <span>“<span>JUICE</span>, Software for Vegetation
+Classification.”</span> <em>Journal of Vegetation Science</em> 13 (3):
+451–53. <a
+href="https://doi.org/10.1111/j.1654-1103.2002.tb02069.x">https://doi.org/10.1111/j.1654-1103.2002.tb02069.x</a>.
+</div>
+</div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

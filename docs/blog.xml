@@ -7,7 +7,27 @@
     <description>Home Page
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Vegetation of East African wetlands -- Assessment using R and vegtable</title>
+      <dc:creator>Miguel Alvarez</dc:creator>
+      <dc:creator>Kai Behn</dc:creator>
+      <link>https://kamapu.github.io/posts/ea-wetlands</link>
+      <description>Example session of the work with vegetation-plot observations in R using the
+package vegtable and a open accessible data set of more than 300 observations
+collected from published references and field surveys. This tutorial explains
+how to use the package vegtable to process data before starting statistical
+assessments. An additional task handled in this document is the use of
+taxonomic information and further species' attributes (traits) for calculating
+statistics at the plot level. Preview photograph: Vigno vexillatae-Panicetum
+fluviicolae in Tanzania (CC-BY-NC K. Behn).</description>
+      <category>R</category>
+      <category>vegetation</category>
+      <category>wetlands</category>
+      <guid>https://kamapu.github.io/posts/ea-wetlands</guid>
+      <pubDate>Thu, 21 Jul 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://kamapu.github.io/posts/ea-wetlands/Vigno-Panicetum.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Syntaxonomic Classification of Chilean Vegetation</title>
       <link>https://kamapu.github.io/posts/vegetation-chile</link>
