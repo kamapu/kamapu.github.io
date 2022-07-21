@@ -1,5 +1,5 @@
 ---
-title: Vegetation of East African wetlands -- Assessment using R and vegtable
+title: Vegetation of East African wetlands - Assessment using R and vegtable
 description: |
   Example session of the work with vegetation-plot observations in R using the
   package vegtable and a open accessible data set of more than 300 observations
