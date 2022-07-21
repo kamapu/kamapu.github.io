@@ -19,8 +19,7 @@ collected from published references and field surveys. This tutorial explains
 how to use the package vegtable to process data before starting statistical
 assessments. An additional task handled in this document is the use of
 taxonomic information and further species' attributes (traits) for calculating
-statistics at the plot level. Preview photograph: Vigno vexillatae-Panicetum
-fluviicolae in Tanzania (CC-BY-NC K. Behn).</description>
+statistics at the plot level.</description>
       <category>R</category>
       <category>vegetation</category>
       <category>wetlands</category>

@@ -7,8 +7,7 @@ description: |
   how to use the package vegtable to process data before starting statistical
   assessments. An additional task handled in this document is the use of
   taxonomic information and further species' attributes (traits) for calculating
-  statistics at the plot level. Preview photograph: Vigno vexillatae-Panicetum
-  fluviicolae in Tanzania (CC-BY-NC K. Behn).
+  statistics at the plot level.
 author:
   - name: Miguel Alvarez
     url: https://kamapu.github.io/
@@ -39,6 +38,11 @@ Cited <- detect_keys("ea-wetlands.Rmd")
 Bib <- subset(Bib, bibtexkey %in% Cited$bibtexkey)
 write_bib(Bib, "references.bib")
 ```
+
+![](Vigno-Panicetum.jpg)\
+Stand of the *Vigno vexillatae-Panicetum fluviicolae* Behn, Alvarez, Mutebi &
+Becker 2022 in an undistrubed area within the Kilombero floodplain, Tanzania
+(CC-BY-NC K. Behn).
 
 # Introduction
 
