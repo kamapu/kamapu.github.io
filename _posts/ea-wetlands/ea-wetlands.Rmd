@@ -95,7 +95,7 @@ following command in your running session.
 
 ```{r}
 download.file(url = "https://zenodo.org/record/5111485/files/swea.rda?download=1",
-    destfile = "swea.rda")
+    destfile = "swea.rda", method = "curl")
 ```
 
 This data set was exported from the database **SWEA-Dataveg**, which
