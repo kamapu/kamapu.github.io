@@ -5,74 +5,45 @@
       "title": "New and Old News",
       "author": [],
       "contents": "\n\n\n\n",
-<<<<<<< HEAD
-      "last_modified": "2022-10-26T17:29:29+02:00"
-=======
-      "last_modified": "2022-08-23T09:20:08+00:00"
->>>>>>> branch 'master' of https://github.com/kamapu/kamapu.github.io.git
+      "last_modified": "2022-10-26T17:33:44+02:00"
     },
     {
       "path": "databases.html",
       "title": "Databases",
       "description": "Collection of data sets and data bases.",
       "author": [],
-<<<<<<< HEAD
       "contents": "\nSWEA-Dataveg\n \nThis database was launched in the context of the SWEA\nproject (agricultural use and vulnerability of small wetlands in\nEast Africa) and has been its legacy across different research projects\nin Eastern Africa. Currently covers several countries in the African\ncontinent and diverse vegetation types.\nThe first mention to this database was done by Alvarez et al. (2012a) and\nAlvarez et al.\n(2012b).\nRead more…\nsudamerica\n \nThis database was first launched as a vegetation-plot database for\nChilean grassland vegetation (CL-Dataveg; see also Alvarez et al. 2012c).\nCurrently it is extended to other countries in South America and is\nopened for any plant bio-diversity record and any vegetation type.\nRead more…\n\n\n\n",
-      "last_modified": "2022-10-26T17:29:29+02:00"
-=======
-      "contents": "\nSWEA-Dataveg\n \nThis database was launched in the context of the SWEA project (agricultural use and vulnerability of small wetlands in East Africa) and has been its legacy across different research projects in Eastern Africa. Currently covers several countries in the African continent and diverse vegetation types.\nThe first mention to this database was done by Alvarez et al. (2012a) and Alvarez et al. (2012b).\nRead more…\nsudamerica\n \nThis database was first launched as a vegetation-plot database for Chilean grassland vegetation (CL-Dataveg; see also Alvarez et al. 2012c). Currently it is extended to other countries in South America and is opened for any plant bio-diversity record and any vegetation type.\nRead more…\n\n\n\n",
-      "last_modified": "2022-08-23T09:20:11+00:00"
->>>>>>> branch 'master' of https://github.com/kamapu/kamapu.github.io.git
+      "last_modified": "2022-10-26T17:33:44+02:00"
     },
     {
       "path": "impressum.html",
       "title": "Impressum",
       "author": [],
-<<<<<<< HEAD
       "contents": "\nDisclosures in\naccordance with § 5 TMG (German Law)\nMiguel Alvarez\nHammerhof 2\n53844 Troisdorf\nGermany\nContact\nE-mail: kamapu78@gmail.com\nEditorial Responsibility\nMiguel Alvarez\nHammerhof 2\n53844 Troisdorf\nGermany\n\n\n\n",
-      "last_modified": "2022-10-26T17:29:29+02:00"
-=======
-      "contents": "\nDisclosures in accordance with § 5 TMG (German Law)\nMiguel Alvarez\nHammerhof 2\n53844 Troisdorf\nGermany\nContact\nE-mail: kamapu78@gmail.com\nEditorial Responsibility\nMiguel Alvarez\nHammerhof 2\n53844 Troisdorf\nGermany\n\n\n\n",
-      "last_modified": "2022-08-23T09:20:13+00:00"
->>>>>>> branch 'master' of https://github.com/kamapu/kamapu.github.io.git
+      "last_modified": "2022-10-26T17:33:45+02:00"
     },
     {
       "path": "index.html",
       "title": "Welcome!",
       "author": [],
-<<<<<<< HEAD
       "contents": "\nMiguel Alvarez, Dr. rer. nat.\n\n\nI am a enthusiastic vegetation ecologist, botanist, teacher and\nprogrammer.\nMy work has been related with impact of human activities on natural\necosystems, classification of vegetation and maintenance of biodiversity\ndatabases, including vegetation-plot databases.\nAs a strong supporter of open source applications and freeware, I had\nfocused my programming abilities on R and related tools\nsuch as Rmarkdown.\nPhysically you can meet me either in Europe, Eastern Africa or South\nAmerica and here is the place to find more details about me.\nMy CV\nMy Publication\nList\n\n\n\n",
-      "last_modified": "2022-10-26T17:29:30+02:00"
-=======
-      "contents": "\nMiguel Alvarez, Dr. rer. nat.\nI am Research Associate at the Plant Nutrition Group, University of Bonn, Germany. My research activities are focused on plant diversity and vegetation ecology in East African wetlands. Additionally, I dedicate some efforts to synsystematic classification in diverse formations and in the management of data stored in vegetation-plot databases. Some surveys have been also carried out in Mediterranean and temperate Chile.\n \nThis page is oriented to my services developing tools for handling vegetation-plot data and diversity information.\nAlthough most the information presented here is related to my work, it does not represent in any way the opinion of the University of Bonn.\nCurriculum Vitae\nPublication List\n\n\n\n",
-      "last_modified": "2022-08-23T09:20:15+00:00"
->>>>>>> branch 'master' of https://github.com/kamapu/kamapu.github.io.git
+      "last_modified": "2022-10-26T17:33:45+02:00"
     },
     {
       "path": "research.html",
       "title": "Research",
       "description": "Research and teaching activities are focused on plant diversity and vegetation\necology in Eastern Africa (Kenya, Tanzania, Uganda, Rwanda and Ethiopia).\nSome additional work have been carried out in Europe (Germany) and South\nAmerica.",
       "author": [],
-<<<<<<< HEAD
       "contents": "\nResearch Projects\nFuture Rural Africa\nFuture Rural Africa – Future-making and social-ecological\ntransformation\nEvaluating expectations and probabilities in future-making from\ndifferent perspectives, including social and natural sciences. One of\nthe focus in the consortium is related to the importance of\ninvasive plants on the ecology and management of\nrangelands in Kenya.\n\n\nGlobE-wetlands\nGlobE-wetlands – Reconciling future food production with\nenvironmental protection\nAn interdisciplinary project dealing with the effects of cropping\nactivities on seasonal wetlands. While wetlands in sub-Saharan Africa\nare important sites for food production, especially in semi-arid\nregions, cropping activities may also have negative impacts on the\nintegrity of agro-ecosystems.\n\n\nARBONETH\nARBONETH – The Ethiopian arboretum network\nResearch and education project supporting ex-situ conservation of\nnative trees through the establishment of a network among Ethiopian\narboretums.\n\n\nRCR\nRCR – Resilience, collapse and reorganization in\nsocial-ecological systems of African savannas\nSocial systems and environment interact through coupling and\nregulation processes in the bio-physical, political-institutional and\nsymbolic-cultural space. Understanding such processes may allow decision\nmakers to adopt strategies suitables for avoiding collapse of\nsocio-ecological systems (SES).\n\n\nSWEA\nSWEA – Agricultural use and vulnerability of small wetlands\nin East Africa\nEffects of cropping activities on the integrity and productivity of\nsmall wetlands in Kenya and Tanzania.\n\n\nIMPETUS\nIMPETUS – An integrated approach to the efficient management\nof scarce water resources in West Africa\nSustainable management of water resources in Benin and Morocco.\n\n\n\n\n\n",
-      "last_modified": "2022-10-26T17:29:30+02:00"
-=======
-      "contents": "\nResearch Projects\nFuture Rural Africa\nFuture Rural Africa – Future-making and social-ecological transformation\nEvaluating expectations and probabilities in future-making from different perspectives, including social and natural sciences. One of the focus in the consortium is related to the importance of invasive plants on the ecology and management of rangelands in Kenya.\n \nGlobE-wetlands\nGlobE-wetlands – Reconciling future food production with environmental protection\nAn interdisciplinary project dealing with the effects of cropping activities on seasonal wetlands. While wetlands in sub-Saharan Africa are important sites for food production, especially in semi-arid regions, cropping activities may also have negative impacts on the integrity of agro-ecosystems.\n \nARBONETH\nARBONETH – The Ethiopian arboretum network\nResearch and education project supporting ex-situ conservation of native trees through the establishment of a network among Ethiopian arboretums.\n \nRCR\nRCR – Resilience, collapse and reorganization in social-ecological systems of African savannas\nSocial systems and environment interact through coupling and regulation processes in the bio-physical, political-institutional and symbolic-cultural space. Understanding such processes may allow decision makers to adopt strategies suitables for avoiding collapse of socio-ecological systems (SES).\n \nSWEA\nSWEA – Agricultural use and vulnerability of small wetlands in East Africa\nEffects of cropping activities on the integrity and productivity of small wetlands in Kenya and Tanzania.\n \nIMPETUS\nIMPETUS – An integrated approach to the efficient management of scarce water resources in West Africa\nSustainable management of water resources in Benin and Morocco.\n \n\n\n\n",
-      "last_modified": "2022-08-23T09:20:17+00:00"
->>>>>>> branch 'master' of https://github.com/kamapu/kamapu.github.io.git
+      "last_modified": "2022-10-26T17:33:46+02:00"
     },
     {
       "path": "rpackages.html",
       "title": "R Packages",
       "description": "R packages either published in [CRAN](https://cran.r-project.org/) or on\ndevelopment.",
       "author": [],
-<<<<<<< HEAD
       "contents": "\nPackages at CRAN\ntaxlist\n   \nThis package provides an object class for containing taxonomic lists.\nLists of taxa (e.g. plant species) may be a list of accepted names but\ncan optionally contain synonyms, taxonomic ranks, parent-child\nrelationships, taxon traits, etc.\nThe object taxlist attempts to validate the congruency\nof information contained in taxonomic lists and provides several\nfunctions for the manipulation of objects belonging to this class.\nRead more…\nvegtable\n   \nThis package provides an object class for containing taxonomic lists.\nLists of taxa (e.g. plant species) may be a list of accepted names but\ncan optionally contain synonyms, taxonomic ranks, parent-child\nrelationships, taxon traits, etc.\nThe object taxlist attempts to validate the congruency\nof information contained in taxonomic lists and provides several\nfunctions for the manipulation of objects belonging to this class.\nRead more…\nbiblio\n   \nA package for import and export of BibTeX files focussing on\ndatabases managed by the software JabRef.\nRead more…\nyamlme\n   \nFunctions to write yaml-heads and r-markdown documents and exchange\ndocuments in R-images.\nRead more…\nOther R Packages at GitHub\nvegTemplates\nDocument templates for taxlist and vegtable\ntemplates using the package yamlme.\nRead more…\nLexiguel\nA mingle-mangle of functions for R, most of them related to own\npublications.\nRead more…\ncropgrowth\nTools for the analysis and display of results coming from growth\nmodels.\nRead more…\nspatialist\nTools for the work with spatial (GIS) objects.\nRead more…\ntaxsearch\nSome functions for search in specimens information in Tropicos.\nRead more…\nconosur\nSome functions for search of species names in Flora del Conosur.\nRead more…\n\n\n\n",
-      "last_modified": "2022-10-26T17:29:31+02:00"
-=======
-      "contents": "\nPackages at CRAN\ntaxlist\n   \nThis package provides an object class for containing taxonomic lists. Lists of taxa (e.g. plant species) may be a list of accepted names but can optionally contain synonyms, taxonomic ranks, parent-child relationships, taxon traits, etc.\nThe object taxlist attempts to validate the congruency of information contained in taxonomic lists and provides several functions for the manipulation of objects belonging to this class.\nRead more…\nvegtable\n   \nThis package provides an object class for containing taxonomic lists. Lists of taxa (e.g. plant species) may be a list of accepted names but can optionally contain synonyms, taxonomic ranks, parent-child relationships, taxon traits, etc.\nThe object taxlist attempts to validate the congruency of information contained in taxonomic lists and provides several functions for the manipulation of objects belonging to this class.\nRead more…\nbiblio\n   \nA package for import and export of BibTeX files focussing on databases managed by the software JabRef.\nRead more…\nyamlme\n   \nFunctions to write yaml-heads and r-markdown documents and exchange documents in R-images.\nRead more…\nOther R Packages at GitHub\nvegTemplates\nDocument templates for taxlist and vegtable templates using the package yamlme.\nRead more…\nLexiguel\nA mingle-mangle of functions for R, most of them related to own publications.\nRead more…\ncropgrowth\nTools for the analysis and display of results coming from growth models.\nRead more…\nspatialist\nTools for the work with spatial (GIS) objects.\nRead more…\ntaxsearch\nSome functions for search in specimens information in Tropicos.\nRead more…\nconosur\nSome functions for search of species names in Flora del Conosur.\nRead more…\n\n\n\n",
-      "last_modified": "2022-08-23T09:20:20+00:00"
->>>>>>> branch 'master' of https://github.com/kamapu/kamapu.github.io.git
+      "last_modified": "2022-10-26T17:33:46+02:00"
     }
   ],
   "collections": ["posts/posts.json"]
