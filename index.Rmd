@@ -5,26 +5,24 @@ site: distill::distill_website
 
 **Miguel Alvarez, Dr. rer. nat.**
 
-I am **Research Associate** at the [Plant Nutrition
-Group](https://www.ipe.uni-bonn.de/), University of Bonn, Germany.
-My research activities are focused on plant diversity and vegetation ecology
-in East African wetlands.
-Additionally, I dedicate some efforts to synsystematic classification in diverse
-formations and in the management of data stored in vegetation-plot databases.
-Some surveys have been also carried out in Mediterranean and temperate Chile.
-
 <aside>
 <a href = "https://www.wetlands-africa.de" target = "_self"> 
     <img src = "images/Miguel4_circl2.png"  alt="" style="width:150px; height:auto;"/> 
 </a>
 </aside>
 
-This page is oriented to my services developing tools for handling
-vegetation-plot data and diversity information.
+I am a enthusiastic vegetation ecologist, botanist, teacher and programmer.
 
-Although most the information presented here is related to my work, it does not
-represent in any way the opinion of the University of Bonn.
+My work has been related with impact of human activities on natural ecosystems,
+classification of vegetation and maintenance of biodiversity databases,
+including vegetation-plot databases.
 
-[**Curriculum Vitae**](documents/CV_Miguel.pdf)
+As a strong supporter of open source applications and freeware, I had focused
+my programming abilities on **R** and related tools such as **Rmarkdown**.
 
-[**Publication List**](documents/Publications_Miguel.pdf)
+Physically you can meet me either in Europe, Eastern Africa or South America
+and here is the place to find more details about me.
+
+[**My CV**](documents/CV_Miguel.pdf)
+
+[**My Publication List**](documents/Publications_Miguel.pdf)

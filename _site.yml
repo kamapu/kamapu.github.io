@@ -16,18 +16,14 @@ navbar:
     - text: "Posts"
       href: blog.html
   right:
-    - image: images/art_ubonn_w.png
-      href: https://www.ipe.uni-bonn.de/pflanzenernaehrung/mitarbeiter/m_alvarez
-    - image: images/art_researchgate_w.png
-      href: https://www.researchgate.net/profile/Miguel_Alvarez18
-    - image: images/art_gscholar_w.png
-      href: https://scholar.google.de/citations?user=z29UaXQAAAAJ&hl=en
-    - image: images/art_github_w.png
+    - icon: fa-github
       href: https://www.github.com/kamapu
-    - image: images/art_gitlab_w.png
+    - icon: fa-gitlab
       href: https://gitlab.com/kamapu1
-    - image: images/art_stack_w.png
+    - icon: fa-stack-overflow
       href: https://gis.stackexchange.com/users/80385/migue-lo?tab=profile
+    - icon: fa-coffee
+      href: https://www.buymeacoffee.com/kamapu
   logo: images/logo_miguel.png
   search: true
 collections:
