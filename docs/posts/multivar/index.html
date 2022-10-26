@@ -801,6 +801,7 @@ d-title .dt-tags {
 d-article table.gt_table td,
 d-article table.gt_table th {
   border-bottom: none;
+  font-size: 100%;
 }
 
 .html-widget {
@@ -1873,15 +1874,21 @@ function init_distill() {
 
     // hoverable references
     $('span.citation[data-cites]').each(function() {
-      if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-        var fn = $(this).children()[0]
+      const citeChild = $(this).children()[0]
+      // Do not process if @xyz has been used without escaping and without bibliography activated
+      // https://github.com/rstudio/distill/issues/466
+      if (citeChild === undefined) return true
+
+      if (citeChild.nodeName == "D-FOOTNOTE") {
+        var fn = citeChild
         $(this).html(fn.shadowRoot.querySelector("sup"))
         $(this).id = fn.id
         fn.remove()
       }
       var refs = $(this).attr('data-cites').split(" ");
       var refHtml = refs.map(function(ref) {
-        return "<p>" + $('#ref-' + ref).html() + "</p>";
+        // Could use CSS.escape too here, we insure backward compatibility in navigator
+        return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
       }).join("\n");
       window.tippy(this, {
         allowHTML: true,
@@ -2153,7 +2160,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Course on Multivariate Statistics an R","description":"A course on the applications of multivariate statistics on vegetation ecology\nis scheduled for the period between the 16th and 23rd of November in\nNairobi.","authors":[{"author":"Miguel Alvarez","authorURL":"https://kamapu.github.io/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-11T00:00:00.000+02:00","citationText":"Alvarez, 2021"}
+{"title":"Course on Multivariate Statistics an R","description":"A course on the applications of multivariate statistics on vegetation ecology\nis scheduled for the period between the 16th and 23rd of November in\nNairobi.","authors":[{"author":"Miguel Alvarez","authorURL":"https://kamapu.github.io/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-11T00:00:00.000+00:00","citationText":"Alvarez, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2262,8 +2269,7 @@ class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"><
   <b>Disclaimer</b>
 </a>
 -->
-<p>This page was created with
-<a href="https://rstudio.github.io/distill/"><b>distill</b></a></p>
+<p>This page was created with <a href="https://rstudio.github.io/distill/"><b>distill</b></a></p>
 </div>
 <!--/radix_placeholder_navigation_after_body-->
 </body></html>
